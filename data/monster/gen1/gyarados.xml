@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Gyarados" nameDescription="a gyarados" race="water" race2="flying" experience="189" speed="181" manacost="0">
+	<level min="81" max="88"/>
+	<health now="950" max="950" />
+	<look type="1033" head="113" body="57" legs="95" feet="113" corpse="26991" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="130" />
+		<flag portraitid="27246" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="3845" />
+		<flag rideable="0" />
+		<flag surfable="3569" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="60" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="scary face" interval="25000" level="16"/>
+		<move name="crunch" interval="3500" isTarget="1" range="1" level="24"/>
+		<move name="twister" interval="7500" level="1"/>
+		<move name="ice fang" interval="8500" level="8"/>
+		<move name="aqua tail" interval="15000" level="32"/>
+		<move name="whirlpool" interval="21000" level="4"/>
+		<move name="waterfall" interval="4500" level="21"/>
+		<move name="hurricane" interval="23000" level="44"/>
+		<move name="hyper beam" interval="14000" level="52"/>
+		<move name="hydro pump" interval="15000" level="40"/>
+		<move name="dragon dance" interval="30000" level="36"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-125" max="-125" />
+		<attack name="scary face" interval="25000" chance="66" target="1"/>
+		<attack name="crunch" interval="3500" chance="66" target="1"/>
+		<attack name="twister" interval="7500" chance="66" target="1"/>
+		<attack name="ice fang" interval="8500" chance="66" target="1"/>
+		<attack name="aqua tail" interval="15000" chance="66" target="1"/>
+		<attack name="whirlpool" interval="21000" chance="66" target="1"/>
+		<attack name="waterfall" interval="4500" chance="66" target="1"/>
+		<attack name="hurricane" interval="23000" chance="66" target="1"/>
+		<attack name="hyper beam" interval="14000" chance="66" target="1"/>
+		<attack name="hydro pump" interval="15000" chance="66" target="1"/>
+		<attack name="dragon dance" interval="30000" chance="66" target="1"/>
+		
+	</attacks>
+	<defenses armor="0" defense="79" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GYARADOS!" />
+	</voices>
+	<loot>
+		<item name="dragon tooth" countmax="1" chance="15000"/>
+		<item name="gyarados tail" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="88" chance="100000"/>
+	</loot>
+</monster>

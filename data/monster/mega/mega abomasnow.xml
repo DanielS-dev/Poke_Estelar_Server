@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Abomasnow" nameDescription="a mega abomasnow" race="grass" race2="ice" experience="346" speed="130" manacost="0">
+	<level min="90" max="90"/>
+	<health now="900" max="900" />
+	<look type="3494" head="113" body="57" legs="95" feet="113" corpse="38506" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="460" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="159" />
+		<flag moveMagicDefenseBase="126" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="ice punch" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="wood hammer" interval="7500" isTarget="1" range="3" level="1"/>
+		<move name="razor leaf" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="leafage" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="magical leaf" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="bullet seed" interval="5000" isTarget="1" range="8" level="1"/>
+		<move name="ice shard" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="weather ball" interval="5000" isTarget="1" range="8" level="1"/>
+		<move name="sheer cold" interval="15000" level="1"/>
+		<move name="blizzard" interval="17500" level="1"/>
+		<move name="ingrain" interval="30000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-159" max="-159" />
+		<attack name="ice punch" interval="3500" chance="66" target="1"/>
+		<attack name="wood hammer" interval="7500" chance="66" target="1"/>
+		<attack name="razor leaf" interval="2500" chance="66" target="1"/>
+		<attack name="leafage" interval="3500" chance="66" target="1"/>
+		<attack name="magical leaf" interval="3500" chance="66" target="1"/>
+		<attack name="bullet seed" interval="5000" chance="66" target="1"/>
+		<attack name="ice shard" interval="2500" chance="66" target="1"/>
+		<attack name="weather ball" interval="5000" chance="66" target="1"/>
+		<attack name="sheer cold" interval="15000" chance="66" target="1"/>
+		<attack name="blizzard" interval="17500" chance="66" target="1"/>
+		<attack name="ingrain" interval="30000" chance="66" target="1"/>
+		
+		<attack name="hail" interval="10000" chance="100"/>
+
+	</attacks>
+	<defenses armor="0" defense="126" >
+		<defense name="hail" interval="10000" chance="100"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ABOMASNOW!" />
+	</voices>
+	<loot>
+		<item name="abomasite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

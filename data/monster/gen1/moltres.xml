@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Moltres" nameDescription="a moltres" race="fire" race2="flying" experience="290" speed="290" manacost="0">
+	<level min="50" max="50"/>
+	<health now="900" max="900" />
+	<look type="3555" head="113" body="57" legs="95" feet="113" corpse="27007" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="146" />
+		<flag portraitid="27262" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="3556" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="5" />
+		<flag moveMagicAttackBase="125" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+		<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="agility" interval="30000" level="1"/>
+		<move name="wing attack" interval="3000" level="1"/>
+		<move name="gust" interval="4500" level="1"/>
+		<move name="sky attack" interval="15000" level="10"/>
+		<move name="air slash" interval="7000" level="20"/>
+		<move name="sunny day" interval="15000" level="30"/>
+		<move name="ancient power" interval="9000" level="40"/>
+		<move name="heat wave" interval="11000" level="50"/>
+		<move name="hurricane" interval="19000" level="60"/>
+		<move name="overheat" interval="18000" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-100" />
+		<attack name="agility" interval="30000" chance="66" target="1"/>
+		<attack name="wing attack" interval="3000" chance="66" target="1"/>
+		<attack name="gust" interval="4500" chance="66" target="1"/>
+		<attack name="sky attack" interval="15000" chance="66" target="1"/>
+		<attack name="air slash" interval="7000" chance="66" target="1"/>
+		<attack name="sunny day" interval="15000" chance="66" target="1"/>
+		<attack name="ancient power" interval="9000" chance="66" target="1"/>
+		<attack name="heat wave" interval="11000" chance="66" target="1"/>
+		<attack name="hurricane" interval="19000" chance="66" target="1"/>
+		<attack name="overheat" interval="18000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="90" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MOLTRES!" />
+	</voices>
+	<loot>
+		<item name="red feather" countmax="1" chance="100"/>
+		<item name="moltres outfit" countmax="1" chance="100"/>
+		<item name="vale token" countmax="10" chance="100000"/>
+		<item name="platinum coin" countmax="25" chance="100000"/>
+	</loot>
+</monster>

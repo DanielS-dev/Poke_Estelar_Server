@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Magikarp" nameDescription="a magikarp" race="water" race2="none" experience="40" speed="180" manacost="0">
+	<level min="1" max="3"/>
+	<health now="200" max="200" />
+	<look type="1032" head="113" body="57" legs="95" feet="113" corpse="26990" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="129" />
+		<flag portraitid="27245" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="333" />
+		<flag moveMagicAttackBase="15" />
+		<flag moveMagicDefenseBase="20" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+	</moves>
+	<evolutions>
+		<evolution name="Gyarados" level="20"/>
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-10" max="-10" />
+	</attacks>
+	<defenses armor="0" defense="55" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MAGIKARP!" />
+	</voices>
+	<loot>
+		<item name="remains of magikarp" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="3" chance="100000"/>
+	</loot>
+</monster>

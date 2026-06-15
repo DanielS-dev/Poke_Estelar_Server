@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Alakazam" nameDescription="an alakazam" race="psychic" race2="none" experience="225" speed="220" manacost="0">
+	<level min="41" max="47"/>
+	<health now="550" max="550" />
+	<look type="968" head="113" body="57" legs="95" feet="113" corpse="26926" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="65" />
+		<flag portraitid="27181" />
+		<flag hasshiny="0" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="1" />
+		<flag catchchance="65" />
+		<flag moveMagicAttackBase="135" />
+		<flag moveMagicDefenseBase="95" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="calm mind" interval="15000" level="1"/>
+		<move name="psybeam" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="confusion" interval="7500" level="1"/>
+		<move name="psychic" interval="8500" level="16"/>
+		<move name="psycho cut" interval="6500" level="5"/>
+		<move name="future sight" interval="22000" level="35"/>
+		<move name="psyshock" interval="7500" level="19"/>
+		<move name="kinesis" interval="14000" level="38"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-50" max="-50" />
+		<attack name="calm mind" interval="15000" chance="66"/>
+		<attack name="psybeam" interval="3500" chance="66" target="1" range="8"/>
+		<attack name="confusion" interval="7500" chance="66" />
+		<attack name="psychic" interval="8500" chance="66"/>
+		<attack name="psycho cut" interval="6500" chance="66"/>
+		<attack name="future sight" interval="22000" chance="66"/>
+		<attack name="psyshock" interval="7500" chance="66"/>
+		<attack name="kinesis" interval="14000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="45" >
+		<defense name="reflect" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ALAKAZAM!" />
+	</voices>
+	<loot>
+		<item name="psychic spoon" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="47" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Honchkrow" nameDescription="a honchkrow" race="dark" race2="flying" experience="177" speed="171" manacost="0">
+	<level min="72" max="74"/>
+	<health now="1000" max="1000" />
+	<look type="3038" head="113" body="57" legs="95" feet="113" corpse="38476" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="430" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3620" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="105" />
+		<flag moveMagicDefenseBase="52" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="wing attack" interval="3500" level="1"/>
+		<move name="gust" interval="5000" level="1"/>
+		<move name="astonish" interval="7500" level="1"/>
+		<move name="dark pulse" interval="8500" level="9"/>
+		<move name="night slash" interval="7000" level="15"/>
+		<move name="air slash" interval="8000" level="19"/>
+		<move name="aerial ace" interval="11000" level="23"/>
+		<move name="nasty plot" interval="30000" level="26"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-125" max="-125" />
+		<attack name="wing attack" interval="3500" chance="66" target="1"/>
+		<attack name="gust" interval="5000" chance="66" target="1"/>
+		<attack name="astonish" interval="7500" chance="66" target="1"/>
+		<attack name="dark pulse" interval="8500" chance="66" target="1"/>
+		<attack name="night slash" interval="7000" chance="66" target="1"/>
+		<attack name="air slash" interval="8000" chance="66" target="1"/>
+		<attack name="aerial ace" interval="11000" chance="66" target="1"/>
+		<attack name="nasty plot" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="52" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HONCHKROW!" />
+	</voices>
+	<loot>
+		<item name="witch hat" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="74" chance="100000"/>
+	</loot>
+</monster>

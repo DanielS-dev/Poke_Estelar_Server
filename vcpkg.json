@@ -1,0 +1,17 @@
+{
+  "name": "poke-estelar-server",
+  "version-string": "1.0.0",
+  "description": "Dependencies for building the Poke Estelar server on Windows with vcpkg.",
+  "supports": "windows & x64",
+  "dependencies": [
+    "boost-asio",
+    "boost-lexical-cast",
+    "boost-lockfree",
+    "boost-range",
+    "boost-system",
+    "libmysql",
+    "luajit",
+    "mpir",
+    "pugixml"
+  ]
+}

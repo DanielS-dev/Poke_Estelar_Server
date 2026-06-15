@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Bellossom" nameDescription="a bellossom" race="grass" race2="none" experience="221" speed="150" manacost="0">
+	<level min="41" max="47"/>
+	<health now="750" max="750" />
+	<look type="1085" head="113" body="57" legs="95" feet="113" corpse="27043" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="182" />
+		<flag portraitid="27298" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="90" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="sleep powder" interval="25000" level="1"/>
+		<move name="absorb" interval="3500" isTarget="1" range="3" level="1"/>
+		<move name="acid" interval="4500" isTarget="1" range="8" level="1"/>
+		<move name="toxic" interval="13000" isTarget="1" range="8" level="23"/>
+		<move name="moonblast" interval="7500" level="25"/>
+		<move name="petal dance" interval="19000" level="27"/>
+		<move name="petal blizzard" interval="8500" level="1"/>
+		<move name="moonlight" interval="20000" level="30"/>
+		<move name="quiver dance" interval="30000" level="5"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-80" />
+		<attack name="sleep powder" interval="25000" chance="40" target="1"/>
+		<attack name="absorb" interval="3500" chance="40" target="1"/>
+		<attack name="acid" interval="4500" chance="40" target="1"/>
+		<attack name="toxic" interval="13000" chance="40"/>
+		<attack name="moonblast" interval="7500" chance="40"/>
+		<attack name="petal dance" interval="19000" chance="40"/>
+		<attack name="petal blizzard" interval="8500" chance="40"/>
+		<attack name="moonlight" interval="20000" chance="40"/>
+		<attack name="quiver dance" interval="30000" chance="40"/>
+
+	</attacks>
+	<defenses armor="0" defense="95" >
+		<defense name="life dew" interval="10000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="BELLOSSOM!" />
+	</voices>
+	<loot>
+		<item name="sun stone" countmax="1" chance="1000"/>
+		<item name="strange flower" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="47" chance="100000"/>
+
+	</loot>
+</monster>

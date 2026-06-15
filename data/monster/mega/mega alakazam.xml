@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Alakazam" nameDescription="a mega alakazam" race="psychic" race2="none" experience="250" speed="220" manacost="0">
+	<level min="90" max="90"/>
+	<health now="550" max="550" />
+	<look type="3499" head="113" body="57" legs="95" feet="113" corpse="26926" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="65" />
+		<flag portraitid="27181" />
+		<flag hasshiny="0" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="1" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="210" />
+		<flag moveMagicDefenseBase="126" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="calm mind" interval="15000" level="1"/>
+		<move name="psybeam" interval="2000" isTarget="1" range="8" level="1"/>
+		<move name="psychic" interval="6000" level="1"/>
+		<move name="confusion" interval="7500" level="1"/>
+		<move name="psycho cut" interval="7000" level="1"/>
+		<move name="future sight" interval="15000" level="1"/>
+		<move name="psyshock" interval="13000" level="1"/>
+		<move name="power swap" interval="20000" level="1"/>
+		<move name="guard swap" interval="20000" level="1"/>
+		<move name="light screen" interval="20000" level="1"/>
+		<move name="kinesis" interval="10000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-60" max="-60" />
+		<attack name="calm mind" interval="15000" chance="66"/>
+		<attack name="psybeam" interval="2000" chance="66" target="1" range="8"/>
+		<attack name="psychic" interval="6000" chance="66" />
+		<attack name="confusion" interval="7500" chance="66"/>
+		<attack name="psycho cut" interval="7000" chance="66"/>
+		<attack name="future sight" interval="15000" chance="66"/>
+		<attack name="psyshock" interval="13000" chance="66"/>
+		<attack name="power swap" interval="20000" chance="66"/>
+		<attack name="guard swap" interval="20000" chance="66"/>
+		<attack name="light screen" interval="20000" chance="66"/>
+		<attack name="kinesis" interval="10000" chance="66"/>
+		
+		
+		<attack name="reflect" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="78" >
+		<defense name="reflect" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ALAKAZAM!" />
+	</voices>
+	<loot>
+		<item name="alakazite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

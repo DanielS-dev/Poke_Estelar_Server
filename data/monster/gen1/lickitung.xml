@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Lickitung" nameDescription="a lickitung" race="normal" race2="none" experience="77" speed="130" manacost="0">
+	<level min="13" max="18"/>
+	<health now="900" max="900" />
+	<look type="1011" head="113" body="57" legs="95" feet="113" corpse="26969" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="108" />
+		<flag portraitid="27224" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="60" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="defense curl" interval="15000" level="11"/>
+		<move name="supersonic" interval="22000" isTarget="1" range="8" level="18"/>
+		<move name="lick" interval="7500" isTarget="1" range="1" level="1"/>
+		<move name="wrap" interval="12000" level="1"/>
+		<move name="rollout" interval="18000" level="1"/>
+		<move name="stomp" interval="11000" level="8"/>
+		<move name="power whip" interval="32000" level="23"/>
+		<move name="screech" interval="35000" level="34"/>
+		<move name="disable" interval="45000" level="40"/>
+		
+		
+	</moves>
+	<evolutions>
+		<evolution name="Lickilicky" level="33"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-55" max="-55" />
+		<attack name="defense curl" interval="15000" chance="66" target="1"/>
+		<attack name="supersonic" interval="22000" chance="66" target="1"/>
+		<attack name="lick" interval="7500" chance="66" target="1"/>
+		<attack name="wrap" interval="12000" chance="66" target="1"/>
+		<attack name="rollout" interval="18000" chance="66" target="1"/>
+		<attack name="stomp" interval="11000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="75" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="LICKITUNG!" />
+	</voices>
+	<loot>
+		<item name="tongue" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="18" chance="100000"/>
+	</loot>
+</monster>

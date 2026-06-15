@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Sailor" script="sailor.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="1967" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Sou o unico marinheiro capaz de navegar pelos canais da zona de distorcao. Voce gostaria de se {aventurar}?" />
+		<parameter key="message_decline" value="Continue sua jornada!" />
+	</parameters>
+</npc>
+

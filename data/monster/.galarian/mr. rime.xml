@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mr. Rime" nameDescription="a mr. rime" race="ice" race2="fairy" experience="1820" speed="170" manacost="0">
+	<level min="100" max="100"/>
+	<health now="800" max="800" />
+	<look type="3652" head="113" body="57" legs="95" feet="113" corpse="0" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="866" />
+		<flag portraitid="27238" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="1" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="110" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="hypnosis" interval="15000" level="20"/>
+		<move name="ice shard" interval="3500" range="8" isTarget="1" level="1"/>
+		<move name="psybeam" interval="3500" range="8" isTarget="1" level="1"/>
+		<move name="dazzling gleam" interval="6500" level="1"/>
+		<move name="psychic" interval="7500" level="8"/>
+		<move name="confusion" interval="8500" level="13"/>
+		<move name="teeter dance" interval="15000" level="18"/>
+		<move name="misty terrain" interval="30000" level="23"/>
+		<move name="protect" interval="30000" level="25"/>
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-45" max="-45" />
+		<attack name="hypnosis" interval="15000" chance="66" target="1"/>
+		<attack name="ice shard" interval="3500" chance="66" target="1"/>
+		<attack name="psybeam" interval="3500" chance="66" target="1"/>
+		<attack name="dazzling gleam" interval="6500" chance="66" target="1"/>
+		<attack name="psychic" interval="7500" chance="66" target="1"/>
+		<attack name="confusion" interval="8500" chance="66" target="1"/>
+		<attack name="teeter dance" interval="15000" chance="66" target="1"/>
+		<attack name="misty terrain" interval="30000" chance="66" target="1"/>
+		<attack name="protect" interval="30000" chance="66" target="1"/>
+		<attack name="reflect" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+		<defense name="reflect" interval="5000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MR. RIME!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

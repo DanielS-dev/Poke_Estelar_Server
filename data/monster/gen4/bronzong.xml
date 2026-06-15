@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Bronzong" nameDescription="a bronzong" race="steel" race2="psychic" experience="175" speed="133" manacost="0">
+	<level min="80" max="80"/>
+	<health now="670" max="670" />
+	<look type="3045" head="113" body="57" legs="95" feet="113" corpse="38483" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="437" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="118" />
+		<flag moveMagicAttackBase="79" />
+		<flag moveMagicDefenseBase="116" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="iron defense" interval="30000" level="1"/>
+		<move name="confusion" interval="10000" level="1"/>
+		<move name="gyro ball" interval="9500" level="1"/>
+		<move name="hex" interval="12000" level="1"/>
+		<move name="psywave" interval="15000" level="1"/>
+		<move name="future sight" interval="20000" level="1"/>
+		<move name="heavy slam" interval="11500" level="1"/>
+		<move name="extrasensory" interval="13500" level="1"/>
+		<move name="flash cannon" interval="14500" level="1"/>
+		<move name="imprison" interval="30000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-89" max="-89" />
+		<attack name="iron defense" interval="30000" chance="66" target="1"/>
+		<attack name="confusion" interval="10000" chance="66" target="1"/>
+		<attack name="gyro ball" interval="9500" chance="66" target="1"/>
+		<attack name="hex" interval="12000" chance="66" target="1"/>
+		<attack name="psywave" interval="15000" chance="66" target="1"/>
+		<attack name="future sight" interval="20000" chance="66" target="1"/>
+		<attack name="heavy slam" interval="11500" chance="66" target="1"/>
+		<attack name="extrasensory" interval="13500" chance="66" target="1"/>
+		<attack name="flash cannon" interval="14500" chance="66" target="1"/>
+		<attack name="imprison" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="116" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="BRONZONG!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="80" chance="100000"/>
+	</loot>
+</monster>

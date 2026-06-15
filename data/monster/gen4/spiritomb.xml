@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Spiritomb" nameDescription="a spiritomb" race="ghost" race2="dark" experience="170" speed="135" manacost="0">
+	<level min="90" max="90"/>
+	<health now="500" max="500" />
+	<look type="3601" head="113" body="57" legs="95" feet="113" corpse="38488" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="442" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3847" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="131" />
+		<flag moveMagicAttackBase="92" />
+		<flag moveMagicDefenseBase="108" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="curse" interval="15000" level="10"/>
+		<move name="sucker punch" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="shadow ball" interval="8500" level="1"/>
+		<move name="night shade" interval="7500" level="1"/>
+		<move name="dark pulse" interval="7000" level="22"/>
+		<move name="shadow sneak" interval="10000" level="31"/>
+		<move name="hex" interval="13000" level="43"/>
+		<move name="dream eater" interval="10000" level="51"/>
+		<move name="nasty plot" interval="30000" level="60"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-92" max="-92" />
+		<attack name="curse" interval="15000" chance="66" target="1"/>
+		<attack name="sucker punch" interval="3500" chance="66" target="1"/>
+		<attack name="shadow ball" interval="8500" chance="66" target="1"/>
+		<attack name="night shade" interval="7500" chance="66" target="1"/>
+		<attack name="dark pulse" interval="7000" chance="66" target="1"/>
+		<attack name="shadow sneak" interval="10000" chance="66" target="1"/>
+		<attack name="hex" interval="13000" chance="66" target="1"/>
+		<attack name="dream eater" interval="10000" chance="66" target="1"/>
+		<attack name="nasty plot" interval="30000" chance="66" target="1"/>
+		
+		<attack name="hypnosis" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="108" >
+		<defense name="hypnosis" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SPIRITOMB!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="90" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Luis" script="luis.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2803" head="114" body="114" legs="114" feet="114" addons="3" />
+	<parameters>
+		<parameter key="message_greet" value="Desde que eu consegui esse {Muk} para minha namorada, ela nao para de reclamar." />
+		<parameter key="message_decline" value="Talvez outra hora." />
+	</parameters>
+</npc>

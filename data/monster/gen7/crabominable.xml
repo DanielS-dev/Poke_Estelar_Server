@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Crabominable" nameDescription="a crabominable" race="fighting" race2="ice" experience="1670" speed="143" manacost="0">
+	<level min="100" max="100"/>
+	<health now="970" max="970" />
+	<look type="3901" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="738" />
+		<flag portraitid="27284" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="62" />
+		<flag moveMagicDefenseBase="67" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="iron defense" interval="15000" level="1"/>
+		<move name="ice punch" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="brick break" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="bubble beam" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="close combat" interval="10000" isTarget="1" range="1" level="5"/>
+		<move name="dynamic punch" interval="10000" isTarget="1" range="1" level="7"/>
+		<move name="reversal" interval="5000" isTarget="1" range="1" level="12"/>
+		<move name="protect" interval="30000" level="15"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-132" max="-132" />
+		<attack name="iron defense" interval="15000" chance="66" target="1"/>
+		<attack name="ice punch" interval="5000" chance="66" target="1"/>
+		<attack name="brick break" interval="5000" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3500" chance="66" target="1"/>
+		<attack name="close combat" interval="10000" chance="66" target="1"/>
+		<attack name="dynamic punch" interval="10000" chance="66" target="1"/>
+		<attack name="reversal" interval="5000" chance="66" target="1"/>
+		<attack name="protect" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="77" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CRABOMINABLE!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

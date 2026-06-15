@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Henricco" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2895" head="39" body="122" legs="125" feet="57" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I {trade} essential stuff." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="parmegiana steak,39206,500;
+		spaghetti and meatballs,39207,750;
+		strawberry milkshake,35632,175;
+		chocolat milkshake,35633,220;" />
+		<parameter key="shop_sellable" value="" />
+	</parameters>
+</npc>

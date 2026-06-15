@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Weezing" nameDescription="a weezing" race="poison" race2="none" experience="172" speed="160" manacost="0">
+	<level min="35" max="55"/>
+	<health now="650" max="650" />
+	<look type="3401" head="113" body="57" legs="95" feet="113" corpse="26971" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="110" />
+		<flag portraitid="27226" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="78" />
+		<flag moveMagicAttackBase="85" />
+		<flag moveMagicDefenseBase="70" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="smokescreen" interval="15000" level="8"/>
+		<move name="sludge" interval="4500" isTarget="1" range="8" level="1"/>
+		<move name="sludge bomb" interval="5500" isTarget="1" range="8" level="1"/>
+		<move name="toxic" interval="10000" isTarget="1" range="1" level="35"/>
+		<move name="poison gas" interval="15000" level="1"/>
+		<move name="heat wave" interval="9500" level="39"/>
+		<move name="assurance" interval="7500" level="41"/>
+		<move name="self-destruct" interval="10000" level="15"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="smokescreen" interval="15000" chance="66" />
+		<attack name="sludge" interval="4500" chance="66" />
+		<attack name="sludge bomb" interval="5500" chance="66" />
+		<attack name="toxic" interval="10000" chance="66" />
+		<attack name="poison gas" interval="15000" chance="66" />
+		<attack name="heat wave" interval="9500" chance="66" />
+		<attack name="assurance" interval="7500" chance="66" />
+		
+		
+	</attacks>
+	<defenses armor="0" defense="120" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="WEEZING!" />
+	</voices>
+	<loot>
+		<item name="venom flute" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="55" chance="100000"/>
+	</loot>
+</monster>

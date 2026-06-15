@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Gliscor" nameDescription="a gliscor" race="ground" race2="flying" experience="179" speed="195" manacost="0">
+	<level min="80" max="80"/>
+	<health now="750" max="750" />
+	<look type="3080" head="113" body="57" legs="95" feet="113" corpse="38518" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="472" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3616" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="45" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="fire fang" interval="7500" level="1"/>
+		<move name="ice fang" interval="7500" level="1"/>
+		<move name="thunder fang" interval="7500" level="1"/>
+		<move name="fury cutter" interval="9500" level="10"/>
+		<move name="night slash" interval="7500" level="20"/>
+		<move name="x-scissor" interval="8500" level="30"/>
+		<move name="earthquake" interval="12000" level="40"/>
+		<move name="earth power" interval="12000" level="50"/>
+		<move name="aerial ace" interval="15000" level="60"/>
+		<move name="swords dance" interval="30000" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-95" max="-95" />
+		<attack name="fire fang" interval="7500" chance="66" target="1"/>
+		<attack name="ice fang" interval="7500" chance="66" target="1"/>
+		<attack name="thunder fang" interval="7500" chance="66" target="1"/>
+		<attack name="fury cutter" interval="9500" chance="66" target="1"/>
+		<attack name="night slash" interval="7500" chance="66" target="1"/>
+		<attack name="x-scissor" interval="8500" chance="66" target="1"/>
+		<attack name="earthquake" interval="12000" chance="66" target="1"/>
+		<attack name="earth power" interval="12000" chance="66" target="1"/>
+		<attack name="aerial ace" interval="15000" chance="66" target="1"/>
+		<attack name="swords dance" interval="30000" chance="66" target="1"/>
+		
+		<attack name="slash" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="125" >
+		<attack name="slash" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GLISCOR!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="80" chance="100000"/>
+	</loot>
+</monster>

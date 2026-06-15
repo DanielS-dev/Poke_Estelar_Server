@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Poliwrath" nameDescription="a poliwrath" race="water" race2="fighting" experience="230" speed="170" manacost="0">
+	<level min="41" max="45"/>
+	<health now="900" max="900" />
+	<look type="965" head="113" body="57" legs="95" feet="113" corpse="26923" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="62" />
+		<flag portraitid="27178" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3385" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="70" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="hypnosis" interval="30000" isTarget="1" range="8" level="1"/>
+		<move name="water gun" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="mud shot" interval="5000" isTarget="1" range="8" level="5"/>
+		<move name="bubble beam" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="vital throw" interval="9500" isTarget="1" range="1" level="41"/>
+		<move name="dynamic punch" interval="7500" isTarget="1" range="1" level="44"/>
+		<move name="earth power" interval="13000" level="25"/>
+		<move name="hydro pump" interval="14000" level="27"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-95" max="-95" />
+		<attack name="hypnosis" interval="30000" chance="66" target="1" range="8"/>
+		<attack name="water gun" interval="2500" chance="66"/>
+		<attack name="mud shot" interval="5000" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3500" chance="66" range="3" target="1"/>
+		<attack name="vital throw" interval="9500" chance="66" range="3" target="1"/>
+		<attack name="dynamic punch" interval="7500" chance="66" range="3" target="1"/>
+		<attack name="earth power" interval="13000" chance="66"/>
+		<attack name="hydro pump" interval="14000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="95" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="POLIWRATH!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="45" chance="100000"/>
+	</loot>
+</monster>

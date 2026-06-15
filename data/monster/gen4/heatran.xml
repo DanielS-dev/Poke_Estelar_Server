@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Heatran" nameDescription="a heatran" race="fire" race2="steel" experience="300" speed="277" manacost="0">
+	<level min="91" max="100"/>
+	<health now="910" max="910" />
+	<look type="3093" head="113" body="57" legs="95" feet="113" corpse="38531" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="485" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="4" />
+		<flag moveMagicAttackBase="130" />
+		<flag moveMagicDefenseBase="106" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+		<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="metal sound" interval="15000" level="1"/>
+		<move name="crunch" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="iron head" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="lava plume" interval="7500" level="1"/>
+		<move name="fire spin" interval="20000" level="10"/>
+		<move name="heat wave" interval="15000" level="20"/>
+		<move name="ancient power" interval="15000" level="30"/>
+		<move name="earth power" interval="12500" level="40"/>
+		<move name="stone edge" interval="17500" level="50"/>
+		<move name="magma storm" interval="17500" level="60"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="metal sound" interval="15000" chance="66" target="1"/>
+		<attack name="crunch" interval="3500" chance="66" target="1"/>
+		<attack name="iron head" interval="3500" chance="66" target="1"/>
+		<attack name="lava plume" interval="7500" chance="66" target="1"/>
+		<attack name="fire spin" interval="20000" chance="66" target="1"/>
+		<attack name="heat wave" interval="15000" chance="66" target="1"/>
+		<attack name="ancient power" interval="15000" chance="66" target="1"/>
+		<attack name="earth power" interval="12500" chance="66" target="1"/>
+		<attack name="stone edge" interval="17500" chance="66" target="1"/>
+		<attack name="magma storm" interval="17500" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="106" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HEATRAN!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="10" chance="100000"/>
+		<item name="platinum coin" countmax="25" chance="100000"/>
+	</loot>
+</monster>

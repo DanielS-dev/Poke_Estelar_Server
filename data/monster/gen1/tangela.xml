@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Tangela" nameDescription="a tangela" race="grass" race2="none" experience="87" speed="160" manacost="0">
+	<level min="21" max="28"/>
+	<health now="650" max="650" />
+	<look type="1017" head="113" body="57" legs="95" feet="113" corpse="26975" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="114" />
+		<flag portraitid="27230" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="40" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="absorb" interval="5000" isTarget="1" range="3" level="1"/>
+		<move name="wrap" interval="8500" level="1"/>
+		<move name="mega drain" interval="12000" level="8"/>
+		<move name="vine whip" interval="4500" level="1"/>
+		<move name="power whip" interval="18500" level="18"/>
+		<move name="ancient power" interval="17500" level="34"/>
+		<move name="poison powder" interval="15000" level="26"/>
+		<move name="stun spore" interval="25000" level="22"/>
+		<move name="sleep powder" interval="30000" level="32"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Tangrowth" level="34" />
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-55" max="-55" />
+		<attack name="absorb" interval="5000" chance="66" target="1"/>
+		<attack name="wrap" interval="8500" chance="66" target="1"/>
+		<attack name="mega drain" interval="12000" chance="66" target="1"/>
+		<attack name="vine whip" interval="4500" chance="66" target="1"/>
+		<attack name="power whip" interval="18500" chance="66" target="1"/>
+		<attack name="ancient power" interval="17500" chance="66" target="1"/>
+		<attack name="poison powder" interval="15000" chance="66" target="1"/>
+		<attack name="stun spore" interval="25000" chance="66" target="1"/>
+		<attack name="sleep powder" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="115" >
+		<defense name="life dew" interval="10000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="TANGELA!" />
+	</voices>
+	<loot>
+		<item name="blue vines" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="28" chance="100000"/>
+	</loot>
+</monster>

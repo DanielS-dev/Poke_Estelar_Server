@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Alolan Marowak" nameDescription="an alolan marowak" race="fire" race2="ghost" experience="149" speed="145" manacost="0">
+	<level min="1" max="1"/>
+	<health now="600" max="600" />
+	<look type="3637" head="113" body="57" legs="95" feet="113" corpse="26966" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="105" />
+		<flag portraitid="27221" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="50" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="will-o-wisp" interval="30000" level="8"/>
+		<move name="bonemerang" interval="7500" level="1"/>
+		<move name="shadow bone" interval="7500" level="1"/>
+		<move name="flame wheel" interval="7500" level="1"/>
+		<move name="fire spin" interval="20000" level="15"/>
+		<move name="thrash" interval="20000" level="18"/>
+		<move name="hex" interval="10000" level="21"/>
+		<move name="stomping tantrum" interval="12500" level="23"/>
+		<move name="flare blitz" interval="5000" level="25"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-80" />
+		<attack name="will-o-wisp" interval="30000" chance="66" target="1"/>
+		<attack name="bonemerang" interval="7500" chance="66" target="1"/>
+		<attack name="shadow bone" interval="7500" chance="66" target="1"/>
+		<attack name="flame wheel" interval="7500" chance="66" target="1"/>
+		<attack name="fire spin" interval="20000" chance="66" target="1"/>
+		<attack name="thrash" interval="20000" chance="66" target="1"/>
+		<attack name="hex" interval="10000" chance="66"/>
+		<attack name="stomping tantrum" interval="12500" chance="66"/>
+		<attack name="flare blitz" interval="5000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="110" >
+		<defense name="bone rush" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MAROWAK!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

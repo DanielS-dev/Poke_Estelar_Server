@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Oddish" nameDescription="an oddish" race="grass" race2="poison" experience="64" speed="130" manacost="0">
+	<level min="1" max="3"/>
+	<health now="450" max="450" />
+	<look type="946" head="113" body="57" legs="95" feet="113" corpse="26904" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="43" />
+		<flag portraitid="27159" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="333" />
+		<flag moveMagicAttackBase="75" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="absorb" interval="5000" isTarget="1" range="3" level="1"/>
+		<move name="acid" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="poison powder" interval="20000" level="1"/>
+		<move name="stun spore" interval="30000" level="5"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Gloom" level="21"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="5000" min="-50" max="-50" />
+		<attack name="absorb" interval="3000" chance="66" target="1"/>
+		<attack name="acid" interval="3500" chance="66" target="1"/>
+		<attack name="poison powder" interval="20000" chance="66"/>
+		<attack name="stun spore" interval="10000" chance="33"/>
+		
+	</attacks>
+	<defenses armor="0" defense="55" >
+		<defense name="life dew" interval="10000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ODDISH!" />
+	</voices>
+	<loot>
+		<item name="twin leaves" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="3" chance="100000"/>
+	</loot>
+</monster>

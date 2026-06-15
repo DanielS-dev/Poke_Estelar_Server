@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Gengar" nameDescription="a gengar" race="ghost" race2="poison" experience="250" speed="210" manacost="0">
+	<level min="41" max="46"/>
+	<health now="600" max="600" />
+	<look type="997" head="113" body="57" legs="95" feet="113" corpse="26955" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="94" />
+		<flag portraitid="27210" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="1337" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="130" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="curse" interval="30000" level="24"/>
+		<move name="lick" interval="3500" isTarget="1" range="3" level="1"/>
+		<move name="shadow punch" interval="5500" isTarget="1" range="1" level="1"/>
+		<move name="hex" interval="7500" level="24"/>
+		<move name="night shade" interval="8000" level="28"/>
+		<move name="dark pulse" interval="9500" level="36"/>
+		<move name="shadow ball" interval="11000" level="40"/>
+		<move name="perish song" interval="15000" level="40"/>
+		<move name="dream eater" interval="10000" level="48"/>
+		
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="curse" interval="30000" chance="66" target="1"/>
+		<attack name="lick" interval="3500" chance="66" target="1"/>
+		<attack name="shadow punch" interval="5500" chance="66" target="1"/>
+		<attack name="hex" interval="7500" chance="66" target="1"/>
+		<attack name="night shade" interval="8000" chance="66" target="1"/>
+		<attack name="dark pulse" interval="9500" chance="66" target="1"/>
+		<attack name="shadow ball" interval="11000" chance="66" target="1"/>
+		<attack name="perish song" interval="15000" chance="66" target="1"/>
+		<attack name="dream eater" interval="10000" chance="66" target="1"/>
+		
+		<attack name="hypnosis" interval="10000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="60" >
+		<defense name="hypnosis" interval="10000" chance="66"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GENGAR!" />
+	</voices>
+	<loot>
+		<item name="rolled gengar carpet" countmax="1" chance="50"/>
+		<item name="gold coin" countmax="46" chance="100000"/>
+	</loot>
+</monster>

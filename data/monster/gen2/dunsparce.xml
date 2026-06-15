@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Dunsparce" nameDescription="a dunsparce" race="normal" race2="none" experience="145" speed="145" manacost="0">
+	<level min="13" max="17"/>
+	<health now="1000" max="1000" />
+	<look type="1109" head="113" body="57" legs="95" feet="113" corpse="27067" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="206" />
+		<flag portraitid="27322" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="248" />
+		<flag moveMagicAttackBase="65" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="defense curl" interval="15000" level="1"/>
+		<move name="body slam" interval="4500" isTarget="1" range="1" level="1"/>
+		<move name="rollout" interval="20000" level="1"/>
+		<move name="drill run" interval="10000" level="5"/>
+		<move name="dragon rush" interval="9500" level="9"/>
+		<move name="ancient power" interval="15000" level="11"/>
+		<move name="coil" interval="30000" level="15"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="defense curl" interval="15000" chance="66" target="1"/>
+		<attack name="body slam" interval="4500" chance="66" target="1"/>
+		<attack name="rollout" interval="20000" chance="66" target="1"/>
+		<attack name="drill run" interval="10000" chance="66" target="1"/>
+		<attack name="dragon rush" interval="9500" chance="66" target="1"/>
+		<attack name="ancient power" interval="15000" chance="66" target="1"/>
+		<attack name="coil" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="DUNSPARCE!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="17" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Pidgeot" nameDescription="a mega pidgeot" race="flying" race2="normal" experience="432" speed="221" manacost="0">
+	<level min="90" max="90"/>
+	<health now="830" max="830" />
+	<look type="3532" head="113" body="57" legs="95" feet="113" corpse="26879" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="18" />
+		<flag portraitid="27134" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3533" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="162" />
+		<flag moveMagicDefenseBase="96" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="feather dance" interval="30000" level="18"/>
+		<move name="tackle" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="quick attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="wing attack" interval="4000" level="1"/>
+		<move name="gust" interval="7500" level="5"/>
+		<move name="twister" interval="6500" level="38"/>
+		<move name="air slash" interval="8500" level="21"/>
+		<move name="hurricane" interval="19000" level="36"/>
+		<move name="aerial ace" interval="14000" level="27"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-96" max="-96" />
+		<attack name="feather dance" interval="30000" chance="66"/>
+		<attack name="tackle" interval="1500" chance="66" target="1"/>
+		<attack name="quick attack" interval="2500" chance="66" target="1"/>
+		<attack name="wing attack" interval="4000" chance="66" target="1"/>
+		<attack name="gust" interval="7500" chance="66"/>
+		<attack name="twister" interval="7500" chance="66"/>
+		<attack name="air slash" interval="8500" chance="66"/>
+		<attack name="hurricane" interval="19000" chance="66"/>
+		<attack name="aerial ace" interval="14000" chance="66"/>
+		
+	</attacks>
+	<defenses armor="0" defense="96" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PIDGEOT!" />
+	</voices>
+	<loot>
+		<item name="pidgeotite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

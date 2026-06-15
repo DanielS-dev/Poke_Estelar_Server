@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Incineroar" nameDescription="an incineroar" race="fire" race2="dark" experience="2390" speed="160" manacost="0">
+	<level min="100" max="100"/>
+	<health now="950" max="950" />
+	<look type="3431" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="727" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="80" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="scratch" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="lick" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="ember" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="cross chop" interval="5500" level="35"/>
+		<move name="fire fang" interval="7500" level="6"/>
+		<move name="flare blitz" interval="11000" level="7"/>
+		<move name="thrash" interval="21000" level="18"/>
+		<move name="flamethrower" interval="15000" level="17"/>
+		<move name="darkest lariat" interval="14500" level="34"/>
+		<move name="bulk up" interval="20000" level="36"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-115" max="-115" />
+		<attack name="scratch" interval="1500" chance="40" />
+		<attack name="lick" interval="3500" chance="40"/>
+		<attack name="ember" interval="2500" chance="40"/>
+		<attack name="fire fang" interval="7500" chance="40"/>
+		<attack name="flare blitz" interval="11000" chance="40"/>
+		<attack name="flamethrower" interval="15000" chance="40" />
+		<attack name="thrash" interval="21000" chance="40"/>
+		<attack name="cross chop" interval="5500" chance="40" />
+		<attack name="darkest lariat" interval="14500" chance="40" />
+		<attack name="bulk up" interval="20000" chance="40"/>
+
+	</attacks>
+	<defenses armor="0" defense="90" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="INCINEROAR!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

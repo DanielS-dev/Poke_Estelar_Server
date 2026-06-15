@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Decidueye" nameDescription="a decidueye" race="grass" race2="ghost" experience="2650" speed="170" manacost="0">
+	<level min="100" max="100"/>
+	<health now="780" max="780" />
+	<look type="3425" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="724" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3841" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="nasty plot" interval="20000" level="7"/>
+		<move name="peck" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="leafage" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="astonish" interval="7500" level="1"/>
+		<move name="leaf blade" interval="7500" level="17"/>
+		<move name="shadow sneak" interval="9500" level="6"/>
+		<move name="spirit shackle" interval="17500" level="34"/>
+		<move name="leaf storm" interval="14000" level="35"/>
+		<move name="phantom force" interval="25000" level="36"/>
+		<move name="synthesis" interval="45000" level="18"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-107" max="-107" />
+		<attack name="flash cannon" interval="3000" chance="40" />
+		<attack name="water gun" interval="3000" chance="40"/>
+		<attack name="withdraw" interval="3000" chance="40"/>
+		<attack name="rapid spin" interval="3000" chance="40"/>
+		<attack name="bite" interval="3000" chance="40"/>
+		<attack name="leaf blade" interval="7500" chance="40" />
+		<attack name="synthesis" interval="45000" chance="40"/>
+		<attack name="spirit shackle" interval="17500" chance="40" />
+		<attack name="leaf storm" interval="14000" chance="40" />
+		<attack name="phantom force" interval="25000" chance="40"/>
+
+	</attacks>
+	<defenses armor="0" defense="75" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="DECIDUEYE!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Catlover Catarina" script="catlovercatarina.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2829" head="114" body="114" legs="114" feet="114" addons="3" />
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|, voce por acaso e fa de {gatos}?" />
+		<parameter key="message_decline" value="Talvez outra hora." />
+	</parameters>
+</npc>

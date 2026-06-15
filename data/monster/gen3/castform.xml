@@ -1,0 +1,83 @@
+	<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Castform" nameDescription="a castform" race="normal" race2="none" experience="147" speed="170" manacost="0">
+	<level min="71" max="74"/>
+	<health now="700" max="700" />
+	<look type="3435" head="113" body="57" legs="95" feet="113" corpse="27923" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="351" />
+		<flag portraitid="28058" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="70" />
+		<flag moveMagicDefenseBase="70" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="ember" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="water gun" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="weather ball" interval="5000" isTarget="1" range="8" level="1"/>
+		<move name="fire blast" interval="13500" level="11"/>
+		<move name="hydro pump" interval="15000" level="21"/>
+		<move name="hurricane" interval="22000" level="31"/>
+		<move name="blizzard" interval="18000" level="41"/>
+		<move name="hail" interval="30000" level="50"/>
+		<move name="rain dance" interval="30000" level="62"/>
+		<move name="sunny day" interval="30000" level="73"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="ember" interval="3500" chance="66" target="1"/>
+		<attack name="water gun" interval="3500" chance="66" target="1"/>
+		<attack name="weather ball" interval="5000" chance="66" target="1"/>
+		<attack name="fire blast" interval="13500" chance="66" target="1"/>
+		<attack name="hydro pump" interval="15000" chance="66" target="1"/>
+		<attack name="hurricane" interval="22000" chance="66" target="1"/>
+		<attack name="blizzard" interval="18000" chance="66" target="1"/>
+		<attack name="hail" interval="30000" chance="66" target="1"/>
+		<attack name="rain dance" interval="30000" chance="66" target="1"/>
+		<attack name="sunny day" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CASTFORM!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="74" chance="100000"/>
+	</loot>
+</monster>

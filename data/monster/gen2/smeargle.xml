@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Smeargle" nameDescription="a smeargle" race="normal" race2="none" experience="88" speed="175" manacost="0">
+	<level min="11" max="18"/>
+	<health now="550" max="550" />
+	<look type="1138" head="113" body="57" legs="95" feet="113" corpse="27096" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="235" />
+		<flag portraitid="27351" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="20" />
+		<flag moveMagicDefenseBase="45" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="sketch1" interval="1000" level="1" isTarget="1"/>
+		<move name="sketch2" interval="1000" level="1" isTarget="1"/>
+		<move name="sketch3" interval="1000" level="1" isTarget="1"/>
+		<move name="sketch4" interval="1000" level="10" isTarget="1"/>
+		<move name="sketch5" interval="1000" level="15" isTarget="1"/>
+		<move name="sketch6" interval="1000" level="20" isTarget="1"/>
+		<move name="sketch7" interval="1000" level="25" isTarget="1"/>
+		<move name="sketch8" interval="1000" level="30" isTarget="1"/>
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-20" max="-20" />
+		<attack name="sketch1" interval="10000" chance="66"/>
+		<attack name="sketch2" interval="10000" chance="66"/>
+		<attack name="sketch3" interval="10000" chance="66"/>
+		<attack name="sketch4" interval="10000" chance="66"/>
+		<attack name="sketch5" interval="10000" chance="66"/>
+		<attack name="sketch6" interval="10000" chance="66"/>
+		<attack name="sketch7" interval="10000" chance="66"/>
+		<attack name="sketch8" interval="10000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="35" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SMEARGLE!" />
+	</voices>
+	<loot>
+		<item name="brush tail" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="18" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+	<globalevent type="startup" name="ServerStartup" script="startup.lua" />
+	<globalevent type="record" name="PlayerRecord" script="record.lua" />
+	<globalevent name="Server Save" time="06:00:00" script="serversave.lua" />
+	<globalevent name="Shiny Collector" time="10:00:00" script="shinycollector.lua" />
+	<globalevent name="Broadcast" interval="1200000" script="broadcast.lua" />
+	<globalevent name="GlobalSave" interval="600000" script="globalsave.lua" />
+	
+	<!-- <globalevent name="KingoftheForest1" time="11:00:00" script="kingoftheforest.lua" /> -->
+	<!-- <globalevent name="KingoftheForest2" time="21:00:00" script="kingoftheforest.lua" /> -->
+</globalevents>

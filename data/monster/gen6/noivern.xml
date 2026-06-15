@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Noivern" nameDescription="a noivern" race="flying" race2="dragon" experience="1870" speed="223" manacost="0">
+	<level min="100" max="100"/>
+	<health now="850" max="850" />
+	<look type="3943" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="635" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="3944" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="97" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="agility" interval="15000" level="1"/>
+		<move name="gust" interval="2500" level="1"/>
+		<move name="wing attack" interval="3500" level="1"/>
+		<move name="dragon pulse" interval="6500" level="8"/>
+		<move name="air slash" interval="7500" level="14"/>
+		<move name="hurricane" interval="15000" level="17"/>
+		<move name="super fang" interval="8500" level="21"/>
+		<move name="boomburst" interval="10000" level="23"/>
+		<move name="moonlight" interval="20000" level="25"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="agility" interval="15000" chance="66" target="1"/>
+		<attack name="gust" interval="2500" chance="66" target="1"/>
+		<attack name="wing attack" interval="3500" chance="66" target="1"/>
+		<attack name="dragon pulse" interval="6500" chance="66" target="1"/>
+		<attack name="air slash" interval="7500" chance="66" target="1"/>
+		<attack name="hurricane" interval="15000" chance="66" target="1"/>
+		<attack name="super fang" interval="8500" chance="66" target="1"/>
+		<attack name="boomburst" interval="10000" chance="66" target="1"/>
+		<attack name="moonlight" interval="20000" chance="66" target="1"/>
+		
+	</attacks>
+	<defenses armor="0" defense="80" >
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="NOIVERN!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

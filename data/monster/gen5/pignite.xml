@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Pignite" nameDescription="a pignite" race="fire" race2="fighting" experience="146" speed="155" manacost="0">
+	<level min="17" max="21"/>
+	<health now="900" max="900" />
+	<look type="3406" head="113" body="57" legs="95" feet="113" corpse="38913" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="499" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="9" />
+		<flag moveMagicAttackBase="93" />
+		<flag moveMagicDefenseBase="55" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="tail whip" interval="15000" level="1"/>
+		<move name="tackle" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="ember" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="flame charge" interval="9000" level="6"/>
+		<move name="rollout" interval="12000"  level="7"/>
+		<move name="arm thrust" interval="9500" level="17"/>
+		<move name="flare blitz" interval="11000" level="18"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Emboar" level="36" />
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="tail whip" interval="15000" chance="40" />
+		<attack name="tackle" interval="1500" chance="40"/>
+		<attack name="ember" interval="2500" chance="40"/>
+		<attack name="flame charge" interval="9000" chance="40"/>
+		<attack name="rollout" interval="12000" chance="40"/>
+		<attack name="arm thrust" interval="9500" chance="40" />
+		<attack name="flare blitz" interval="11000" chance="40"/>
+
+	</attacks>
+	<defenses armor="0" defense="55" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PIGNITE!" />
+	</voices>
+	<loot>
+		<item name="fire stone" countmax="1" chance="225"/>
+		<item name="gold coin" countmax="90" chance="40000"/>
+
+	</loot>
+</monster>

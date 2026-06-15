@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Cloned Ninetales" nameDescription="a cloned ninetales" race="fire" race2="none" experience="177" speed="200" manacost="0">
+	<level min="100" max="100"/>
+	<health now="730" max="730" />
+	<look type="1207" head="113" body="57" legs="95" feet="113" corpse="0" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="1038" />
+		<flag portraitid="27154" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="97" />
+		<flag moveMagicDefenseBase="120" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="nasty plot" interval="20000" level="20"/>
+		<move name="ember" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="will-o-wisp" interval="15000" level="1"/>
+		<move name="incinerate" interval="8500" level="1"/>
+		<move name="fire spin" interval="15000" level="1"/>
+		<move name="inferno" interval="8500" level="8"/>
+		<move name="fire blast" interval="9000" level="15"/>
+		<move name="extrasensory" interval="13000" level="29"/>
+		<move name="flamethrower" interval="15000" level="36"/>
+		<move name="imprison" interval="30000" level="40"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-91" max="-91" />
+		<attack name="nasty plot" interval="20000" chance="66" target="1"/>
+		<attack name="ember" interval="2500" chance="66" target="1"/>
+		<attack name="will-o-wisp" interval="15000" chance="66" target="1"/>
+		<attack name="incinerate" interval="8500" chance="66" target="1"/>
+		<attack name="fire spin" interval="15000" chance="66" target="1"/>
+		<attack name="inferno" interval="8500" chance="66" target="1"/>
+		<attack name="fire blast" interval="9000" chance="66" target="1"/>
+		<attack name="extrasensory" interval="13000" chance="66" target="1"/>
+		<attack name="flamethrower" interval="15000" chance="66" target="1"/>
+		<attack name="imprison" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="90" >
+		<defense name="sunny day" interval="5000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="NINETALES!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

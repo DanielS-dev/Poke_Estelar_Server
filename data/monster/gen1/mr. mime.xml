@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mr. Mime" nameDescription="a mr. mime" race="psychic" race2="fairy" experience="161" speed="190" manacost="0">
+	<level min="51" max="58"/>
+	<health now="400" max="400" />
+	<look type="1025" head="113" body="57" legs="95" feet="113" corpse="26983" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="122" />
+		<flag portraitid="27238" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="1" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="120" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		
+		<move name="psybeam" interval="3500" range="8" isTarget="1" level="1"/>
+		<move name="confusion" interval="8000" level="1"/>
+		<move name="psychic" interval="6500" level="8"/>
+		<move name="dazzling gleam" interval="7500" level="1"/>
+		<move name="wide guard" interval="30000" level="21"/>
+		<move name="power swap" interval="30000" level="32"/>
+		<move name="guard swap" interval="30000" level="35"/>
+		
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-45" max="-45" />
+		<attack name="power swap" interval="3500" chance="66" target="1"/>
+		<attack name="guard swap" interval="8000" chance="66" target="1"/>
+		<attack name="psybeam" interval="6500" chance="66" target="1"/>
+		<attack name="confusion" interval="7500" chance="66" target="1"/>
+		<attack name="psychic" interval="30000" chance="66" target="1"/>
+		<attack name="dazzling gleam" interval="30000" chance="66" target="1"/>
+		<attack name="wide guard" interval="30000" chance="66" target="1"/>
+		<attack name="reflect" interval="5000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+		<defense name="reflect" interval="5000" chance="66"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MR. MIME!" />
+	</voices>
+	<loot>
+		<item name="mimic clothes" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="58" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Audino" nameDescription="an audino" race="normal" race2="none" experience="3900" speed="150" manacost="0">
+	<level min="100" max="100"/>
+	<health now="1030" max="1030" />
+	<look type="3632" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="531" />
+		<flag portraitid="27358" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="60" />
+		<flag moveMagicDefenseBase="86" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="misty terrain" interval="30000" level="19"/>
+		<move name="double slap" interval="3000" level="1"/>
+		<move name="disarming voice" interval="5000" level="1"/>
+		<move name="zen headbutt" interval="10000" level="1"/>
+		<move name="hyper voice" interval="9000" level="10"/>
+		<move name="heal pulse" interval="30000" level="16"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-60" max="-60" />
+		<attack name="misty terrain" interval="15000" chance="66" target="1"/>
+		<attack name="double slap" interval="15000" chance="66" target="1"/>
+		<attack name="disarming voice" interval="2500" chance="66" target="1"/>
+		<attack name="zen headbutt" interval="4500" chance="66" target="1"/>
+		<attack name="hyper voice" interval="30000" chance="66" target="1"/>
+		<attack name="heal pulse" interval="28000" chance="66" target="1"/>
+		<attack name="life dew" interval="10000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="86" >
+		<defense name="life dew" interval="10000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="AUDINO!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

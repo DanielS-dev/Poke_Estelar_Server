@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Pinsir" nameDescription="a pinsir" race="bug" race2="none" experience="175" speed="185" manacost="0">
+	<level min="41" max="48"/>
+	<health now="650" max="650" />
+	<look type="1030" head="113" body="57" legs="95" feet="113" corpse="26988" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="127" />
+		<flag portraitid="27243" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="55" />
+		<flag moveMagicDefenseBase="70" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="harden" interval="15000" level="1"/>
+		<move name="bug bite" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="seismic toss" interval="15000" isTarget="1" range="1" level="12"/>
+		<move name="vital throw" interval="21000" isTarget="1" range="1" level="24"/>
+		<move name="guillotine" interval="12500" isTarget="1" range="1" level="36"/>
+		<move name="x-scissor" interval="8500" level="1"/>
+		<move name="brick break" interval="11000" isTarget="1" range="1" level="48"/>
+		<move name="swords dance" interval="20000" level="32"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-125" max="-125" />
+		<attack name="harden" interval="15000" chance="66" target="1"/>
+		<attack name="bug bite" interval="2500" chance="66" target="1"/>
+		<attack name="seismic toss" interval="15000" chance="66" target="1"/>
+		<attack name="vital throw" interval="21000" chance="66" target="1"/>
+		<attack name="guillotine" interval="12500" chance="66" target="1"/>
+		<attack name="x-scissor" interval="8500" chance="66" target="1"/>
+		<attack name="brick break" interval="11000" chance="66" target="1"/>
+		<attack name="swords dance" interval="20000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="100" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PINSIR!" />
+	</voices>
+	<loot>
+		<item name="pinsir horn" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="48" chance="100000"/>
+	</loot>
+</monster>

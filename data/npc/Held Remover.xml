@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Held Remover" script="heldremove.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2910" head="114" body="114" legs="114" feet="114" addons="3" />
+	<parameters>
+		<parameter key="message_greet" value="EU REMOVO HELD DESATIVADO DE POKEMONS. PARA REMOVER UM HELD BASTA SOLTAR O POKEMON E DIZER {remover}. POREM TENHA ATENCAO POIS SE VOCE SOLTAR O POKEMON ERRADO IREI REMOVER O HELD, SEJA ELE MEGA STONE, HELD NORMAL, O QUE FOR, ENTAO TENHA ATENCAO DO QUE ESTEJA FAZENDO." />
+		<parameter key="message_decline" value="Maybe next time." />
+	</parameters>
+</npc>

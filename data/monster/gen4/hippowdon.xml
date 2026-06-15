@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Hippowdon" nameDescription="a hippowdon" race="ground" race2="none" experience="184" speed="147" manacost="0">
+	<level min="71" max="75"/>
+	<health now="1080" max="1080" />
+	<look type="3058" head="113" body="57" legs="95" feet="113" corpse="38496" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="450" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="1" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="78" />
+		<flag moveMagicAttackBase="68" />
+		<flag moveMagicDefenseBase="72" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="rest" interval="60000" level="50"/>
+		<move name="ice fang" interval="10000" level="1"/>
+		<move name="fire fang" interval="10000" level="1"/>
+		<move name="thunder fang" interval="10000" level="1"/>
+		<move name="sand tomb" interval="25000" level="14"/>
+		<move name="dig" interval="20000" level="22"/>
+		<move name="earthquake" interval="15000" level="31"/>
+		<move name="fissure" interval="17500" level="45"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-112" max="-112" />
+		<attack name="rest" interval="60000" chance="66"/>
+		<attack name="ice fang" interval="10000" chance="66"/>
+		<attack name="fire fang" interval="10000" chance="66"/>
+		<attack name="thunder fang" interval="10000" chance="66"/>
+		<attack name="sand tomb" interval="25000" chance="66"/>
+		<attack name="dig" interval="20000" chance="66"/>
+		<attack name="earthquake" interval="15000" chance="66"/>
+		<attack name="fissure" interval="17500" chance="66"/>
+		
+		<attack name="sandstorm" interval="10000" chance="100"/>
+
+	</attacks>
+	<defenses armor="0" defense="118" >
+		<defense name="sandstorm" interval="10000" chance="100"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HIPPOWDON!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="75" chance="100000"/>
+	</loot>
+</monster>

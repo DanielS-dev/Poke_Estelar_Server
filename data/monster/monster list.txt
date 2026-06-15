@@ -1,0 +1,41 @@
+Pokemon tier
+
+1+ 10-{Rattata, Bellsprout, Shellder, Spearow, Venonat, Vulpix, Weedle, Voltorb, Kakuna, Horsea, Goldeen, Geodude, Ekans, Diglett, Charmander, Bulbasaur, Squirtle, Abra, Ponyta, Poliwag, Pidgey, Paras, Oddish, Mankey, Magnemite, Magikarp, Krabby, Exeggcute, 
+
+}
+
+11+ 20-{Raticate, Seel, Tentacool, Zubat, Staryu, Gastly, Drowzee, Doduo, Cubone, Clefairy, Charmeleon, Wartortle, Ivysaur, Slowpoke, Sandshrew, Psyduck, Porygon, Pikachu, Meowth, Machop, Lickitung, Koffing, Jigglypuff, Grimer, Beedrill, Butterfree, Pidgeotto, Smeargle, Delibird, Furret, Qwilfish, Ledian, Corsola, Dunsparce, 
+
+}
+
+21+ 30-{Eevee, Dratini, Tangela, Rhyhorn, Onix, Omanyte, Kabuto, Growlithe, Farfetch'd, Weepinbell, Arbok, Gloom, Dugtrio, Sandslash, Haunter, Fearow, Kadabra, Graveler, Kingler, Poliwhirl, Primeape, Azumarill, Ariados, Granbull, Jumpluff, Lanturn, Donphan, Mantine, Noctowl, Octillery, 
+
+}
+
+31+ 40-{Charizard, Venusaur, Blastoise, Chansey, Lickitung, Hitmonlee, Hitmonchan, Wigglytuff, Weezing, Clefable, Hypno, Marowak, Persian, Venomoth, Dodrio, Electrode, Tentacruel, Raichu, Slowbro, Golbat, Golduck, Machoke, Cloyster, Seadra, Pidgeot, Shuckle, Sunflora, Forretress, Porygon2, Quagsire, Houndoom, Ursaring, Hitmontop, 
+
+}
+
+41+ 50-{Tauros, Pinsir, Ninetales, Jolteon, Flareon, Vaporeon, Magneton, Vileplume, Victreebel, Dragonair, Rhydon, Starmie, Gengar, Dewgong, Alakazam, Golem, Machamp, Muk, Nidoqueen, Nidoking, Poliwrath, Stantler, Bellossom, Politoed, Umbreon, Espeon, Espeon, Girafarig, Magcargo, 
+
+}
+
+50+ 70-{Snorlax, Scyther, Mr. Mime, Magmar, Lapras, Kangaskhan, Jynx, Electabuzz, Kabutops, Exeggutor, Rapidash, Omastar, Steelix, Skarmory, Sudowoodo, Scizor, Wobbuffet, Miltank, Heracross, Xatu, Ampharos, 
+
+}
+
+71+ 90-{Aerodactyl, Arcanine, Dragonite, Gyarados, Tyranitar, Gen 3 e Gen 4, 
+
+} -- Drop de Token
+
+91+{Mew, Mewtwo, Articuno, Moltres, Zapdos, 
+
+}
+
+New Spells{
+	Bug Bite, Struggle Bug, Rock Tomb, Head Smash, Air Slash Scizor, Mirror Coat, Counter, Fell Stinger, Pin Missile, Infestation, Refresh, Present, Follow Me, Milk Drink, Snarl, Throat Chop, Fairy Wind, Hidden Power, Triple Kick, Rolling Kick, Muddy Water, Octazooka, Weather Ball, Sacred Fire, Leaf Storm, Boomburst, Sandstorm, Rain Dance, Sunny Day, Draining Kiss, Knock Off, Shadow Claw (993), Axe Kick, Smelling Salts, Wake-up Slap, Healing Wish, Eruption, Dual Wingbeat, Fly, Iron Head, Iron Tail, Autotomize, Metal Burst, Wild Charge, Hammer Arm, Punishment, Sucker Punch, Flail, Chip Away, Feint Attack, Doom Desire, Gravity, Liquidation (trocar a sprite), Crush Claw, Ingrain, Freeze-dry, Teeter Dance, Dynamic Punch, Precipice Blades, Origin Pulse, Dragon Ascent, Mist Ball, Luster Purge, Attack Order, Defense Order, Twineedle, Pin Missile, Fell Stinger, Aqua Cutter, Volt Switch, Rock Wrecker, Me First, Double Hit, Wave Crash, Chatter (waves com cores de notas musicais diferentes), Lunar Blessing, Bad Dreams, Roar of Time, Spacial Rend, Crush Grip, Mega Punch, Payback, Revenge, Rock Smash, Magma Storm, Seed Flare, Shadow Force, Ominous Winds, Mystical Power, 
+
+}
+
+<item name="bass horn" countmax="1" chance="5000"/>
+		<item name="vale token" countmax="1" chance="100"/>

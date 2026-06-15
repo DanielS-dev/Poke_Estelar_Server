@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Pangoro" nameDescription="a pangoro" race="fighting" race2="dark" experience="1730" speed="158" manacost="0">
+	<level min="100" max="100"/>
+	<health now="950" max="950" />
+	<look type="3858" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="675" />
+		<flag portraitid="27184" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="69" />
+		<flag moveMagicDefenseBase="71" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="crunch" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="low sweep" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="bullet punch" interval="7500" isTarget="1" range="1" level="1"/>
+		<move name="hammer arm" interval="4000" isTarget="1" range="1" level="1"/>
+		<move name="night slash" interval="6000" level="1"/>
+		<move name="vital throw" interval="8500" isTarget="1" range="1" level="1"/>
+		<move name="arm thrust" interval="8000" level="1"/>
+		<move name="karate chop" interval="3500" isTarget="1" range="1" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-124" max="-124" />
+		<attack name="crunch" interval="3500" chance="66" target="1"/>
+		<attack name="low sweep" interval="5000" chance="66" target="1"/>
+		<attack name="bullet punch" interval="7500" chance="66" target="1"/>
+		<attack name="hammer arm" interval="4000" chance="66" target="1"/>
+		<attack name="night slash" interval="6000" chance="66" target="1"/>
+		<attack name="vital throw" interval="8500" chance="66" target="1"/>
+		<attack name="arm thrust" interval="8000" chance="66" target="1"/>
+		<attack name="karate chop" interval="3500" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="78" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PANGORO!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

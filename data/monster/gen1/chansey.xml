@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Chansey" nameDescription="a chansey" race="normal" race2="none" experience="395" speed="150" manacost="0">
+	<level min="31" max="40"/>
+	<health now="2500" max="2500" />
+	<look type="1016" head="113" body="57" legs="95" feet="113" corpse="26974" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="113" />
+		<flag portraitid="27229" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="35" />
+		<flag moveMagicDefenseBase="105" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="defense curl" interval="15000" level="1"/>
+		<move name="tail whip" interval="15000" level="1"/>
+		<move name="disarming voice" interval="4000" level="1"/>
+		<move name="echoed voice" interval="6500" level="3"/>
+		<move name="light screen" interval="30000" level="11"/>
+		<move name="helping hand" interval="28000" level="15"/>
+		<move name="sing" interval="33000" level="17"/>
+		<move name="life dew" interval="30000" level="23"/>
+		<move name="heal pulse" interval="30000" level="27"/>
+		<move name="soft-boiled" interval="30000" level="36"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Blissey" love="30"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-5" max="-5" />
+		<attack name="defense curl" interval="15000" chance="66" target="1"/>
+		<attack name="tail whip" interval="15000" chance="66" target="1"/>
+		<attack name="disarming voice" interval="4000" chance="66" target="1"/>
+		<attack name="echoed voice" interval="6500" chance="66" target="1"/>
+		<attack name="light screen" interval="30000" chance="66" target="1"/>
+		<attack name="helping hand" interval="28000" chance="66" target="1"/>
+		<attack name="sing" interval="33000" chance="66" target="1"/>
+		<attack name="life dew" interval="30000" chance="66" target="1"/>
+		<attack name="heal pulse" interval="30000" chance="66" target="1"/>
+		<attack name="soft-boiled" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="5" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CHANSEY!" />
+	</voices>
+	<loot>
+		<item name="big egg" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="40" chance="100000"/>
+	</loot>
+</monster>

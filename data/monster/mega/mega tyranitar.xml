@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Tyranitar" nameDescription="a mega tyranitar" race="rock" race2="dark" experience="600" speed="171" manacost="0">
+	<level min="90" max="90"/>
+	<health now="1000" max="1000" />
+	<look type="3545" head="113" body="57" legs="95" feet="113" corpse="27109" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="248" />
+		<flag portraitid="27364" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="114" />
+		<flag moveMagicDefenseBase="144" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="bite" interval="5500" isTarget="1" range="1" level="1"/>
+		<move name="crunch" interval="4500" isTarget="1" range="1" level="1"/>
+		<move name="rock throw" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="fire fang" interval="9500" level="15"/>
+		<move name="ice fang" interval="9500" level="18"/>
+		<move name="dark pulse" interval="10000" level="23"/>
+		<move name="giga impact" interval="18000" level="31"/>
+		<move name="stomping tantrum" interval="15000" level="39"/>
+		<move name="earthquake" interval="16000" level="51"/>
+		<move name="stone edge" interval="17500" level="62"/>
+		<move name="rock slide" interval="17000" level="75"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-197" max="-197" />
+		<attack name="bite" interval="5500" chance="66" target="1"/>
+		<attack name="crunch" interval="4500" chance="66" target="1"/>
+		<attack name="rock throw" interval="3500" chance="66" target="1"/>
+		<attack name="fire fang" interval="9500" chance="66" target="1"/>
+		<attack name="ice fang" interval="9500" chance="66" target="1"/>
+		<attack name="dark pulse" interval="10000" chance="66" target="1"/>
+		<attack name="giga impact" interval="18000" chance="66" target="1"/>
+		<attack name="stomping tantrum" interval="15000" chance="66" target="1"/>
+		<attack name="earthquake" interval="16000" chance="66" target="1"/>
+		<attack name="stone edge" interval="17500" chance="66" target="1"/>
+		<attack name="rock slide" interval="17000" chance="66" target="1"/>
+		
+		<attack name="sandstorm" interval="10000" chance="50"/>
+
+	</attacks>
+	<defenses armor="0" defense="180" >
+		<defense name="sandstorm" interval="10000" chance="50"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="TYRANITAR!" />
+	</voices>
+	<loot>
+		<item name="tyranitarite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

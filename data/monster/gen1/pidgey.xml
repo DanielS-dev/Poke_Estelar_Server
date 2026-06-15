@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Pidgey" nameDescription="a pidgey" race="flying" race2="normal" experience="50" speed="156" manacost="0">
+	<level min="3" max="6"/>
+	<health now="400" max="400" />
+	<look type="919" head="113" body="57" legs="95" feet="113" corpse="26877" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="16" />
+		<flag portraitid="27132" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3612" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="333" />
+		<flag moveMagicAttackBase="35" />
+		<flag moveMagicDefenseBase="35" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="tackle" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="quick attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="wing attack" interval="4000" level="1"/>
+		<move name="gust" interval="7500" level="5"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Pidgeotto" level="18" />
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-45" max="-45" />
+		<attack name="tackle" interval="1500" chance="66" target="1"/>
+		<attack name="quick attack" interval="2500" chance="66" target="1"/>
+		<attack name="wing attack" interval="4000" chance="66" target="1"/>
+		<attack name="gust" interval="7500" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="40" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PIDGEY!" />
+	</voices>
+	<loot>
+		<item name="bird beak" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="6" chance="100000"/>
+	</loot>
+</monster>

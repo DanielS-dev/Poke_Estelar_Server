@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Ariados" nameDescription="an ariados" race="bug" race2="poison" experience="140" speed="140" manacost="0">
+	<level min="22" max="27"/>
+	<health now="700" max="700" />
+	<look type="1071" head="113" body="57" legs="95" feet="113" corpse="27029" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="168" />
+		<flag portraitid="27284" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="118" />
+		<flag moveMagicAttackBase="60" />
+		<flag moveMagicDefenseBase="70" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="string shot" interval="15000" isTarget="1" range="8" level="1"/>
+		<move name="poison sting" interval="3500" isTarget="1" range="3" level="1"/>
+		<move name="pin missile" interval="4500" isTarget="1" range="8" level="1"/>
+		<move name="fell stinger" interval="7500" isTarget="1" range="8" level="1"/>
+		<move name="infestation" interval="18000" level="11"/>
+		<move name="night shade" interval="8500" level="16"/>
+		<move name="shadow sneak" interval="9500" level="21"/>
+		<move name="leech life" interval="20000" level="26"/>
+		<move name="swords dance" interval="30000" level="31"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="string shot" interval="15000" chance="66" target="1"/>
+		<attack name="poison sting" interval="3500" chance="66" target="1"/>
+		<attack name="fell stinger" interval="4500" chance="66" target="1"/>
+		<attack name="pin missile" interval="7500" chance="66" target="1"/>
+		<attack name="infestation" interval="18000" chance="66" target="1"/>
+		<attack name="night shade" interval="8500" chance="66" target="1"/>
+		<attack name="shadow sneak" interval="9500" chance="66" target="1"/>
+		<attack name="leech life" interval="20000" chance="66" target="1"/>
+		<attack name="swords dance" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ARIADOS!" />
+	</voices>
+	<loot>
+		<item name="spider legs" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="27" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Slaking" nameDescription="a slaking" race="normal" race2="none" experience="285" speed="200" manacost="0">
+	<level min="40" max="60"/>
+	<health now="1500" max="1500" />
+	<look type="1470" head="113" body="57" legs="95" feet="113" corpse="27861" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="289" />
+		<flag portraitid="27996" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="95" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="amnesia" interval="30000" level="50"/>
+		<move name="scratch" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="hammer arm" interval="8000" isTarget="1" range="1" level="1"/>
+		<move name="sucker punch" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="flail" interval="10000" isTarget="1" range="1" level="10"/>
+		<move name="feint attack" interval="7000" isTarget="1" range="1" level="24"/>
+		<move name="chip away" interval="6000" isTarget="1" range="1" level="36"/>
+		<move name="punishment" interval="15000" level="40"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-160" max="-160" />
+		<attack name="amnesia" interval="30000" chance="66" target="1"/>
+		<attack name="scratch" interval="5000" chance="66" target="1"/>
+		<attack name="hammer arm" interval="8000" chance="66" target="1"/>
+		<attack name="sucker punch" interval="5000" chance="66" target="1"/>
+		<attack name="flail" interval="10000" chance="66" target="1"/>
+		<attack name="feint attack" interval="7000" chance="66" target="1"/>
+		<attack name="chip away" interval="6000" chance="66" target="1"/>
+		<attack name="punishment" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="100" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SLAKING!" />
+	</voices>
+	<loot>
+		<item name="power banana" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="60" chance="100000"/>
+	</loot>
+</monster>

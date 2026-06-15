@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Vaporeon" nameDescription="a vaporeon" race="water" race2="none" experience="184" speed="165" manacost="0">
+	<level min="41" max="50"/>
+	<health now="1300" max="1300" />
+	<look type="1037" head="113" body="57" legs="95" feet="113" corpse="26995" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="134" />
+		<flag portraitid="27250" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="1322" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="110" />
+		<flag moveMagicDefenseBase="95" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="water gun" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="bite" interval="4500" isTarget="1" range="1" level="1"/>
+		<move name="quick attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="water pulse" interval="6500" level="25"/>
+		<move name="aurora beam" interval="18000" level="30"/>
+		<move name="muddy water" interval="14000" level="40"/>
+		<move name="hydro pump" interval="15500" level="50"/>
+		<move name="aqua ring" interval="45000" level="35"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="water gun" interval="3500" chance="66" target="1"/>
+		<attack name="bite" interval="4500" chance="66" target="1"/>
+		<attack name="quick attack" interval="2500" chance="66" target="1"/>
+		<attack name="water pulse" interval="6500" chance="66" target="1"/>
+		<attack name="aurora beam" interval="18000" chance="66" target="1"/>
+		<attack name="muddy water" interval="14000" chance="66" target="1"/>
+		<attack name="hydro pump" interval="15500" chance="66" target="1"/>
+		<attack name="aqua ring" interval="45000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="60" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="VAPOREON!" />
+	</voices>
+	<loot>
+		<item name="vaporeon collar" countmax="1" chance="15000"/>
+		<item name="vaporeon tail" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="50" chance="100000"/>
+	</loot>
+</monster>

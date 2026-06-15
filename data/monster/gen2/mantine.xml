@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mantine" nameDescription="a mantine" race="water" race2="flying" experience="170" speed="170" manacost="0">
+	<level min="21" max="23"/>
+	<health now="850" max="850" />
+	<look type="3201" head="113" body="57" legs="95" feet="113" corpse="27087" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="226" />
+		<flag portraitid="27342" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3568" />
+		<flag canteleport="0" />
+		<flag catchchance="33" />
+		<flag moveMagicAttackBase="80" />
+		<flag moveMagicDefenseBase="140" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="bullet seed" interval="4500" isTarget="1" range="8" level="1"/>
+		<move name="psybeam" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="bubble beam" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="wing attack" interval="4500" level="7"/>
+		<move name="water pulse" interval="7500" level="13"/>
+		<move name="air slash" interval="8000" level="17"/>
+		<move name="bounce" interval="15000" level="21"/>
+		<move name="hydro pump" interval="17500" level="26"/>
+		<move name="wide guard" interval="30000" level="31"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-40" max="-40" />
+		<attack name="bullet seed" interval="4500" chance="66" target="1"/>
+		<attack name="psybeam" interval="2500" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3500" chance="66" target="1"/>
+		<attack name="wing attack" interval="4500" chance="66" target="1"/>
+		<attack name="water pulse" interval="7500" chance="66" target="1"/>
+		<attack name="air slash" interval="8000" chance="66" target="1"/>
+		<attack name="bounce" interval="15000" chance="66" target="1"/>
+		<attack name="hydro pump" interval="17500" chance="66" target="1"/>
+		<attack name="wide guard" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MANTINE!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="23" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Zapdos" nameDescription="a zapdos" race="electric" race2="flying" experience="290" speed="300" manacost="0">
+	<level min="50" max="50"/>
+	<health now="900" max="900" />
+	<look type="3553" head="113" body="57" legs="95" feet="113" corpse="27006" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="145" />
+		<flag portraitid="27261" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="3554" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="5" />
+		<flag moveMagicAttackBase="125" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+		<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="charge" interval="15000" level="1"/>
+		<move name="peck" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="thunder shock" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="discharge" interval="8000" level="10"/>
+		<move name="drill peck" interval="9000" level="20"/>
+		<move name="ancient power" interval="13000" level="30"/>
+		<move name="thunder" interval="9000" level="40"/>
+		<move name="zap cannon" interval="11000" level="50"/>
+		<move name="thunderbolt" interval="9500" level="60"/>
+		<move name="thunder wave" interval="30000" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="charge" interval="15000" chance="66" target="1"/>
+		<attack name="peck" interval="2500" chance="66" target="1"/>
+		<attack name="thunder shock" interval="2500" chance="66" target="1"/>
+		<attack name="discharge" interval="8000" chance="66" target="1"/>
+		<attack name="drill peck" interval="9000" chance="66" target="1"/>
+		<attack name="ancient power" interval="13000" chance="66" target="1"/>
+		<attack name="thunder" interval="9000" chance="66" target="1"/>
+		<attack name="zap cannon" interval="11000" chance="66" target="1"/>
+		<attack name="thunderbolt" interval="9500" chance="66" target="1"/>
+		<attack name="thunder wave" interval="30000" chance="66" target="1"/>
+		
+	</attacks>
+	<defenses armor="0" defense="85" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ZAPDOS!" />
+	</voices>
+	<loot>
+		<item name="yellow feather" countmax="1" chance="100"/>
+		<item name="zapdos outfit" countmax="1" chance="100"/>
+		<item name="vale token" countmax="10" chance="100000"/>
+		<item name="platinum coin" countmax="25" chance="100000"/>
+	</loot>
+</monster>

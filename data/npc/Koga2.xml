@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Koga" script="koga2.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2001" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Sou o Koga, elite quatro do tipo veneno. Voce acha que consegue me derrotar?" />
+		<parameter key="message_decline" value="Continue sua jornada!" />
+	</parameters>
+</npc>
+

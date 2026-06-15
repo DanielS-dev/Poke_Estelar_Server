@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Hitmonlee" nameDescription="a hitmonlee" race="fighting" race2="none" experience="159" speed="187" manacost="0">
+	<level min="31" max="35"/>
+	<health now="500" max="500" />
+	<look type="1009" head="113" body="57" legs="95" feet="113" corpse="26967" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="106" />
+		<flag portraitid="27222" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="35" />
+		<flag moveMagicDefenseBase="110" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="brick break" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="low sweep" interval="5500" isTarget="1" range="1" level="1"/>
+		<move name="double kick" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="low kick" interval="4500" isTarget="1" range="1" level="8"/>
+		<move name="blaze kick" interval="7500" isTarget="1" range="1" level="12"/>
+		<move name="reversal" interval="5000" isTarget="1" range="1" level="17"/>
+		<move name="close combat" interval="9500" level="21"/>
+		<move name="high jump kick" interval="7000" isTarget="1" range="8" level="24"/>
+		<move name="endure" interval="60000" level="30"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-120" max="-120" />
+		<attack name="brick break" interval="2500" chance="66" target="1"/>
+		<attack name="low sweep" interval="5500" chance="66" target="1"/>
+		<attack name="double kick" interval="3500" chance="66" target="1"/>
+		<attack name="low kick" interval="4500" chance="66" target="1"/>
+		<attack name="blaze kick" interval="7500" chance="66" target="1"/>
+		<attack name="reversal" interval="5000" chance="66" target="1"/>
+		<attack name="close combat" interval="9500" chance="66" target="1"/>
+		<attack name="high jump kick" interval="7000" chance="66" target="1"/>
+		<attack name="endure" interval="60000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="53" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HITMONLEE!" />
+	</voices>
+	<loot>
+		<item name="kick machine" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="350" chance="35000"/>
+	</loot>
+</monster>

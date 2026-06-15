@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Psyduck" nameDescription="a psyduck" race="water" race2="none" experience="64" speed="155" manacost="0">
+	<level min="12" max="15"/>
+	<health now="500" max="500" />
+	<look type="3211" head="113" body="57" legs="95" feet="113" corpse="26915" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="54" />
+		<flag portraitid="27170" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="248" />
+		<flag moveMagicAttackBase="65" />
+		<flag moveMagicDefenseBase="50" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="scratch" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="water gun" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="confusion" interval="9500" level="5"/>
+		<move name="zen headbutt" interval="11500" level="9"/>
+		<move name="disable" interval="30000" level="15"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Golduck" level="33"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-52" max="-52" />
+		<attack name="scratch" interval="1500" chance="66" target="1"/>
+		<attack name="water gun" interval="2500" chance="66"/>
+		<attack name="confusion" interval="9500" chance="66"/>
+		<attack name="zen headbutt" interval="11500" chance="66"/>
+		<attack name="disable" interval="30000" chance="66"/>
+		
+
+	</attacks>
+	<defenses armor="0" defense="48" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PSYDUCK!" />
+	</voices>
+	<loot>
+		<item name="psyduck mug" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="15" chance="100000"/>
+	</loot>
+</monster>

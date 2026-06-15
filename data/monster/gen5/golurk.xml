@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Golurk" nameDescription="a golurk" race="ground" race2="ghost" experience="1690" speed="155" manacost="0">
+	<level min="100" max="100"/>
+	<health now="890" max="890" />
+	<look type="3892" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="623" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="55" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="mega punch" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="shadow punch" interval="5500" isTarget="1" range="1" level="1"/>
+		<move name="focus punch" interval="10000" isTarget="1" range="1" level="1"/>
+		<move name="hammer arm" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="dynamic punch" interval="7500" isTarget="1" range="1" level="8"/>
+		<move name="high horsepower" interval="15000" level="13"/>
+		<move name="stomping tantrum" interval="12500" level="19"/>
+		<move name="earthquake" interval="17500" level="23"/>
+		<move name="phantom force" interval="15000" level="25"/>
+		<move name="curse" interval="15000" level="30"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-124" max="-124" />
+		<attack name="mega punch" interval="5000" chance="66" target="1"/>
+		<attack name="shadow punch" interval="5500" chance="66" target="1"/>
+		<attack name="focus punch" interval="10000" chance="66" target="1"/>
+		<attack name="hammer arm" interval="5000" chance="66" target="1"/>
+		<attack name="dynamic punch" interval="7500" chance="66" target="1"/>
+		<attack name="high horsepower" interval="15000" chance="66" target="1"/>
+		<attack name="stomping tantrum" interval="12500" chance="66" target="1"/>
+		<attack name="earthquake" interval="17500" chance="66" target="1"/>
+		<attack name="phantom force" interval="15000" chance="66" target="1"/>
+		<attack name="curse" interval="15000" chance="66" target="1"/>
+		
+
+	</attacks>
+	<defenses armor="0" defense="80" >
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GOLURK!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

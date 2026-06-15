@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Torterra" nameDescription="a torterra" race="grass" race2="ground" experience="236" speed="156" manacost="0">
+	<level min="70" max="75"/>
+	<health now="950" max="950" />
+	<look type="2997" head="113" body="57" legs="95" feet="113" corpse="38435" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="389" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="3626" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="75" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="withdraw" interval="15000" level="1"/>
+		<move name="tackle" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="leafage" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="crunch" interval="3000" isTarget="1" range="1" level="18"/>
+		<move name="wood hammer" interval="7500" isTarget="1" range="1" level="36"/>
+		<move name="leech seed" interval="10000" level="6"/>
+		<move name="earthquake" interval="11000" level="32"/>
+		<move name="giga drain" interval="12000" level="34"/>
+		<move name="leaf storm" interval="12000" level="19"/>
+		<move name="curse" interval="14000" level="8"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-109" max="-109" />
+		<attack name="withdraw" interval="15000" chance="40" range="1" target="1"/>
+		<attack name="tackle" interval="1500" chance="40" target="1"/>
+		<attack name="leafage" interval="2500" chance="40" target="1"/>
+		<attack name="crunch" interval="3000" chance="40" target="1"/>
+		<attack name="leaf storm" interval="12000" chance="40" range="1" target="1"/>
+		<attack name="leech seed" interval="10000" chance="40" target="1"/>
+		<attack name="curse" interval="14000" chance="40" target="1"/>
+		<attack name="wood hammer" interval="7500" chance="40" target="1"/>
+		<attack name="earthquake" interval="11000" chance="40" target="1"/>
+		<attack name="giga drain" interval="12000" chance="40" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="105" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="TORTERRA!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="75" chance="100000"/>
+	</loot>
+</monster>

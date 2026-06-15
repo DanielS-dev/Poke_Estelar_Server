@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Fearow" nameDescription="a fearow" race="flying" race2="normal" experience="155" speed="200" manacost="0">
+	<level min="21" max="28"/>
+	<health now="650" max="650" />
+	<look type="925" head="113" body="57" legs="95" feet="113" corpse="26883" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="22" />
+		<flag portraitid="27138" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="1336" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="118" />
+		<flag moveMagicAttackBase="61" />
+		<flag moveMagicDefenseBase="61" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="peck" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="wing attack" interval="3500" level="1"/>
+		<move name="assurance" interval="7500" level="4"/>
+		<move name="drill run" interval="8500" level="20"/>
+		<move name="drill peck" interval="9500" level="6"/>
+		<move name="aerial ace" interval="13000" level="22"/>
+		<move name="agility" interval="30000" level="3"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="peck" interval="2500" chance="66" target="1"/>
+		<attack name="wing attack" interval="3500" chance="66" target="1"/>
+		<attack name="assurance" interval="7500" chance="66" target="1"/>
+		<attack name="drill run" interval="8500" chance="66" target="1"/>
+		<attack name="drill peck" interval="9500" chance="66" target="1"/>
+		<attack name="aerial ace" interval="13000" chance="66" target="1"/>
+		<attack name="agility" interval="30000" chance="66" target="1"/>
+		
+	</attacks>
+	<defenses armor="0" defense="65" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="FEAROW!" />
+	</voices>
+	<loot>
+		<item name="bird beak" countmax="1" chance="15000"/>
+		<item name="giant yellow wing" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="28" chance="100000"/>
+	</loot>
+</monster>

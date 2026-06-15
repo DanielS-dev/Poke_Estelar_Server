@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Sharpedo" nameDescription="a sharpedo" race="water" race2="dark" experience="161" speed="300" manacost="0">
+	<level min="81" max="83"/>
+	<health now="700" max="700" />
+	<look type="1500" head="113" body="57" legs="95" feet="113" corpse="27891" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="319" />
+		<flag portraitid="28026" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3597" />
+		<flag canteleport="0" />
+		<flag catchchance="78" />
+		<flag moveMagicAttackBase="95" />
+		<flag moveMagicDefenseBase="40" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="agility" interval="30000" level="1"/>
+		<move name="crunch" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="bite" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="night slash" interval="5000" level="1"/>
+		<move name="ice fang" interval="7000" level="1"/>
+		<move name="poison fang" interval="7000" level="1"/>
+		<move name="aqua jet" interval="8500" level="1"/>
+		<move name="liquidation" interval="10000" level="1"/>
+		<move name="scary face" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-120" max="-120" />
+		<attack name="agility" interval="30000" chance="66" target="1"/>
+		<attack name="crunch" interval="3500" chance="66" target="1"/>
+		<attack name="bite" interval="5000" chance="66" target="1"/>
+		<attack name="night slash" interval="5000" chance="66" target="1"/>
+		<attack name="ice fang" interval="7000" chance="66" target="1"/>
+		<attack name="poison fang" interval="7000" chance="66" target="1"/>
+		<attack name="aqua jet" interval="8500" chance="66" target="1"/>
+		<attack name="liquidation" interval="10000" chance="66" target="1"/>
+		<attack name="scary face" interval="15000" chance="66" target="1"/>
+		<attack name="slash" interval="5000" chance="33" />
+
+	</attacks>
+	<defenses armor="0" defense="40" >
+		<defense name="slash" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SHARPEDO!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="83" chance="100000"/>
+	</loot>
+</monster>

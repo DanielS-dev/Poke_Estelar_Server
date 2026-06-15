@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="caterpie turret" nameDescription="a caterpie turret" race="normal" race2="none" experience="1" speed="0" manacost="0">
+	<level min="100" max="100"/>
+	<health now="1" max="1" />
+	<look type="163" head="113" body="57" legs="95" feet="113" corpse="0" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="0" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="8" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="10000" />
+		<flag portraitid="1" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="1" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+
+	</moves>
+	<evolutions>
+	
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-100" />
+		<attack name="string shot" interval="1000" target="1" range="8" chance="100"/>
+
+	</attacks>
+	<defenses armor="0" defense="1" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+	</voices>
+	<loot>
+
+	</loot>
+</monster>

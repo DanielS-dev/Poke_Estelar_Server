@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Dratini" nameDescription="a dratini" race="dragon" race2="none" experience="60" speed="150" manacost="0">
+	<level min="21" max="27"/>
+	<health now="410" max="410" />
+	<look type="1050" head="113" body="57" legs="95" feet="113" corpse="27008" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="147" />
+		<flag portraitid="27263" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="50" />
+		<flag moveMagicDefenseBase="50" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="wrap" interval="7500" level="1"/>
+		<move name="thunder wave" interval="25000" level="1"/>
+		<move name="twister" interval="5500" level="1"/>
+		<move name="dragon rush" interval="9500" level="10"/>
+		<move name="dragon dance" interval="30000" level="22"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Dragonair" level="30"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-64" max="-64" />
+		<attack name="wrap" interval="7500" chance="66" target="1"/>
+		<attack name="thunder wave" interval="25000" chance="66" target="1"/>
+		<attack name="twister" interval="5500" chance="66" target="1"/>
+		<attack name="dragon rush" interval="9500" chance="66" target="1"/>
+		<attack name="dragon dance" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="45" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="DRATINI!" />
+	</voices>
+	<loot>
+		<item name="dragon scale" countmax="1" chance="1000"/>
+		<item name="gold coin" countmax="27" chance="100000"/>
+	</loot>
+</monster>

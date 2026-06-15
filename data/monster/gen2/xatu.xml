@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Xatu" nameDescription="a xatu" race="psychic" race2="flying" experience="165" speed="195" manacost="0">
+	<level min="61" max="66"/>
+	<health now="650" max="650" />
+	<look type="3243" head="113" body="57" legs="95" feet="113" corpse="27039" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="178" />
+		<flag portraitid="27294" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="1359" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="98" />
+		<flag moveMagicAttackBase="95" />
+		<flag moveMagicDefenseBase="70" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="tailwind" interval="30000" level="53"/>
+		<move name="confusion" interval="8500" level="1"/>
+		<move name="psychic" interval="7500" level="1"/>
+		<move name="night shade" interval="6500" level="1"/>
+		<move name="air slash" interval="7000" level="25"/>
+		<move name="future sight" interval="18000" level="33"/>
+		<move name="stored power" interval="15000" level="45"/>
+		<move name="power swap" interval="30000" level="60"/>
+		<move name="guard swap" interval="30000" level="61"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-75" max="-75" />
+		<attack name="tailwind" interval="30000" chance="66" target="1"/>
+		<attack name="confusion" interval="8500" chance="66" target="1"/>
+		<attack name="psychic" interval="7500" chance="66" target="1"/>
+		<attack name="night shade" interval="6500" chance="66" target="1"/>
+		<attack name="air slash" interval="7000" chance="66" target="1"/>
+		<attack name="future sight" interval="18000" chance="66" target="1"/>
+		<attack name="stored power" interval="15000" chance="66" target="1"/>
+		<attack name="power swap" interval="30000" chance="66" target="1"/>
+		<attack name="guard swap" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="XATU!" />
+	</voices>
+	<loot>
+		<item name="strange feather" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="66" chance="100000"/>
+	</loot>
+</monster>

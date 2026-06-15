@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Iron Bundle" nameDescription="an iron bundle" race="ice" race2="water" experience="2850" speed="236" manacost="0">
+	<level min="100" max="100"/>
+	<health now="560" max="560" />
+	<look type="3949" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="991" />
+		<flag portraitid="27189" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3950" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="124" />
+		<flag moveMagicDefenseBase="60" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="present" interval="1500" isTarget="1" range="8" level="1"/>
+		<move name="powder snow" interval="5500" level="1"/>
+		<move name="freeze-dry" interval="6500" level="1"/>
+		<move name="drill peck" interval="7500" level="1"/>
+		<move name="whirlpool" interval="12500" level="1"/>
+		<move name="ice beam" interval="10000" level="1"/>
+		<move name="blizzard" interval="12500" level="1"/>
+		<move name="hydro pump" interval="12500" level="1"/>
+		<move name="agility" interval="7500" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-80" />
+		<attack name="present" interval="1500" chance="66" target="1"/>
+		<attack name="powder snow" interval="5500" chance="66" target="1"/>
+		<attack name="freeze-dry" interval="6500" chance="66" target="1"/>
+		<attack name="drill peck" interval="7500" chance="66" target="1"/>
+		<attack name="whirlpool" interval="12500" chance="66" target="1"/>
+		<attack name="ice beam" interval="10000" chance="66" target="1"/>
+		<attack name="blizzard" interval="12500" chance="66" target="1"/>
+		<attack name="hydro pump" interval="12500" chance="66" target="1"/>
+		<attack name="agility" interval="7500" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="114" >
+		
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="IRON BUNDLE!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+		<item name="otherworldly essence" count="1" chance="100000"/>
+	</loot>
+</monster>

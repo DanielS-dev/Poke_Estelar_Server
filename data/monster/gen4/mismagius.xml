@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mismagius" nameDescription="a mismagius" race="ghost" race2="none" experience="173" speed="205" manacost="0">
+	<level min="72" max="75"/>
+	<health now="600" max="600" />
+	<look type="3635" head="113" body="57" legs="95" feet="113" corpse="38475" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="429" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3846" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="105" />
+		<flag moveMagicDefenseBase="105" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="psybeam" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="shadow ball" interval="7500" level="1"/>
+		<move name="astonish" interval="7000" level="1"/>
+		<move name="confusion" interval="8500" level="10"/>
+		<move name="mystical fire" interval="12000" level="22"/>
+		<move name="power gem" interval="15000" level="31"/>
+		<move name="phantom force" interval="17500" level="43"/>
+		<move name="hex" interval="13000" level="51"/>
+		<move name="perish song" interval="19000" level="62"/>
+		<move name="extrasensory" interval="16000" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-60" max="-60" />
+		<attack name="psybeam" interval="3500" chance="66" target="1"/>
+		<attack name="shadow ball" interval="7500" chance="66" target="1"/>
+		<attack name="astonish" interval="7000" chance="66" target="1"/>
+		<attack name="confusion" interval="8500" chance="66" target="1"/>
+		<attack name="mystical fire" interval="12000" chance="66" target="1"/>
+		<attack name="power gem" interval="15000" chance="66" target="1"/>
+		<attack name="phantom force" interval="17500" chance="66" target="1"/>
+		<attack name="hex" interval="13000" chance="66" target="1"/>
+		<attack name="perish song" interval="19000" chance="66" target="1"/>
+		<attack name="extrasensory" interval="16000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="60" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MISMAGIUS!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="75" chance="100000"/>
+	</loot>
+</monster>

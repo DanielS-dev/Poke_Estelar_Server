@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Flygon" nameDescription="a flygon" race="ground" race2="dragon" experience="234" speed="200" manacost="0">
+	<level min="76" max="78"/>
+	<health now="800" max="800" />
+	<look type="1511" head="113" body="57" legs="95" feet="113" corpse="27902" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="330" />
+		<flag portraitid="28037" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3615" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="80" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="dragon dance" interval="30000" level="20"/>
+		<move name="dragon breath" interval="5500" isTarget="1" range="8" level="1"/>
+		<move name="dragon tail" interval="15000" level="1"/>
+		<move name="dragon rush" interval="9500" level="1"/>
+		<move name="dragon claw" interval="8000" level="11"/>
+		<move name="bulldoze" interval="10000" level="30"/>
+		<move name="sand tomb" interval="22000" level="42"/>
+		<move name="outrage" interval="25000" level="54"/>
+		<move name="earth power" interval="12000" level="67"/>
+		<move name="earthquake" interval="13000" level="72"/>
+		<move name="fissure" interval="15000" level="81"/>
+		<move name="sandstorm" interval="60000" level="90"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-100" />
+		<attack name="dragon dance" interval="30000" chance="66" target="1"/>
+		<attack name="dragon breath" interval="5500" chance="66" target="1"/>
+		<attack name="dragon tail" interval="15000" chance="66" target="1"/>
+		<attack name="dragon rush" interval="9500" chance="66" target="1"/>
+		<attack name="dragon claw" interval="8000" chance="66" target="1"/>
+		<attack name="bulldoze" interval="10000" chance="66" target="1"/>
+		<attack name="sand tomb" interval="22000" chance="66" target="1"/>
+		<attack name="outrage" interval="25000" chance="66" target="1"/>
+		<attack name="earth power" interval="12000" chance="66" target="1"/>
+		<attack name="earthquake" interval="13000" chance="66" target="1"/>
+		<attack name="fissure" interval="15000" chance="66" target="1"/>
+		<attack name="sandstorm" interval="60000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="80" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="FLYGON!" />
+	</voices>
+	<loot>
+		<item name="dragon tail" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="78" chance="100000"/>
+	</loot>
+</monster>

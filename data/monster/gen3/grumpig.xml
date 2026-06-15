@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Grumpig" nameDescription="a grumpig" race="psychic" race2="none" experience="165" speed="180" manacost="0">
+	<level min="71" max="73"/>
+	<health now="800" max="800" />
+	<look type="1507" head="113" body="57" legs="95" feet="113" corpse="27898" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="326" />
+		<flag portraitid="28033" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="78" />
+		<flag moveMagicAttackBase="90" />
+		<flag moveMagicDefenseBase="110" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="teeter dance" interval="15000" level="50"/>
+		<move name="confusion" interval="9500" level="1"/>
+		<move name="psychic" interval="8000" level="1"/>
+		<move name="psyshock" interval="7500" level="1"/>
+		<move name="power gem" interval="12000" level="10"/>
+		<move name="bounce" interval="20000" level="22"/>
+		<move name="zen headbutt" interval="8500" level="31"/>
+		<move name="rest" interval="30000" level="42"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-45" max="-45" />
+		<attack name="teeter dance" interval="15000" chance="66" target="1"/>
+		<attack name="confusion" interval="9500" chance="66" target="1"/>
+		<attack name="psychic" interval="8000" chance="66" target="1"/>
+		<attack name="psyshock" interval="7500" chance="66" target="1"/>
+		<attack name="power gem" interval="12000" chance="66" target="1"/>
+		<attack name="bounce" interval="20000" chance="66" target="1"/>
+		<attack name="zen headbutt" interval="8500" chance="66" target="1"/>
+		<attack name="rest" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GRUMPIG!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="73" chance="100000"/>
+	</loot>
+</monster>

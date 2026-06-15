@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monsters>
+	<!-- Utility -->
+	
+	<monster name="Missingno" file="utility/missingno.xml" />
+	<monster name="Squirtle Turret" file="utility/squirtle turret.xml" />
+	<monster name="Charmander Turret" file="utility/charmander turret.xml" />
+	<monster name="Bulbasaur Turret" file="utility/bulbasaur turret.xml" />
+	<monster name="Pikachu Turret" file="utility/pikachu turret.xml" />
+	<monster name="Caterpie Turret" file="utility/caterpie turret.xml" />
+	<monster name="Bellsprout Turret" file="utility/bellsprout turret.xml" />
+	<monster name="Koffing Turret" file="utility/koffing turret.xml" />
+	<monster name="Porygon Turret" file="utility/porygon turret.xml" />
+	<monster name="Fire" file="utility/fire.xml" />
+	<monster name="Water Crystal" file="utility/water crystal.xml" />
+	
+	<!-- Cloned -->
+	
+	<monster name="Cloned Electivire" file="cloned/cloned electivire.xml" />
+	<monster name="Cloned Gengar" file="cloned/cloned gengar.xml" />
+	<monster name="Cloned Mamoswine" file="cloned/cloned mamoswine.xml" />
+	<monster name="Cloned Muk" file="cloned/cloned muk.xml" />
+	<monster name="Cloned Ninetales" file="cloned/cloned ninetales.xml" />
+	<monster name="Cloned Scyther" file="cloned/cloned scyther.xml" />
+	<monster name="Cloned Tentacruel" file="cloned/cloned tentacruel.xml" />
+	<monster name="Cloned Typhlosion" file="cloned/cloned typhlosion.xml" />
+	
+	<!-- Mega -->
+	
+	<monster name="Mega Abomasnow" file="mega/mega abomasnow.xml" />
+	<monster name="Mega Absol" file="mega/mega absol.xml" />
+	<monster name="Mega Aerodactyl" file="mega/mega aerodactyl.xml" />
+	<monster name="Mega Aggron" file="mega/mega aggron.xml" />
+	<monster name="Mega Alakazam" file="mega/mega alakazam.xml" />
+	<monster name="Mega Altaria" file="mega/mega altaria.xml" />
+	<monster name="Mega Ampharos" file="mega/mega ampharos.xml" />
+	<monster name="Mega Banette" file="mega/mega banette.xml" />
+	<monster name="Mega Beedrill" file="mega/mega beedrill.xml" />
+	<monster name="Mega Blastoise" file="mega/mega blastoise.xml" />
+	<monster name="Mega Blaziken" file="mega/mega blaziken.xml" />
+	<monster name="Mega Camerupt" file="mega/mega camerupt.xml" />
+	<monster name="Mega Charizard X" file="mega/mega charizard x.xml" />
+	<monster name="Mega Charizard Y" file="mega/mega charizard y.xml" />
+	<monster name="Mega Gallade" file="mega/mega gallade.xml" />
+	<monster name="Mega Garchomp" file="mega/mega garchomp.xml" />
+	<monster name="Mega Gardevoir" file="mega/mega gardevoir.xml" />
+	<monster name="Mega Gengar" file="mega/mega gengar.xml" />
+	<monster name="Mega Glalie" file="mega/mega glalie.xml" />
+	<monster name="Mega Gyarados" file="mega/mega gyarados.xml" />
+	<monster name="Mega Heracross" file="mega/mega heracross.xml" />
+	<monster name="Mega Houndoom" file="mega/mega houndoom.xml" />
+	<monster name="Mega Kangaskhan" file="mega/mega kangaskhan.xml" />
+	<monster name="Mega Lopunny" file="mega/mega lopunny.xml" />
+	<monster name="Mega Lucario" file="mega/mega lucario.xml" />
+	<monster name="Mega Manectric" file="mega/mega manectric.xml" />
+	<monster name="Mega Mawile" file="mega/mega mawile.xml" />
+	<monster name="Mega Medicham" file="mega/mega medicham.xml" />
+	<monster name="Mega Metagross" file="mega/mega metagross.xml" />
+	<monster name="Mega Pidgeot" file="mega/mega pidgeot.xml" />
+	<monster name="Mega Pinsir" file="mega/mega pinsir.xml" />
+	<monster name="Mega Sableye" file="mega/mega sableye.xml" />
+	<monster name="Mega Salamence" file="mega/mega salamence.xml" />
+	<monster name="Mega Sceptile" file="mega/mega sceptile.xml" />
+	<monster name="Mega Scizor" file="mega/mega scizor.xml" />
+	<monster name="Mega Slowbro" file="mega/mega slowbro.xml" />
+	<monster name="Mega Steelix" file="mega/mega steelix.xml" />
+	<monster name="Mega Swampert" file="mega/mega swampert.xml" />
+	<monster name="Mega Tyranitar" file="mega/mega tyranitar.xml" />
+	<monster name="Mega Venusaur" file="mega/mega venusaur.xml" />
+	<monster name="Mega Sharpedo" file="mega/mega sharpedo.xml" />
+	<monster name="Mega Audino" file="mega/mega audino.xml" />
+	
+	<!-- Alolan -->
+	
+	<monster name="Alolan Ninetales" file=".alola/alolan ninetales.xml" />
+	<monster name="Alolan Raticate" file=".alola/alolan raticate.xml" />
+	<monster name="Alolan Dugtrio" file=".alola/alolan dugtrio.xml" />
+	<monster name="Alolan Persian" file=".alola/alolan persian.xml" />
+	<monster name="Alolan Marowak" file=".alola/alolan marowak.xml" />
+	<monster name="Alolan Golem" file=".alola/alolan golem.xml" />
+	<monster name="Alolan Muk" file=".alola/alolan muk.xml" />
+	<monster name="Alolan Exeggutor" file=".alola/alolan exeggutor.xml" />
+	<monster name="Alolan Sandslash" file=".alola/alolan sandslash.xml" />
+	<monster name="Alolan Raichu" file=".alola/alolan raichu.xml" />
+	
+	<!-- Galarian -->
+	
+	<monster name="Galarian Darmanitan" file=".galarian/galarian darmanitan.xml" />
+	<monster name="Galarian Rapidash" file=".galarian/galarian rapidash.xml" />
+	<monster name="Galarian Weezing" file=".galarian/galarian weezing.xml" />
+	<monster name="Mr. Rime" file=".galarian/mr. rime.xml" />
+	<monster name="Sirfetch'd" file=".galarian/sirfetch'd.xml" />
+	
+	<!-- Galarian -->
+	
+	<monster name="Hisuian Arcanine" file=".hisuian/hisuian arcanine.xml" />
+	<monster name="Hisuian Avalugg" file=".hisuian/hisuian avalugg.xml" />
+	<monster name="Hisuian Braviary" file=".hisuian/hisuian braviary.xml" />
+	<monster name="Hisuian Decidueye" file=".hisuian/hisuian decidueye.xml" />
+	<monster name="Hisuian Electrode" file=".hisuian/hisuian electrode.xml" />
+	<monster name="Hisuian Goodra" file=".hisuian/hisuian goodra.xml" />
+	<monster name="Hisuian Lilligant" file=".hisuian/hisuian lilligant.xml" />
+	<monster name="Hisuian Samurott" file=".hisuian/hisuian samurott.xml" />
+	<monster name="Hisuian Typhlosion" file=".hisuian/hisuian typhlosion.xml" />
+	<monster name="Hisuian Zoroark" file=".hisuian/hisuian zoroark.xml" />
+	
+	<!-- Gen 1 -->
+	
+	<monster name="Bulbasaur" file="gen1/bulbasaur.xml" />
+	<monster name="Ivysaur" file="gen1/ivysaur.xml" />
+	<monster name="Venusaur" file="gen1/venusaur.xml" />
+	<monster name="Charmander" file="gen1/charmander.xml" />
+	<monster name="Charmeleon" file="gen1/charmeleon.xml" />
+	<monster name="Charizard" file="gen1/charizard.xml" />
+	<monster name="Squirtle" file="gen1/squirtle.xml" />
+	<monster name="Wartortle" file="gen1/wartortle.xml" />
+	<monster name="Blastoise" file="gen1/blastoise.xml" />
+	<monster name="Caterpie" file="gen1/caterpie.xml" />
+	<monster name="Metapod" file="gen1/metapod.xml" />
+	<monster name="Butterfree" file="gen1/butterfree.xml" />
+	<monster name="Weedle" file="gen1/weedle.xml" />
+	<monster name="Kakuna" file="gen1/kakuna.xml" />
+	<monster name="Beedrill" file="gen1/beedrill.xml" />
+	<monster name="Pidgey" file="gen1/pidgey.xml" />
+	<monster name="Pidgeotto" file="gen1/pidgeotto.xml" />
+	<monster name="Pidgeot" file="gen1/pidgeot.xml" />
+	<monster name="Rattata" file="gen1/rattata.xml" />
+	<monster name="Raticate" file="gen1/raticate.xml" />
+	<monster name="Spearow" file="gen1/spearow.xml" />
+	<monster name="Fearow" file="gen1/fearow.xml" />
+	<monster name="Ekans" file="gen1/ekans.xml" />
+	<monster name="Arbok" file="gen1/arbok.xml" />
+	<monster name="Pikachu" file="gen1/pikachu.xml" />
+	<monster name="Raichu" file="gen1/raichu.xml" />
+	<monster name="Sandshrew" file="gen1/sandshrew.xml" />
+	<monster name="Sandslash" file="gen1/sandslash.xml" />
+	<monster name="Nidoran Female" file="gen1/nidoran female.xml" />
+	<monster name="Nidorina" file="gen1/nidorina.xml" />
+	<monster name="Nidoqueen" file="gen1/nidoqueen.xml" />
+	<monster name="Nidoran Male" file="gen1/nidoran male.xml" />
+	<monster name="Nidorino" file="gen1/nidorino.xml" />
+	<monster name="Nidoking" file="gen1/nidoking.xml" />
+	<monster name="Clefairy" file="gen1/clefairy.xml" />
+	<monster name="Clefable" file="gen1/clefable.xml" />
+	<monster name="Vulpix" file="gen1/vulpix.xml" />
+	<monster name="Ninetales" file="gen1/ninetales.xml" />
+	<monster name="Jigglypuff" file="gen1/jigglypuff.xml" />
+	<monster name="Wigglytuff" file="gen1/wigglytuff.xml" />
+	<monster name="Zubat" file="gen1/zubat.xml" />
+	<monster name="Golbat" file="gen1/golbat.xml" />
+	<monster name="Oddish" file="gen1/oddish.xml" />
+	<monster name="Gloom" file="gen1/gloom.xml" />
+	<monster name="Vileplume" file="gen1/vileplume.xml" />
+	<monster name="Paras" file="gen1/paras.xml" />
+	<monster name="Parasect" file="gen1/parasect.xml" />
+	<monster name="Venonat" file="gen1/venonat.xml" />
+	<monster name="Venomoth" file="gen1/venomoth.xml" />
+	<monster name="Diglett" file="gen1/diglett.xml" />
+	<monster name="Dugtrio" file="gen1/dugtrio.xml" />
+	<monster name="Meowth" file="gen1/meowth.xml" />
+	<monster name="Persian" file="gen1/persian.xml" />
+	<monster name="Psyduck" file="gen1/psyduck.xml" />
+	<monster name="Golduck" file="gen1/golduck.xml" />
+	<monster name="Mankey" file="gen1/mankey.xml" />
+	<monster name="Primeape" file="gen1/primeape.xml" />
+	<monster name="Growlithe" file="gen1/growlithe.xml" />
+	<monster name="Arcanine" file="gen1/arcanine.xml" />
+	<monster name="Poliwag" file="gen1/poliwag.xml" />
+	<monster name="Poliwhirl" file="gen1/poliwhirl.xml" />
+	<monster name="Poliwrath" file="gen1/poliwrath.xml" />
+	<monster name="Abra" file="gen1/abra.xml" />
+	<monster name="Kadabra" file="gen1/kadabra.xml" />
+	<monster name="Alakazam" file="gen1/alakazam.xml" />
+	<monster name="Machop" file="gen1/machop.xml" />
+	<monster name="Machoke" file="gen1/machoke.xml" />
+	<monster name="Machamp" file="gen1/machamp.xml" />
+	<monster name="Bellsprout" file="gen1/bellsprout.xml" />
+	<monster name="Weepinbell" file="gen1/weepinbell.xml" />
+	<monster name="Victreebel" file="gen1/victreebel.xml" />
+	<monster name="Tentacool" file="gen1/tentacool.xml" />
+	<monster name="Tentacruel" file="gen1/tentacruel.xml" />
+	<monster name="Geodude" file="gen1/geodude.xml" />
+	<monster name="Graveler" file="gen1/graveler.xml" />
+	<monster name="Golem" file="gen1/golem.xml" />
+	<monster name="Ponyta" file="gen1/ponyta.xml" />
+	<monster name="Rapidash" file="gen1/rapidash.xml" />
+	<monster name="Slowpoke" file="gen1/slowpoke.xml" />
+	<monster name="Slowbro" file="gen1/slowbro.xml" />
+	<monster name="Magnemite" file="gen1/magnemite.xml" />
+	<monster name="Magneton" file="gen1/magneton.xml" />
+	<monster name="Farfetch'd" file="gen1/farfetch'd.xml" />
+	<monster name="Doduo" file="gen1/doduo.xml" />
+	<monster name="Dodrio" file="gen1/dodrio.xml" />
+	<monster name="Seel" file="gen1/seel.xml" />
+	<monster name="Dewgong" file="gen1/dewgong.xml" />
+	<monster name="Grimer" file="gen1/grimer.xml" />
+	<monster name="Muk" file="gen1/muk.xml" />
+	<monster name="Shellder" file="gen1/shellder.xml" />
+	<monster name="Cloyster" file="gen1/cloyster.xml" />
+	<monster name="Gastly" file="gen1/gastly.xml" />
+	<monster name="Haunter" file="gen1/haunter.xml" />
+	<monster name="Gengar" file="gen1/gengar.xml" />
+	<monster name="Onix" file="gen1/onix.xml" />
+	<monster name="Drowzee" file="gen1/drowzee.xml" />
+	<monster name="Hypno" file="gen1/hypno.xml" />
+	<monster name="Krabby" file="gen1/krabby.xml" />
+	<monster name="Kingler" file="gen1/kingler.xml" />
+	<monster name="Voltorb" file="gen1/voltorb.xml" />
+	<monster name="Electrode" file="gen1/electrode.xml" />
+	<monster name="Exeggcute" file="gen1/exeggcute.xml" />
+	<monster name="Exeggutor" file="gen1/exeggutor.xml" />
+	<monster name="Cubone" file="gen1/cubone.xml" />
+	<monster name="Marowak" file="gen1/marowak.xml" />
+	<monster name="Hitmonlee" file="gen1/hitmonlee.xml" />
+	<monster name="Hitmonchan" file="gen1/hitmonchan.xml" />
+	<monster name="Lickitung" file="gen1/lickitung.xml" />
+	<monster name="Koffing" file="gen1/koffing.xml" />
+	<monster name="Weezing" file="gen1/weezing.xml" />
+	<monster name="Rhyhorn" file="gen1/rhyhorn.xml" />
+	<monster name="Rhydon" file="gen1/rhydon.xml" />
+	<monster name="Chansey" file="gen1/chansey.xml" />
+	<monster name="Tangela" file="gen1/tangela.xml" />
+	<monster name="Kangaskhan" file="gen1/kangaskhan.xml" />
+	<monster name="Horsea" file="gen1/horsea.xml" />
+	<monster name="Seadra" file="gen1/seadra.xml" />
+	<monster name="Goldeen" file="gen1/goldeen.xml" />
+	<monster name="Seaking" file="gen1/seaking.xml" />
+	<monster name="Staryu" file="gen1/staryu.xml" />
+	<monster name="Starmie" file="gen1/starmie.xml" />
+	<monster name="Mr. Mime" file="gen1/mr. mime.xml" />
+	<monster name="Scyther" file="gen1/scyther.xml" />
+	<monster name="Jynx" file="gen1/jynx.xml" />
+	<monster name="Electabuzz" file="gen1/electabuzz.xml" />
+	<monster name="Magmar" file="gen1/magmar.xml" />
+	<monster name="Pinsir" file="gen1/pinsir.xml" />
+	<monster name="Tauros" file="gen1/tauros.xml" />
+	<monster name="Magikarp" file="gen1/magikarp.xml" />
+	<monster name="Gyarados" file="gen1/gyarados.xml" />
+	<monster name="Lapras" file="gen1/lapras.xml" />
+	<monster name="Ditto" file="gen1/ditto.xml" />
+	<monster name="Eevee" file="gen1/eevee.xml" />
+	<monster name="Vaporeon" file="gen1/vaporeon.xml" />
+	<monster name="Jolteon" file="gen1/jolteon.xml" />
+	<monster name="Flareon" file="gen1/flareon.xml" />
+	<monster name="Porygon" file="gen1/porygon.xml" />
+	<monster name="Omanyte" file="gen1/omanyte.xml" />
+	<monster name="Omastar" file="gen1/omastar.xml" />
+	<monster name="Kabuto" file="gen1/kabuto.xml" />
+	<monster name="Kabutops" file="gen1/kabutops.xml" />
+	<monster name="Aerodactyl" file="gen1/aerodactyl.xml" />
+	<monster name="Snorlax" file="gen1/snorlax.xml" />
+	<monster name="Articuno" file="gen1/articuno.xml" />
+	<monster name="Zapdos" file="gen1/zapdos.xml" />
+	<monster name="Moltres" file="gen1/moltres.xml" />
+	<monster name="Dratini" file="gen1/dratini.xml" />
+	<monster name="Dragonair" file="gen1/dragonair.xml" />
+	<monster name="Dragonite" file="gen1/dragonite.xml" />
+	<monster name="Mewtwo" file="gen1/mewtwo.xml" />
+	<monster name="Mew" file="gen1/mew.xml" />
+	
+	<!-- Gen 2 -->
+	
+	<monster name="Chikorita" file="gen2/chikorita.xml" />
+	<monster name="Bayleef" file="gen2/bayleef.xml" />
+	<monster name="Meganium" file="gen2/meganium.xml" />
+	<monster name="Cyndaquil" file="gen2/cyndaquil.xml" />
+	<monster name="Quilava" file="gen2/quilava.xml" />
+	<monster name="Typhlosion" file="gen2/typhlosion.xml" />
+	<monster name="Totodile" file="gen2/totodile.xml" />
+	<monster name="Croconaw" file="gen2/croconaw.xml" />
+	<monster name="Feraligatr" file="gen2/feraligatr.xml" />
+	<!-- <monster name="Sentret" file="gen2/sentret.xml" /> -->
+	<monster name="Furret" file="gen2/furret.xml" />
+	<!-- <monster name="Hoothoot" file="gen2/hoothoot.xml" /> -->
+	<monster name="Noctowl" file="gen2/noctowl.xml" />
+	<!-- <monster name="Ledyba" file="gen2/ledyba.xml" /> -->
+	<monster name="Ledian" file="gen2/ledian.xml" />
+	<!-- <monster name="Spinarak" file="gen2/spinarak.xml" /> -->
+	<monster name="Ariados" file="gen2/ariados.xml" />
+	<monster name="Crobat" file="gen2/crobat.xml" />
+	<!-- <monster name="Chinchou" file="gen2/chinchou.xml" /> -->
+	<monster name="Lanturn" file="gen2/lanturn.xml" />
+	<!-- <monster name="Pichu" file="gen2/pichu.xml" /> -->
+	<!-- <monster name="Cleffa" file="gen2/cleffa.xml" /> -->
+	<!-- <monster name="Igglybuff" file="gen2/igglybuff.xml" /> -->
+	<!-- <monster name="Togepi" file="gen2/togepi.xml" /> -->
+	<!-- <monster name="Togetic" file="gen2/togetic.xml" /> -->
+	<!-- <monster name="Natu" file="gen2/natu.xml" /> -->
+	<monster name="Xatu" file="gen2/xatu.xml" />
+	<!-- <monster name="Mareep" file="gen2/mareep.xml" /> -->
+	<!-- <monster name="Flaaffy" file="gen2/flaaffy.xml" /> -->
+	<monster name="Ampharos" file="gen2/ampharos.xml" />
+	<monster name="Bellossom" file="gen2/bellossom.xml" />
+	<!-- <monster name="Marill" file="gen2/marill.xml" /> -->
+	<monster name="Azumarill" file="gen2/azumarill.xml" />
+	<monster name="Sudowoodo" file="gen2/sudowoodo.xml" />
+	<monster name="Politoed" file="gen2/politoed.xml" />
+	<!-- <monster name="Hoppip" file="gen2/hoppip.xml" /> -->
+	<!-- <monster name="Skiploom" file="gen2/skiploom.xml" /> -->
+	<monster name="Jumpluff" file="gen2/jumpluff.xml" />
+	<!-- <monster name="Aipom" file="gen2/aipom.xml" /> -->
+	<!-- <monster name="Sunkern" file="gen2/sunkern.xml" /> -->
+	<monster name="Sunflora" file="gen2/sunflora.xml" />
+	<!-- <monster name="Yanma" file="gen2/yanma.xml" /> -->
+	<!-- <monster name="Wooper" file="gen2/wooper.xml" /> -->
+	<monster name="Quagsire" file="gen2/quagsire.xml" />
+	<monster name="Espeon" file="gen2/espeon.xml" />
+	<monster name="Umbreon" file="gen2/umbreon.xml" />
+	<!-- <monster name="Murkrow" file="gen2/murkrow.xml" /> -->
+	<monster name="Slowking" file="gen2/slowking.xml" />
+	<!-- <monster name="Misdreavus" file="gen2/misdreavus.xml" /> -->
+	<monster name="Unown" file="gen2/unown.xml" />
+	<monster name="Wobbuffet" file="gen2/wobbuffet.xml" />
+	<monster name="Girafarig" file="gen2/girafarig.xml" />
+	<!-- <monster name="Pineco" file="gen2/pineco.xml" /> -->
+	<monster name="Forretress" file="gen2/forretress.xml" />
+	<monster name="Dunsparce" file="gen2/dunsparce.xml" />
+	<!-- <monster name="Gligar" file="gen2/gligar.xml" /> -->
+	<monster name="Steelix" file="gen2/steelix.xml" />
+	<!-- <monster name="Snubbull" file="gen2/snubbull.xml" /> -->
+	<monster name="Granbull" file="gen2/granbull.xml" />
+	<monster name="Qwilfish" file="gen2/qwilfish.xml" />
+	<monster name="Scizor" file="gen2/scizor.xml" />
+	<monster name="Shuckle" file="gen2/shuckle.xml" />
+	<monster name="Heracross" file="gen2/heracross.xml" />
+	<!-- <monster name="Sneasel" file="gen2/sneasel.xml" /> -->
+	<!-- <monster name="Teddiursa" file="gen2/teddiursa.xml" /> -->
+	<monster name="Ursaring" file="gen2/ursaring.xml" />
+	<!-- <monster name="Slugma" file="gen2/slugma.xml" /> -->
+	<monster name="Magcargo" file="gen2/magcargo.xml" />
+	<!-- <monster name="Swinub" file="gen2/swinub.xml" /> -->
+	<!-- <monster name="Piloswine" file="gen2/piloswine.xml" /> -->
+	<monster name="Corsola" file="gen2/corsola.xml" />
+	<!-- <monster name="Remoraid" file="gen2/remoraid.xml" /> -->
+	<monster name="Octillery" file="gen2/octillery.xml" />
+	<monster name="Delibird" file="gen2/delibird.xml" />
+	<monster name="Mantine" file="gen2/mantine.xml" />
+	<monster name="Skarmory" file="gen2/skarmory.xml" />
+	<!-- <monster name="Houndour" file="gen2/houndour.xml" /> -->
+	<monster name="Houndoom" file="gen2/houndoom.xml" />
+	<monster name="Kingdra" file="gen2/kingdra.xml" />
+	<!-- <monster name="Phanpy" file="gen2/phanpy.xml" /> -->
+	<monster name="Donphan" file="gen2/donphan.xml" />
+	<monster name="Porygon2" file="gen2/porygon2.xml" />
+	<monster name="Stantler" file="gen2/stantler.xml" />
+	<monster name="Smeargle" file="gen2/smeargle.xml" />
+	<!-- <monster name="Tyrogue" file="gen2/tyrogue.xml" /> -->
+	<monster name="Hitmontop" file="gen2/hitmontop.xml" />
+	<!-- <monster name="Smoochum" file="gen2/smoochum.xml" /> -->
+	<!-- <monster name="Elekid" file="gen2/elekid.xml" /> -->
+	<!-- <monster name="Magby" file="gen2/magby.xml" /> -->
+	<monster name="Miltank" file="gen2/miltank.xml" />
+	<monster name="Blissey" file="gen2/blissey.xml" />
+	<monster name="Raikou" file="gen2/raikou.xml" />
+	<monster name="Entei" file="gen2/entei.xml" />
+	<monster name="Suicune" file="gen2/suicune.xml" />
+	<!-- <monster name="Larvitar" file="gen2/larvitar.xml" /> -->
+	<!-- <monster name="Pupitar" file="gen2/pupitar.xml" /> -->
+	<monster name="Tyranitar" file="gen2/tyranitar.xml" />
+	<monster name="Lugia" file="gen2/lugia.xml" />
+	<monster name="Ho-Oh" file="gen2/ho-oh.xml" />
+	<monster name="Celebi" file="gen2/celebi.xml" />
+	
+	<!-- Gen 3 -->
+	
+	<monster name="Treecko" file="gen3/treecko.xml" />
+	<monster name="Grovyle" file="gen3/grovyle.xml" />
+	<monster name="Sceptile" file="gen3/sceptile.xml" />
+	<monster name="Torchic" file="gen3/torchic.xml" />
+	<monster name="Combusken" file="gen3/combusken.xml" />
+	<monster name="Blaziken" file="gen3/blaziken.xml" />
+	<monster name="Mudkip" file="gen3/mudkip.xml" />
+	<monster name="Marshtomp" file="gen3/marshtomp.xml" />
+	<monster name="Swampert" file="gen3/swampert.xml" />
+	<!-- <monster name="Poochyena" file="gen3/poochyena.xml" /> -->
+	<monster name="Mightyena" file="gen3/mightyena.xml" />
+	<!-- <monster name="Zigzagoon" file="gen3/zigzagoon.xml" /> -->
+	<monster name="Linoone" file="gen3/linoone.xml" />
+	<!-- <monster name="Wurmple" file="gen3/wurmple.xml" /> -->
+	<!-- <monster name="Silcoon" file="gen3/silcoon.xml" /> -->
+	<monster name="Beautifly" file="gen3/beautifly.xml" />
+	<!-- <monster name="Cascoon" file="gen3/cascoon.xml" /> -->
+	<monster name="Dustox" file="gen3/dustox.xml" />
+	<!-- <monster name="Lotad" file="gen3/lotad.xml" /> -->
+	<!-- <monster name="Lombre" file="gen3/lombre.xml" /> -->
+	<monster name="Ludicolo" file="gen3/ludicolo.xml" />
+	<!-- <monster name="Seedot" file="gen3/seedot.xml" /> -->
+	<!-- <monster name="Nuzleaf" file="gen3/nuzleaf.xml" /> -->
+	<monster name="Shiftry" file="gen3/shiftry.xml" />
+	<!-- <monster name="Taillow" file="gen3/taillow.xml" /> -->
+	<monster name="Swellow" file="gen3/swellow.xml" />
+	<!-- <monster name="Wingull" file="gen3/wingull.xml" /> -->
+	<monster name="Pelipper" file="gen3/pelipper.xml" />
+	<!-- <monster name="Ralts" file="gen3/ralts.xml" /> -->
+	<!-- <monster name="Kirlia" file="gen3/kirlia.xml" /> -->
+	<monster name="Gardevoir" file="gen3/gardevoir.xml" />
+	<!-- <monster name="Surskit" file="gen3/surskit.xml" /> -->
+	<monster name="Masquerain" file="gen3/masquerain.xml" />
+	<!-- <monster name="Shroomish" file="gen3/shroomish.xml" /> -->
+	<monster name="Breloom" file="gen3/breloom.xml" />
+	<!-- <monster name="Slakoth" file="gen3/slakoth.xml" /> -->
+	<!-- <monster name="Vigoroth" file="gen3/vigoroth.xml" /> -->
+	<monster name="Slaking" file="gen3/slaking.xml" />
+	<!-- <monster name="Nincada" file="gen3/nincada.xml" /> -->
+	<monster name="Ninjask" file="gen3/ninjask.xml" />
+	<monster name="Shedinja" file="gen3/shedinja.xml" />
+	<!-- <monster name="Whismur" file="gen3/whismur.xml" /> -->
+	<!-- <monster name="Loudred" file="gen3/loudred.xml" /> -->
+	<monster name="Exploud" file="gen3/exploud.xml" />
+	<!-- <monster name="Makuhita" file="gen3/makuhita.xml" /> -->
+	<monster name="Hariyama" file="gen3/hariyama.xml" />
+	<!-- <monster name="Azurill" file="gen3/azurill.xml" /> -->
+	<!-- <monster name="Nosepass" file="gen3/nosepass.xml" /> -->
+	<!-- <monster name="Skitty" file="gen3/skitty.xml" /> -->
+	<monster name="Delcatty" file="gen3/delcatty.xml" />
+	<monster name="Sableye" file="gen3/sableye.xml" />
+	<monster name="Mawile" file="gen3/mawile.xml" />
+	<!-- <monster name="Aron" file="gen3/aron.xml" /> -->
+	<!-- <monster name="Lairon" file="gen3/lairon.xml" /> -->
+	<monster name="Aggron" file="gen3/aggron.xml" />
+	<!-- <monster name="Meditite" file="gen3/meditite.xml" /> -->
+	<monster name="Medicham" file="gen3/medicham.xml" />
+	<!-- <monster name="Electrike" file="gen3/electrike.xml" /> -->
+	<monster name="Manectric" file="gen3/manectric.xml" />
+	<monster name="Plusle" file="gen3/plusle.xml" />
+	<monster name="Minun" file="gen3/minun.xml" />
+	<monster name="Volbeat" file="gen3/volbeat.xml" />
+	<monster name="Illumise" file="gen3/illumise.xml" />
+	<!-- <monster name="Roselia" file="gen3/roselia.xml" /> -->
+	<!-- <monster name="Gulpin" file="gen3/gulpin.xml" /> -->
+	<monster name="Swalot" file="gen3/swalot.xml" />
+	<!-- <monster name="Carvanha" file="gen3/carvanha.xml" /> -->
+	<monster name="Sharpedo" file="gen3/sharpedo.xml" />
+	<!-- <monster name="Wailmer" file="gen3/wailmer.xml" /> -->
+	<monster name="Wailord" file="gen3/wailord.xml" />
+	<!-- <monster name="Numel" file="gen3/numel.xml" /> -->
+	<monster name="Camerupt" file="gen3/camerupt.xml" />
+	<monster name="Torkoal" file="gen3/torkoal.xml" />
+	<!-- <monster name="Spoink" file="gen3/spoink.xml" /> -->
+	<monster name="Grumpig" file="gen3/grumpig.xml" />
+	<monster name="Spinda" file="gen3/spinda.xml" />
+	<!-- <monster name="Trapinch" file="gen3/trapinch.xml" /> -->
+	<!-- <monster name="Vibrava" file="gen3/vibrava.xml" /> -->
+	<monster name="Flygon" file="gen3/flygon.xml" />
+	<!-- <monster name="Cacnea" file="gen3/cacnea.xml" /> -->
+	<monster name="Cacturne" file="gen3/cacturne.xml" />
+	<!-- <monster name="Swablu" file="gen3/swablu.xml" /> -->
+	<monster name="Altaria" file="gen3/altaria.xml" />
+	<monster name="Zangoose" file="gen3/zangoose.xml" />
+	<monster name="Seviper" file="gen3/seviper.xml" />
+	<monster name="Lunatone" file="gen3/lunatone.xml" />
+	<monster name="Solrock" file="gen3/solrock.xml" />
+	<!-- <monster name="Barboach" file="gen3/barboach.xml" /> -->
+	<monster name="Whiscash" file="gen3/whiscash.xml" />
+	<!-- <monster name="Corphish" file="gen3/corphish.xml" /> -->
+	<monster name="Crawdaunt" file="gen3/crawdaunt.xml" />
+	<!-- <monster name="Baltoy" file="gen3/baltoy.xml" /> -->
+	<monster name="Claydol" file="gen3/claydol.xml" />
+	<!-- <monster name="Lileep" file="gen3/lileep.xml" /> -->
+	<monster name="Cradily" file="gen3/cradily.xml" />
+	<!-- <monster name="Anorith" file="gen3/anorith.xml" /> -->
+	<monster name="Armaldo" file="gen3/armaldo.xml" />
+	<!-- <monster name="Feebas" file="gen3/feebas.xml" /> -->
+	<monster name="Milotic" file="gen3/milotic.xml" />
+	<monster name="Castform" file="gen3/castform.xml" />
+	<monster name="Kecleon" file="gen3/kecleon.xml" />
+	<!-- <monster name="Shuppet" file="gen3/shuppet.xml" /> -->
+	<monster name="Banette" file="gen3/banette.xml" />
+	<!-- <monster name="Duskull" file="gen3/duskull.xml" /> -->
+	<!-- <monster name="Dusclops" file="gen3/dusclops.xml" /> -->
+	<monster name="Tropius" file="gen3/tropius.xml" />
+	<monster name="Chimecho" file="gen3/chimecho.xml" />
+	<monster name="Absol" file="gen3/absol.xml" />
+	<!-- <monster name="Wynaut" file="gen3/wynaut.xml" /> -->
+	<!-- <monster name="Snorunt" file="gen3/snorunt.xml" /> -->
+	<monster name="Glalie" file="gen3/glalie.xml" />
+	<!-- <monster name="Spheal" file="gen3/spheal.xml" /> -->
+	<!-- <monster name="Sealeo" file="gen3/sealeo.xml" /> -->
+	<monster name="Walrein" file="gen3/walrein.xml" />
+	<!-- <monster name="Clamperl" file="gen3/clamperl.xml" /> -->
+	<monster name="Huntail" file="gen3/huntail.xml" />
+	<monster name="Gorebyss" file="gen3/gorebyss.xml" />
+	<monster name="Relicanth" file="gen3/relicanth.xml" />
+	<monster name="Luvdisc" file="gen3/luvdisc.xml" />
+	<!-- <monster name="Bagon" file="gen3/bagon.xml" /> -->
+	<!-- <monster name="Shelgon" file="gen3/shelgon.xml" /> -->
+	<monster name="Salamence" file="gen3/salamence.xml" />
+	<!-- <monster name="Beldum" file="gen3/beldum.xml" /> -->
+	<!-- <monster name="Metang" file="gen3/metang.xml" /> -->
+	<monster name="Metagross" file="gen3/metagross.xml" />
+	<monster name="Regirock" file="gen3/regirock.xml" />
+	<monster name="Regice" file="gen3/regice.xml" />
+	<monster name="Registeel" file="gen3/registeel.xml" />
+	<monster name="Latias" file="gen3/latias.xml" />
+	<monster name="Latios" file="gen3/latios.xml" />
+	<monster name="Kyogre" file="gen3/kyogre.xml" />
+	<monster name="Groudon" file="gen3/groudon.xml" />
+	<monster name="Rayquaza" file="gen3/rayquaza.xml" />
+	<monster name="Jirachi" file="gen3/jirachi.xml" />
+	<monster name="Deoxys" file="gen3/deoxys.xml" />
+	
+	<!-- Gen 4 -->
+	
+	<monster name="Turtwig" file="gen4/turtwig.xml" />
+	<monster name="Grotle" file="gen4/grotle.xml" />
+	<monster name="Torterra" file="gen4/torterra.xml" />
+	<monster name="Chimchar" file="gen4/chimchar.xml" />
+	<monster name="Monferno" file="gen4/monferno.xml" />
+	<monster name="Infernape" file="gen4/infernape.xml" />
+	<monster name="Piplup" file="gen4/piplup.xml" />
+	<monster name="Prinplup" file="gen4/prinplup.xml" />
+	<monster name="Empoleon" file="gen4/empoleon.xml" />
+	<!-- <monster name="Starly" file="gen4/starly.xml" /> -->
+	<!-- <monster name="Staravia" file="gen4/staravia.xml" /> -->
+	<monster name="Staraptor" file="gen4/staraptor.xml" />
+	<!-- <monster name="Bidoof" file="gen4/bidoof.xml" /> -->
+	<monster name="Bibarel" file="gen4/bibarel.xml" />
+	<!-- <monster name="Kricketot" file="gen4/kricketot.xml" /> -->
+	<monster name="Kricketune" file="gen4/kricketune.xml" />
+	<!-- <monster name="Shinx" file="gen4/shinx.xml" /> -->
+	<!-- <monster name="Luxio" file="gen4/luxio.xml" /> -->
+	<monster name="Luxray" file="gen4/luxray.xml" />
+	<!-- <monster name="Budew" file="gen4/budew.xml" /> -->
+	<monster name="Roserade" file="gen4/roserade.xml" />
+	<!-- <monster name="Cranidos" file="gen4/cranidos.xml" /> -->
+	<monster name="Rampardos" file="gen4/rampardos.xml" />
+	<!-- <monster name="Shieldon" file="gen4/shieldon.xml" /> -->
+	<monster name="Bastiodon" file="gen4/bastiodon.xml" />
+	<!-- <monster name="Burmy" file="gen4/burmy.xml" /> -->
+	<monster name="Wormadam" file="gen4/wormadam.xml" />
+	<monster name="Mothim" file="gen4/mothim.xml" />
+	<!-- <monster name="Combee" file="gen4/combee.xml" /> -->
+	<monster name="Vespiquen" file="gen4/vespiquen.xml" />
+	<monster name="Pachirisu" file="gen4/pachirisu.xml" />
+	<!-- <monster name="Buizel" file="gen4/buizel.xml" /> -->
+	<monster name="Floatzel" file="gen4/floatzel.xml" />
+	<!-- <monster name="Cherubi" file="gen4/cherubi.xml" /> -->
+	<monster name="Cherrim" file="gen4/cherrim.xml" />
+	<!-- <monster name="Shellos" file="gen4/shellos.xml" /> -->
+	<monster name="Gastrodon" file="gen4/gastrodon.xml" />
+	<monster name="Ambipom" file="gen4/ambipom.xml" />
+	<!-- <monster name="Drifloon" file="gen4/drifloon.xml" /> -->
+	<monster name="Drifblim" file="gen4/drifblim.xml" />
+	<!-- <monster name="Buneary" file="gen4/buneary.xml" /> -->
+	<monster name="Lopunny" file="gen4/lopunny.xml" />
+	<monster name="Mismagius" file="gen4/mismagius.xml" />
+	<monster name="Honchkrow" file="gen4/honchkrow.xml" />
+	<!-- <monster name="Glameow" file="gen4/glameow.xml" /> -->
+	<monster name="Purugly" file="gen4/purugly.xml" />
+	<!-- <monster name="Chingling" file="gen4/chingling.xml" /> -->
+	<!-- <monster name="Stunky" file="gen4/stunky.xml" /> -->
+	<monster name="Skuntank" file="gen4/skuntank.xml" />
+	<!-- <monster name="Bronzor" file="gen4/bronzor.xml" /> -->
+	<monster name="Bronzong" file="gen4/bronzong.xml" />
+	<!-- <monster name="Bonsly" file="gen4/bonsly.xml" /> -->
+	<!-- <monster name="Mime Jr" file="gen4/mime jr.xml" /> -->
+	<!-- <monster name="Happiny" file="gen4/happiny.xml" /> -->
+	<monster name="Chatot" file="gen4/chatot.xml" />
+	<monster name="Spiritomb" file="gen4/spiritomb.xml" />
+	<!-- <monster name="Gible" file="gen4/gible.xml" /> -->
+	<!-- <monster name="Gabite" file="gen4/gabite.xml" /> -->
+	<monster name="Garchomp" file="gen4/garchomp.xml" />
+	<!-- <monster name="Munchlax" file="gen4/munchlax.xml" /> -->
+	<!-- <monster name="Riolu" file="gen4/riolu.xml" /> -->
+	<monster name="Lucario" file="gen4/lucario.xml" />
+	<!-- <monster name="Hippopotas" file="gen4/hippopotas.xml" /> -->
+	<monster name="Hippowdon" file="gen4/hippowdon.xml" />
+	<!-- <monster name="Skorupi" file="gen4/skorupi.xml" /> -->
+	<monster name="Drapion" file="gen4/drapion.xml" />
+	<!-- <monster name="Croagunk" file="gen4/croagunk.xml" /> -->
+	<monster name="Toxicroak" file="gen4/toxicroak.xml" />
+	<monster name="Carnivine" file="gen4/carnivine.xml" />
+	<!-- <monster name="Finneon" file="gen4/finneon.xml" /> -->
+	<monster name="Lumineon" file="gen4/lumineon.xml" />
+	<!-- <monster name="Mantyke" file="gen4/mantyke.xml" /> -->
+	<!-- <monster name="Snover" file="gen4/snover.xml" /> -->
+	<monster name="Abomasnow" file="gen4/abomasnow.xml" />
+	<monster name="Weavile" file="gen4/weavile.xml" />
+	<monster name="Magnezone" file="gen4/magnezone.xml" />
+	<monster name="Lickilicky" file="gen4/lickilicky.xml" />
+	<monster name="Rhyperior" file="gen4/rhyperior.xml" />
+	<monster name="Tangrowth" file="gen4/tangrowth.xml" />
+	<monster name="Electivire" file="gen4/electivire.xml" />
+	<monster name="Magmortar" file="gen4/magmortar.xml" />
+	<monster name="Togekiss" file="gen4/togekiss.xml" />
+	<monster name="Yanmega" file="gen4/yanmega.xml" />
+	<monster name="Leafeon" file="gen4/leafeon.xml" />
+	<monster name="Glaceon" file="gen4/glaceon.xml" />
+	<monster name="Gliscor" file="gen4/gliscor.xml" />
+	<monster name="Mamoswine" file="gen4/mamoswine.xml" />
+	<monster name="Porygon-Z" file="gen4/porygon-z.xml" />
+	<monster name="Gallade" file="gen4/gallade.xml" />
+	<monster name="Probopass" file="gen4/probopass.xml" />
+	<monster name="Dusknoir" file="gen4/dusknoir.xml" />
+	<monster name="Froslass" file="gen4/froslass.xml" />
+	<monster name="Rotom" file="gen4/rotom.xml" />
+	<monster name="Uxie" file="gen4/uxie.xml" />
+	<monster name="Mesprit" file="gen4/mesprit.xml" />
+	<monster name="Azelf" file="gen4/azelf.xml" />
+	<monster name="Dialga" file="gen4/dialga.xml" />
+	<monster name="Palkia" file="gen4/palkia.xml" />
+	<monster name="Heatran" file="gen4/heatran.xml" />
+	<monster name="Regigigas" file="gen4/regigigas.xml" />
+	<monster name="Giratina" file="gen4/giratina.xml" />
+	<monster name="Cresselia" file="gen4/cresselia.xml" />
+	<monster name="Phione" file="gen4/phione.xml" />
+	<monster name="Manaphy" file="gen4/manaphy.xml" />
+	<monster name="Darkrai" file="gen4/darkrai.xml" />
+	<monster name="Shaymin" file="gen4/shaymin.xml" />
+	<monster name="Arceus" file="gen4/arceus.xml" />
+	
+	<!-- Gen 5 -->
+	
+	<monster name="Snivy" file="gen5/snivy.xml" />
+	<monster name="Servine" file="gen5/servine.xml" />
+	<monster name="Serperior" file="gen5/serperior.xml" />
+	<monster name="Tepig" file="gen5/tepig.xml" />
+	<monster name="Pignite" file="gen5/pignite.xml" />
+	<monster name="Emboar" file="gen5/emboar.xml" />
+	<monster name="Oshawott" file="gen5/oshawott.xml" />
+	<monster name="Dewott" file="gen5/dewott.xml" />
+	<monster name="Samurott" file="gen5/samurott.xml" />
+	<monster name="Audino" file="gen5/audino.xml" />
+	<monster name="Zoroark" file="gen5/zoroark.xml" />
+	<monster name="Scolipede" file="gen5/scolipede.xml" />
+	<monster name="Lilligant" file="gen5/lilligant.xml" />
+	<monster name="Darmanitan" file="gen5/darmanitan.xml" />
+	<monster name="Carracosta" file="gen5/carracosta.xml" />
+	<monster name="Gothitelle" file="gen5/gothitelle.xml" />
+	<monster name="Galvantula" file="gen5/galvantula.xml" />
+	<monster name="Ferrothorn" file="gen5/ferrothorn.xml" />
+	<monster name="Klinklang" file="gen5/klinklang.xml" />
+	<monster name="Eelektross" file="gen5/eelektross.xml" />
+	<monster name="Chandelure" file="gen5/chandelure.xml" />
+	<monster name="Haxorus" file="gen5/haxorus.xml" />
+	<monster name="Beartic" file="gen5/beartic.xml" />
+	<monster name="Accelgor" file="gen5/accelgor.xml" />
+	<monster name="Druddigon" file="gen5/druddigon.xml" />
+	<monster name="Golurk" file="gen5/golurk.xml" />
+	<monster name="Braviary" file="gen5/braviary.xml" />
+	<monster name="Heatmor" file="gen5/heatmor.xml" />
+	<monster name="Hydreigon" file="gen5/hydreigon.xml" />
+	<monster name="Volcarona" file="gen5/volcarona.xml" />
+	<monster name="Escavalier" file="gen5/escavalier.xml" />
+	<monster name="Victini" file="gen5/victini.xml" />
+	<monster name="Keldeo" file="gen5/keldeo.xml" />
+	<monster name="Meloetta" file="gen5/meloetta.xml" />
+	<monster name="Genesect" file="gen5/genesect.xml" />
+	
+	<!-- Gen 6 -->
+	
+	<monster name="Chespin" file="gen6/chespin.xml" />
+	<monster name="Quilladin" file="gen6/quilladin.xml" />
+	<monster name="Chesnaught" file="gen6/chesnaught.xml" />
+	<monster name="Fennekin" file="gen6/fennekin.xml" />
+	<monster name="Braixen" file="gen6/braixen.xml" />
+	<monster name="Delphox" file="gen6/delphox.xml" />
+	<monster name="Froakie" file="gen6/froakie.xml" />
+	<monster name="Frogadier" file="gen6/frogadier.xml" />
+	<monster name="Greninja" file="gen6/greninja.xml" />
+	<monster name="Talonflame" file="gen6/talonflame.xml" />
+	<monster name="Gogoat" file="gen6/gogoat.xml" />
+	<monster name="Pangoro" file="gen6/pangoro.xml" />
+	<monster name="Clawitzer" file="gen6/clawitzer.xml" />
+	<monster name="Sylveon" file="gen6/sylveon.xml" />
+	<monster name="Hawlucha" file="gen6/hawlucha.xml" />
+	<monster name="Goodra" file="gen6/goodra.xml" />
+	<monster name="Trevenant" file="gen6/trevenant.xml" />
+	<monster name="Avalugg" file="gen6/avalugg.xml" />
+	<monster name="Noivern" file="gen6/noivern.xml" />
+	<monster name="Diancie" file="gen6/diancie.xml" />
+	<monster name="Hoopa" file="gen6/hoopa.xml" />
+	<monster name="Volcanion" file="gen6/volcanion.xml" />
+	
+	<!-- Gen 7 -->
+	
+	<monster name="Rowlet" file="gen7/rowlet.xml" />
+	<monster name="Dartrix" file="gen7/dartrix.xml" />
+	<monster name="Decidueye" file="gen7/decidueye.xml" />
+	<monster name="Litten" file="gen7/litten.xml" />
+	<monster name="Torracat" file="gen7/torracat.xml" />
+	<monster name="Incineroar" file="gen7/incineroar.xml" />
+	<monster name="Popplio" file="gen7/popplio.xml" />
+	<monster name="Brionne" file="gen7/brionne.xml" />
+	<monster name="Primarina" file="gen7/primarina.xml" />
+	<monster name="Vikavolt" file="gen7/vikavolt.xml" />
+	<monster name="Crabominable" file="gen7/crabominable.xml" />
+	<monster name="Lycanroc" file="gen7/lycanroc.xml" />
+	<monster name="Araquanid" file="gen7/araquanid.xml" />
+	<monster name="Lurantis" file="gen7/lurantis.xml" />
+	<monster name="Salazzle" file="gen7/salazzle.xml" />
+	<monster name="Tsareena" file="gen7/tsareena.xml" />
+	<monster name="Oranguru" file="gen7/oranguru.xml" />
+	<monster name="Passimian" file="gen7/passimian.xml" />
+	<monster name="Turtonator" file="gen7/turtonator.xml" />
+	<monster name="Mimikyu" file="gen7/mimikyu.xml" />
+	<monster name="Magearna" file="gen7/magearna.xml" />
+	<monster name="Marshadow" file="gen7/marshadow.xml" />
+	<monster name="Zeraora" file="gen7/zeraora.xml" />
+	<monster name="Melmetal" file="gen7/melmetal.xml" />
+	
+	<!-- Gen 8 -->
+	
+	<monster name="Cinderace" file="gen8/cinderace.xml" />
+	<monster name="Corviknight" file="gen8/corviknight.xml" />
+	<monster name="Centiskorch" file="gen8/centiskorch.xml" />
+	<monster name="Dragapult" file="gen8/dragapult.xml" />
+	<monster name="Hatterene" file="gen8/hatterene.xml" />
+	<monster name="Grimmsnarl" file="gen8/grimmsnarl.xml" />
+	<monster name="Zarude" file="gen8/zarude.xml" />
+	
+	<!-- Gen 8.5 Bosses -->
+	
+	<monster name="Kleavor" file="gen8/kleavor.xml" />
+	<monster name="Wyrdeer" file="gen8/wyrdeer.xml" />
+	<monster name="Ursaluna" file="gen8/ursaluna.xml" />
+	<monster name="Basculegion" file="gen8/basculegion.xml" />
+	<monster name="Sneasler" file="gen8/sneasler.xml" />
+	<monster name="Overqwil" file="gen8/overqwil.xml" />
+	
+	<monster name="Toedscruel" file="gen9/toedscruel.xml" />
+	<monster name="Wugtrio" file="gen9/wugtrio.xml" />
+	<monster name="Annihilape" file="gen9/annihilape.xml" />
+	<monster name="Clodsire" file="gen9/clodsire.xml" />
+	<monster name="Farigiraf" file="gen9/farigiraf.xml" />
+	<monster name="Dudunsparce" file="gen9/dudunsparce.xml" />
+	<monster name="Iron Bundle" file="gen9/iron bundle.xml" />
+	<monster name="Gholdengo" file="gen9/gholdengo.xml" />
+	
+	
+	<!-- Shiny Gen 1 -->
+	
+	<!-- <monster name="Shiny Bulbasaur" file="shiny/shiny bulbasaur.xml" /> -->
+	<!-- <monster name="Shiny Ivysaur" file="shiny/shiny ivysaur.xml" /> -->
+	<!-- <monster name="Shiny Venusaur" file="shiny/shiny venusaur.xml" /> -->
+	<!-- <monster name="Shiny Charmander" file="shiny/shiny charmander.xml" /> -->
+	<!-- <monster name="Shiny Charmeleon" file="shiny/shiny charmeleon.xml" /> -->
+	<!-- <monster name="Shiny Charizard" file="shiny/shiny charizard.xml" /> -->
+	<!-- <monster name="Shiny Squirtle" file="shiny/shiny squirtle.xml" /> -->
+	<!-- <monster name="Shiny Wartortle" file="shiny/shiny wartortle.xml" /> -->
+	<!-- <monster name="Shiny Blastoise" file="shiny/shiny blastoise.xml" /> -->
+	<!-- <monster name="Shiny Caterpie" file="shiny/shiny caterpie.xml" /> -->
+	<!-- <monster name="Shiny Metapod" file="shiny/shiny metapod.xml" /> -->
+	<!-- <monster name="Shiny Butterfree" file="shiny/shiny butterfree.xml" /> -->
+	<!-- <monster name="Shiny Weedle" file="shiny/shiny weedle.xml" /> -->
+	<!-- <monster name="Shiny Kakuna" file="shiny/shiny kakuna.xml" /> -->
+	<!-- <monster name="Shiny Beedrill" file="shiny/shiny beedrill.xml" /> -->
+	<!-- <monster name="Shiny Pidgey" file="shiny/shiny pidgey.xml" /> -->
+	<!-- <monster name="Shiny Pidgeotto" file="shiny/shiny pidgeotto.xml" /> -->
+	<!-- <monster name="Shiny Pidgeot" file="shiny/shiny pidgeot.xml" /> -->
+	<!-- <monster name="Shiny Rattata" file="shiny/shiny rattata.xml" /> -->
+	<!-- <monster name="Shiny Raticate" file="shiny/shiny raticate.xml" /> -->
+	<!-- <monster name="Shiny Spearow" file="shiny/shiny spearow.xml" /> -->
+	<!-- <monster name="Shiny Fearow" file="shiny/shiny fearow.xml" /> -->
+	<!-- <monster name="Shiny Ekans" file="shiny/shiny ekans.xml" /> -->
+	<!-- <monster name="Shiny Arbok" file="shiny/shiny arbok.xml" /> -->
+	<!-- <monster name="Shiny Pikachu" file="shiny/shiny pikachu.xml" /> -->
+	<!-- <monster name="Shiny Raichu" file="shiny/shiny raichu.xml" /> -->
+	<!-- <monster name="Shiny Sandshrew" file="shiny/shiny sandshrew.xml" /> -->
+	<!-- <monster name="Shiny Sandslash" file="shiny/shiny sandslash.xml" /> -->
+	<!-- <monster name="Shiny Nidoran Female" file="shiny/shiny nidoran female.xml" /> -->
+	<!-- <monster name="Shiny Nidorina" file="shiny/shiny nidorina.xml" /> -->
+	<!-- <monster name="Shiny Nidoqueen" file="shiny/shiny nidoqueen.xml" /> -->
+	<!-- <monster name="Shiny Nidoran Male" file="shiny/shiny nidoran male.xml" /> -->
+	<!-- <monster name="Shiny Nidorino" file="shiny/shiny nidorino.xml" /> -->
+	<!-- <monster name="Shiny Nidoking" file="shiny/shiny nidoking.xml" /> -->
+	<!-- <monster name="Shiny Clefairy" file="shiny/shiny clefairy.xml" /> -->
+	<!-- <monster name="Shiny Clefable" file="shiny/shiny clefable.xml" /> -->
+	<!-- <monster name="Shiny Vulpix" file="shiny/shiny vulpix.xml" /> -->
+	<!-- <monster name="Shiny Ninetales" file="shiny/shiny ninetales.xml" /> -->
+	<!-- <monster name="Shiny Jigglypuff" file="shiny/shiny jigglypuff.xml" /> -->
+	<!-- <monster name="Shiny Wigglytuff" file="shiny/shiny wigglytuff.xml" /> -->
+	<!-- <monster name="Shiny Zubat" file="shiny/shiny zubat.xml" /> -->
+	<!-- <monster name="Shiny Golbat" file="shiny/shiny golbat.xml" /> -->
+	<!-- <monster name="Shiny Oddish" file="shiny/shiny oddish.xml" /> -->
+	<!-- <monster name="Shiny Gloom" file="shiny/shiny gloom.xml" /> -->
+	<!-- <monster name="Shiny Vileplume" file="shiny/shiny vileplume.xml" /> -->
+	<!-- <monster name="Shiny Paras" file="shiny/shiny paras.xml" /> -->
+	<!-- <monster name="Shiny Parasect" file="shiny/shiny parasect.xml" /> -->
+	<!-- <monster name="Shiny Venonat" file="shiny/shiny venonat.xml" /> -->
+	<!-- <monster name="Shiny Venomoth" file="shiny/shiny venomoth.xml" /> -->
+	<!-- <monster name="Shiny Diglett" file="shiny/shiny diglett.xml" /> -->
+	<!-- <monster name="Shiny Dugtrio" file="shiny/shiny dugtrio.xml" /> -->
+	<!-- <monster name="Shiny Meowth" file="shiny/shiny meowth.xml" /> -->
+	<!-- <monster name="Shiny Persian" file="shiny/shiny persian.xml" /> -->
+	<!-- <monster name="Shiny Psyduck" file="shiny/shiny psyduck.xml" /> -->
+	<!-- <monster name="Shiny Golduck" file="shiny/shiny golduck.xml" /> -->
+	<!-- <monster name="Shiny Mankey" file="shiny/shiny mankey.xml" /> -->
+	<!-- <monster name="Shiny Primeape" file="shiny/shiny primeape.xml" /> -->
+	<!-- <monster name="Shiny Growlithe" file="shiny/shiny growlithe.xml" /> -->
+	<!-- <monster name="Shiny Arcanine" file="shiny/shiny arcanine.xml" /> -->
+	<!-- <monster name="Shiny Poliwag" file="shiny/shiny poliwag.xml" /> -->
+	<!-- <monster name="Shiny Poliwhirl" file="shiny/shiny poliwhirl.xml" /> -->
+	<!-- <monster name="Shiny Poliwrath" file="shiny/shiny poliwrath.xml" /> -->
+	<!-- <monster name="Shiny Abra" file="shiny/shiny abra.xml" /> -->
+	<!-- <monster name="Shiny Kadabra" file="shiny/shiny kadabra.xml" /> -->
+	<!-- <monster name="Shiny Alakazam" file="shiny/shiny alakazam.xml" /> -->
+	<!-- <monster name="Shiny Machop" file="shiny/shiny machop.xml" /> -->
+	<!-- <monster name="Shiny Machoke" file="shiny/shiny machoke.xml" /> -->
+	<!-- <monster name="Shiny Machamp" file="shiny/shiny machamp.xml" /> -->
+	<!-- <monster name="Shiny Bellsprout" file="shiny/shiny bellsprout.xml" /> -->
+	<!-- <monster name="Shiny Weepinbell" file="shiny/shiny weepinbell.xml" /> -->
+	<!-- <monster name="Shiny Victreebel" file="shiny/shiny victreebel.xml" /> -->
+	<!-- <monster name="Shiny Tentacool" file="shiny/shiny tentacool.xml" /> -->
+	<!-- <monster name="Shiny Tentacruel" file="shiny/shiny tentacruel.xml" /> -->
+	<!-- <monster name="Shiny Geodude" file="shiny/shiny geodude.xml" /> -->
+	<!-- <monster name="Shiny Graveler" file="shiny/shiny graveler.xml" /> -->
+	<!-- <monster name="Shiny Golem" file="shiny/shiny golem.xml" /> -->
+	<!-- <monster name="Shiny Ponyta" file="shiny/shiny ponyta.xml" /> -->
+	<!-- <monster name="Shiny Rapidash" file="shiny/shiny rapidash.xml" /> -->
+	<!-- <monster name="Shiny Slowpoke" file="shiny/shiny slowpoke.xml" /> -->
+	<!-- <monster name="Shiny Slowbro" file="shiny/shiny slowbro.xml" /> -->
+	<!-- <monster name="Shiny Magnemite" file="shiny/shiny magnemite.xml" /> -->
+	<!-- <monster name="Shiny Magneton" file="shiny/shiny magneton.xml" /> -->
+	<!-- <monster name="Shiny Farfetch'd" file="shiny/shiny farfetch'd.xml" /> -->
+	<!-- <monster name="Shiny Doduo" file="shiny/shiny doduo.xml" /> -->
+	<!-- <monster name="Shiny Dodrio" file="shiny/shiny dodrio.xml" /> -->
+	<!-- <monster name="Shiny Seel" file="shiny/shiny seel.xml" /> -->
+	<!-- <monster name="Shiny Dewgong" file="shiny/shiny dewgong.xml" /> -->
+	<!-- <monster name="Shiny Grimer" file="shiny/shiny grimer.xml" /> -->
+	<!-- <monster name="Shiny Muk" file="shiny/shiny muk.xml" /> -->
+	<!-- <monster name="Shiny Shellder" file="shiny/shiny shellder.xml" /> -->
+	<!-- <monster name="Shiny Cloyster" file="shiny/shiny cloyster.xml" /> -->
+	<!-- <monster name="Shiny Gastly" file="shiny/shiny gastly.xml" /> -->
+	<!-- <monster name="Shiny Haunter" file="shiny/shiny haunter.xml" /> -->
+	<!-- <monster name="Shiny Gengar" file="shiny/shiny gengar.xml" /> -->
+	<!-- <monster name="Shiny Onix" file="shiny/shiny onix.xml" /> -->
+	<!-- <monster name="Shiny Drowzee" file="shiny/shiny drowzee.xml" /> -->
+	<!-- <monster name="Shiny Hypno" file="shiny/shiny hypno.xml" /> -->
+	<!-- <monster name="Shiny Krabby" file="shiny/shiny krabby.xml" /> -->
+	<!-- <monster name="Shiny Kingler" file="shiny/shiny kingler.xml" /> -->
+	<!-- <monster name="Shiny Voltorb" file="shiny/shiny voltorb.xml" /> -->
+	<!-- <monster name="Shiny Electrode" file="shiny/shiny electrode.xml" /> -->
+	<!-- <monster name="Shiny Exeggcute" file="shiny/shiny exeggcute.xml" /> -->
+	<!-- <monster name="Shiny Exeggutor" file="shiny/shiny exeggutor.xml" /> -->
+	<!-- <monster name="Shiny Cubone" file="shiny/shiny cubone.xml" /> -->
+	<!-- <monster name="Shiny Marowak" file="shiny/shiny marowak.xml" /> -->
+	<!-- <monster name="Shiny Hitmonlee" file="shiny/shiny hitmonlee.xml" /> -->
+	<!-- <monster name="Shiny Hitmonchan" file="shiny/shiny hitmonchan.xml" /> -->
+	<!-- <monster name="Shiny Lickitung" file="shiny/shiny lickitung.xml" /> -->
+	<!-- <monster name="Shiny Koffing" file="shiny/shiny koffing.xml" /> -->
+	<!-- <monster name="Shiny Weezing" file="shiny/shiny weezing.xml" /> -->
+	<!-- <monster name="Shiny Rhyhorn" file="shiny/shiny rhyhorn.xml" /> -->
+	<!-- <monster name="Shiny Rhydon" file="shiny/shiny rhydon.xml" /> -->
+	<!-- <monster name="Shiny Chansey" file="shiny/shiny chansey.xml" /> -->
+	<!-- <monster name="Shiny Tangela" file="shiny/shiny tangela.xml" /> -->
+	<!-- <monster name="Shiny Kangaskhan" file="shiny/shiny kangaskhan.xml" /> -->
+	<!-- <monster name="Shiny Horsea" file="shiny/shiny horsea.xml" /> -->
+	<!-- <monster name="Shiny Seadra" file="shiny/shiny seadra.xml" /> -->
+	<!-- <monster name="Shiny Goldeen" file="shiny/shiny goldeen.xml" /> -->
+	<!-- <monster name="Shiny Seaking" file="shiny/shiny seaking.xml" /> -->
+	<!-- <monster name="Shiny Staryu" file="shiny/shiny staryu.xml" /> -->
+	<!-- <monster name="Shiny Starmie" file="shiny/shiny starmie.xml" /> -->
+	<!-- <monster name="Shiny Mr. Mime" file="shiny/shiny mr. mime.xml" /> -->
+	<!-- <monster name="Shiny Scyther" file="shiny/shiny scyther.xml" /> -->
+	<!-- <monster name="Shiny Jynx" file="shiny/shiny jynx.xml" /> -->
+	<!-- <monster name="Shiny Electabuzz" file="shiny/shiny electabuzz.xml" /> -->
+	<!-- <monster name="Shiny Magmar" file="shiny/shiny magmar.xml" /> -->
+	<!-- <monster name="Shiny Pinsir" file="shiny/shiny pinsir.xml" /> -->
+	<!-- <monster name="Shiny Tauros" file="shiny/shiny tauros.xml" /> -->
+	<!-- <monster name="Shiny Magikarp" file="shiny/shiny magikarp.xml" /> -->
+	<!-- <monster name="Shiny Gyarados" file="shiny/shiny gyarados.xml" /> -->
+	<!-- <monster name="Shiny Lapras" file="shiny/shiny lapras.xml" /> -->
+	<!-- <monster name="Shiny Ditto" file="shiny/shiny ditto.xml" /> -->
+	<!-- <monster name="Shiny Eevee" file="shiny/shiny eevee.xml" /> -->
+	<!-- <monster name="Shiny Vaporeon" file="shiny/shiny vaporeon.xml" /> -->
+	<!-- <monster name="Shiny Jolteon" file="shiny/shiny jolteon.xml" /> -->
+	<!-- <monster name="Shiny Flareon" file="shiny/shiny flareon.xml" /> -->
+	<!-- <monster name="Shiny Porygon" file="shiny/shiny porygon.xml" /> -->
+	<!-- <monster name="Shiny Omanyte" file="shiny/shiny omanyte.xml" /> -->
+	<!-- <monster name="Shiny Omastar" file="shiny/shiny omastar.xml" /> -->
+	<!-- <monster name="Shiny Kabuto" file="shiny/shiny kabuto.xml" /> -->
+	<!-- <monster name="Shiny Kabutops" file="shiny/shiny kabutops.xml" /> -->
+	<!-- <monster name="Shiny Aerodactyl" file="shiny/shiny aerodactyl.xml" /> -->
+	<!-- <monster name="Shiny Snorlax" file="shiny/shiny snorlax.xml" /> -->
+	<!-- <monster name="Shiny Articuno" file="shiny/shiny articuno.xml" /> -->
+	<!-- <monster name="Shiny Zapdos" file="shiny/shiny zapdos.xml" /> -->
+	<!-- <monster name="Shiny Moltres" file="shiny/shiny moltres.xml" /> -->
+	<!-- <monster name="Shiny Dratini" file="shiny/shiny dratini.xml" /> -->
+	<!-- <monster name="Shiny Dragonair" file="shiny/shiny dragonair.xml" /> -->
+	<!-- <monster name="Shiny Dragonite" file="shiny/shiny dragonite.xml" /> -->
+	<!-- <monster name="Shiny Mewtwo" file="shiny/shiny mewtwo.xml" /> -->
+	<!-- <monster name="Shiny Mew" file="shiny/shiny mew.xml" /> -->
+	
+	<!-- Shiny Gen 2 -->
+	
+	<!-- <monster name="Shiny Chikorita" file="shiny/shiny chikorita.xml" /> -->
+	<!-- <monster name="Shiny Bayleef" file="shiny/shiny bayleef.xml" /> -->
+	<!-- <monster name="Shiny Meganium" file="shiny/shiny meganium.xml" /> -->
+	<!-- <monster name="Shiny Cyndaquil" file="shiny/shiny cyndaquil.xml" /> -->
+	<!-- <monster name="Shiny Quilava" file="shiny/shiny quilava.xml" /> -->
+	<!-- <monster name="Shiny Typhlosion" file="shiny/shiny typhlosion.xml" /> -->
+	<!-- <monster name="Shiny Totodile" file="shiny/shiny totodile.xml" /> -->
+	<!-- <monster name="Shiny Croconaw" file="shiny/shiny croconaw.xml" /> -->
+	<!-- <monster name="Shiny Feraligatr" file="shiny/shiny feraligatr.xml" /> -->
+	<!-- <monster name="Shiny Sentret" file="shiny/shiny sentret.xml" /> -->
+	<!-- <monster name="Shiny Furret" file="shiny/shiny furret.xml" /> -->
+	<!-- <monster name="Shiny Hoothoot" file="shiny/shiny hoothoot.xml" /> -->
+	<!-- <monster name="Shiny Noctowl" file="shiny/shiny noctowl.xml" /> -->
+	<!-- <monster name="Shiny Ledyba" file="shiny/shiny ledyba.xml" /> -->
+	<!-- <monster name="Shiny Ledian" file="shiny/shiny ledian.xml" /> -->
+	<!-- <monster name="Shiny Spinarak" file="shiny/shiny spinarak.xml" /> -->
+	<!-- <monster name="Shiny Ariados" file="shiny/shiny ariados.xml" /> -->
+	<!-- <monster name="Shiny Crobat" file="shiny/shiny crobat.xml" /> -->
+	<!-- <monster name="Shiny Chinchou" file="shiny/shiny chinchou.xml" /> -->
+	<!-- <monster name="Shiny Lanturn" file="shiny/shiny lanturn.xml" /> -->
+	<!-- <monster name="Shiny Pichu" file="shiny/shiny pichu.xml" /> -->
+	<!-- <monster name="Shiny Cleffa" file="shiny/shiny cleffa.xml" /> -->
+	<!-- <monster name="Shiny Igglybuff" file="shiny/shiny igglybuff.xml" /> -->
+	<!-- <monster name="Shiny Togepi" file="shiny/shiny togepi.xml" /> -->
+	<!-- <monster name="Shiny Togetic" file="shiny/shiny togetic.xml" /> -->
+	<!-- <monster name="Shiny Natu" file="shiny/shiny natu.xml" /> -->
+	<!-- <monster name="Shiny Xatu" file="shiny/shiny xatu.xml" /> -->
+	<!-- <monster name="Shiny Mareep" file="shiny/shiny mareep.xml" /> -->
+	<!-- <monster name="Shiny Flaaffy" file="shiny/shiny flaaffy.xml" /> -->
+	<!-- <monster name="Shiny Ampharos" file="shiny/shiny ampharos.xml" /> -->
+	<!-- <monster name="Shiny Bellossom" file="shiny/shiny bellossom.xml" /> -->
+	<!-- <monster name="Shiny Marill" file="shiny/shiny marill.xml" /> -->
+	<!-- <monster name="Shiny Azumarill" file="shiny/shiny azumarill.xml" /> -->
+	<!-- <monster name="Shiny Sudowoodo" file="shiny/shiny sudowoodo.xml" /> -->
+	<!-- <monster name="Shiny Politoed" file="shiny/shiny politoed.xml" /> -->
+	<!-- <monster name="Shiny Hoppip" file="shiny/shiny hoppip.xml" /> -->
+	<!-- <monster name="Shiny Skiploom" file="shiny/shiny skiploom.xml" /> -->
+	<!-- <monster name="Shiny Jumpluff" file="shiny/shiny jumpluff.xml" /> -->
+	<!-- <monster name="Shiny Aipom" file="shiny/shiny aipom.xml" /> -->
+	<!-- <monster name="Shiny Sunkern" file="shiny/shiny sunkern.xml" /> -->
+	<!-- <monster name="Shiny Sunflora" file="shiny/shiny sunflora.xml" /> -->
+	<!-- <monster name="Shiny Yanma" file="shiny/shiny yanma.xml" /> -->
+	<!-- <monster name="Shiny Wooper" file="shiny/shiny wooper.xml" /> -->
+	<!-- <monster name="Shiny Quagsire" file="shiny/shiny quagsire.xml" /> -->
+	<!-- <monster name="Shiny Espeon" file="shiny/shiny espeon.xml" /> -->
+	<!-- <monster name="Shiny Umbreon" file="shiny/shiny umbreon.xml" /> -->
+	<!-- <monster name="Shiny Murkrow" file="shiny/shiny murkrow.xml" /> -->
+	<!-- <monster name="Shiny Slowking" file="shiny/shiny slowking.xml" /> -->
+	<!-- <monster name="Shiny Misdreavus" file="shiny/shiny misdreavus.xml" /> -->
+	<!-- <monster name="Shiny Unown" file="shiny/shiny unown.xml" /> -->
+	<!-- <monster name="Shiny Wobbuffet" file="shiny/shiny wobbuffet.xml" /> -->
+	<!-- <monster name="Shiny Girafarig" file="shiny/shiny girafarig.xml" /> -->
+	<!-- <monster name="Shiny Pineco" file="shiny/shiny pineco.xml" /> -->
+	<!-- <monster name="Shiny Forretress" file="shiny/shiny forretress.xml" /> -->
+	<!-- <monster name="Shiny Dunsparce" file="shiny/shiny dunsparce.xml" /> -->
+	<!-- <monster name="Shiny Gligar" file="shiny/shiny gligar.xml" /> -->
+	<!-- <monster name="Shiny Steelix" file="shiny/shiny steelix.xml" /> -->
+	<!-- <monster name="Shiny Snubbull" file="shiny/shiny snubbull.xml" /> -->
+	<!-- <monster name="Shiny Granbull" file="shiny/shiny granbull.xml" /> -->
+	<!-- <monster name="Shiny Qwilfish" file="shiny/shiny qwilfish.xml" /> -->
+	<!-- <monster name="Shiny Scizor" file="shiny/shiny scizor.xml" /> -->
+	<!-- <monster name="Shiny Shuckle" file="shiny/shiny shuckle.xml" /> -->
+	<!-- <monster name="Shiny Heracross" file="shiny/shiny heracross.xml" /> -->
+	<!-- <monster name="Shiny Sneasel" file="shiny/shiny sneasel.xml" /> -->
+	<!-- <monster name="Shiny Teddiursa" file="shiny/shiny teddiursa.xml" /> -->
+	<!-- <monster name="Shiny Ursaring" file="shiny/shiny ursaring.xml" /> -->
+	<!-- <monster name="Shiny Slugma" file="shiny/shiny slugma.xml" /> -->
+	<!-- <monster name="Shiny Magcargo" file="shiny/shiny magcargo.xml" /> -->
+	<!-- <monster name="Shiny Swinub" file="shiny/shiny swinub.xml" /> -->
+	<!-- <monster name="Shiny Piloswine" file="shiny/shiny piloswine.xml" /> -->
+	<!-- <monster name="Shiny Corsola" file="shiny/shiny corsola.xml" /> -->
+	<!-- <monster name="Shiny Remoraid" file="shiny/shiny remoraid.xml" /> -->
+	<!-- <monster name="Shiny Octillery" file="shiny/shiny octillery.xml" /> -->
+	<!-- <monster name="Shiny Delibird" file="shiny/shiny delibird.xml" /> -->
+	<!-- <monster name="Shiny Mantine" file="shiny/shiny mantine.xml" /> -->
+	<!-- <monster name="Shiny Skarmory" file="shiny/shiny skarmory.xml" /> -->
+	<!-- <monster name="Shiny Houndour" file="shiny/shiny houndour.xml" /> -->
+	<!-- <monster name="Shiny Houndoom" file="shiny/shiny houndoom.xml" /> -->
+	<!-- <monster name="Shiny Kingdra" file="shiny/shiny kingdra.xml" /> -->
+	<!-- <monster name="Shiny Phanpy" file="shiny/shiny phanpy.xml" /> -->
+	<!-- <monster name="Shiny Donphan" file="shiny/shiny donphan.xml" /> -->
+	<!-- <monster name="Shiny Porygon2" file="shiny/shiny porygon2.xml" /> -->
+	<!-- <monster name="Shiny Stantler" file="shiny/shiny stantler.xml" /> -->
+	<!-- <monster name="Shiny Smeargle" file="shiny/shiny smeargle.xml" /> -->
+	<!-- <monster name="Shiny Tyrogue" file="shiny/shiny tyrogue.xml" /> -->
+	<!-- <monster name="Shiny Hitmontop" file="shiny/shiny hitmontop.xml" /> -->
+	<!-- <monster name="Shiny Smoochum" file="shiny/shiny smoochum.xml" /> -->
+	<!-- <monster name="Shiny Elekid" file="shiny/shiny elekid.xml" /> -->
+	<!-- <monster name="Shiny Magby" file="shiny/shiny magby.xml" /> -->
+	<!-- <monster name="Shiny Miltank" file="shiny/shiny miltank.xml" /> -->
+	<!-- <monster name="Shiny Blissey" file="shiny/shiny blissey.xml" /> -->
+	<!-- <monster name="Shiny Raikou" file="shiny/shiny raikou.xml" /> -->
+	<!-- <monster name="Shiny Entei" file="shiny/shiny entei.xml" /> -->
+	<!-- <monster name="Shiny Suicune" file="shiny/shiny suicune.xml" /> -->
+	<!-- <monster name="Shiny Larvitar" file="shiny/shiny larvitar.xml" /> -->
+	<!-- <monster name="Shiny Pupitar" file="shiny/shiny pupitar.xml" /> -->
+	<!-- <monster name="Shiny Tyranitar" file="shiny/shiny tyranitar.xml" /> -->
+	<!-- <monster name="Shiny Lugia" file="shiny/shiny lugia.xml" /> -->
+	<!-- <monster name="Shiny Ho-Oh" file="shiny/shiny ho-oh.xml" /> -->
+	<!-- <monster name="Shiny Celebi" file="shiny/shiny celebi.xml" /> -->
+	
+	<!-- Shiny Gen 3 -->
+	
+	<!-- <monster name="Shiny Treecko" file="shiny/shiny treecko.xml" /> -->
+	<!-- <monster name="Shiny Grovyle" file="shiny/shiny grovyle.xml" /> -->
+	<!-- <monster name="Shiny Sceptile" file="shiny/shiny sceptile.xml" /> -->
+	<!-- <monster name="Shiny Torchic" file="shiny/shiny torchic.xml" /> -->
+	<!-- <monster name="Shiny Combusken" file="shiny/shiny combusken.xml" /> -->
+	<!-- <monster name="Shiny Blaziken" file="shiny/shiny blaziken.xml" /> -->
+	<!-- <monster name="Shiny Mudkip" file="shiny/shiny mudkip.xml" /> -->
+	<!-- <monster name="Shiny Marshtomp" file="shiny/shiny marshtomp.xml" /> -->
+	<!-- <monster name="Shiny Swampert" file="shiny/shiny swampert.xml" /> -->
+	<!-- <monster name="Shiny Poochyena" file="shiny/shiny poochyena.xml" /> -->
+	<!-- <monster name="Shiny Mightyena" file="shiny/shiny mightyena.xml" /> -->
+	<!-- <monster name="Shiny Zigzagoon" file="shiny/shiny zigzagoon.xml" /> -->
+	<!-- <monster name="Shiny Linoone" file="shiny/shiny linoone.xml" /> -->
+	<!-- <monster name="Shiny Wurmple" file="shiny/shiny wurmple.xml" /> -->
+	<!-- <monster name="Shiny Silcoon" file="shiny/shiny silcoon.xml" /> -->
+	<!-- <monster name="Shiny Beautifly" file="shiny/shiny beautifly.xml" /> -->
+	<!-- <monster name="Shiny Cascoon" file="shiny/shiny cascoon.xml" /> -->
+	<!-- <monster name="Shiny Dustox" file="shiny/shiny dustox.xml" /> -->
+	<!-- <monster name="Shiny Lotad" file="shiny/shiny lotad.xml" /> -->
+	<!-- <monster name="Shiny Lombre" file="shiny/shiny lombre.xml" /> -->
+	<!-- <monster name="Shiny Ludicolo" file="shiny/shiny ludicolo.xml" /> -->
+	<!-- <monster name="Shiny Seedot" file="shiny/shiny seedot.xml" /> -->
+	<!-- <monster name="Shiny Nuzleaf" file="shiny/shiny nuzleaf.xml" /> -->
+	<!-- <monster name="Shiny Shiftry" file="shiny/shiny shiftry.xml" /> -->
+	<!-- <monster name="Shiny Taillow" file="shiny/shiny taillow.xml" /> -->
+	<!-- <monster name="Shiny Swellow" file="shiny/shiny swellow.xml" /> -->
+	<!-- <monster name="Shiny Wingull" file="shiny/shiny wingull.xml" /> -->
+	<!-- <monster name="Shiny Pelipper" file="shiny/shiny pelipper.xml" /> -->
+	<!-- <monster name="Shiny Ralts" file="shiny/shiny ralts.xml" /> -->
+	<!-- <monster name="Shiny Kirlia" file="shiny/shiny kirlia.xml" /> -->
+	<!-- <monster name="Shiny Gardevoir" file="shiny/shiny gardevoir.xml" /> -->
+	<!-- <monster name="Shiny Surskit" file="shiny/shiny surskit.xml" /> -->
+	<!-- <monster name="Shiny Masquerain" file="shiny/shiny masquerain.xml" /> -->
+	<!-- <monster name="Shiny Shroomish" file="shiny/shiny shroomish.xml" /> -->
+	<!-- <monster name="Shiny Breloom" file="shiny/shiny breloom.xml" /> -->
+	<!-- <monster name="Shiny Slakoth" file="shiny/shiny slakoth.xml" /> -->
+	<!-- <monster name="Shiny Vigoroth" file="shiny/shiny vigoroth.xml" /> -->
+	<!-- <monster name="Shiny Slaking" file="shiny/shiny slaking.xml" /> -->
+	<!-- <monster name="Shiny Nincada" file="shiny/shiny nincada.xml" /> -->
+	<!-- <monster name="Shiny Ninjask" file="shiny/shiny ninjask.xml" /> -->
+	<!-- <monster name="Shiny Shedinja" file="shiny/shiny shedinja.xml" /> -->
+	<!-- <monster name="Shiny Whismur" file="shiny/shiny whismur.xml" /> -->
+	<!-- <monster name="Shiny Loudred" file="shiny/shiny loudred.xml" /> -->
+	<!-- <monster name="Shiny Exploud" file="shiny/shiny exploud.xml" /> -->
+	<!-- <monster name="Shiny Makuhita" file="shiny/shiny makuhita.xml" /> -->
+	<!-- <monster name="Shiny Hariyama" file="shiny/shiny hariyama.xml" /> -->
+	<!-- <monster name="Shiny Azurill" file="shiny/shiny azurill.xml" /> -->
+	<!-- <monster name="Shiny Nosepass" file="shiny/shiny nosepass.xml" /> -->
+	<!-- <monster name="Shiny Skitty" file="shiny/shiny skitty.xml" /> -->
+	<!-- <monster name="Shiny Delcatty" file="shiny/shiny delcatty.xml" /> -->
+	<!-- <monster name="Shiny Sableye" file="shiny/shiny sableye.xml" /> -->
+	<!-- <monster name="Shiny Mawile" file="shiny/shiny mawile.xml" /> -->
+	<!-- <monster name="Shiny Aron" file="shiny/shiny aron.xml" /> -->
+	<!-- <monster name="Shiny Lairon" file="shiny/shiny lairon.xml" /> -->
+	<!-- <monster name="Shiny Aggron" file="shiny/shiny aggron.xml" /> -->
+	<!-- <monster name="Shiny Meditite" file="shiny/shiny meditite.xml" /> -->
+	<!-- <monster name="Shiny Medicham" file="shiny/shiny medicham.xml" /> -->
+	<!-- <monster name="Shiny Electrike" file="shiny/shiny electrike.xml" /> -->
+	<!-- <monster name="Shiny Manectric" file="shiny/shiny manectric.xml" /> -->
+	<!-- <monster name="Shiny Plusle" file="shiny/shiny plusle.xml" /> -->
+	<!-- <monster name="Shiny Minun" file="shiny/shiny minun.xml" /> -->
+	<!-- <monster name="Shiny Volbeat" file="shiny/shiny volbeat.xml" /> -->
+	<!-- <monster name="Shiny Illumise" file="shiny/shiny illumise.xml" /> -->
+	<!-- <monster name="Shiny Roselia" file="shiny/shiny roselia.xml" /> -->
+	<!-- <monster name="Shiny Gulpin" file="shiny/shiny gulpin.xml" /> -->
+	<!-- <monster name="Shiny Swalot" file="shiny/shiny swalot.xml" /> -->
+	<!-- <monster name="Shiny Carvanha" file="shiny/shiny carvanha.xml" /> -->
+	<!-- <monster name="Shiny Sharpedo" file="shiny/shiny sharpedo.xml" /> -->
+	<!-- <monster name="Shiny Wailmer" file="shiny/shiny wailmer.xml" /> -->
+	<!-- <monster name="Shiny Wailord" file="shiny/shiny wailord.xml" /> -->
+	<!-- <monster name="Shiny Numel" file="shiny/shiny numel.xml" /> -->
+	<!-- <monster name="Shiny Camerupt" file="shiny/shiny camerupt.xml" /> -->
+	<!-- <monster name="Shiny Torkoal" file="shiny/shiny torkoal.xml" /> -->
+	<!-- <monster name="Shiny Spoink" file="shiny/shiny spoink.xml" /> -->
+	<!-- <monster name="Shiny Grumpig" file="shiny/shiny grumpig.xml" /> -->
+	<!-- <monster name="Shiny Spinda" file="shiny/shiny spinda.xml" /> -->
+	<!-- <monster name="Shiny Trapinch" file="shiny/shiny trapinch.xml" /> -->
+	<!-- <monster name="Shiny Vibrava" file="shiny/shiny vibrava.xml" /> -->
+	<!-- <monster name="Shiny Flygon" file="shiny/shiny flygon.xml" /> -->
+	<!-- <monster name="Shiny Cacnea" file="shiny/shiny cacnea.xml" /> -->
+	<!-- <monster name="Shiny Cacturne" file="shiny/shiny cacturne.xml" /> -->
+	<!-- <monster name="Shiny Swablu" file="shiny/shiny swablu.xml" /> -->
+	<!-- <monster name="Shiny Altaria" file="shiny/shiny altaria.xml" /> -->
+	<!-- <monster name="Shiny Zangoose" file="shiny/shiny zangoose.xml" /> -->
+	<!-- <monster name="Shiny Seviper" file="shiny/shiny seviper.xml" /> -->
+	<!-- <monster name="Shiny Lunatone" file="shiny/shiny lunatone.xml" /> -->
+	<!-- <monster name="Shiny Solrock" file="shiny/shiny solrock.xml" /> -->
+	<!-- <monster name="Shiny Barboach" file="shiny/shiny barboach.xml" /> -->
+	<!-- <monster name="Shiny Whiscash" file="shiny/shiny whiscash.xml" /> -->
+	<!-- <monster name="Shiny Corphish" file="shiny/shiny corphish.xml" /> -->
+	<!-- <monster name="Shiny Crawdaunt" file="shiny/shiny crawdaunt.xml" /> -->
+	<!-- <monster name="Shiny Baltoy" file="shiny/shiny baltoy.xml" /> -->
+	<!-- <monster name="Shiny Claydol" file="shiny/shiny claydol.xml" /> -->
+	<!-- <monster name="Shiny Lileep" file="shiny/shiny lileep.xml" /> -->
+	<!-- <monster name="Shiny Cradily" file="shiny/shiny cradily.xml" /> -->
+	<!-- <monster name="Shiny Anorith" file="shiny/shiny anorith.xml" /> -->
+	<!-- <monster name="Shiny Armaldo" file="shiny/shiny armaldo.xml" /> -->
+	<!-- <monster name="Shiny Feebas" file="shiny/shiny feebas.xml" /> -->
+	<!-- <monster name="Shiny Milotic" file="shiny/shiny milotic.xml" /> -->
+	<!-- <monster name="Shiny Castform" file="shiny/shiny castform.xml" /> -->
+	<!-- <monster name="Shiny Kecleon" file="shiny/shiny kecleon.xml" /> -->
+	<!-- <monster name="Shiny Shuppet" file="shiny/shiny shuppet.xml" /> -->
+	<!-- <monster name="Shiny Banette" file="shiny/shiny banette.xml" /> -->
+	<!-- <monster name="Shiny Duskull" file="shiny/shiny duskull.xml" /> -->
+	<!-- <monster name="Shiny Dusclops" file="shiny/shiny dusclops.xml" /> -->
+	<!-- <monster name="Shiny Tropius" file="shiny/shiny tropius.xml" /> -->
+	<!-- <monster name="Shiny Chimecho" file="shiny/shiny chimecho.xml" /> -->
+	<!-- <monster name="Shiny Absol" file="shiny/shiny absol.xml" /> -->
+	<!-- <monster name="Shiny Wynaut" file="shiny/shiny wynaut.xml" /> -->
+	<!-- <monster name="Shiny Snorunt" file="shiny/shiny snorunt.xml" /> -->
+	<!-- <monster name="Shiny Glalie" file="shiny/shiny glalie.xml" /> -->
+	<!-- <monster name="Shiny Spheal" file="shiny/shiny spheal.xml" /> -->
+	<!-- <monster name="Shiny Sealeo" file="shiny/shiny sealeo.xml" /> -->
+	<!-- <monster name="Shiny Walrein" file="shiny/shiny walrein.xml" /> -->
+	<!-- <monster name="Shiny Clamperl" file="shiny/shiny clamperl.xml" /> -->
+	<!-- <monster name="Shiny Huntail" file="shiny/shiny huntail.xml" /> -->
+	<!-- <monster name="Shiny Gorebyss" file="shiny/shiny gorebyss.xml" /> -->
+	<!-- <monster name="Shiny Relicanth" file="shiny/shiny relicanth.xml" /> -->
+	<!-- <monster name="Shiny Luvdisc" file="shiny/shiny luvdisc.xml" /> -->
+	<!-- <monster name="Shiny Bagon" file="shiny/shiny bagon.xml" /> -->
+	<!-- <monster name="Shiny Shelgon" file="shiny/shiny shelgon.xml" /> -->
+	<!-- <monster name="Shiny Salamence" file="shiny/shiny salamence.xml" /> -->
+	<!-- <monster name="Shiny Beldum" file="shiny/shiny beldum.xml" /> -->
+	<!-- <monster name="Shiny Metang" file="shiny/shiny metang.xml" /> -->
+	<!-- <monster name="Shiny Metagross" file="shiny/shiny metagross.xml" /> -->
+	<!-- <monster name="Shiny Regirock" file="shiny/shiny regirock.xml" /> -->
+	<!-- <monster name="Shiny Regice" file="shiny/shiny regice.xml" /> -->
+	<!-- <monster name="Shiny Registeel" file="shiny/shiny registeel.xml" /> -->
+	<!-- <monster name="Shiny Latias" file="shiny/shiny latias.xml" /> -->
+	<!-- <monster name="Shiny Latios" file="shiny/shiny latios.xml" /> -->
+	<!-- <monster name="Shiny Kyogre" file="shiny/shiny kyogre.xml" /> -->
+	<!-- <monster name="Shiny Groudon" file="shiny/shiny groudon.xml" /> -->
+	<!-- <monster name="Shiny Rayquaza" file="shiny/shiny rayquaza.xml" /> -->
+	<!-- <monster name="Shiny Jirachi" file="shiny/shiny jirachi.xml" /> -->
+	<!-- <monster name="Shiny Deoxys" file="shiny/shiny deoxys.xml" /> -->
+	
+	<!-- Shiny Gen 4 -->
+	
+	<!-- <monster name="Shiny Turtwig" file="shiny/shiny turtwig.xml" /> -->
+	<!-- <monster name="Shiny Grotle" file="shiny/shiny grotle.xml" /> -->
+	<!-- <monster name="Shiny Torterra" file="shiny/shiny torterra.xml" /> -->
+	<!-- <monster name="Shiny Chimchar" file="shiny/shiny chimchar.xml" /> -->
+	<!-- <monster name="Shiny Monferno" file="shiny/shiny monferno.xml" /> -->
+	<!-- <monster name="Shiny Infernape" file="shiny/shiny infernape.xml" /> -->
+	<!-- <monster name="Shiny Piplup" file="shiny/shiny piplup.xml" /> -->
+	<!-- <monster name="Shiny Prinplup" file="shiny/shiny prinplup.xml" /> -->
+	<!-- <monster name="Shiny Empoleon" file="shiny/shiny empoleon.xml" /> -->
+	<!-- <monster name="Shiny Starly" file="shiny/shiny starly.xml" /> -->
+	<!-- <monster name="Shiny Staravia" file="shiny/shiny staravia.xml" /> -->
+	<!-- <monster name="Shiny Staraptor" file="shiny/shiny staraptor.xml" /> -->
+	<!-- <monster name="Shiny Bidoof" file="shiny/shiny bidoof.xml" /> -->
+	<!-- <monster name="Shiny Bibarel" file="shiny/shiny bibarel.xml" /> -->
+	<!-- <monster name="Shiny Kricketot" file="shiny/shiny kricketot.xml" /> -->
+	<!-- <monster name="Shiny Kricketune" file="shiny/shiny kricketune.xml" /> -->
+	<!-- <monster name="Shiny Shinx" file="shiny/shiny shinx.xml" /> -->
+	<!-- <monster name="Shiny Luxio" file="shiny/shiny luxio.xml" /> -->
+	<!-- <monster name="Shiny Luxray" file="shiny/shiny luxray.xml" /> -->
+	<!-- <monster name="Shiny Budew" file="shiny/shiny budew.xml" /> -->
+	<!-- <monster name="Shiny Roserade" file="shiny/shiny roserade.xml" /> -->
+	<!-- <monster name="Shiny Cranidos" file="shiny/shiny cranidos.xml" /> -->
+	<!-- <monster name="Shiny Rampardos" file="shiny/shiny rampardos.xml" /> -->
+	<!-- <monster name="Shiny Shieldon" file="shiny/shiny shieldon.xml" /> -->
+	<!-- <monster name="Shiny Bastiodon" file="shiny/shiny bastiodon.xml" /> -->
+	<!-- <monster name="Shiny Burmy" file="shiny/shiny burmy.xml" /> -->
+	<!-- <monster name="Shiny Wormadam" file="shiny/shiny wormadam.xml" /> -->
+	<!-- <monster name="Shiny Mothim" file="shiny/shiny mothim.xml" /> -->
+	<!-- <monster name="Shiny Combee" file="shiny/shiny combee.xml" /> -->
+	<!-- <monster name="Shiny Vespiquen" file="shiny/shiny vespiquen.xml" /> -->
+	<!-- <monster name="Shiny Pachirisu" file="shiny/shiny pachirisu.xml" /> -->
+	<!-- <monster name="Shiny Buizel" file="shiny/shiny buizel.xml" /> -->
+	<!-- <monster name="Shiny Floatzel" file="shiny/shiny floatzel.xml" /> -->
+	<!-- <monster name="Shiny Cherubi" file="shiny/shiny cherubi.xml" /> -->
+	<!-- <monster name="Shiny Cherrim" file="shiny/shiny cherrim.xml" /> -->
+	<!-- <monster name="Shiny Shellos" file="shiny/shiny shellos.xml" /> -->
+	<!-- <monster name="Shiny Gastrodon" file="shiny/shiny gastrodon.xml" /> -->
+	<!-- <monster name="Shiny Ambipom" file="shiny/shiny ambipom.xml" /> -->
+	<!-- <monster name="Shiny Drifloon" file="shiny/shiny drifloon.xml" /> -->
+	<!-- <monster name="Shiny Drifblim" file="shiny/shiny drifblim.xml" /> -->
+	<!-- <monster name="Shiny Buneary" file="shiny/shiny buneary.xml" /> -->
+	<!-- <monster name="Shiny Lopunny" file="shiny/shiny lopunny.xml" /> -->
+	<!-- <monster name="Shiny Mismagius" file="shiny/shiny mismagius.xml" /> -->
+	<!-- <monster name="Shiny Honchkrow" file="shiny/shiny honchkrow.xml" /> -->
+	<!-- <monster name="Shiny Glameow" file="shiny/shiny glameow.xml" /> -->
+	<!-- <monster name="Shiny Purugly" file="shiny/shiny purugly.xml" /> -->
+	<!-- <monster name="Shiny Chingling" file="shiny/shiny chingling.xml" /> -->
+	<!-- <monster name="Shiny Stunky" file="shiny/shiny stunky.xml" /> -->
+	<!-- <monster name="Shiny Skuntank" file="shiny/shiny skuntank.xml" /> -->
+	<!-- <monster name="Shiny Bronzor" file="shiny/shiny bronzor.xml" /> -->
+	<!-- <monster name="Shiny Bronzong" file="shiny/shiny bronzong.xml" /> -->
+	<!-- <monster name="Shiny Bonsly" file="shiny/shiny bonsly.xml" /> -->
+	<!-- <monster name="Shiny Mime Jr" file="shiny/shiny mime jr.xml" /> -->
+	<!-- <monster name="Shiny Happiny" file="shiny/shiny happiny.xml" /> -->
+	<!-- <monster name="Shiny Chatot" file="shiny/shiny chatot.xml" /> -->
+	<!-- <monster name="Shiny Spiritomb" file="shiny/shiny spiritomb.xml" /> -->
+	<!-- <monster name="Shiny Gible" file="shiny/shiny gible.xml" /> -->
+	<!-- <monster name="Shiny Gabite" file="shiny/shiny gabite.xml" /> -->
+	<!-- <monster name="Shiny Garchomp" file="shiny/shiny garchomp.xml" /> -->
+	<!-- <monster name="Shiny Munchlax" file="shiny/shiny munchlax.xml" /> -->
+	<!-- <monster name="Shiny Riolu" file="shiny/shiny riolu.xml" /> -->
+	<!-- <monster name="Shiny Lucario" file="shiny/shiny lucario.xml" /> -->
+	<!-- <monster name="Shiny Hippopotas" file="shiny/shiny hippopotas.xml" /> -->
+	<!-- <monster name="Shiny Hippowdon" file="shiny/shiny hippowdon.xml" /> -->
+	<!-- <monster name="Shiny Skorupi" file="shiny/shiny skorupi.xml" /> -->
+	<!-- <monster name="Shiny Drapion" file="shiny/shiny drapion.xml" /> -->
+	<!-- <monster name="Shiny Croagunk" file="shiny/shiny croagunk.xml" /> -->
+	<!-- <monster name="Shiny Toxicroak" file="shiny/shiny toxicroak.xml" /> -->
+	<!-- <monster name="Shiny Carnivine" file="shiny/shiny carnivine.xml" /> -->
+	<!-- <monster name="Shiny Finneon" file="shiny/shiny finneon.xml" /> -->
+	<!-- <monster name="Shiny Lumineon" file="shiny/shiny lumineon.xml" /> -->
+	<!-- <monster name="Shiny Mantyke" file="shiny/shiny mantyke.xml" /> -->
+	<!-- <monster name="Shiny Snover" file="shiny/shiny snover.xml" /> -->
+	<!-- <monster name="Shiny Abomasnow" file="shiny/shiny abomasnow.xml" /> -->
+	<!-- <monster name="Shiny Weavile" file="shiny/shiny weavile.xml" /> -->
+	<!-- <monster name="Shiny Magnezone" file="shiny/shiny magnezone.xml" /> -->
+	<!-- <monster name="Shiny Lickilicky" file="shiny/shiny lickilicky.xml" /> -->
+	<!-- <monster name="Shiny Rhyperior" file="shiny/shiny rhyperior.xml" /> -->
+	<!-- <monster name="Shiny Tangrowth" file="shiny/shiny tangrowth.xml" /> -->
+	<!-- <monster name="Shiny Electivire" file="shiny/shiny electivire.xml" /> -->
+	<!-- <monster name="Shiny Magmortar" file="shiny/shiny magmortar.xml" /> -->
+	<!-- <monster name="Shiny Togekiss" file="shiny/shiny togekiss.xml" /> -->
+	<!-- <monster name="Shiny Yanmega" file="shiny/shiny yanmega.xml" /> -->
+	<!-- <monster name="Shiny Leafeon" file="shiny/shiny leafeon.xml" /> -->
+	<!-- <monster name="Shiny Glaceon" file="shiny/shiny glaceon.xml" /> -->
+	<!-- <monster name="Shiny Gliscor" file="shiny/shiny gliscor.xml" /> -->
+	<!-- <monster name="Shiny Mamoswine" file="shiny/shiny mamoswine.xml" /> -->
+	<!-- <monster name="Shiny Porygon-Z" file="shiny/shiny porygon-z.xml" /> -->
+	<!-- <monster name="Shiny Gallade" file="shiny/shiny gallade.xml" /> -->
+	<!-- <monster name="Shiny Probopass" file="shiny/shiny probopass.xml" /> -->
+	<!-- <monster name="Shiny Dusknoir" file="shiny/shiny dusknoir.xml" /> -->
+	<!-- <monster name="Shiny Froslass" file="shiny/shiny froslass.xml" /> -->
+	<!-- <monster name="Shiny Rotom" file="shiny/shiny rotom.xml" /> -->
+	<!-- <monster name="Shiny Uxie" file="shiny/shiny uxie.xml" /> -->
+	<!-- <monster name="Shiny Mesprit" file="shiny/shiny mesprit.xml" /> -->
+	<!-- <monster name="Shiny Azelf" file="shiny/shiny azelf.xml" /> -->
+	<!-- <monster name="Shiny Dialga" file="shiny/shiny dialga.xml" /> -->
+	<!-- <monster name="Shiny Palkia" file="shiny/shiny palkia.xml" /> -->
+	<!-- <monster name="Shiny Heatran" file="shiny/shiny heatran.xml" /> -->
+	<!-- <monster name="Shiny Regigigas" file="shiny/shiny regigigas.xml" /> -->
+	<!-- <monster name="Shiny Giratina" file="shiny/shiny giratina.xml" /> -->
+	<!-- <monster name="Shiny Cresselia" file="shiny/shiny cresselia.xml" /> -->
+	<!-- <monster name="Shiny Phione" file="shiny/shiny phione.xml" /> -->
+	<!-- <monster name="Shiny Manaphy" file="shiny/shiny manaphy.xml" /> -->
+	<!-- <monster name="Shiny Darkrai" file="shiny/shiny darkrai.xml" /> -->
+	<!-- <monster name="Shiny Shaymin" file="shiny/shiny shaymin.xml" /> -->
+	<!-- <monster name="Shiny Arceus" file="shiny/shiny arceus.xml" /> -->
+</monsters>

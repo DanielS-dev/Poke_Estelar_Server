@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Groudon" nameDescription="a groudon" race="ground" race2="none" experience="335" speed="290" manacost="0">
+	<level min="90" max="99"/>
+	<health now="1000" max="1000" />
+	<look type="1564" head="113" body="57" legs="95" feet="113" corpse="27955" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="383" />
+		<flag portraitid="28090" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="5" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+		<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="rest" interval="60000" level="80"/>
+		<move name="earth power" interval="7500" level="1"/>
+		<move name="earthquake" interval="7000" level="1"/>
+		<move name="lava plume" interval="6500" level="10"/>
+		<move name="ancient power" interval="14000" level="20"/>
+		<move name="eruption" interval="15000" level="30"/>
+		<move name="solar beam" interval="13000" level="40"/>
+		<move name="fire blast" interval="12000" level="50"/>
+		<move name="fissure" interval="13500" level="60"/>
+		<move name="precipice blades" interval="12500" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-150" max="-150" />
+		<attack name="rest" interval="60000" chance="66" target="1"/>
+		<attack name="earth power" interval="7500" chance="66" target="1"/>
+		<attack name="earthquake" interval="7000" chance="66" target="1"/>
+		<attack name="lava plume" interval="6500" chance="66" target="1"/>
+		<attack name="ancient power" interval="14000" chance="66" target="1"/>
+		<attack name="eruption" interval="15000" chance="66" target="1"/>
+		<attack name="solar beam" interval="13000" chance="66" target="1"/>
+		<attack name="fire blast" interval="12000" chance="66" target="1"/>
+		<attack name="fissure" interval="13500" chance="66" target="1"/>
+		<attack name="precipice blades" interval="12500" chance="66" target="1"/>
+		
+		<attack name="sunny day" interval="10000" chance="100"/>
+
+	</attacks>
+	<defenses armor="0" defense="140" >
+		<defense name="sunny day" interval="10000" chance="100"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GROUDON!" />
+	</voices>
+	<loot>
+		<item name="groudon's plate" countmax="1" chance="100"/>
+		<item name="vale token" countmax="10" chance="100000"/>
+		<item name="platinum coin" countmax="25" chance="100000"/>
+	</loot>
+</monster>

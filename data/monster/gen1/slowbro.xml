@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Slowbro" nameDescription="a slowbro" race="water" race2="psychic" experience="172" speed="130" manacost="0">
+	<level min="37" max="40"/>
+	<health now="950" max="950" />
+	<look type="983" head="113" body="57" legs="95" feet="113" corpse="26941" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="80" />
+		<flag portraitid="27196" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="98" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="curse" interval="20000" level="1"/>
+		<move name="tackle" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="water gun" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="confusion" interval="13000" level="4"/>
+		<move name="psychic" interval="11000" level="37"/>
+		<move name="water pulse" interval="7500" level="9"/>
+		<move name="zen headbutt" interval="8500" level="39"/>
+		<move name="surf" interval="14500" level="41"/>
+		<move name="disable" interval="30000" level="12"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-75" max="-75" />
+		<attack name="curse" interval="20000" chance="66" target="1"/>
+		<attack name="tackle" interval="1500" chance="66" target="1"/>
+		<attack name="water gun" interval="3500" chance="66" target="1"/>
+		<attack name="confusion" interval="13000" chance="66" target="1"/>
+		<attack name="psychic" interval="11000" chance="66" target="1"/>
+		<attack name="water pulse" interval="7500" chance="66" target="1"/>
+		<attack name="zen headbutt" interval="8500" chance="66" target="1"/>
+		<attack name="surf" interval="14500" chance="66" target="1"/>
+		<attack name="disable" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="110" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SLOWBRO!" />
+	</voices>
+	<loot>
+		<item name="locksmith of shell" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="40" chance="100000"/>
+	</loot>
+</monster>

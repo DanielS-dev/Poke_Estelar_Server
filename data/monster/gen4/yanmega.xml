@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Yanmega" nameDescription="a yanmega" race="bug" race2="flying" experience="180" speed="295" manacost="0">
+	<level min="75" max="77"/>
+	<health now="860" max="860" />
+	<look type="3077" head="113" body="57" legs="95" feet="113" corpse="38515" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="469" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="116" />
+		<flag moveMagicDefenseBase="56" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="screech" interval="7000" level="1"/>
+		<move name="gust" interval="2000" level="1"/>
+		<move name="uproar" interval="3500" level="1"/>
+		<move name="wing attack" interval="3000" level="1"/>
+		<move name="night slash" interval="4000" level="10"/>
+		<move name="air slash" interval="5000" level="20"/>
+		<move name="ancient power" interval="10000" level="30"/>
+		<move name="aerial ace" interval="9000" level="40"/>
+		<move name="bug buzz" interval="7500" level="50"/>
+		<move name="detect" interval="15000" level="60"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-76" max="-76" />
+		<attack name="screech" interval="7000" chance="66" target="1"/>
+		<attack name="gust" interval="2000" chance="66" target="1"/>
+		<attack name="uproar" interval="3500" chance="66" target="1"/>
+		<attack name="wing attack" interval="3000" chance="66" target="1"/>
+		<attack name="night slash" interval="4000" chance="66" target="1"/>
+		<attack name="air slash" interval="5000" chance="66" target="1"/>
+		<attack name="ancient power" interval="10000" chance="66" target="1"/>
+		<attack name="aerial ace" interval="9000" chance="66" target="1"/>
+		<attack name="bug buzz" interval="7500" chance="66" target="1"/>
+		<attack name="detect" interval="15000" chance="66" target="1"/>
+		
+		<attack name="slash" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="86" >
+		<defense name="slash" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="YANMEGA!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="77" chance="100000"/>
+	</loot>
+</monster>

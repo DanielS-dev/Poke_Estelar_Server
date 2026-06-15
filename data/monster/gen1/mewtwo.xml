@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mewtwo" nameDescription="a mewtwo" race="psychic" race2="none" experience="340" speed="330" manacost="0">
+	<level min="100" max="100"/>
+	<health now="1060" max="1060" />
+	<look type="1053" head="113" body="57" legs="95" feet="113" corpse="27011" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="150" />
+		<flag portraitid="27266" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="3833" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="1" />
+		<flag catchchance="5" />
+		<flag moveMagicAttackBase="154" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+		<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="amnesia" interval="15000" level="1"/>
+		<move name="power swap" interval="20000" level="10"/>
+		<move name="guard swap" interval="20000" level="20"/>
+		<move name="confusion" interval="6500" level="1"/>
+		<move name="psychic" interval="6000" level="1"/>
+		<move name="psycho cut" interval="6500" level="30"/>
+		<move name="aura sphere" interval="8000" level="40"/>
+		<move name="ancient power" interval="12000" level="50"/>
+		<move name="future sight" interval="15000" level="60"/>
+		<move name="psystrike" interval="10000" level="70"/>
+		
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-110" max="-110" />
+		<attack name="amnesia" interval="15000" chance="66" target="1"/>
+		<attack name="power swap" interval="20000" chance="66" target="1"/>
+		<attack name="guard swap" interval="20000" chance="66" target="1"/>
+		<attack name="confusion" interval="6500" chance="66" target="1"/>
+		<attack name="psychic" interval="6000" chance="66" target="1"/>
+		<attack name="psycho cut" interval="6500" chance="66" target="1"/>
+		<attack name="aura sphere" interval="8000" chance="66" target="1"/>
+		<attack name="ancient power" interval="12000" chance="66" target="1"/>
+		<attack name="future sight" interval="15000" chance="66" target="1"/>
+		<attack name="psystrike" interval="10000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="90" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MEWTWO!" />
+	</voices>
+	<loot>
+		<item name="metal helmet" countmax="1" chance="50"/>
+		<item name="vale token" countmax="10" chance="100000"/>
+		<item name="platinum coin" countmax="25" chance="100000"/>
+	</loot>
+</monster>

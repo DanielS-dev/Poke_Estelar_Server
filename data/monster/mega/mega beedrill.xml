@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Beedrill" nameDescription="a mega beedrill" race="bug" race2="poison" experience="356" speed="245" manacost="0">
+	<level min="90" max="90"/>
+	<health now="650" max="650" />
+	<look type="3504" head="113" body="57" legs="95" feet="113" corpse="26876" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="15" />
+		<flag portraitid="27131" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="17" />
+		<flag moveMagicDefenseBase="96" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="agility" interval="15000" level="1"/>
+		<move name="twineedle" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="poison sting" interval="3500" isTarget="1" range="3" level="1"/>
+		<move name="pin missile" interval="4500" isTarget="1" range="3" level="1"/>
+		<move name="fell stinger" interval="5500" isTarget="1" range="3" level="1"/>
+		<move name="poison jab" interval="5000" isTarget="1" range="3" level="1"/>
+		<move name="fury cutter" interval="7500" level="1"/>
+		<move name="x-scissor" interval="10000" level="1"/>
+		<move name="facade" interval="5000" isTarget="1" range="3" level="1"/>
+		<move name="assurance" interval="12500" level="1"/>
+		<move name="aerial ace" interval="15000" level="1"/>
+		<move name="swords dance" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" range="1" min="-180" max="-180"/>
+		<attack name="agility" interval="15000" chance="66" target="1"/>
+		<attack name="twineedle" interval="2500" chance="66" target="1"/>
+		<attack name="poison sting" interval="3500" chance="66" target="1"/>
+		<attack name="pin missile" interval="4500" chance="66" target="1"/>
+		<attack name="fell stinger" interval="5500" chance="66" target="1"/>
+		<attack name="poison jab" interval="5000" chance="66" target="1"/>
+		<attack name="fury cutter" interval="7500" chance="66" target="1"/>
+		<attack name="x-scissor" interval="10000" chance="66" target="1"/>
+		<attack name="facade" interval="5000" chance="66" target="1"/>
+		<attack name="assurance" interval="12500" chance="66" target="1"/>
+		<attack name="aerial ace" interval="15000" chance="66" target="1"/>
+		<attack name="swords dance" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="48" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="BEEDRILL!" />
+	</voices>
+	<loot>
+		<item name="beedrillite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

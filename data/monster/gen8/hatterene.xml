@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Hatterene" nameDescription="a hatterene" race="psychic" race2="fairy" experience="2550" speed="129" manacost="0">
+	<level min="100" max="100"/>
+	<health now="570" max="570" />
+	<look type="4065" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="858" />
+		<flag portraitid="27261" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="136" />
+		<flag moveMagicDefenseBase="103" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+	</script>
+	<moves>
+		<move name="calm mind" interval="15000" level="1"/>
+		<move name="psybeam" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="psychic" interval="7000" level="1"/>
+		<move name="dazzling gleam" interval="8000" level="1"/>
+		<move name="confusion" interval="9000" level="1"/>
+		<move name="psycho cut" interval="7500" level="1"/>
+		<move name="disarming voice" interval="10000" level="1"/>
+		<move name="heal pulse" interval="30000" level="1"/>
+		<move name="aromatic mist" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="calm mind" interval="15000" chance="66" target="1"/>
+		<attack name="psybeam" interval="3500" chance="66" target="1"/>
+		<attack name="psychic" interval="7000" chance="66" target="1"/>
+		<attack name="dazzling gleam" interval="8000" chance="66" target="1"/>
+		<attack name="confusion" interval="9000" chance="66" target="1"/>
+		<attack name="psycho cut" interval="7500" chance="66" target="1"/>
+		<attack name="disarming voice" interval="10000" chance="66" target="1"/>
+		<attack name="heal pulse" interval="30000" chance="66" target="1"/>
+		<attack name="aromatic mist" interval="15000" chance="66" target="1"/>
+		<attack name="refresh" interval="5000" chance="33" target="1"/>
+		<attack name="life dew" interval="10000" chance="33" target="1"/>
+		
+	</attacks>
+	<defenses armor="0" defense="95" >
+		<defense name="refresh" interval="5000" chance="33" />
+		<defense name="life dew" interval="10000" chance="33" />
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HATTERENE!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

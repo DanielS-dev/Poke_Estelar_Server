@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Magnezone" nameDescription="a magnezone" race="electric" race2="steel" experience="268" speed="160" manacost="0">
+	<level min="80" max="80"/>
+	<health now="700" max="700" />
+	<look type="3599" head="113" body="57" legs="95" feet="113" corpse="38508" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="462" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3608" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="130" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="supersonic" interval="18000" isTarget="1" range="8" level="1"/>
+		<move name="thunder shock" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="thunder wave" interval="30000" level="33"/>
+		<move name="gyro ball" interval="5500" level="1"/>
+		<move name="spark" interval="7500" level="3"/>
+		<move name="discharge" interval="12000" level="8"/>
+		<move name="tri attack" interval="9500" level="30"/>
+		<move name="flash cannon" interval="16000" level="40"/>
+		<move name="zap cannon" interval="17500" level="44"/>
+		<move name="lock-on" interval="20000" level="5"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="supersonic" interval="18000" chance="66" target="1"/>
+		<attack name="thunder shock" interval="3500" chance="66" target="1"/>
+		<attack name="thunder wave" interval="30000" chance="66" target="1"/>
+		<attack name="gyro ball" interval="5500" chance="66" target="1"/>
+		<attack name="spark" interval="7500" chance="66" target="1"/>
+		<attack name="discharge" interval="12000" chance="66" target="1"/>
+		<attack name="tri attack" interval="9500" chance="66" target="1"/>
+		<attack name="flash cannon" interval="16000" chance="66" target="1"/>
+		<attack name="zap cannon" interval="17500" chance="66" target="1"/>
+		<attack name="lock-on" interval="20000" chance="66" target="1"/>
+		<attack name="mirror coat" interval="5000" chance="33" />
+
+	</attacks>
+	<defenses armor="0" defense="115" >
+		<defense name="mirror coat" interval="5000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MAGNEZONE!" />
+	</voices>
+	<loot>
+		<item name="ufo plate" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="80" chance="100000"/>
+	</loot>
+</monster>

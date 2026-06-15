@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Vileplume" nameDescription="a vileplume" race="grass" race2="poison" experience="221" speed="150" manacost="0">
+	<level min="41" max="45"/>
+	<health now="750" max="750" />
+	<look type="948" head="113" body="57" legs="95" feet="113" corpse="26906" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="45" />
+		<flag portraitid="27161" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="110" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="absorb" interval="5000" isTarget="1" range="3" level="1"/>
+		<move name="acid" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="toxic" interval="9500" isTarget="1" range="3" level="21"/>
+		<move name="giga drain" interval="13000" level="23"/>
+		<move name="moonblast" interval="7500" level="25"/>
+		<move name="petal dance" interval="19000" level="27"/>
+		<move name="petal blizzard" interval="8500" level="21"/>
+		<move name="poison powder" interval="20000" level="1"/>
+		<move name="stun spore" interval="30000" level="5"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-80" />
+		<attack name="absorb" interval="5000" chance="66" target="1"/>
+		<attack name="acid" interval="3500" chance="66" target="1"/>
+		<attack name="toxic" interval="9500" chance="66"/>
+		<attack name="mega drain" interval="13000" chance="66"/>
+		<attack name="moonblast" interval="7500" chance="66"/>
+		<attack name="petal dance" interval="19000" chance="66"/>
+		<attack name="petal blizzard" interval="8500" chance="66"/>
+		<attack name="poison powder" interval="20000" chance="66"/>
+		<attack name="stun spore" interval="30000" chance="66"/>
+		
+	</attacks>
+	<defenses armor="0" defense="85" >
+		<defense name="life dew" interval="10000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="VILEPLUME!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="45" chance="100000"/>
+	</loot>
+</monster>

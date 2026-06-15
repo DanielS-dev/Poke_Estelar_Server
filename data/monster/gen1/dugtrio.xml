@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Dugtrio" nameDescription="a dugtrio" race="ground" race2="none" experience="149" speed="220" manacost="0">
+	<level min="26" max="29"/>
+	<health now="350" max="350" />
+	<look type="954" head="113" body="57" legs="95" feet="113" corpse="26912" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="51" />
+		<flag portraitid="27167" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="65" />
+		<flag moveMagicAttackBase="50" />
+		<flag moveMagicDefenseBase="70" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="growl" interval="15000" level="1"/>
+		<move name="scratch" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="astonish" interval="7500" level="1"/>
+		<move name="dig" interval="15000" level="5"/>
+		<move name="bulldoze" interval="8500" level="31"/>
+		<move name="sand tomb" interval="19000" level="1"/>
+		<move name="tri attack" interval="9500" level="26"/>
+		<move name="earth power" interval="16000" level="8"/>
+		<move name="earthquake" interval="17500" level="11"/>
+		<move name="fissure" interval="14000" level="13"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-100" />
+		<attack name="growl" interval="15000" chance="66" target="1"/>
+		<attack name="scratch" interval="1500" chance="66" target="1"/>
+		<attack name="astonish" interval="7500" chance="66" target="1"/>
+		<attack name="dig" interval="15000" chance="66" target="1"/>
+		<attack name="bulldoze" interval="8500" chance="66" target="1"/>
+		<attack name="sand tomb" interval="19000" chance="66" target="1"/>
+		<attack name="tri attack" interval="9500" chance="66" target="1"/>
+		<attack name="earth power" interval="16000" chance="66" target="1"/>
+		<attack name="earthquake" interval="17500" chance="66" target="1"/>
+		<attack name="fissure" interval="14000" chance="66" target="1"/>	
+		
+	</attacks>
+	<defenses armor="0" defense="50" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="DUGTRIO!" />
+	</voices>
+	<loot>
+		<item name="piece of diglett" countmax="3" chance="15000"/>
+		<item name="gold coin" countmax="29" chance="100000"/>
+	</loot>
+</monster>

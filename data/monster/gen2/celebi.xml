@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Celebi" nameDescription="a celebi" race="psychic" race2="grass" experience="270" speed="300" manacost="0">
+	<level min="90" max="100"/>
+	<health now="1000" max="1000" />
+	<look type="3633" head="113" body="57" legs="95" feet="113" corpse="27112" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="251" />
+		<flag portraitid="27367" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="3627" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="50" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+		<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="life dew" interval="30000" level="1"/>
+		<move name="magical leaf" interval="2000" isTarget="1" range="8" level="1"/>
+		<move name="leech seed" interval="10000" level="1"/>
+		<move name="confusion" interval="7500" level="1"/>
+		<move name="ancient power" interval="15000" level="1"/>
+		<move name="future sight" interval="17500" level="1"/>
+		<move name="leaf storm" interval="12500" level="1"/>
+		<move name="perish song" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-100" />
+		<attack name="magical leaf" interval="2000" chance="66"/>
+		<attack name="leech seed" interval="10000" chance="66"/>
+		<attack name="confusion" interval="7500" chance="66" target="1"/>
+		<attack name="ancient power" interval="15000" chance="66"/>
+		<attack name="future sight" interval="17500" chance="66"/>
+		<attack name="leaf storm" interval="12500" chance="66"/>
+		<attack name="perish song" interval="15000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="100" >
+		<defense name="recover" interval="10000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CELEBI!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

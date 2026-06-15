@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Sneasler" nameDescription="a sneasler" race="poison" race2="fighting" experience="1020" speed="220" manacost="0">
+	<level min="100" max="100"/>
+	<health now="800" max="800" />
+	<look type="3917" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="903" />
+		<flag portraitid="27350" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="3918" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="40" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="agility" interval="15000" level="11"/>
+		<move name="poison jab" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="brick break" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="metal claw" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="dire claw" interval="6500" level="1"/>
+		<move name="close combat" interval="7500" level="6"/>
+		<move name="swords dance" interval="15000" level="14"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-130" max="-130" />
+		<attack name="agility" interval="15000" chance="66" target="1"/>
+		<attack name="poison jab" interval="2500" chance="66" target="1"/>
+		<attack name="brick break" interval="2500" chance="66" target="1"/>
+		<attack name="metal claw" interval="3500" chance="66" target="1"/>
+		<attack name="dire claw" interval="6500" chance="66" target="1"/>
+		<attack name="close combat" interval="7500" chance="66" target="1"/>
+		<attack name="swords dance" interval="15000" chance="66" target="1"/>
+		<attack name="slash" interval="5000" chance="33" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="60" >
+		<defense name="slash" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SNEASLER!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+		<item name="otherworldly essence" count="1" chance="100000"/>
+	</loot>
+</monster>

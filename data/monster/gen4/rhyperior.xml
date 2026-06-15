@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Rhyperior" nameDescription="a rhyperior" race="ground" race2="rock" experience="241" speed="140" manacost="0">
+	<level min="90" max="90"/>
+	<health now="1150" max="1150" />
+	<look type="3072" head="113" body="57" legs="95" feet="113" corpse="38510" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="464" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="55" />
+		<flag moveMagicDefenseBase="55" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="horn attack" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="hammer arm" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="stomp" interval="7500" level="1"/>
+		<move name="drill run" interval="15000" level="17"/>
+		<move name="megahorn" interval="9000" level="8"/>
+		<move name="rock blast" interval="20000" level="14"/>
+		<move name="earthquake" interval="14000" level="19"/>
+		<move name="high horsepower" interval="12000" level="46"/>
+		<move name="horn drill" interval="18000" level="21"/>
+		<move name="stone edge" interval="15000" level="43"/>
+		<move name="rock slide" interval="14500" level="51"/>
+		<move name="rock wrecker" interval="17000" level="60"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-140" max="-140" />
+		<attack name="horn attack" interval="2500" chance="66" target="1"/>
+		<attack name="hammer arm" interval="3500" chance="66" target="1"/>
+		<attack name="stomp" interval="7500" chance="66" target="1"/>
+		<attack name="drill run" interval="15000" chance="66" target="1"/>
+		<attack name="megahorn" interval="9000" chance="66" target="1"/>
+		<attack name="rock blast" interval="20000" chance="66" target="1"/>
+		<attack name="earthquake" interval="14000" chance="66" target="1"/>
+		<attack name="high horsepower" interval="12000" chance="66" target="1"/>
+		<attack name="horn drill" interval="18000" chance="66" target="1"/>
+		<attack name="stone edge" interval="15000" chance="66" target="1"/>
+		<attack name="rock slide" interval="14500" chance="66" target="1"/>
+		<attack name="rock wrecker" interval="17000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="130" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="RHYPERIOR!" />
+	</voices>
+	<loot>
+		<item name="protector" countmax="1" chance="1000"/>
+		<item name="drill arm" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="90" chance="100000"/>
+	</loot>
+</monster>

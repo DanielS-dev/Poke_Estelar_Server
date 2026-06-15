@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Sunflora" nameDescription="a sunflora" race="grass" race2="none" experience="149" speed="130" manacost="0">
+	<level min="31" max="35"/>
+	<health now="750" max="750" />
+	<look type="1095" head="113" body="57" legs="95" feet="113" corpse="27053" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="192" />
+		<flag portraitid="27308" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="157" />
+		<flag moveMagicAttackBase="105" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="absorb" interval="5500" isTarget="1" range="1" level="1"/>
+		<move name="razor leaf" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="bullet seed" interval="7500" isTarget="1" range="8" level="1"/>
+		<move name="mega drain" interval="15000" level="8"/>
+		<move name="petal dance" interval="7500" level="13"/>
+		<move name="solar beam" interval="15000" level="20"/>
+		<move name="petal blizzard" interval="14000" level="25"/>
+		<move name="leaf storm" interval="13500" level="30"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-75" max="-75" />
+		<attack name="absorb" interval="5500" chance="66" target="1"/>
+		<attack name="razor leaf" interval="3500" chance="66"/>
+		<attack name="bullet seed" interval="7500" chance="66" target="1"/>
+		<attack name="mega drain" interval="15000" chance="66" target="1"/>
+		<attack name="petal dance" interval="7500" chance="66" target="1"/>
+		<attack name="solar beam" interval="15000" chance="66"/>
+		<attack name="petal blizzard" interval="14000" chance="66"/>
+		<attack name="leaf storm" interval="13500" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="55" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SUNFLORA!" />
+	</voices>
+	<loot>
+		<item name="sun stone" countmax="1" chance="1000"/>
+		<item name="gold coin" countmax="35" chance="100000"/>
+	</loot>
+</monster>

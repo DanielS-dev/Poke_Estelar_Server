@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Blastoise" nameDescription="a mega blastoise" race="water" race2="none" experience="478" speed="178" manacost="0">
+	<level min="90" max="90"/>
+	<health now="790" max="790" />
+	<look type="3505" head="113" body="57" legs="95" feet="113" corpse="26870" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="9" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3506" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="162" />
+		<flag moveMagicDefenseBase="138" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="iron defense" interval="15000" level="1"/>
+		<move name="water gun" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="water pulse" interval="8500" level="1"/>
+		<move name="waterfall" interval="7500" level="1"/>
+		<move name="aqua tail" interval="10000" level="1"/>
+		<move name="rollout" interval="20000" level="1"/>
+		<move name="rapid spin" interval="17500" level="1"/>
+		<move name="brine" interval="12500" level="1"/>
+		<move name="hydro pump" interval="17500" level="1"/>
+		<move name="surf" interval="17000" level="1"/>
+		<move name="rain dance" interval="15000" level="1"/>
+		<move name="protect" interval="30000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-123" max="-123" />
+		<attack name="iron defense" interval="15000" chance="66"/>
+		<attack name="water gun" interval="3500" chance="66"/>
+		<attack name="water pulse" interval="8500" chance="66"/>
+		<attack name="waterfall" interval="7500" chance="66"/>
+		<attack name="aqua tail" interval="10000" chance="66"/>
+		<attack name="rollout" interval="20000" chance="66"/>
+		<attack name="rapid spin" interval="17500" chance="66"/>
+		<attack name="brine" interval="12500" chance="66"/>
+		<attack name="hydro pump" interval="17500" chance="66"/>
+		<attack name="surf" interval="17000" chance="66"/>
+		<attack name="rain dance" interval="15000" chance="66"/>
+		<attack name="protect" interval="30000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="144" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="BLASTOISE!" />
+	</voices>
+	<loot>
+		<item name="blastoisinite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

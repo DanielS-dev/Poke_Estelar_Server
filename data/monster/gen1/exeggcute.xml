@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Exeggcute" nameDescription="an exeggcute" race="grass" race2="psychic" experience="65" speed="140" manacost="0">
+	<level min="1" max="5"/>
+	<health now="600" max="600" />
+	<look type="3399" head="113" body="57" legs="95" feet="113" corpse="26963" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="102" />
+		<flag portraitid="27218" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="118" />
+		<flag moveMagicAttackBase="60" />
+		<flag moveMagicDefenseBase="45" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="absorb" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="leech seed" interval="13000" level="1"/>
+		<move name="uproar" interval="5500" level="1"/>
+		<move name="confusion" interval="7500" level="3"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Exeggutor" itemName="leaf stone" count="1"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-40" max="-40" />
+		<attack name="absorb" interval="5000" chance="66" target="1"/>
+		<attack name="leech seed" interval="13000" chance="66" target="1"/>
+		<attack name="uproar" interval="5500" chance="66" target="1"/>
+		<attack name="confusion" interval="7500" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="80" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="EXEGGCUTE!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="5" chance="100000"/>
+	</loot>
+</monster>

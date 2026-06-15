@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Manectric" nameDescription="a manectric" race="electric" race2="none" experience="166" speed="205" manacost="0">
+	<level min="76" max="80"/>
+	<health now="700" max="700" />
+	<look type="1491" head="113" body="57" legs="95" feet="113" corpse="27882" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="310" />
+		<flag portraitid="28017" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="1579" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="105" />
+		<flag moveMagicDefenseBase="60" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="charge" interval="30000" level="10"/>
+		<move name="fire fang" interval="8000" level="1"/>
+		<move name="thunder fang" interval="8000" level="1"/>
+		<move name="shock wave" interval="7000" level="1"/>
+		<move name="wild charge" interval="15000" level="20"/>
+		<move name="discharge" interval="12000" level="30"/>
+		<move name="thunder" interval="13000" level="35"/>
+		<move name="thunder wave" interval="20000" level="40"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-75" max="-75" />
+		<attack name="charge" interval="30000" chance="66" target="1"/>
+		<attack name="fire fang" interval="8000" chance="66" target="1"/>
+		<attack name="thunder fang" interval="8000" chance="66" target="1"/>
+		<attack name="shock wave" interval="7000" chance="66" target="1"/>
+		<attack name="wild charge" interval="15000" chance="66" target="1"/>
+		<attack name="discharge" interval="12000" chance="66" target="1"/>
+		<attack name="thunder" interval="13000" chance="66" target="1"/>
+		<attack name="thunder wave" interval="20000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="60" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MANECTRIC!" />
+	</voices>
+	<loot>
+		<item name="electric fur" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="80" chance="100000"/>
+	</loot>
+</monster>

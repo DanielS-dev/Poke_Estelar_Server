@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Poliwag" nameDescription="a poliwag" race="water" race2="none" experience="60" speed="190" manacost="0">
+	<level min="2" max="6"/>
+	<health now="400" max="400" />
+	<look type="963" head="113" body="57" legs="95" feet="113" corpse="26921" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="60" />
+		<flag portraitid="27176" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3383" />
+		<flag canteleport="0" />
+		<flag catchchance="333" />
+		<flag moveMagicAttackBase="40" />
+		<flag moveMagicDefenseBase="40" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="hypnosis" interval="30000" isTarget="1" range="8" level="1"/>
+		<move name="water gun" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="mud shot" interval="5000" isTarget="1" range="8" level="5"/>
+		<move name="bubble beam" interval="3500" isTarget="1" range="8" level="1"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Poliwhirl" level="25"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-50" max="-50" />
+		<attack name="hypnosis" interval="30000" chance="66" target="1" range="8"/>
+		<attack name="water gun" interval="2500" chance="66"/>
+		<attack name="mud shot" interval="5000" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3500" chance="66" range="3" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="40" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="POLIWAG!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="5" chance="100000"/>
+	</loot>
+</monster>

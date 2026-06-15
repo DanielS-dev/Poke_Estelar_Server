@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Relicanth" nameDescription="a relicanth" race="water" race2="rock" experience="170" speed="155" manacost="0">
+	<level min="71" max="72"/>
+	<health now="1000" max="1000" />
+	<look type="1550" head="113" body="57" legs="95" feet="113" corpse="27941" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="369" />
+		<flag portraitid="28076" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="1597" />
+		<flag canteleport="0" />
+		<flag catchchance="33" />
+		<flag moveMagicAttackBase="45" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="harden" interval="30000" level="10"/>
+		<move name="head smash" interval="10000" isTarget="1" range="1" level="1"/>
+		<move name="water gun" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="aqua tail" interval="15000" level="1"/>
+		<move name="ancient power" interval="14000" level="23"/>
+		<move name="hydro pump" interval="16000" level="35"/>
+		<move name="rest" interval="60000" level="41"/> 
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="harden" interval="30000" chance="66" target="1"/>
+		<attack name="head smash" interval="10000" chance="66" target="1"/>
+		<attack name="water gun" interval="3500" chance="66" target="1"/>
+		<attack name="aqua tail" interval="15000" chance="66" target="1"/>
+		<attack name="ancient power" interval="14000" chance="66" target="1"/>
+		<attack name="hydro pump" interval="16000" chance="66" target="1"/>
+		<attack name="rest" interval="60000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="130" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="RELICANTH!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="72" chance="100000"/>
+	</loot>
+</monster>

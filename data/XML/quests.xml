@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	<quest name="Beta Tester" startstorageid="65033" startstoragevalue="0">
+		<mission name="Quest" storageid="65033" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Participe do BETA Teste e receba uma outfit exclusiva." />
+			<missionstate id="1" description="Voce participou do BETA Teste e recebeu uma outfit exclusiva." />
+		</mission>
+	</quest>
+	
+	<quest name="Catches" startstorageid="91000" startstoragevalue="0">
+		<mission name="Quest 1" storageid="91000" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Capture 2 rattatas e va ate a npc Julie no CP de Saffron para coletar seu premio!" />
+			<missionstate id="1" description="Capture 2 rattatas e va ate a npc Julie no CP de Saffron para coletar seu premio!" />
+		</mission>
+		<mission name="Quest 2" storageid="91000" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Capture 2 bellsprouts e va ate a npc Julie no CP de Saffron para coletar seu premio!" />
+			<missionstate id="2" description="Capture 2 bellsprouts e va ate a npc Julie no CP de Saffron para coletar seu premio!" />
+		</mission>
+		<mission name="Quest Diaria" storageid="91000" startvalue="2" endvalue="3">
+			<missionstate id="2" description="Catches aleatorios diarios!" />
+			<missionstate id="3" description="Catches aleatorios diarios!" />
+		</mission>
+	</quest>
+
+	<quest name="Indigo League" startstorageid="91007" startstoragevalue="0">
+		<mission name="Quest" storageid="91007" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Apos vencer todos os ginasios de Kanto, esta na hora do verdadeiro desafio: A Indigo League!" />
+			<missionstate id="1" description="Voce mostrou sua habilidade ao passar pela Elite Four e sua competencia ao vencer Green, se tornando o mais novo campeao da Indigo League!" />
+		</mission>
+	</quest>
+	<quest name="Johto League" startstorageid="65042" startstoragevalue="0">
+		<mission name="Quest" storageid="65042" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Apos vencer todos os ginasios de Johto, esta na hora do verdadeiro desafio: A Johto League!" />
+			<missionstate id="1" description="Voce mostrou sua habilidade ao passar pela Elite Four e sua competencia ao vencer Lance, se tornando o mais novo campeao da Johto League!" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Pedra - Kanto" startstorageid="65009" startstoragevalue="0">
+		<mission name="Quest" storageid="65009" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Brock na ilha dos ginasios!" />
+			<missionstate id="1" description="Voce derrotou Brock e recebeu a Insignia da Rocha" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Agua - Kanto" startstorageid="65010" startstoragevalue="0">
+		<mission name="Quest" storageid="65010" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Misty na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Misty e recebeu a Insignia da Cascata" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Eletrico - Kanto" startstorageid="65011" startstoragevalue="0">
+		<mission name="Quest" storageid="65011" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Lt. Surge na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Lt. Surge e recebeu a Insignia do Trovao" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Planta - Kanto" startstorageid="65012" startstoragevalue="0">
+		<mission name="Quest" storageid="65012" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Erika na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Erika e recebeu a Insignia do Arco-Iris" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Veneno - Kanto" startstorageid="65013" startstoragevalue="0">
+		<mission name="Quest" storageid="65013" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Koga na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Koga e recebeu a Insignia da Alma" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Psiquico - Kanto" startstorageid="65014" startstoragevalue="0">
+		<mission name="Quest" storageid="65014" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Sabrina na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Sabrina e recebeu a Insignia do Pantano" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Fogo - Kanto" startstorageid="65015" startstoragevalue="0">
+		<mission name="Quest" storageid="65015" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Blaine na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Blaine e recebeu a Insignia do Vulcao" />
+		</mission>
+	</quest>
+
+	<quest name="Ginasio Terra - Kanto" startstorageid="65016" startstoragevalue="0">
+		<mission name="Quest" storageid="65016" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote Giovanni na ilha dos ginasios!!" />
+			<missionstate id="1" description="Voce derrotou Giovanni e recebeu a Insignia da Terra" />
+		</mission>
+	</quest>
+
+	<quest name="Zephyr Badge" startstorageid="92008" startstoragevalue="0">
+		<mission name="Quest" storageid="92008" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Hive Badge" startstorageid="92009" startstoragevalue="0">
+		<mission name="Quest" storageid="92009" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Plain Badge" startstorageid="92010" startstoragevalue="0">
+		<mission name="Quest" storageid="92010" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Fog Badge" startstorageid="92011" startstoragevalue="0">
+		<mission name="Quest" storageid="92011" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Storm Badge" startstorageid="92012" startstoragevalue="0">
+		<mission name="Quest" storageid="92012" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Mineral Badge" startstorageid="92013" startstoragevalue="0">
+		<mission name="Quest" storageid="92013" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Glacier Badge" startstorageid="92014" startstoragevalue="0">
+		<mission name="Quest" storageid="92014" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+
+	<quest name="Rising Badge" startstorageid="92015" startstoragevalue="0">
+		<mission name="Quest" storageid="92015" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Derrote o lider do ginasio e colecte sua insignea!" />
+			<missionstate id="1" description="Derrote o lider do ginasio e colecte sua insignea!" />
+		</mission>
+	</quest>
+	
+	<quest name="Underwater Chest" startstorageid="65002" startstoragevalue="0">
+		<mission name="Quest" storageid="65002" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt aquatica." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt aquatica." />
+		</mission>
+	</quest>
+	
+	<quest name="Dragonair Lost Box" startstorageid="65003" startstoragevalue="0">
+		<mission name="Quest" storageid="65003" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de Dragonair." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de Dragonair." />
+		</mission>
+	</quest>
+	
+	<quest name="Marowak Lost Box" startstorageid="65005" startstoragevalue="0">
+		<mission name="Quest" storageid="65005" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de Marowak." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de Marowak." />
+		</mission>
+	</quest>
+	
+	<quest name="Aerodactyl Lost Box" startstorageid="65001" startstoragevalue="0">
+		<mission name="Quest" storageid="65001" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de Aerodactyl." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de Aerodactyl." />
+		</mission>
+	</quest>
+	
+	<quest name="Gengar Lost Box" startstorageid="65004" startstoragevalue="0">
+		<mission name="Quest" storageid="65004" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de Gengar." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de Gengar." />
+		</mission>
+	</quest>
+	
+	<quest name="Venomous Lost Box" startstorageid="65006" startstoragevalue="0">
+		<mission name="Quest" storageid="65006" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de veneno." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de veneno." />
+		</mission>
+	</quest>
+	
+	<quest name="Machamp Lost Box" startstorageid="65007" startstoragevalue="0">
+		<mission name="Quest" storageid="65007" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de Machamp." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de Machamp." />
+		</mission>
+	</quest>
+
+	<quest name="A mochila perdida" startstorageid="65008" startstoragevalue="0">
+		<mission name="Quest" storageid="65008" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre a mochila perdida no bueiro de Saffron." />
+			<missionstate id="1" description="Voce encontrou a mochila perdida no bueiro de Saffron." />
+		</mission>
+	</quest>
+	
+	<quest name="Uma Ninetales peculiar" startstorageid="65018" startstoragevalue="0">
+		<mission name="Quest" storageid="65018" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre Arissa em Port Harbor para saber mais sobre sua encomenda." />
+			<missionstate id="1" description="Voce trocou com Arissa e recebeu uma Alolan Ninetales." />
+		</mission>
+	</quest>
+	
+	<quest name="O lixo de uns, o ouro de outros" startstorageid="65019" startstoragevalue="0">
+		<mission name="Quest" storageid="65019" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Brian recebeu um pokemon que nao gostou, cheque com ele em Saffron." />
+			<missionstate id="1" description="Voce trocou com Brian e recebeu um Alolan Raticate." />
+		</mission>
+	</quest>
+	
+	<quest name="A captura acidental" startstorageid="65020" startstoragevalue="0">
+		<mission name="Quest" storageid="65020" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Brendon capturou um pokemon por acidente e quer outro, cheque com ele na praia." />
+			<missionstate id="1" description="Voce trocou com Brendon e recebeu um Alolan Dugtrio." />
+		</mission>
+	</quest>
+	
+	<quest name="Amante de gatos" startstorageid="65021" startstoragevalue="0">
+		<mission name="Quest" storageid="65021" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Catlover Catarina precisa de um favor em Saffron." />
+			<missionstate id="1" description="Voce ajudou Catlover Catarina e recebeu um Alolan Persian." />
+		</mission>
+	</quest>
+	
+	<quest name="O sonho de ser uma lider" startstorageid="65022" startstoragevalue="0">
+		<mission name="Quest" storageid="65022" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Larissa procura um duelo em Saffron." />
+			<missionstate id="1" description="Voce venceu o duelo contra Larissa e recebeu um Alolan Marowak." />
+		</mission>
+	</quest>
+	
+	<quest name="Uma descoberta eletrizante" startstorageid="65023" startstoragevalue="0">
+		<mission name="Quest" storageid="65023" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Sparky tem um quiz para voce, o procure na entrada das cavernas." />
+			<missionstate id="1" description="Voce finalizou o quiz de Sparky e recebeu um Alolan Golem." />
+		</mission>
+	</quest>
+	
+	<quest name="Quanta toxicidade" startstorageid="65024" startstoragevalue="0">
+		<mission name="Quest" storageid="65024" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Luis tem um problema com seu Muk." />
+			<missionstate id="1" description="Voce ajudou Luis e recebeu um Alolan Muk." />
+		</mission>
+	</quest>
+	
+	<quest name="O duelo de Pietro" startstorageid="65025" startstoragevalue="0">
+		<mission name="Quest" storageid="65025" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Pietro quer duelar, encontre ele em na ilha Lutadora." />
+			<missionstate id="1" description="Voce venceu o duelo contra Pietro e recebeu um pokemon de alola." />
+		</mission>
+	</quest>
+	
+	<quest name="Johto Lost Box" startstorageid="65032" startstoragevalue="0">
+		<mission name="Quest" storageid="65032" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de Sableye." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de Sableye." />
+		</mission>
+	</quest>
+	
+	<quest name="Hoenn Lost Box" startstorageid="65031" startstoragevalue="0">
+		<mission name="Quest" storageid="65031" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau no dojo." />
+			<missionstate id="1" description="Voce encontrou este bau no dojo." />
+		</mission>
+	</quest>
+	
+	<quest name="Sinnoh Lost Box" startstorageid="65030" startstoragevalue="0">
+		<mission name="Quest" storageid="65030" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Encontre este bau na hunt de gelo." />
+			<missionstate id="1" description="Voce encontrou este bau na hunt de gelo." />
+		</mission>
+	</quest>
+	
+	<quest name="Marinheiro Naufragado" startstorageid="65033" startstoragevalue="0">
+		<mission name="Quest" storageid="65033" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Descubra a localizacao do marinheiro." />
+			<missionstate id="1" description="Voce encontrou o marinheiro e completou sua missao." />
+		</mission>
+	</quest>
+
+</quests>
+

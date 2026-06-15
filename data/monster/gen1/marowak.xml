@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Marowak" nameDescription="a marowak" race="ground" race2="none" experience="149" speed="145" manacost="0">
+	<level min="31" max="36"/>
+	<health now="600" max="600" />
+	<look type="1008" head="113" body="57" legs="95" feet="113" corpse="26966" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="105" />
+		<flag portraitid="27221" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="98" />
+		<flag moveMagicAttackBase="50" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="bone club" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="bonemerang" interval="7500" level="1"/>
+		<move name="headbutt" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="thrash" interval="17000" level="8"/>
+		<move name="stomping tantrum" interval="14000" level="12"/>
+		<move name="tail whip" interval="15000" level="3"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-80" />
+		<attack name="bone club" interval="2500" chance="66" target="1"/>
+		<attack name="bonemerang" interval="7500" chance="66" target="1"/>
+		<attack name="headbutt" interval="3500" chance="66" target="1"/>
+		<attack name="thrash" interval="17000" chance="66" target="1"/>
+		<attack name="stomping tantrum" interval="14000" chance="66" target="1"/>
+		<attack name="tail whip" interval="15000" chance="66" target="1"/>
+		<attack name="bone rush" interval="5000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="110" >
+		<defense name="bone rush" interval="5000" chance="66"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MAROWAK!" />
+	</voices>
+	<loot>
+		<item name="bone" countmax="1" chance="15000"/>
+		<item name="old skull" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="36" chance="100000"/>
+	</loot>
+</monster>

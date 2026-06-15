@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mega Collector" script="megacollector.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2910" head="114" body="114" legs="114" feet="114" addons="3" />
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I buy {mega} stones. Just say the {name} of the {mega} stone you wanna sell me." />
+		<parameter key="message_decline" value="Maybe next time." />
+	</parameters>
+</npc>

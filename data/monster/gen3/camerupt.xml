@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Camerupt" nameDescription="a camerupt" race="fire" race2="ground" experience="161" speed="140" manacost="0">
+	<level min="79" max="83"/>
+	<health now="700" max="700" />
+	<look type="1504" head="113" body="57" legs="95" feet="113" corpse="27895" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="323" />
+		<flag portraitid="28030" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="196" />
+		<flag moveMagicAttackBase="105" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="curse" interval="30000" level="1"/>
+		<move name="ember" interval="4000" isTarget="1" range="8" level="1"/>
+		<move name="incinerate" interval="10000" level="1"/>
+		<move name="bulldoze" interval="9000" level="11"/>
+		<move name="lava plume" interval="9500" level="23"/>
+		<move name="eruption" interval="20000" level="31"/>
+		<move name="earth power" interval="18000" level="40"/>
+		<move name="earthquake" interval="17000" level="52"/>
+		<move name="rock slide" interval="16000" level="62"/>
+		<move name="fissure" interval="15000" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-100" />
+		<attack name="curse" interval="30000" chance="66" target="1"/>
+		<attack name="ember" interval="4000" chance="66" target="1"/>
+		<attack name="incinerate" interval="10000" chance="66" target="1"/>
+		<attack name="bulldoze" interval="9000" chance="66" target="1"/>
+		<attack name="lava plume" interval="9500" chance="66" target="1"/>
+		<attack name="eruption" interval="20000" chance="66" target="1"/>
+		<attack name="earth power" interval="18000" chance="66" target="1"/>
+		<attack name="earthquake" interval="17000" chance="66" target="1"/>
+		<attack name="rock slide" interval="16000" chance="66" target="1"/>
+		<attack name="fissure" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CAMERUPT!" />
+	</voices>
+	<loot>
+		<item name="volcano exhaust" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="83" chance="100000"/>
+	</loot>
+</monster>

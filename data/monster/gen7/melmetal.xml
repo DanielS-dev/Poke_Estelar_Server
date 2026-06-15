@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Melmetal" nameDescription="a melmetal" race="steel" race2="none" experience="300" speed="234" manacost="0">
+	<level min="100" max="100"/>
+	<health now="1350" max="1350" />
+	<look type="4023" head="113" body="57" legs="95" feet="113" corpse="39288" />
+	<targetchange interval="5000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="809" />
+		<flag portraitid="27261" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="5" />
+		<flag moveMagicAttackBase="80" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+			<event name="LegendariesDeath"/>
+	</script>
+	<moves>
+		<move name="harden" interval="15000" level="1"/>
+		<move name="headbutt" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="thunder shock" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="thunder punch" interval="3000" isTarget="1" range="1" level="1"/>
+		<move name="mega punch" interval="5000" isTarget="1" range="1" level="10"/>
+		<move name="dynamic punch" interval="5500" isTarget="1" range="1" level="20"/>
+		<move name="superpower" interval="17500" level="30"/>
+		<move name="protect" interval="30000" level="40"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-143" max="-143" />
+		<attack name="harden" interval="15000" chance="66" target="1"/>
+		<attack name="headbutt" interval="3500" chance="66" target="1"/>
+		<attack name="thunder shock" interval="2500" chance="66" target="1"/>
+		<attack name="thunder punch" interval="3000" chance="66" target="1"/>
+		<attack name="mega punch" interval="5000" chance="66" target="1"/>
+		<attack name="dynamic punch" interval="5500" chance="66" target="1"/>
+		<attack name="superpower" interval="17500" chance="66" target="1"/>
+		<attack name="protect" interval="30000" chance="66" target="1"/>
+		
+	</attacks>
+	<defenses armor="0" defense="143" >
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MELMETAL!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

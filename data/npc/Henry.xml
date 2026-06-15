@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Henry" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2007" head="0" body="109" legs="128" feet="128" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I {trade} essential stuff." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="leaf stone,26731,5000;water stone,26736,5000;thunder stone,26734,5000;fire stone,26728,5000;" />
+		<parameter key="shop_sellable" value="leaf stone,26731,1000;water stone,26736,1000;thunder stone,26734,1000;fire stone,26728,1000;moon stone,26733,500;metal coat,26747,500;sun stone,26748,500;dragon scale,26743,500;king's rock,26746,500;" />
+	</parameters>
+</npc>
+

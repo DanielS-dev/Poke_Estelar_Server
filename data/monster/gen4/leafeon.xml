@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Leafeon" nameDescription="a leafeon" race="grass" race2="none" experience="184" speed="195" manacost="0">
+	<level min="75" max="75"/>
+	<health now="650" max="650" />
+	<look type="3078" head="113" body="57" legs="95" feet="113" corpse="38516" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="470" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="60" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="charm" interval="15000" level="8"/>
+		<move name="quick attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="razor leaf" interval="3000" isTarget="1" range="8" level="1"/>
+		<move name="leafage" interval="3500" isTarget="1" range="8" level="12"/>
+		<move name="magical leaf" interval="4000" isTarget="1" range="8" level="1"/>
+		<move name="leaf blade" interval="7500" level="19"/>
+		<move name="giga drain" interval="15000" level="28"/>
+		<move name="sunny day" interval="15000" level="31"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-110" max="-110" />
+		<attack name="charm" interval="15000" chance="66" target="1"/>
+		<attack name="quick attack" interval="2500" chance="66"/>
+		<attack name="razor leaf" interval="3000" chance="66" target="1"/>
+		<attack name="leafage" interval="3500" chance="66" target="1"/>
+		<attack name="magical leaf" interval="4000" chance="66" target="1"/>
+		<attack name="leaf blade" interval="7500" chance="66" target="1"/>
+		<attack name="giga drain" interval="15000" chance="66" target="1"/>
+		<attack name="sunny day" interval="15000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="130" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="LEAFEON!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="75" chance="100000"/>
+	</loot>
+</monster>

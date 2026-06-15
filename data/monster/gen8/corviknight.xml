@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Corviknight" nameDescription="a corviknight" race="flying" race2="steel" experience="2480" speed="167" manacost="0">
+	<level min="100" max="100"/>
+	<health now="980" max="980" />
+	<look type="3826" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="823" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3827" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="53" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="iron defense" interval="15000" level="13"/>
+		<move name="peck" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="steel wing" interval="2500" level="1"/>
+		<move name="drill peck" interval="5000" level="1"/>
+		<move name="metal sound" interval="10000" level="5"/>
+		<move name="scary face" interval="10000" level="9"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-87" max="-87" />
+		<attack name="iron defense" interval="3000" chance="66" />
+		<attack name="peck" interval="2500" chance="66"/>
+		<attack name="steel wing" interval="3500" chance="66"/>
+		<attack name="drill peck" interval="2500" chance="66"/>
+		<attack name="metal sound" interval="3500" chance="66"/>
+		<attack name="scary face" interval="5000" chance="66" />
+
+	</attacks>
+	<defenses armor="0" defense="105" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CORVIKNIGHT!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

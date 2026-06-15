@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Unown" nameDescription="an unown" race="psychic" race2="none" experience="118" speed="148" manacost="0">
+	<level min="1" max="5"/>
+	<health now="480" max="480" />
+	<look type="1104" head="113" body="57" legs="95" feet="113" corpse="27062" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="201" />
+		<flag portraitid="27317" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="294" /> 
+		<flag moveMagicAttackBase="72" />
+		<flag moveMagicDefenseBase="48" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="hidden power" interval="5000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-72" max="-72" />
+		<attack name="hidden power" interval="5000" chance="100"/>
+
+	</attacks>
+	<defenses armor="0" defense="48" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="UNOWN!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="5" chance="100000"/>
+	</loot>
+</monster>

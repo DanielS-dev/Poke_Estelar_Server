@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Poliwhirl" nameDescription="a poliwhirl" race="water" race2="none" experience="135" speed="190" manacost="0">
+	<level min="25" max="29"/>
+	<health now="650" max="650" />
+	<look type="964" head="113" body="57" legs="95" feet="113" corpse="26922" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="61" />
+		<flag portraitid="27177" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3384" />
+		<flag canteleport="0" />
+		<flag catchchance="157" />
+		<flag moveMagicAttackBase="50" />
+		<flag moveMagicDefenseBase="50" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="hypnosis" interval="30000" isTarget="1" range="8" level="1"/>
+		<move name="water gun" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="mud shot" interval="5000" isTarget="1" range="8" level="5"/>
+		<move name="bubble beam" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="earth power" interval="13000" level="25"/>
+		<move name="hydro pump" interval="14000" level="27"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Poliwrath" itemName="water stone" count="1"/>
+		<evolution name="Politoed" itemName="king's rock"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="hypnosis" interval="30000" chance="66" target="1" range="8"/>
+		<attack name="water gun" interval="2500" chance="66"/>
+		<attack name="mud shot" interval="5000" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3500" chance="66" range="3" target="1"/>
+		<attack name="earth power" interval="13000" chance="66"/>
+		<attack name="hydro pump" interval="14000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="POLIWHIRL!" />
+	</voices>
+	<loot>
+		<item name="king's rock" countmax="1" chance="1000"/>
+		<item name="gold coin" countmax="29" chance="100000"/>
+	</loot>
+</monster>

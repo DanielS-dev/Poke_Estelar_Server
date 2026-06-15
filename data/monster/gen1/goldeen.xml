@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Goldeen" nameDescription="a goldeen" race="water" race2="none" experience="64" speed="163" manacost="0">
+	<level min="3" max="9"/>
+	<health now="450" max="450" />
+	<look type="3402" head="113" body="57" legs="95" feet="113" corpse="26979" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="118" />
+		<flag portraitid="27234" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3391" />
+		<flag canteleport="0" />
+		<flag catchchance="294" />
+		<flag moveMagicAttackBase="35" />
+		<flag moveMagicDefenseBase="50" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="supersonic" interval="20000" isTarget="1" range="8" level="1"/>
+		<move name="peck" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="water pulse" interval="7500" level="1"/>
+		<move name="waterfall" interval="5000" level="5"/>
+		<move name="megahorn" interval="14000" level="11"/>
+		<move name="agility" interval="20000" level="13"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Seaking" level="33"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-67" max="-67" />
+		<attack name="supersonic" interval="20000" chance="66" target="1"/>
+		<attack name="peck" interval="2500" chance="66" target="1"/>
+		<attack name="water pulse" interval="7500" chance="66" />
+		<attack name="waterfall" interval="5000" chance="66" />
+
+	</attacks>
+	<defenses armor="0" defense="60" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GOLDEEN!" />
+	</voices>
+	<loot>
+		<item name="horn" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="9" chance="100000"/>
+	</loot>
+</monster>

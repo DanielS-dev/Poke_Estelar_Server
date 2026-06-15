@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Dragapult" nameDescription="a dragapult" race="dragon" race2="ghost" experience="3000" speed="242" manacost="0">
+	<level min="100" max="100"/>
+	<health now="880" max="880" />
+	<look type="3864" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="887" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3850" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="dragon dance" interval="15000" level="1"/>
+		<move name="dragon breath" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="dragon darts" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="dragon rush" interval="7500" level="1"/>
+		<move name="infestation" interval="12500" level="1"/>
+		<move name="lock-on" interval="10000" level="1"/>
+		<move name="hex" interval="10000" level="1"/>
+		<move name="assurance" interval="7500" level="1"/>
+		<move name="phantom force" interval="7500" level="1"/>
+		<move name="agility" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-120" max="-120" />
+		<attack name="dragon dance" interval="15000" chance="66" />
+		<attack name="dragon breath" interval="2500" chance="66"/>
+		<attack name="dragon darts" interval="3500" chance="66"/>
+		<attack name="dragon rush" interval="7500" chance="66"/>
+		<attack name="infestation" interval="12500" chance="66"/>
+		<attack name="lock-on" interval="10000" chance="66" />
+		<attack name="hex" interval="10000" chance="66" />
+		<attack name="assurance" interval="7500" chance="66" />
+		<attack name="phantom force" interval="7500" chance="66" />
+		<attack name="agility" interval="15000" chance="66" />
+
+	</attacks>
+	<defenses armor="0" defense="75" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="DRAGAPULT!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

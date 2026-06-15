@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Bastiodon" nameDescription="a bastiodon" race="rock" race2="steel" experience="173" speed="130" manacost="0">
+	<level min="80" max="80"/>
+	<health now="600" max="600" />
+	<look type="3019" head="113" body="57" legs="95" feet="113" corpse="38457" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="411" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="3119" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="47" />
+		<flag moveMagicDefenseBase="138" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="iron defense" interval="30000" level="60"/>
+		<move name="tackle" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="iron head" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="ancient power" interval="18000" level="1"/>
+		<move name="metal sound" interval="15000" level="10"/>
+		<move name="heavy slam" interval="18500" level="20"/>
+		<move name="earth power" interval="19000" level="30"/>
+		<move name="rock slide" interval="19500" level="40"/>
+		<move name="metal burst" interval="20000" level="50"/>
+		<move name="endure" interval="60000" level="70"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-52" max="-52" />
+		<attack name="iron defense" interval="30000" chance="66" target="1"/>
+		<attack name="tackle" interval="3500" chance="66" target="1"/>
+		<attack name="iron head" interval="5000" chance="66" target="1"/>
+		<attack name="ancient power" interval="18000" chance="66" target="1"/>
+		<attack name="metal sound" interval="15000" chance="66" target="1"/>
+		<attack name="heavy slam" interval="18500" chance="66" target="1"/>
+		<attack name="earth power" interval="19000" chance="66" target="1"/>
+		<attack name="rock slide" interval="19500" chance="66" target="1"/>
+		<attack name="metal burst" interval="20000" chance="66" target="1"/>
+		<attack name="endure" interval="60000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="168" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="BASTIODON!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="80" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Kleavor" nameDescription="a kleavor" race="bug" race2="rock" experience="1750" speed="185" manacost="0">
+	<level min="100" max="100"/>
+	<health now="700" max="700" />
+	<look type="3924" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="900" />
+		<flag portraitid="27328" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="45" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="swords dance" interval="15000" level="20"/>
+		<move name="quick attack" interval="3500" isTarget="1" range="3" level="1"/>
+		<move name="slash" interval="5000" level="1"/>
+		<move name="fury cutter" interval="7500" level="6"/>
+		<move name="x-scissor" interval="6500" level="12"/>
+		<move name="stone axe" interval="12500" level="1"/>
+		<move name="rock slide" interval="15000" level="16"/>
+		<move name="agility" interval="15000" level="18"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-130" max="-130" />
+		<attack name="swords dance" interval="15000" chance="66" target="1"/>
+		<attack name="quick attack" interval="3500" chance="66" target="1"/>
+		<attack name="slash" interval="5000" chance="66" target="1"/>
+		<attack name="fury cutter" interval="7500" chance="66" target="1"/>
+		<attack name="x-scissor" interval="6500" chance="66" target="1"/>
+		<attack name="stone axe" interval="12500" chance="66" target="1"/>
+		<attack name="rock slide" interval="15000" chance="66"/>
+		<attack name="agility" interval="15000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="95" >
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="KLEAVOR!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+		<item name="otherworldly essence" count="1" chance="100000"/>
+	</loot>
+</monster>

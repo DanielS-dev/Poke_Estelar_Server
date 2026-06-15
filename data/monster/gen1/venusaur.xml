@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Venusaur" nameDescription="a venusaur" race="grass" race2="poison" experience="236" speed="180" manacost="0">
+	<level min="32" max="40"/>
+	<health now="800" max="800" />
+	<look type="906" head="113" body="57" legs="95" feet="113" corpse="26864" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="3" />
+		<flag portraitid="27119" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="1386" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="100" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="growl" interval="15000" level="1"/>
+		<move name="tackle" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="vine whip" interval="4000" level="1"/>
+		<move name="leech seed" interval="12000" level="6"/>
+		<move name="petal dance" interval="9500" level="37"/>
+		<move name="petal blizzard" interval="7500" level="36"/>
+		<move name="solar beam" interval="15000" level="16"/>
+		<move name="seed bomb" interval="9000" level="7"/>
+		<move name="sleep powder" interval="20000" level="38"/>
+		<move name="poison powder" interval="10000" level="17"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-82" max="-82" />
+		<attack name="growl" interval="15000" chance="40" range="1" target="1"/>
+		<attack name="tackle" interval="1500" chance="40" range="1" target="1"/>
+		<attack name="vine whip" interval="4000" chance="40" range="1" target="1"/>
+		<attack name="leech seed" interval="12000" chance="40" range="1" target="1"/>
+		<attack name="seed bomb" interval="9000" chance="40" range="1" target="1"/>
+		<attack name="solar beam" interval="15000" chance="40" range="1" target="1"/>
+		<attack name="poison powder" interval="10000" chance="40" range="1" target="1"/>
+		<attack name="petal dance" interval="9500" chance="40" range="1" target="1"/>
+		<attack name="petal blizzard" interval="7500" chance="40" range="1" target="1"/>
+		<attack name="sleep powder" interval="20000" chance="40" range="1" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="83" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="VENUSAUR!" />
+	</voices>
+	<loot>
+		<item name="bulb" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="40" chance="100000"/>
+	</loot>
+</monster>

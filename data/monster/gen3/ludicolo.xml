@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Ludicolo" nameDescription="a ludicolo" race="water" race2="grass" experience="216" speed="170" manacost="0">
+	<level min="71" max="73"/>
+	<health now="800" max="800" />
+	<look type="1453" head="113" body="57" legs="95" feet="113" corpse="27844" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="272" />
+		<flag portraitid="27979" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="1574" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="90" />
+		<flag moveMagicDefenseBase="100" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="water gun" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="bubble beam" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="energy ball" interval="6500" level="1"/>
+		<move name="astonish" interval="7500" level="9"/>
+		<move name="giga drain" interval="15000" level="15"/>
+		<move name="zen headbutt" interval="8500" level="30"/>
+		<move name="hydro pump" interval="13000" level="43"/>
+		<move name="rain dance" interval="30000" level="50"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="water gun" interval="2500" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3500" chance="66" target="1"/>
+		<attack name="energy ball" interval="6500" chance="66" target="1"/>
+		<attack name="astonish" interval="7500" chance="66" target="1"/>
+		<attack name="giga drain" interval="15000" chance="66" target="1"/>
+		<attack name="zen headbutt" interval="8500" chance="66" target="1"/>
+		<attack name="hydro pump" interval="13000" chance="66" target="1"/>
+		<attack name="rain dance" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="LUDICOLO!" />
+	</voices>
+	<loot>
+		<item name="giant water lily" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="73" chance="100000"/>
+	</loot>
+</monster>

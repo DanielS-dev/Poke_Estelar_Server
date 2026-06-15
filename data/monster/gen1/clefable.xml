@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Clefable" nameDescription="a clefable" race="fairy" race2="none" experience="217" speed="160" manacost="0">
+	<level min="31" max="38"/>
+	<health now="950" max="950" />
+	<look type="3184" head="113" body="57" legs="95" feet="113" corpse="26897" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="36" />
+		<flag portraitid="27152" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="33" />
+		<flag moveMagicAttackBase="95" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="cosmic power" interval="15000" level="1"/>
+		<move name="pound" interval="1500" level="1"/>
+		<move name="disarming voice" interval="5500" level="1"/>
+		<move name="stored power" interval="8500" level="4"/>
+		<move name="meteor mash" interval="9500" level="11"/>
+		<move name="moonblast" interval="10000" level="21"/>
+		<move name="metronome" interval="11000" level="32"/>
+		<move name="healing wish" interval="10000" level="16"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="cosmic power" interval="3000" chance="40" range="1" target="1"/>
+		<attack name="pound" interval="1500" chance="66" target="1"/>
+		<attack name="disarming voice" interval="5500" chance="66" target="1"/>
+		<attack name="stored power" interval="8500" chance="66" target="1"/>
+		<attack name="meteor mash" interval="9500" chance="66" target="1"/>
+		<attack name="moonblast" interval="10000" chance="66" target="1"/>
+		<attack name="metronome" interval="11000" chance="66" target="1"/>
+		<attack name="healing wish" interval="10000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="73" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CLEFABLE!" />
+	</voices>
+	<loot>
+		<item name="moon stone" countmax="1" chance="1000"/>
+		<item name="comb" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="38" chance="100000"/>
+	</loot>
+</monster>

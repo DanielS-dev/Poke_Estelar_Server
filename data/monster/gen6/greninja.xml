@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Greninja" nameDescription="a greninja" race="water" race2="dark" experience="265" speed="222" manacost="0">
+	<level min="36" max="50"/>
+	<health now="720" max="720" />
+	<look type="3422" head="113" body="57" legs="95" feet="113" corpse="38926" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="658" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="25" />
+		<flag moveMagicAttackBase="103" />
+		<flag moveMagicDefenseBase="71" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="pound" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="quick attack" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="water gun" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="night slash" interval="6500" level="36"/>
+		<move name="shadow sneak" interval="9500" level="37"/>
+		<move name="water pulse" interval="6500" level="6"/>
+		<move name="bounce" interval="7500" level="16"/>
+		<move name="water shuriken" interval="15000" level="36"/>
+		<move name="hydro pump" interval="13500" level="17"/>
+		<move name="smokescreen" interval="18000" level="7"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-95" max="-95" />
+		<attack name="pound" interval="3000" chance="40" />
+		<attack name="quick attack" interval="3000" chance="40"/>
+		<attack name="water gun" interval="3000" chance="40"/>
+		<attack name="water pulse" interval="3000" chance="40"/>
+		<attack name="bounce" interval="7500" chance="40" />
+		<attack name="hydro pump" interval="13500" chance="40"/>
+		<attack name="smokescreen" interval="3000" chance="40"/>
+		<attack name="night slash" interval="6500" chance="40" />
+		<attack name="shadow sneak" interval="9500" chance="40" />
+		<attack name="water shuriken" interval="15000" chance="40"/>
+
+	</attacks>
+	<defenses armor="0" defense="67" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GRENINJA!" />
+	</voices>
+	<loot>
+		<item name="water stone" countmax="1" chance="225"/>
+		<item name="gold coin" countmax="90" chance="40000"/>
+		<item name="water gem" countmax="2" chance="40000"/>
+		<item name="water pendant" countmax="1" chance="5000"/>
+
+	</loot>
+</monster>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Steelix" nameDescription="a mega steelix" race="steel" race2="ground" experience="358" speed="130" manacost="0">
+	<level min="90" max="90"/>
+	<health now="750" max="750" />
+	<look type="3542" head="113" body="57" legs="95" feet="113" corpse="27069" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="208" />
+		<flag portraitid="27324" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="3543" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="66" />
+		<flag moveMagicDefenseBase="114" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="iron defense" interval="15000" level="1"/>
+		<move name="rock throw" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="rock tomb" interval="7500" level="1"/>
+		<move name="rollout" interval="15000" level="1"/>
+		<move name="iron tail" interval="10000" level="1"/>
+		<move name="sand tomb" interval="22500" level="1"/>
+		<move name="heavy slam" interval="11000" level="1"/>
+		<move name="earthquake" interval="14000" level="1"/>
+		<move name="bulldoze" interval="16000" level="1"/>
+		<move name="stone edge" interval="17000" level="1"/>
+		<move name="rock slide" interval="18000" level="1"/>
+		<move name="autotomize" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-150" max="-150" />
+		<attack name="iron defense" interval="15000" chance="66" target="1"/>
+		<attack name="rock throw" interval="3500" chance="66" target="1"/>
+		<attack name="rock tomb" interval="7500" chance="66" target="1"/>
+		<attack name="rollout" interval="15000" chance="66" target="1"/>
+		<attack name="iron tail" interval="10000" chance="66" target="1"/>
+		<attack name="sand tomb" interval="22500" chance="66" target="1"/>
+		<attack name="heavy slam" interval="11000" chance="66" target="1"/>
+		<attack name="earthquake" interval="14000" chance="66" target="1"/>
+		<attack name="bulldoze" interval="16000" chance="66" target="1"/>
+		<attack name="stone edge" interval="17000" chance="66" target="1"/>
+		<attack name="rock slide" interval="18000" chance="66" target="1"/>
+		<attack name="autotomize" interval="15000" chance="66" target="1"/>
+		<attack name="sandstorm" interval="10000" chance="100" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="276" >
+		<defense name="sandstorm" interval="10000" chance="100"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="STEELIX!" />
+	</voices>
+	<loot>
+		<item name="steelixite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+	</loot>
+</monster>

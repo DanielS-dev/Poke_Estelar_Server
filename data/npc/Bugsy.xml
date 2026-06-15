@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Bugsy" script="bugsy.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="4107" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Sou o lider do ginasio de Azalea, mesmo com meu ginasio sendo teleportado para ca. Deseja me enfrentar em um duelo?" />
+		<parameter key="message_decline" value="Continue sua jornada!" />
+	</parameters>
+</npc>

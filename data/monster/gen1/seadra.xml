@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Seadra" nameDescription="a seadra" race="water" race2="none" experience="154" speed="185" manacost="0">
+	<level min="32" max="35"/>
+	<health now="550" max="550" />
+	<look type="1020" head="113" body="57" legs="95" feet="113" corpse="26978" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="117" />
+		<flag portraitid="27233" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="3387" />
+		<flag canteleport="0" />
+		<flag catchchance="98" />
+		<flag moveMagicAttackBase="95" />
+		<flag moveMagicDefenseBase="45" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="smokescreen" interval="20000" level="3"/>
+		<move name="water gun" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="bubble beam" interval="3000" isTarget="1" range="8" level="1"/>
+		<move name="dragon breath" interval="5500" isTarget="1" range="8" level="32"/>
+		<move name="twister" interval="5500" level="1"/>
+		<move name="dragon pulse" interval="7500" level="5"/>
+		<move name="hydro pump" interval="13000" level="37"/>
+		<move name="dragon dance" interval="30000" level="39"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Kingdra" itemName="dragon scale" />
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="smokescreen" interval="20000" chance="66" target="1"/>
+		<attack name="water gun" interval="2500" chance="66" target="1"/>
+		<attack name="bubble beam" interval="3000" chance="66" target="1"/>
+		<attack name="dragon breath" interval="5500" chance="66" target="1"/>
+		<attack name="twister" interval="5500" chance="66"/>
+		<attack name="dragon pulse" interval="7500" chance="66" target="1"/>
+		<attack name="hydro pump" interval="13000" chance="66" target="1"/>
+		<attack name="dragon dance" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="95" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SEADRA!" />
+	</voices>
+	<loot>
+		<item name="dragon scale" countmax="1" chance="1000"/>
+		<item name="seahorse tail" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="35" chance="100000"/>
+	</loot>
+</monster>

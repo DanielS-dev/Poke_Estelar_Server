@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Altaria" nameDescription="an altaria" race="dragon" race2="flying" experience="172" speed="180" manacost="0">
+	<level min="75" max="77"/>
+	<health now="750" max="750" />
+	<look type="1515" head="113" body="57" legs="95" feet="113" corpse="27906" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="334" />
+		<flag portraitid="28041" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="3595" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="70" />
+		<flag moveMagicDefenseBase="105" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="sing" interval="45000" level="10"/>
+		<move name="dragon breath" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="disarming voice" interval="7000" level="1"/>
+		<move name="dragon pulse" interval="8500" level="1"/>
+		<move name="moonblast" interval="10000" level="21"/>
+		<move name="sky attack" interval="15000" level="34"/>
+		<move name="perish song" interval="20000" level="45"/>
+		<move name="dragon dance" interval="30000" level="50"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-70" max="-70" />
+		<attack name="sing" interval="45000" chance="66" target="1"/>
+		<attack name="dragon breath" interval="3500" chance="66" target="1"/>
+		<attack name="disarming voice" interval="7000" chance="66" target="1"/>
+		<attack name="dragon pulse" interval="8500" chance="66" target="1"/>
+		<attack name="moonblast" interval="10000" chance="66" target="1"/>
+		<attack name="sky attack" interval="15000" chance="66" target="1"/>
+		<attack name="perish song" interval="20000" chance="66" target="1"/>
+		<attack name="dragon dance" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="90" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ALTARIA!" />
+	</voices>
+	<loot>
+		<item name="cotton wings" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="77" chance="100000"/>
+
+	</loot>
+</monster>

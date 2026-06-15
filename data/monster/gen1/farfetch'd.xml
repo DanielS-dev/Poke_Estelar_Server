@@ -1,0 +1,77 @@
+ <?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Farfetch'd" nameDescription="a farfetch'd" race="flying" race2="normal" experience="132" speed="160" manacost="0">
+	<level min="21" max="27"/>
+	<health now="520" max="520" />
+	<look type="986" head="113" body="57" legs="95" feet="113" corpse="26944" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="83" />
+		<flag portraitid="27199" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3565" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="58" />
+		<flag moveMagicDefenseBase="62" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="agility" interval="20000" level="8"/>
+		<move name="peck" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="night slash" interval="6500" level="1"/>
+		<move name="air cutter" interval="11000" level="11"/>
+		<move name="air slash" interval="7500" level="4"/>
+		<move name="aerial ace" interval="9500" level="16"/>
+		<move name="swords dance" interval="25000" level="18"/>
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="agility" interval="20000" chance="66" target="1"/>
+		<attack name="peck" interval="1500" chance="66" target="1"/>
+		<attack name="night slash" interval="6500" chance="66" target="1"/>
+		<attack name="air cutter" interval="11000" chance="66" target="1"/>
+		<attack name="air slash" interval="7500" chance="66" target="1"/>
+		<attack name="aerial ace" interval="9500" chance="66" target="1"/>
+		<attack name="swords dance" interval="25000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="55" >
+		
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="FARFETCH'D!" />
+	</voices>
+	<loot>
+		<item name="bird beak" countmax="1" chance="15000"/>
+		<item name="farfetch'd stick" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="27" chance="100000"/>
+	</loot>
+</monster>

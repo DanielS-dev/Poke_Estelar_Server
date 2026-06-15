@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Token Collector" script="tokencollector.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2005" head="59" body="150" legs="150" feet="150" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. Gostaria de fazer um {trade}?" />
+		<parameter key="message_decline" value="Talvez uma outra hora!" />
+	</parameters>
+</npc>

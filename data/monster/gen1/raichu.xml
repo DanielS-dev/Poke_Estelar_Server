@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Raichu" nameDescription="a raichu" race="electric" race2="none" experience="243" speed="210" manacost="0">
+	<level min="32" max="35"/>
+	<health now="600" max="600" />
+	<look type="929" head="113" body="57" legs="95" feet="113" corpse="26887" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="26" />
+		<flag portraitid="27142" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="98" />
+		<flag moveMagicAttackBase="90" />
+		<flag moveMagicDefenseBase="80" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="charm" interval="15000" level="1"/>
+		<move name="quick attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="thunder shock" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="thunder punch" interval="4500" isTarget="1" range="1" level="1"/>
+		<move name="electro ball" interval="7500" level="5"/>
+		<move name="spark" interval="8000" level="9"/>
+		<move name="discharge" interval="9500" level="11"/>
+		<move name="thunder" interval="11000" level="36"/>
+		<move name="thunderbolt" interval="8500" level="42"/>
+		<move name="nasty plot" interval="20000" level="15"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="charm" interval="15000" chance="66"/>
+		<attack name="quick attack" interval="2500" chance="66" target="1"/>
+		<attack name="thunder shock" interval="3500" chance="66" target="1"/>
+		<attack name="thunder punch" interval="4500" chance="66" target="1"/>
+		<attack name="electro ball" interval="7500" chance="66"/>
+		<attack name="spark" interval="8000" chance="66"/>
+		<attack name="discharge" interval="9500" chance="66"/>
+		<attack name="thunder" interval="11000" chance="66"/>
+		<attack name="thunderbolt" interval="8500" chance="66"/>
+		<attack name="nasty plot" interval="20000" chance="66" />
+
+	</attacks>
+	<defenses armor="0" defense="55" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="RAICHU!" />
+	</voices>
+	<loot>
+		<item name="strange electric tail" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="35" chance="100000"/>
+	</loot>
+</monster>

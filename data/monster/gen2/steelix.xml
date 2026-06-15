@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Steelix" nameDescription="a steelix" race="steel" race2="ground" experience="179" speed="130" manacost="0">
+	<level min="51" max="60"/>
+	<health now="750" max="750" />
+	<look type="1111" head="113" body="57" legs="95" feet="113" corpse="27069" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="208" />
+		<flag portraitid="27324" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="1385" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="33" />
+		<flag moveMagicAttackBase="55" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="bite" interval="5500" isTarget="1" range="1" level="1"/>
+		<move name="crunch" interval="3000" isTarget="1" range="1" level="1"/>
+		<move name="fire fang" interval="12500" level="1"/>
+		<move name="ice fang" interval="12000" level="10"/>
+		<move name="thunder fang" interval="11000" level="20"/>
+		<move name="sand tomb" interval="22000" level="28"/>
+		<move name="dig" interval="15000" level="35"/>
+		<move name="stone edge" interval="18000" level="42"/>
+		<move name="rock slide" interval="19000" level="55"/>
+		<move name="sandstorm" interval="30000" level="61"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-85" max="-85" />
+		<attack name="bite" interval="5500" chance="66" target="1"/>
+		<attack name="crunch" interval="3000" chance="66" target="1"/>
+		<attack name="fire fang" interval="12500" chance="66" target="1"/>
+		<attack name="ice fang" interval="12000" chance="66" target="1"/>
+		<attack name="thunder fang" interval="11000" chance="66" target="1"/>
+		<attack name="sand tomb" interval="22000" chance="66" target="1"/>
+		<attack name="dig" interval="15000" chance="66" target="1"/>
+		<attack name="stone edge" interval="18000" chance="66" target="1"/>
+		<attack name="rock slide" interval="19000" chance="66" target="1"/>
+		<attack name="sandstorm" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="200" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="STEELIX!" />
+	</voices>
+	<loot>
+		<item name="steelix tail" countmax="1" chance="15000"/>
+		<item name="metal coat" countmax="1" chance="1000"/>
+		<item name="gold coin" countmax="60" chance="100000"/>
+	</loot>
+</monster>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Grovyle" nameDescription="a grovyle" race="grass" race2="none" experience="142" speed="195" manacost="0">
+	<level min="16" max="21"/>
+	<health now="500" max="500" />
+	<look type="1434" head="113" body="57" legs="95" feet="113" corpse="27825" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="253" />
+		<flag portraitid="27960" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="85" />
+		<flag moveMagicDefenseBase="65" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="leer" interval="15000" level="1"/>
+		<move name="pound" interval="1500" isTarget="1" range="1" level="1"/>
+		<move name="leafage" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="x-scissor" interval="5000" level="16"/>
+		<move name="fury cutter" interval="9000" level="17"/>
+		<move name="assurance" interval="6500" level="6"/>
+		<move name="energy ball" interval="8000" level="6"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Sceptile" level="36" />
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="leer" interval="3000" chance="40" range="1" target="1"/>
+		<attack name="pound" interval="3000" chance="40" target="1"/>
+		<attack name="leafage" interval="3000" chance="40" target="1"/>
+		<attack name="assurance" interval="5000" chance="40" target="1"/>
+		<attack name="energy ball" interval="5000" chance="40" target="1"/>
+		<attack name="fury cutter" interval="5000" chance="40" target="1"/>
+		<attack name="x-scissor" interval="5000" chance="40" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="45" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GROVYLE!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="21" chance="100000"/>
+	</loot>
+</monster>

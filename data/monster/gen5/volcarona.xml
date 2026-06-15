@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Volcarona" nameDescription="a volcarona" race="bug" race2="fire" experience="2750" speed="200" manacost="0">
+	<level min="100" max="100"/>
+	<health now="850" max="850" />
+	<look type="3869" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="598" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3870" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="135" />
+		<flag moveMagicDefenseBase="105" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="leech life" interval="15000" level="1"/>
+		<move name="ember" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="gust" interval="5000" level="1"/>
+		<move name="struggle bug" interval="7500" level="1"/>
+		<move name="fire spin" interval="15000" level="1"/>
+		<move name="hurricane" interval="17500" level="1"/>
+		<move name="fire blast" interval="12500" level="1"/>
+		<move name="heat wave" interval="10000" level="1"/>
+		<move name="bug buzz" interval="15000" level="1"/>
+		<move name="quiver dance" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-60" max="-60" />
+		<attack name="leech life" interval="15000" chance="66" target="1"/>
+		<attack name="ember" interval="3500" chance="66" target="1"/>
+		<attack name="gust" interval="5000" chance="66" target="1"/>
+		<attack name="struggle bug" interval="7500" chance="66" target="1"/>
+		<attack name="fire spin" interval="15000" chance="66" target="1"/>
+		<attack name="hurricane" interval="17500" chance="66" target="1"/>
+		<attack name="fire blast" interval="12500" chance="66" target="1"/>
+		<attack name="heat wave" interval="10000" chance="66" target="1"/>
+		<attack name="bug buzz" interval="15000" chance="66" target="1"/>
+		<attack name="quiver dance" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="VOLCARONA!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

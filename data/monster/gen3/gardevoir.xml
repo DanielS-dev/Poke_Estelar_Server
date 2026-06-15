@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Gardevoir" nameDescription="a gardevoir" race="psychic" race2="fairy" experience="259" speed="180" manacost="0">
+	<level min="85" max="89"/>
+	<health now="680" max="680" />
+	<look type="1463" head="113" body="57" legs="95" feet="113" corpse="27854" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="282" />
+		<flag portraitid="27989" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="1" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="125" />
+		<flag moveMagicDefenseBase="115" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="calm mind" interval="30000" level="21"/>
+		<move name="psybeam" interval="3000" isTarget="1" range="8" level="1"/>
+		<move name="confusion" interval="9500" level="1"/>
+		<move name="psychic" interval="8000" level="1"/>
+		<move name="disarming voice" interval="7500" level="13"/>
+		<move name="future sight" interval="19000" level="31"/>
+		<move name="moonblast" interval="13000" level="45"/>
+		<move name="mystical fire" interval="15000" level="53"/>
+		<move name="draining kiss" interval="18000" level="64"/>
+		<move name="misty terrain" interval="30000" level="73"/>
+		<move name="dream eater" interval="10000" level="88"/>
+		<move name="hypnosis" interval="30000" level="90"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="calm mind" interval="30000" chance="66" target="1"/>
+		<attack name="psybeam" interval="3000" chance="66" target="1"/>
+		<attack name="confusion" interval="9500" chance="66" target="1"/>
+		<attack name="psychic" interval="8000" chance="66" target="1"/>
+		<attack name="disarming voice" interval="7500" chance="66" target="1"/>
+		<attack name="future sight" interval="19000" chance="66" target="1"/>
+		<attack name="moonblast" interval="13000" chance="66" target="1"/>
+		<attack name="mystical fire" interval="15000" chance="66" target="1"/>
+		<attack name="draining kiss" interval="18000" chance="66" target="1"/>
+		<attack name="misty terrain" interval="30000" chance="66" target="1"/>
+		<attack name="dream eater" interval="10000" chance="66" target="1"/>
+		<attack name="hypnosis" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GARDEVOIR!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="89" chance="100000"/>
+	</loot>
+</monster>

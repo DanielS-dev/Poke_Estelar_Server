@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Chatot" nameDescription="a chatot" race="normal" race2="flying" experience="144" speed="191" manacost="0">
+	<level min="71" max="73"/>
+	<health now="760" max="760" />
+	<look type="3049" head="113" body="57" legs="95" feet="113" corpse="38487" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="441" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3842" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="39" />
+		<flag moveMagicAttackBase="92" />
+		<flag moveMagicDefenseBase="42" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="sing" interval="30000" level="16"/>
+		<move name="round" interval="2500" isTarget="1" range="1" level="1"/>
+		<move name="uproar" interval="5000" level="1"/>
+		<move name="hyper voice" interval="7500" level="1"/>
+		<move name="air slash" interval="8500" level="5"/>
+		<move name="echoed voice" interval="12500" level="7"/>
+		<move name="chatter" interval="15000" level="10"/>
+		<move name="feather dance" interval="15000" level="13"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-65" max="-65" />
+		<attack name="sing" interval="30000" chance="66" target="1"/>
+		<attack name="round" interval="2500" chance="66" target="1"/>
+		<attack name="uproar" interval="5000" chance="66" target="1"/>
+		<attack name="hyper voice" interval="7500" chance="66" target="1"/>
+		<attack name="air slash" interval="8500" chance="66" target="1"/>
+		<attack name="echoed voice" interval="12500" chance="66" target="1"/>
+		<attack name="chatter" interval="15000" chance="66" target="1"/>
+		<attack name="feather dance" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="45" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="CHATOT!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="73" chance="100000"/>
+	</loot>
+</monster>

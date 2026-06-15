@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Weepinbell" nameDescription="a weepinbell" race="grass" race2="poison" experience="137" speed="155" manacost="0">
+	<level min="21" max="27"/>
+	<health now="650" max="650" />
+	<look type="973" head="113" body="57" legs="95" feet="113" corpse="26931" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="70" />
+		<flag portraitid="27186" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="157" />
+		<flag moveMagicAttackBase="85" />
+		<flag moveMagicDefenseBase="45" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="acid" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="poison jab" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="razor leaf" interval="3000" isTarget="1" range="8" level="21"/>
+		<move name="vine whip" interval="5000" level="2"/>
+		<move name="wrap" interval="7500" level="4"/>
+		<move name="poison powder" interval="15000" level="23"/>
+		<move name="sleep powder" interval="30000" level="25"/>
+		<move name="stun spore" interval="25000" level="27"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Victreebel" itemName="leaf stone" count="1"/>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-90" max="-90" />
+		<attack name="acid" interval="2500" chance="66"/>
+		<attack name="poison jab" interval="3500" chance="66"/>
+		<attack name="razor leaf" interval="3000" chance="66"/>
+		<attack name="vine whip" interval="5000" chance="66" target="1"/>
+		<attack name="wrap" interval="7500" chance="66"/>
+		<attack name="poison powder" interval="15000" chance="66"/>
+		<attack name="sleep powder" interval="30000" chance="66"/>
+		<attack name="stun spore" interval="25000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="50" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="WEEPINBELL!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="27" chance="100000"/>
+	</loot>
+</monster>

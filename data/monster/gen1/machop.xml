@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Machop" nameDescription="a machop" race="fighting" race2="none" experience="61" speed="135" manacost="0">
+	<level min="11" max="20"/>
+	<health now="700" max="700" />
+	<look type="3199" head="113" body="57" legs="95" feet="113" corpse="26927" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="66" />
+		<flag portraitid="27182" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="235" />
+		<flag moveMagicAttackBase="35" />
+		<flag moveMagicDefenseBase="35" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="bulk up" interval="30000" level="21"/>
+		<move name="low kick" interval="4000" isTarget="1" range="1" level="1"/>
+		<move name="low sweep" interval="6000" isTarget="1" range="1" level="1"/>
+		<move name="vital throw" interval="9500" isTarget="1" range="1" level="1"/>
+		<move name="cross chop" interval="8500" level="11"/>
+
+	</moves>
+	<evolutions>
+		<evolution name="Machoke" level="28" />
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-80" />
+		<attack name="bulk up" interval="30000" chance="66" target="1"/>
+		<attack name="low kick" interval="4000" chance="66" target="1"/>
+		<attack name="low sweep" interval="6000" chance="66" target="1"/>
+		<attack name="vital throw" interval="9500" chance="66" target="1"/>
+		<attack name="cross chop" interval="8500" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="50" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="MACHOP!" />
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="20" chance="100000"/>
+	</loot>
+</monster>

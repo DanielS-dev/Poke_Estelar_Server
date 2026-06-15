@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Plusle" nameDescription="a plusle" race="electric" race2="none" experience="142" speed="195" manacost="0">
+	<level min="71" max="71"/>
+	<health now="600" max="600" />
+	<look type="1492" head="113" body="57" legs="95" feet="113" corpse="27883" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="311" />
+		<flag portraitid="28018" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="261" />
+		<flag moveMagicAttackBase="85" />
+		<flag moveMagicDefenseBase="75" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="charge" interval="30000" level="21"/>
+		<move name="thunder shock" interval="3000" isTarget="1" range="1" level="1"/>
+		<move name="electro ball" interval="7500" level="1"/>
+		<move name="discharge" interval="13000" level="1"/>
+		<move name="thunder" interval="18000" level="10"/>
+		<move name="helping hand" interval="15000" level="33"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-50" max="-50" />
+		<attack name="charge" interval="30000" chance="66" target="1"/>
+		<attack name="thunder shock" interval="3000" chance="66" target="1"/>
+		<attack name="electro ball" interval="7500" chance="66" target="1"/>
+		<attack name="discharge" interval="13000" chance="66" target="1"/>
+		<attack name="thunder" interval="18000" chance="66" target="1"/>
+		<attack name="helping hand" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="40" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PLUSLE!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="71" chance="100000"/>
+	</loot>
+</monster>

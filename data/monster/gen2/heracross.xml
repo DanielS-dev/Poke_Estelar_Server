@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Heracross" nameDescription="a heracross" race="bug" race2="fighting" experience="175" speed="185" manacost="0">
+	<level min="51" max="55"/>
+	<health now="800" max="800" />
+	<look type="3192" head="113" body="57" legs="95" feet="113" corpse="27075" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="214" />
+		<flag portraitid="27330" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="1338" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="40" />
+		<flag moveMagicDefenseBase="95" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="endure" interval="45000" level="41"/>
+		<move name="horn attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="pin missile" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="brick break" interval="5000" isTarget="1" range="1" level="1"/>
+		<move name="arm thrust" interval="7500" level="8"/>
+		<move name="thrash" interval="20000" level="17"/>
+		<move name="close combat" interval="11000" level="29"/>
+		<move name="throat chop" interval="9500" level="22"/>
+		<move name="megahorn" interval="13000" level="35"/>
+		<move name="aerial ace" interval="15000" level="49"/>
+		<move name="swords dance" interval="30000" level="52"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-125" max="-125" />
+		<attack name="endure" interval="45000" chance="66" target="1"/>
+		<attack name="horn attack" interval="2500" chance="66" target="1"/>
+		<attack name="pin missile" interval="3500" chance="66" target="1"/>
+		<attack name="brick break" interval="5000" chance="66" target="1"/>
+		<attack name="arm thrust" interval="7500" chance="66" target="1"/>
+		<attack name="thrash" interval="20000" chance="66" target="1"/>
+		<attack name="close combat" interval="11000" chance="66" target="1"/>
+		<attack name="throat chop" interval="9500" chance="66" target="1"/>
+		<attack name="megahorn" interval="13000" chance="66" target="1"/>
+		<attack name="aerial ace" interval="15000" chance="66" target="1"/>
+		<attack name="swords dance" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="75" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="HERACROSS!" />
+	</voices>
+	<loot>
+		<item name="insect claw" countmax="1" chance="15000"/>
+		<item name="gold coin" countmax="55" chance="100000"/>
+	</loot>
+</monster>

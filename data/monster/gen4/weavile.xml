@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Weavile" nameDescription="a weavile" race="dark" race2="ice" experience="179" speed="225" manacost="0">
+	<level min="72" max="75"/>
+	<health now="700" max="700" />
+	<look type="3069" head="113" body="57" legs="95" feet="113" corpse="38507" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="461" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="45" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="nasty plot" interval="10000" level="31"/>
+		<move name="quick attack" interval="1500" isTarget="1" range="3" level="1"/>
+		<move name="metal claw" interval="3500" isTarget="1" range="1" level="1"/>
+		<move name="ice shard" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="night slash" interval="5000" level="8"/>
+		<move name="dark pulse" interval="6000" level="22"/>
+		<move name="icy wind" interval="6500" level="45"/>
+		<move name="assurance" interval="7000" level="52"/>
+		<move name="agility" interval="15000" level="60"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-120" max="-120" />
+		<attack name="nasty plot" interval="1500" chance="66" target="1"/>
+		<attack name="quick attack" interval="1500" chance="66" target="1"/>
+		<attack name="metal claw" interval="3500" chance="66" target="1"/>
+		<attack name="ice shard" interval="2500" chance="66" target="1"/>
+		<attack name="night slash" interval="5000" chance="66" target="1"/>
+		<attack name="dark pulse" interval="6000" chance="66" target="1"/>
+		<attack name="icy wind" interval="6500" chance="66" target="1"/>
+		<attack name="assurance" interval="7000" chance="66" target="1"/>
+		<attack name="agility" interval="15000" chance="66" target="1"/>
+		
+		<attack name="slash" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="65" >
+		<defense name="slash" interval="5000" chance="33"/>
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="WEAVILE!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="75" chance="100000"/>
+	</loot>
+</monster>

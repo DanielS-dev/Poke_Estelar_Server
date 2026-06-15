@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Daycare" script="daycare.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2001" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Ola, sou XXXXX, dona do {Daycare} de Saffron, gostaria de produzir um ovo?" />
+		<parameter key="message_decline" value="Continue sua jornada!" />
+	</parameters>
+</npc>

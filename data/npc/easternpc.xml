@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Easter Event" script="easternpc.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2910" head="114" body="114" legs="114" feet="114" addons="3" />
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. Voce gostaria de {trocar} seus {pontos}?" />
+		<parameter key="message_decline" value="Talvez outra hora." />
+	</parameters>
+</npc>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Lance" script="lance1.lua" walkinterval="0" floorchange="0">
+	<health now="100" max="100" />
+	<look type="2017" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Sou Lance, elite quatro do tipo dragao. Voce acha que consegue me derrotar?" />
+		<parameter key="message_decline" value="Continue sua jornada!" />
+	</parameters>
+</npc>
+

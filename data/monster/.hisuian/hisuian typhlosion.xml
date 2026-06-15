@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Hisuian Typhlosion" nameDescription="a hisuian typhlosion" race="fire" race2="ghost" experience="2670" speed="195" manacost="0">
+	<level min="100" max="100"/>
+	<health now="730" max="730" />
+	<look type="3911" head="113" body="57" legs="95" feet="113" corpse="0" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="157" />
+		<flag portraitid="27273" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="119" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="defense curl" interval="15000" level="1"/>
+		<move name="ember" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="shadow ball" interval="5000" level="1"/>
+		<move name="flame wheel" interval="6500" level="1"/>
+		<move name="hex" interval="7500" level="8"/>
+		<move name="eruption" interval="10000" level="12"/>
+		<move name="lava plume" interval="8500" level="16"/>
+		<move name="flamethrower" interval="12500" level="17"/>
+		<move name="overheat" interval="15000" level="21"/>
+		<move name="inferno" interval="14000" level="25"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-84" max="-84" />
+		
+		
+		<attack name="defense curl" interval="15000" chance="66" range="1" target="1"/>
+		<attack name="ember" interval="2500" chance="66" target="1"/>
+		<attack name="shadow ball" interval="5000" chance="66" target="1"/>
+		<attack name="flame wheel" interval="6500" chance="66"/>
+		<attack name="hex" interval="7500" chance="66"/>
+		<attack name="eruption" interval="10000" chance="66"/>
+		<attack name="lava plume" interval="8500" chance="66"/>
+		<attack name="flamethrower" interval="12500" chance="66"/>
+		<attack name="overheat" interval="15000" chance="66"/>
+		<attack name="inferno" interval="14000" chance="66"/>
+
+	</attacks>
+	<defenses armor="0" defense="78" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="TYPHLOSION!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Pachirisu" nameDescription="a pachirisu" race="electric" race2="none" experience="142" speed="195" manacost="0">
+	<level min="71" max="72"/>
+	<health now="600" max="600" />
+	<look type="3025" head="113" body="57" legs="95" feet="113" corpse="38463" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="417" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="261" />
+		<flag moveMagicAttackBase="45" />
+		<flag moveMagicDefenseBase="90" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="charm" interval="15000" level="10"/>
+		<move name="thunder shock" interval="3000" isTarget="1" range="1" level="1"/>
+		<move name="spark" interval="5500" level="1"/>
+		<move name="electro ball" interval="7500" level="1"/>
+		<move name="super fang" interval="8500" level="8"/>
+		<move name="discharge" interval="12000" level="16"/>
+		<move name="thunder" interval="15000" level="19"/>
+		<move name="endure" interval="30000" level="23"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-45" max="-45" />
+		<attack name="charm" interval="15000" chance="66" target="1"/>
+		<attack name="thunder shock" interval="3000" chance="66" target="1"/>
+		<attack name="spark" interval="5500" chance="66" target="1"/>
+		<attack name="electro ball" interval="7500" chance="66" target="1"/>
+		<attack name="super fang" interval="8500" chance="66" target="1"/>
+		<attack name="discharge" interval="12000" chance="66" target="1"/>
+		<attack name="thunder" interval="15000" chance="66" target="1"/>
+		<attack name="endure" interval="30000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="70" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="PACHIRISU!" />
+	</voices>
+	<loot>
+		<item name="vale token" countmax="1" chance="2500"/>
+		<item name="gold coin" countmax="72" chance="100000"/>
+	</loot>
+</monster>

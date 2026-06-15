@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Mega Altaria" nameDescription="a mega altaria" race="dragon" race2="fairy" experience="344" speed="180" manacost="0">
+	<level min="90" max="90"/>
+	<health now="750" max="750" />
+	<look type="3500" head="113" body="57" legs="95" feet="113" corpse="27906" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="334" />
+		<flag portraitid="28041" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3501" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="132" />
+		<flag moveMagicDefenseBase="126" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="sing" interval="30000" level="1"/>
+		<move name="fairy wind" interval="2500" isTarget="1" range="8" level="1"/>
+		<move name="dragon breath" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="disarming voice" interval="7500" level="1"/>
+		<move name="dragon pulse" interval="8500" level="1"/>
+		<move name="hurricane" interval="20000" level="1"/>
+		<move name="moonblast" interval="12500" level="1"/>
+		<move name="sky attack" interval="17500" level="1"/>
+		<move name="hyper voice" interval="10000" level="1"/>
+		<move name="hyper beam" interval="18000" level="1"/>
+		<move name="perish song" interval="19000" level="1"/>
+		<move name="dragon dance" interval="15000" level="1"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-132" max="-132" />
+		<attack name="sing" interval="30000" chance="66" target="1"/>
+		<attack name="fairy wind" interval="2500" chance="66" target="1"/>
+		<attack name="dragon breath" interval="3500" chance="66" target="1"/>
+		<attack name="disarming voice" interval="7500" chance="66" target="1"/>
+		<attack name="dragon pulse" interval="8500" chance="66" target="1"/>
+		<attack name="hurricane" interval="20000" chance="66" target="1"/>
+		<attack name="moonblast" interval="12500" chance="66" target="1"/>
+		<attack name="sky attack" interval="17500" chance="66" target="1"/>
+		<attack name="hyper voice" interval="10000" chance="66" target="1"/>
+		<attack name="hyper beam" interval="18000" chance="66" target="1"/>
+		<attack name="perish song" interval="19000" chance="66" target="1"/>
+		<attack name="dragon dance" interval="15000" chance="66" target="1"/>
+
+	</attacks>
+	<defenses armor="0" defense="132" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="ALTARIA!" />
+	</voices>
+	<loot>
+		<item name="altarianite" countmax="1" chance="100"/>
+		<item name="platinum coin" countmax="5" chance="100000"/>
+		<item name="vale token" countmax="1" chance="15000"/>
+
+	</loot>
+</monster>

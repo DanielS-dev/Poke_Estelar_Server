@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Garchomp" nameDescription="a garchomp" race="dragon" race2="ground" experience="300" speed="202" manacost="0">
+	<level min="90" max="90"/>
+	<health now="1080" max="1080" />
+	<look type="3053" head="113" body="57" legs="95" feet="113" corpse="38491" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="445" />
+		<flag portraitid="0" />
+		<flag hasshiny="1" />
+		<flag hasmega="1" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="59" />
+		<flag moveMagicAttackBase="80" />
+		<flag moveMagicDefenseBase="85" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="crunch" interval="3000" isTarget="1" range="1" level="1"/>
+		<move name="dragon breath" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="twister" interval="6500" level="1"/>
+		<move name="dual chop" interval="7500" level="10"/>
+		<move name="dragon claw" interval="7000" level="22"/>
+		<move name="sand tomb" interval="18000" level="31"/>
+		<move name="dig" interval="15000" level="42"/>
+		<move name="dragon rush" interval="10000" level="53"/>
+		<move name="earth power" interval="12000" level="65"/>
+		<move name="bulldoze" interval="13000" level="72"/>
+		<move name="sandstorm" interval="17500" level="80"/>
+
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-130" max="-130" />
+		<attack name="crunch" interval="3000" chance="66" target="1"/>
+		<attack name="dragon breath" interval="3500" chance="66" target="1"/>
+		<attack name="twister" interval="6500" chance="66" target="1"/>
+		<attack name="dual chop" interval="7500" chance="66" target="1"/>
+		<attack name="dragon claw" interval="7000" chance="66" target="1"/>
+		<attack name="sand tomb" interval="18000" chance="66" target="1"/>
+		<attack name="dig" interval="15000" chance="66" target="1"/>
+		<attack name="dragon rush" interval="10000" chance="66" target="1"/>
+		<attack name="earth power" interval="12000" chance="66" target="1"/>
+		<attack name="bulldoze" interval="13000" chance="66" target="1"/>
+		<attack name="sandstorm" interval="17500" chance="66" target="1"/>
+		
+		<attack name="slash" interval="5000" chance="33"/>
+
+	</attacks>
+	<defenses armor="0" defense="95" >
+		<defense name="slash" interval="5000" chance="33"/>
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GARCHOMP!" />
+	</voices>
+	<loot>
+		<item name="jet claw" countmax="1" chance="15000"/>
+		<item name="vale token" countmax="1" chance="5000"/>
+		<item name="gold coin" countmax="90" chance="100000"/>
+	</loot>
+</monster>

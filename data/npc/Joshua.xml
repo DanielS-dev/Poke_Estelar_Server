@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Joshua" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="1966" head="39" body="122" legs="125" feet="57" addons="0" />
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I {trade} essential stuff." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="apple juice,35623,150;
+		grape juice,35624,200;
+		watermelon juice,35625,250;
+		orange juice,35626,300;
+		strawberry juice,35627,350;
+		water bottle,35629,25;
+		grilled gyarados,39198,3333;
+		roasted magikarp,39199,10000;
+		shoyu tentacle,39220,10000;
+		fried omanyte,39221,50000;" />
+	</parameters>
+</npc>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Talonflame" nameDescription="a talonflame" race="fire" race2="flying" experience="1750" speed="226" manacost="0">
+	<level min="100" max="100"/>
+	<health now="750" max="750" />
+	<look type="3895" head="113" body="57" legs="95" feet="113" corpse="39260" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="663" />
+		<flag portraitid="27125" />
+		<flag hasshiny="1" />
+		<flag hasmega="0" />
+		<flag flyable="3896" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="74" />
+		<flag moveMagicDefenseBase="69" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="quick attack" interval="2500" isTarget="1" range="3" level="1"/>
+		<move name="ember" interval="3500" isTarget="1" range="8" level="1"/>
+		<move name="flame charge" interval="7500" level="1"/>
+		<move name="steel wing" interval="5000" level="3"/>
+		<move name="flare blitz" interval="6500" level="7"/>
+		<move name="fly" interval="15000" level="11"/>
+		<move name="aerial ace" interval="12500" level="17"/>
+		<move name="agility" interval="15000" level="20"/>
+		
+	</moves>
+	<evolutions>
+
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-81" max="-81" />
+		<attack name="quick attack" interval="2500" chance="66" />
+		<attack name="ember" interval="3500" chance="66"/>
+		<attack name="flame charge" interval="7500" chance="66"/>
+		<attack name="steel wing" interval="5000" chance="66"/>
+		<attack name="flare blitz" interval="6500" chance="66"/>
+		<attack name="fly" interval="15000" chance="66" />
+		<attack name="aerial ace" interval="12500" chance="66"/>
+		<attack name="agility" interval="15000" chance="66" />
+
+	</attacks>
+	<defenses armor="0" defense="71" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="TALONFLAME!" />
+	</voices>
+	<loot>
+		<item name="platinum coin" countmax="10" chance="100000"/>
+		<item name="vale token" countmax="10" chance="10000"/>
+	</loot>
+</monster>

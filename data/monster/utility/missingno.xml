@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<monster name="Missingno" nameDescription="a missingno" race="normal" race2="none" experience="1" speed="666" manacost="0">
+	<level min="100" max="100"/>
+	<health now="666" max="666" />
+	<look type="3432" head="113" body="57" legs="95" feet="113" corpse="0" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag passive="0" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="97" />
+		<flag runonhealth="0" />
+		<flag dexentry="10000" />
+		<flag portraitid="1" />
+		<flag hasshiny="0" />
+		<flag hasmega="0" />
+		<flag flyable="0" />
+		<flag rideable="0" />
+		<flag surfable="0" />
+		<flag canteleport="0" />
+		<flag catchchance="0" />
+		<flag moveMagicAttackBase="666" />
+		<flag moveMagicDefenseBase="666" />
+	</flags>
+	<script>
+        	<event name="MonsterHealthChange"/>
+        	<event name="CorpseLevel"/>
+        	<event name="CorpseLoot"/>
+
+	</script>
+	<moves>
+		<move name="testmove" interval="100" level="1"/>
+	</moves>
+	<evolutions>
+		
+	</evolutions>
+	<attacks>
+		<attack name="melee" interval="2000" min="-666" max="-666" />
+		<attack name="testmove" interval="1000" chance="100"/>
+
+	</attacks>
+	<defenses armor="0" defense="666" >
+
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="5000" chance="10">
+	</voices>
+	<loot>
+
+	</loot>
+</monster>
