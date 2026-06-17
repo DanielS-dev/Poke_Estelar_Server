@@ -31,7 +31,7 @@
 #include "iomarket.h"
 #include "talkaction.h"
 #include "spells.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "app/server.h"
 #include "globalevent.h"
 #include "bed.h"

@@ -21,7 +21,7 @@
 
 #include "party.h"
 #include "game.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "events.h"
 
 extern Game g_game;

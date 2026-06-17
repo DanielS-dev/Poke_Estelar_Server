@@ -19,7 +19,7 @@
 
 #include "otpch.h"
 
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "database.h"
 
 #include <errmsg.h>

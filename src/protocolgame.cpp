@@ -27,7 +27,7 @@
 
 #include "player.h"
 
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "actions.h"
 #include "game.h"
 #include "iologindata.h"

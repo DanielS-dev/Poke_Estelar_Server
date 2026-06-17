@@ -24,7 +24,7 @@
 #include "../tasks.h"
 #include "../game.h"
 #include "../actions.h"
-#include "../configmanager.h"
+#include "../config/configmanager.h"
 #include "../spells.h"
 #include "../talkaction.h"
 #include "../movement.h"

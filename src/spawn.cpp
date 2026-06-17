@@ -22,7 +22,7 @@
 #include "spawn.h"
 #include "game.h"
 #include "monster.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "scheduler.h"
 
 #include "pugicast.h"

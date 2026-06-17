@@ -19,7 +19,7 @@
 
 #include "otpch.h"
 
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "globalevent.h"
 #include "tools.h"
 #include "scheduler.h"

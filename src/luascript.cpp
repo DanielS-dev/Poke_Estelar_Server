@@ -28,7 +28,7 @@
 #include "protocolstatus.h"
 #include "spells.h"
 #include "iologindata.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "teleport.h"
 #include "databasemanager.h"
 #include "bed.h"

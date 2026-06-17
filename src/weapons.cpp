@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "combat.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "game.h"
 #include "pugicast.h"
 #include "weapons.h"

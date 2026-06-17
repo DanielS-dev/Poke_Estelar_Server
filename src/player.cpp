@@ -24,7 +24,7 @@
 #include "bed.h"
 #include "chat.h"
 #include "combat.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "creatureevent.h"
 #include "events.h"
 #include "game.h"

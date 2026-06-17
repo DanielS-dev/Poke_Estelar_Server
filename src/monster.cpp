@@ -22,7 +22,7 @@
 #include "monster.h"
 #include "game.h"
 #include "spells.h"
-#include "configmanager.h" //pota
+#include "config/configmanager.h" //pota
 
 extern Game g_game;
 extern Monsters g_monsters;

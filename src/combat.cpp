@@ -23,7 +23,7 @@
 
 #include "game.h"
 #include "weapons.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "events.h"
 #include "monster.h" //pota
 

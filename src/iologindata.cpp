@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "iologindata.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "game.h"
 
 extern ConfigManager g_config;

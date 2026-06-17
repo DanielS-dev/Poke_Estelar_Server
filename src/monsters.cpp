@@ -24,7 +24,7 @@
 #include "spells.h"
 #include "combat.h"
 #include "weapons.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "game.h"
 #include "player.h"
 

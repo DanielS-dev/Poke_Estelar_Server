@@ -27,7 +27,7 @@
 #include "game.h"
 #include "actions.h"
 #include "iologindata.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "spells.h"
 #include "movement.h"
 #include "weapons.h"

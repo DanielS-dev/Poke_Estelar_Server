@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "configmanager.h"
-#include "game.h"
+#include "../game.h"
 
 #if LUA_VERSION_NUM >= 502
 #undef lua_strlen

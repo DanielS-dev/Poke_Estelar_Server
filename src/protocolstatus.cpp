@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "protocolstatus.h"
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "game.h"
 #include "outputmessage.h"
 

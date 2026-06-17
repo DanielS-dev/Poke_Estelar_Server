@@ -21,7 +21,7 @@
 
 #include "iomarket.h"
 
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "databasetasks.h"
 #include "iologindata.h"
 #include "game.h"

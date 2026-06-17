@@ -24,7 +24,7 @@
 #include "outputmessage.h"
 #include "tasks.h"
 
-#include "configmanager.h"
+#include "config/configmanager.h"
 #include "iologindata.h"
 #include "ban.h"
 #include "game.h"

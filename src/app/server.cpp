@@ -22,7 +22,7 @@
 #include "../outputmessage.h"
 #include "server.h"
 #include "../scheduler.h"
-#include "../configmanager.h"
+#include "../config/configmanager.h"
 #include "../ban.h"
 
 extern ConfigManager g_config;
