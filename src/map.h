@@ -22,7 +22,7 @@
 
 #include "position.h"
 #include "item.h"
-#include "fileloader.h"
+#include "io/fileloader.h"
 
 #include "tools.h"
 #include "tile.h"
