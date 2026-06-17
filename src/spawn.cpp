@@ -26,7 +26,7 @@
 #include "scheduler.h"
 
 #include "pugicast.h"
-#include "events.h" //pota
+#include "scripting/events.h" //pota
 
 extern ConfigManager g_config;
 extern Monsters g_monsters;

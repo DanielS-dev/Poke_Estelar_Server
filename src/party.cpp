@@ -22,7 +22,7 @@
 #include "party.h"
 #include "game.h"
 #include "config/configmanager.h"
-#include "events.h"
+#include "scripting/events.h"
 
 extern Game g_game;
 extern ConfigManager g_config;

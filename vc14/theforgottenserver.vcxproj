@@ -133,9 +133,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\actions.cpp" />
+    <ClCompile Include="..\src\scripting\actions.cpp" />
     <ClCompile Include="..\src\security\ban.cpp" />
-    <ClCompile Include="..\src\baseevents.cpp" />
+    <ClCompile Include="..\src\scripting\baseevents.cpp" />
     <ClCompile Include="..\src\bed.cpp" />
     <ClCompile Include="..\src\chat.cpp" />
     <ClCompile Include="..\src\combat.cpp" />
@@ -145,17 +145,17 @@
     <ClCompile Include="..\src\connection.cpp" />
     <ClCompile Include="..\src\container.cpp" />
     <ClCompile Include="..\src\creature.cpp" />
-    <ClCompile Include="..\src\creatureevent.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent.cpp" />
     <ClCompile Include="..\src\cylinder.cpp" />
     <ClCompile Include="..\src\database.cpp" />
     <ClCompile Include="..\src\databasemanager.cpp" />
     <ClCompile Include="..\src\databasetasks.cpp" />
     <ClCompile Include="..\src\depotchest.cpp" />
     <ClCompile Include="..\src\depotlocker.cpp" />
-    <ClCompile Include="..\src\events.cpp" />
+    <ClCompile Include="..\src\scripting\events.cpp" />
     <ClCompile Include="..\src\io\fileloader.cpp" />
     <ClCompile Include="..\src\game.cpp" />
-    <ClCompile Include="..\src\globalevent.cpp" />
+    <ClCompile Include="..\src\scripting\globalevent.cpp" />
     <ClCompile Include="..\src\groups.cpp" />
     <ClCompile Include="..\src\guild.cpp" />
     <ClCompile Include="..\src\house.cpp" />
@@ -168,7 +168,7 @@
     <ClCompile Include="..\src\iomarket.cpp" />
     <ClCompile Include="..\src\item.cpp" />
     <ClCompile Include="..\src\items.cpp" />
-    <ClCompile Include="..\src\luascript.cpp" />
+    <ClCompile Include="..\src\scripting\luascript.cpp" />
     <ClCompile Include="..\src\mailbox.cpp" />
     <ClCompile Include="..\src\map.cpp" />
     <ClCompile Include="..\src\monster.cpp" />
@@ -198,13 +198,13 @@
     <ClCompile Include="..\src\raids.cpp" />
     <ClCompile Include="..\src\security\rsa.cpp" />
     <ClCompile Include="..\src\scheduler.cpp" />
-    <ClCompile Include="..\src\scriptmanager.cpp" />
+    <ClCompile Include="..\src\scripting\scriptmanager.cpp" />
     <ClCompile Include="..\src\app\server.cpp" />
     <ClCompile Include="..\src\app\signals.cpp" />
     <ClCompile Include="..\src\spawn.cpp" />
     <ClCompile Include="..\src\spells.cpp" />
     <ClCompile Include="..\src\protocolstatus.cpp" />
-    <ClCompile Include="..\src\talkaction.cpp" />
+    <ClCompile Include="..\src\scripting\talkaction.cpp" />
     <ClCompile Include="..\src\tasks.cpp" />
     <ClCompile Include="..\src\teleport.cpp" />
     <ClCompile Include="..\src\thing.cpp" />
@@ -218,9 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\account.h" />
-    <ClInclude Include="..\src\actions.h" />
+    <ClInclude Include="..\src\scripting\actions.h" />
     <ClInclude Include="..\src\security\ban.h" />
-    <ClInclude Include="..\src\baseevents.h" />
+    <ClInclude Include="..\src\scripting\baseevents.h" />
     <ClInclude Include="..\src\bed.h" />
     <ClInclude Include="..\src\chat.h" />
     <ClInclude Include="..\src\combat.h" />
@@ -231,7 +231,7 @@
     <ClInclude Include="..\src\const.h" />
     <ClInclude Include="..\src\container.h" />
     <ClInclude Include="..\src\creature.h" />
-    <ClInclude Include="..\src\creatureevent.h" />
+    <ClInclude Include="..\src\scripting\creatureevent.h" />
     <ClInclude Include="..\src\cylinder.h" />
     <ClInclude Include="..\src\database.h" />
     <ClInclude Include="..\src\databasemanager.h" />
@@ -240,10 +240,10 @@
     <ClInclude Include="..\src\depotchest.h" />
     <ClInclude Include="..\src\depotlocker.h" />
     <ClInclude Include="..\src\enums.h" />
-    <ClInclude Include="..\src\events.h" />
+    <ClInclude Include="..\src\scripting\events.h" />
     <ClInclude Include="..\src\io\fileloader.h" />
     <ClInclude Include="..\src\game.h" />
-    <ClInclude Include="..\src\globalevent.h" />
+    <ClInclude Include="..\src\scripting\globalevent.h" />
     <ClInclude Include="..\src\groups.h" />
     <ClInclude Include="..\src\guild.h" />
     <ClInclude Include="..\src\house.h" />
@@ -258,7 +258,7 @@
     <ClInclude Include="..\src\itemloader.h" />
     <ClInclude Include="..\src\items.h" />
     <ClInclude Include="..\src\lockfree.h" />
-    <ClInclude Include="..\src\luascript.h" />
+    <ClInclude Include="..\src\scripting\luascript.h" />
     <ClInclude Include="..\src\mailbox.h" />
     <ClInclude Include="..\src\map.h" />
     <ClInclude Include="..\src\monster.h" />
@@ -282,13 +282,13 @@
     <ClInclude Include="..\src\raids.h" />
     <ClInclude Include="..\src\security\rsa.h" />
     <ClInclude Include="..\src\scheduler.h" />
-    <ClInclude Include="..\src\scriptmanager.h" />
+    <ClInclude Include="..\src\scripting\scriptmanager.h" />
     <ClInclude Include="..\src\app\server.h" />
     <ClInclude Include="..\src\app\signals.h" />
     <ClInclude Include="..\src\spawn.h" />
     <ClInclude Include="..\src\spells.h" />
     <ClInclude Include="..\src\protocolstatus.h" />
-    <ClInclude Include="..\src\talkaction.h" />
+    <ClInclude Include="..\src\scripting\talkaction.h" />
     <ClInclude Include="..\src\tasks.h" />
     <ClInclude Include="..\src\teleport.h" />
     <ClInclude Include="..\src\thing.h" />

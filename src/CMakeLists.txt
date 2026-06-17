@@ -3,9 +3,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/app/server.cpp
 	${CMAKE_CURRENT_LIST_DIR}/app/signals.cpp
 	${CMAKE_CURRENT_LIST_DIR}/otpch.cpp
-	${CMAKE_CURRENT_LIST_DIR}/actions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/actions.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/ban.cpp
-	${CMAKE_CURRENT_LIST_DIR}/baseevents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
 	${CMAKE_CURRENT_LIST_DIR}/bed.cpp
 	${CMAKE_CURRENT_LIST_DIR}/chat.cpp
 	${CMAKE_CURRENT_LIST_DIR}/combat.cpp
@@ -15,17 +15,17 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/container.cpp
 	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
-	${CMAKE_CURRENT_LIST_DIR}/creatureevent.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/cylinder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/database.cpp
 	${CMAKE_CURRENT_LIST_DIR}/databasemanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/databasetasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/depotchest.cpp
 	${CMAKE_CURRENT_LIST_DIR}/depotlocker.cpp
-	${CMAKE_CURRENT_LIST_DIR}/events.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events.cpp
 	${CMAKE_CURRENT_LIST_DIR}/io/fileloader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game.cpp
-	${CMAKE_CURRENT_LIST_DIR}/globalevent.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/guild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/groups.cpp
 	${CMAKE_CURRENT_LIST_DIR}/house.cpp
@@ -38,7 +38,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/iomarket.cpp
 	${CMAKE_CURRENT_LIST_DIR}/item.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items.cpp
-	${CMAKE_CURRENT_LIST_DIR}/luascript.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp
 	${CMAKE_CURRENT_LIST_DIR}/mailbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/map.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
@@ -61,10 +61,10 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scheduler.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scriptmanager.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/spawn.cpp
 	${CMAKE_CURRENT_LIST_DIR}/spells.cpp
-	${CMAKE_CURRENT_LIST_DIR}/talkaction.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/talkaction.cpp
 	${CMAKE_CURRENT_LIST_DIR}/tasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/teleport.cpp
 	${CMAKE_CURRENT_LIST_DIR}/thing.cpp

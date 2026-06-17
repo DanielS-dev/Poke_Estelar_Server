@@ -26,7 +26,7 @@
 #include "../iomarket.h"
 
 #include "../config/configmanager.h"
-#include "../scriptmanager.h"
+#include "../scripting/scriptmanager.h"
 #include "../security/rsa.h"
 #include "../protocolold.h"
 #include "../protocollogin.h"

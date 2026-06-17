@@ -19,9 +19,9 @@
 
 #include "otpch.h"
 
-#include "player.h"
+#include "../player.h"
 #include "talkaction.h"
-#include "pugicast.h"
+#include "../pugicast.h"
 
 TalkActions::TalkActions()
 	: scriptInterface("TalkAction Interface")

@@ -20,9 +20,9 @@
 #ifndef FS_MOVEMENT_H_5E0D2626D4634ACA83AC6509518E5F49
 #define FS_MOVEMENT_H_5E0D2626D4634ACA83AC6509518E5F49
 
-#include "baseevents.h"
+#include "scripting/baseevents.h"
 #include "item.h"
-#include "luascript.h"
+#include "scripting/luascript.h"
 
 enum MoveEvent_t {
 	MOVE_EVENT_STEP_IN,

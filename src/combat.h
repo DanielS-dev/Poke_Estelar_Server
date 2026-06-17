@@ -23,7 +23,7 @@
 #include "thing.h"
 #include "condition.h"
 #include "map.h"
-#include "baseevents.h"
+#include "scripting/baseevents.h"
 
 class Condition;
 class Creature;

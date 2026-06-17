@@ -22,7 +22,7 @@
 
 #include "const.h"
 #include "position.h"
-#include "baseevents.h"
+#include "scripting/baseevents.h"
 
 enum RaidState_t {
 	RAIDSTATE_IDLE,

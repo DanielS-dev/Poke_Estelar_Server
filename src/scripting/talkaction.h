@@ -22,7 +22,7 @@
 
 #include "luascript.h"
 #include "baseevents.h"
-#include "const.h"
+#include "../const.h"
 
 enum TalkActionResult_t {
 	TALKACTION_CONTINUE,

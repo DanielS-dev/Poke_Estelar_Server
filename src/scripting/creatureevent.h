@@ -22,7 +22,7 @@
 
 #include "luascript.h"
 #include "baseevents.h"
-#include "enums.h"
+#include "../enums.h"
 
 enum CreatureEventType_t {
 	CREATURE_EVENT_NONE,

@@ -26,7 +26,7 @@
 #include "const.h"
 #include "tile.h"
 #include "enums.h"
-#include "creatureevent.h"
+#include "scripting/creatureevent.h"
 
 typedef std::list<Condition*> ConditionList;
 typedef std::list<CreatureEvent*> CreatureEventList;

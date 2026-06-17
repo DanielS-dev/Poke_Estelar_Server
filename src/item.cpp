@@ -28,7 +28,7 @@
 #include "game.h"
 #include "bed.h"
 
-#include "actions.h"
+#include "scripting/actions.h"
 #include "spells.h"
 
 extern Game g_game;
