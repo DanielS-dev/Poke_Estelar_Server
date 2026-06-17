@@ -22,17 +22,17 @@
 #include <bitset>
 
 #include "world/bed.h"
-#include "chat.h"
-#include "combat.h"
+#include "game/chat.h"
+#include "game/combat.h"
 #include "config/configmanager.h"
 #include "scripting/creatureevent.h"
 #include "scripting/events.h"
-#include "game.h"
+#include "game/game.h"
 #include "persistence/iologindata.h"
 #include "monster.h"
-#include "movement.h"
+#include "game/movement.h"
 #include "core/scheduler.h"
-#include "weapons.h"
+#include "game/weapons.h"
 
 extern ConfigManager g_config;
 extern Game g_game;

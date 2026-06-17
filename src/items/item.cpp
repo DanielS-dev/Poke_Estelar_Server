@@ -25,11 +25,11 @@
 #include "trashholder.h"
 #include "mailbox.h"
 #include "../world/house.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "../world/bed.h"
 
 #include "../scripting/actions.h"
-#include "../spells.h"
+#include "../game/spells.h"
 
 extern Game g_game;
 extern Spells* g_spells;

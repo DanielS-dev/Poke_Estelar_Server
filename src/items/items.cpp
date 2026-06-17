@@ -20,9 +20,9 @@
 #include "otpch.h"
 
 #include "items.h"
-#include "../spells.h"
-#include "../movement.h"
-#include "../weapons.h"
+#include "../game/spells.h"
+#include "../game/movement.h"
+#include "../game/weapons.h"
 
 #include "../core/pugicast.h"
 

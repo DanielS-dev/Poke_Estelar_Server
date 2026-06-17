@@ -22,7 +22,7 @@
 #include "protocolold.h"
 #include "outputmessage.h"
 
-#include "../game.h"
+#include "../game/game.h"
 
 extern Game g_game;
 

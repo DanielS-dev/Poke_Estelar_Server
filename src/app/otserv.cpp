@@ -21,7 +21,7 @@
 
 #include "server.h"
 
-#include "../game.h"
+#include "../game/game.h"
 
 #include "../persistence/iomarket.h"
 

@@ -21,7 +21,7 @@
 
 #include "quests.h"
 
-#include "core/pugicast.h"
+#include "../core/pugicast.h"
 
 std::string Mission::getDescription(Player* player) const
 {

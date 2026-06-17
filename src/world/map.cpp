@@ -21,9 +21,9 @@
 
 #include "../persistence/iomap.h"
 #include "../persistence/iomapserialize.h"
-#include "../combat.h"
+#include "../game/combat.h"
 #include "../creature.h"
-#include "../game.h"
+#include "../game/game.h"
 
 extern Game g_game;
 

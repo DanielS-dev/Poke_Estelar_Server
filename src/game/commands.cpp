@@ -22,21 +22,21 @@
 #include <fstream>
 
 #include "commands.h"
-#include "player.h"
-#include "npc.h"
+#include "../player.h"
+#include "../npc.h"
 #include "game.h"
-#include "scripting/actions.h"
-#include "persistence/iologindata.h"
-#include "config/configmanager.h"
+#include "../scripting/actions.h"
+#include "../persistence/iologindata.h"
+#include "../config/configmanager.h"
 #include "spells.h"
 #include "movement.h"
 #include "weapons.h"
-#include "scripting/globalevent.h"
-#include "monster.h"
-#include "core/scheduler.h"
-#include "scripting/events.h"
+#include "../scripting/globalevent.h"
+#include "../monster.h"
+#include "../core/scheduler.h"
+#include "../scripting/events.h"
 
-#include "core/pugicast.h"
+#include "../core/pugicast.h"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;

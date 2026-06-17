@@ -7,10 +7,10 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/security/ban.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/bed.cpp
-	${CMAKE_CURRENT_LIST_DIR}/chat.cpp
-	${CMAKE_CURRENT_LIST_DIR}/combat.cpp
-	${CMAKE_CURRENT_LIST_DIR}/commands.cpp
-	${CMAKE_CURRENT_LIST_DIR}/condition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/combat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commands.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
@@ -24,7 +24,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/items/depotlocker.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/events.cpp
 	${CMAKE_CURRENT_LIST_DIR}/io/fileloader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/guild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/groups.cpp
@@ -44,7 +44,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monsters.cpp
 	${CMAKE_CURRENT_LIST_DIR}/mounts.cpp
-	${CMAKE_CURRENT_LIST_DIR}/movement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/movement.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/networkmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/npc.cpp
 	${CMAKE_CURRENT_LIST_DIR}/outfit.cpp
@@ -57,13 +57,13 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/network/protocollogin.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolold.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolstatus.cpp
-	${CMAKE_CURRENT_LIST_DIR}/quests.cpp
-	${CMAKE_CURRENT_LIST_DIR}/raids.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/quests.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/spawn.cpp
-	${CMAKE_CURRENT_LIST_DIR}/spells.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/talkaction.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
@@ -73,7 +73,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/waitlist.cpp
-	${CMAKE_CURRENT_LIST_DIR}/weapons.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapons.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/wildcardtree.cpp
 )
 

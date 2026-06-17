@@ -20,9 +20,9 @@
 #ifndef FS_RAIDS_H_3583C7C054584881856D55765DEDAFA9
 #define FS_RAIDS_H_3583C7C054584881856D55765DEDAFA9
 
-#include "core/const.h"
-#include "core/position.h"
-#include "scripting/baseevents.h"
+#include "../core/const.h"
+#include "../core/position.h"
+#include "../scripting/baseevents.h"
 
 enum RaidState_t {
 	RAIDSTATE_IDLE,

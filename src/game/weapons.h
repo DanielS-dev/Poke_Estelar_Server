@@ -20,11 +20,11 @@
 #ifndef FS_WEAPONS_H_69D1993478AA42948E24C0B90B8F5BF5
 #define FS_WEAPONS_H_69D1993478AA42948E24C0B90B8F5BF5
 
-#include "scripting/luascript.h"
-#include "player.h"
-#include "scripting/baseevents.h"
+#include "../scripting/luascript.h"
+#include "../player.h"
+#include "../scripting/baseevents.h"
 #include "combat.h"
-#include "core/const.h"
+#include "../core/const.h"
 
 class Weapon;
 class WeaponMelee;

@@ -22,7 +22,7 @@
 
 #include "world/map.h"
 #include "core/position.h"
-#include "condition.h"
+#include "game/condition.h"
 #include "core/const.h"
 #include "world/tile.h"
 #include "core/enums.h"

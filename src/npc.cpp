@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "npc.h"
-#include "game.h"
+#include "game/game.h"
 #include "core/pugicast.h"
 
 extern Game g_game;

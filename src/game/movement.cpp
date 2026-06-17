@@ -21,7 +21,7 @@
 
 #include "game.h"
 
-#include "core/pugicast.h"
+#include "../core/pugicast.h"
 
 #include "movement.h"
 

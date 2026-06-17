@@ -23,7 +23,7 @@
 
 #include "house.h"
 #include "../persistence/iologindata.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "../config/configmanager.h"
 #include "bed.h"
 

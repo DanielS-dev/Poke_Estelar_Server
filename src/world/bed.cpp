@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "bed.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "../persistence/iologindata.h"
 #include "../core/scheduler.h"
 

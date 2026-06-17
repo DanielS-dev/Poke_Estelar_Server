@@ -29,7 +29,7 @@
 
 #include "../config/configmanager.h"
 #include "../scripting/actions.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "../persistence/iologindata.h"
 #include "../persistence/iomarket.h"
 #include "../core/waitlist.h"

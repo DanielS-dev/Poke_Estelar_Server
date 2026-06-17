@@ -27,7 +27,7 @@
 #include "../config/configmanager.h"
 #include "../persistence/iologindata.h"
 #include "../security/ban.h"
-#include "../game.h"
+#include "../game/game.h"
 
 extern ConfigManager g_config;
 extern Game g_game;

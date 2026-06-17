@@ -21,7 +21,7 @@
 
 #include "container.h"
 #include "../persistence/iomap.h"
-#include "../game.h"
+#include "../game/game.h"
 
 extern Game g_game;
 

@@ -20,9 +20,9 @@
 #include "otpch.h"
 
 #include "combat.h"
-#include "config/configmanager.h"
+#include "../config/configmanager.h"
 #include "game.h"
-#include "core/pugicast.h"
+#include "../core/pugicast.h"
 #include "weapons.h"
 
 extern Game g_game;

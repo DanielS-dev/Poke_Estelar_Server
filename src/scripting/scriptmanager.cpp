@@ -22,11 +22,11 @@
 #include "scriptmanager.h"
 
 #include "actions.h"
-#include "../chat.h"
+#include "../game/chat.h"
 #include "talkaction.h"
-#include "../spells.h"
-#include "../movement.h"
-#include "../weapons.h"
+#include "../game/spells.h"
+#include "../game/movement.h"
+#include "../game/weapons.h"
 #include "globalevent.h"
 #include "events.h"
 

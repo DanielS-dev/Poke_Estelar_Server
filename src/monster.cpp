@@ -20,8 +20,8 @@
 #include "otpch.h"
 
 #include "monster.h"
-#include "game.h"
-#include "spells.h"
+#include "game/game.h"
+#include "game/spells.h"
 #include "config/configmanager.h" //pota
 
 extern Game g_game;

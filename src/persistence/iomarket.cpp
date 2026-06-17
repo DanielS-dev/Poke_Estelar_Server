@@ -24,7 +24,7 @@
 #include "../config/configmanager.h"
 #include "databasetasks.h"
 #include "iologindata.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "../core/scheduler.h"
 
 extern ConfigManager g_config;

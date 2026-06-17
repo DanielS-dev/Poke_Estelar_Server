@@ -20,18 +20,18 @@
 #ifndef FS_GAME_H_3EC96D67DD024E6093B3BAC29B7A6D7F
 #define FS_GAME_H_3EC96D67DD024E6093B3BAC29B7A6D7F
 
-#include "account.h"
+#include "../account.h"
 #include "combat.h"
 #include "commands.h"
-#include "groups.h"
-#include "world/map.h"
-#include "core/position.h"
-#include "items/item.h"
-#include "items/container.h"
-#include "player.h"
+#include "../groups.h"
+#include "../world/map.h"
+#include "../core/position.h"
+#include "../items/item.h"
+#include "../items/container.h"
+#include "../player.h"
 #include "raids.h"
-#include "npc.h"
-#include "core/wildcardtree.h"
+#include "../npc.h"
+#include "../core/wildcardtree.h"
 #include "quests.h"
 
 class ServiceManager;

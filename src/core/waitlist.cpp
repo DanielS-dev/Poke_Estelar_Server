@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "../config/configmanager.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "waitlist.h"
 
 extern ConfigManager g_config;

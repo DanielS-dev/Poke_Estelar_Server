@@ -20,10 +20,10 @@
 #include "otpch.h"
 
 #include "combat.h"
-#include "config/configmanager.h"
+#include "../config/configmanager.h"
 #include "game.h"
-#include "monster.h"
-#include "core/pugicast.h"
+#include "../monster.h"
+#include "../core/pugicast.h"
 #include "spells.h"
 
 extern Game g_game;

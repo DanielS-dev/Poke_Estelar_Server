@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "tasks.h"
-#include "../game.h"
+#include "../game/game.h"
 
 extern Game g_game;
 

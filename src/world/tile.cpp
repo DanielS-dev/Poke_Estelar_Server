@@ -24,11 +24,11 @@
 #include "tile.h"
 
 #include "../creature.h"
-#include "../combat.h"
-#include "../game.h"
+#include "../game/combat.h"
+#include "../game/game.h"
 #include "../items/mailbox.h"
 #include "../monster.h"
-#include "../movement.h"
+#include "../game/movement.h"
 #include "teleport.h"
 #include "../items/trashholder.h"
 

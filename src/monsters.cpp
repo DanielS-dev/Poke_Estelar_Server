@@ -21,11 +21,11 @@
 
 #include "monsters.h"
 #include "monster.h"
-#include "spells.h"
-#include "combat.h"
-#include "weapons.h"
+#include "game/spells.h"
+#include "game/combat.h"
+#include "game/weapons.h"
 #include "config/configmanager.h"
-#include "game.h"
+#include "game/game.h"
 #include "player.h"
 
 #include "core/pugicast.h"

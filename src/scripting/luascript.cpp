@@ -22,11 +22,11 @@
 #include <boost/range/adaptor/reversed.hpp>
 
 #include "luascript.h"
-#include "../chat.h"
+#include "../game/chat.h"
 #include "../player.h"
-#include "../game.h"
+#include "../game/game.h"
 #include "../network/protocolstatus.h"
-#include "../spells.h"
+#include "../game/spells.h"
 #include "../persistence/iologindata.h"
 #include "../config/configmanager.h"
 #include "../world/teleport.h"

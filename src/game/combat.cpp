@@ -23,9 +23,9 @@
 
 #include "game.h"
 #include "weapons.h"
-#include "config/configmanager.h"
-#include "scripting/events.h"
-#include "monster.h" //pota
+#include "../config/configmanager.h"
+#include "../scripting/events.h"
+#include "../monster.h" //pota
 
 extern Game g_game;
 extern Weapons* g_weapons;
