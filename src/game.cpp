@@ -21,7 +21,7 @@
 
 #include "pugicast.h"
 
-#include "items.h"
+#include "items/items.h"
 #include "commands.h"
 #include "creature.h"
 #include "monster.h"

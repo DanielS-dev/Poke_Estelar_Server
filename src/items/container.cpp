@@ -20,8 +20,8 @@
 #include "otpch.h"
 
 #include "container.h"
-#include "persistence/iomap.h"
-#include "game.h"
+#include "../persistence/iomap.h"
+#include "../game.h"
 
 extern Game g_game;
 

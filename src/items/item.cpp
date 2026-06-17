@@ -21,15 +21,15 @@
 
 #include "item.h"
 #include "container.h"
-#include "teleport.h"
+#include "../teleport.h"
 #include "trashholder.h"
 #include "mailbox.h"
-#include "house.h"
-#include "game.h"
-#include "bed.h"
+#include "../house.h"
+#include "../game.h"
+#include "../bed.h"
 
-#include "scripting/actions.h"
-#include "spells.h"
+#include "../scripting/actions.h"
+#include "../spells.h"
 
 extern Game g_game;
 extern Spells* g_spells;

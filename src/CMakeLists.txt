@@ -13,15 +13,15 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/condition.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
-	${CMAKE_CURRENT_LIST_DIR}/container.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
 	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/cylinder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/database.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/databasemanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/databasetasks.cpp
-	${CMAKE_CURRENT_LIST_DIR}/depotchest.cpp
-	${CMAKE_CURRENT_LIST_DIR}/depotlocker.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/depotchest.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/depotlocker.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/events.cpp
 	${CMAKE_CURRENT_LIST_DIR}/io/fileloader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game.cpp
@@ -30,16 +30,16 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/groups.cpp
 	${CMAKE_CURRENT_LIST_DIR}/house.cpp
 	${CMAKE_CURRENT_LIST_DIR}/housetile.cpp
-	${CMAKE_CURRENT_LIST_DIR}/inbox.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/inbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/ioguild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iologindata.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iomap.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iomapserialize.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iomarket.cpp
-	${CMAKE_CURRENT_LIST_DIR}/item.cpp
-	${CMAKE_CURRENT_LIST_DIR}/items.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/item.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/items.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp
-	${CMAKE_CURRENT_LIST_DIR}/mailbox.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/mailbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/map.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monsters.cpp
@@ -70,7 +70,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/thing.cpp
 	${CMAKE_CURRENT_LIST_DIR}/tile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/tools.cpp
-	${CMAKE_CURRENT_LIST_DIR}/trashholder.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp
 	${CMAKE_CURRENT_LIST_DIR}/waitlist.cpp
 	${CMAKE_CURRENT_LIST_DIR}/weapons.cpp

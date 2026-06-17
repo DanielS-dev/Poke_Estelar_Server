@@ -22,7 +22,7 @@
 #include "actions.h"
 #include "../bed.h"
 #include "../config/configmanager.h"
-#include "../container.h"
+#include "../items/container.h"
 #include "../game.h"
 #include "../pugicast.h"
 #include "../spells.h"

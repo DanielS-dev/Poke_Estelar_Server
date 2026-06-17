@@ -21,7 +21,7 @@
 #define FS_PLAYER_H_4083D3D3A05B4EDE891B31BB720CD06F
 
 #include "creature.h"
-#include "container.h"
+#include "items/container.h"
 #include "cylinder.h"
 #include "outfit.h"
 #include "enums.h"
@@ -29,9 +29,9 @@
 #include "network/protocolgame.h"
 #include "persistence/ioguild.h"
 #include "party.h"
-#include "inbox.h"
-#include "depotchest.h"
-#include "depotlocker.h"
+#include "items/inbox.h"
+#include "items/depotchest.h"
+#include "items/depotlocker.h"
 #include "guild.h"
 #include "groups.h"
 #include "town.h"

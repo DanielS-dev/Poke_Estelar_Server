@@ -21,7 +21,7 @@
 #define FS_MOVEMENT_H_5E0D2626D4634ACA83AC6509518E5F49
 
 #include "scripting/baseevents.h"
-#include "item.h"
+#include "items/item.h"
 #include "scripting/luascript.h"
 
 enum MoveEvent_t {

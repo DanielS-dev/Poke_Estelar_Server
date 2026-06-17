@@ -21,7 +21,7 @@
 #define FS_VOCATION_H_ADCAA356C0DB44CEBA994A0D678EC92D
 
 #include "enums.h"
-#include "item.h"
+#include "items/item.h"
 
 class Vocation
 {

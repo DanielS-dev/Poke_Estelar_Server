@@ -20,11 +20,11 @@
 #include "otpch.h"
 
 #include "items.h"
-#include "spells.h"
-#include "movement.h"
-#include "weapons.h"
+#include "../spells.h"
+#include "../movement.h"
+#include "../weapons.h"
 
-#include "pugicast.h"
+#include "../pugicast.h"
 
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;

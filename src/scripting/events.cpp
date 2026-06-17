@@ -21,7 +21,7 @@
 
 #include "events.h"
 #include "../tools.h"
-#include "../item.h"
+#include "../items/item.h"
 #include "../player.h"
 
 #include <set>

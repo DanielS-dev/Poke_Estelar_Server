@@ -22,7 +22,7 @@
 
 #include <regex>
 
-#include "container.h"
+#include "items/container.h"
 #include "housetile.h"
 #include "position.h"
 

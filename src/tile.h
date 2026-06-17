@@ -23,7 +23,7 @@
 #include <unordered_set>
 
 #include "cylinder.h"
-#include "item.h"
+#include "items/item.h"
 #include "tools.h"
 
 class Creature;
