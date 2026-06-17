@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "creatureevent.h"
-#include "../tools.h"
+#include "../core/tools.h"
 #include "../player.h"
 
 CreatureEvents::CreatureEvents() :

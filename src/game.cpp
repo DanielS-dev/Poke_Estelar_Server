@@ -19,7 +19,7 @@
 
 #include "otpch.h"
 
-#include "pugicast.h"
+#include "core/pugicast.h"
 
 #include "items/items.h"
 #include "commands.h"
@@ -35,7 +35,7 @@
 #include "app/server.h"
 #include "scripting/globalevent.h"
 #include "world/bed.h"
-#include "scheduler.h"
+#include "core/scheduler.h"
 #include "scripting/events.h"
 #include "persistence/databasetasks.h"
 

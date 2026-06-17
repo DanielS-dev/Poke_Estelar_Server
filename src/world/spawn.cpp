@@ -23,9 +23,9 @@
 #include "../game.h"
 #include "../monster.h"
 #include "../config/configmanager.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 
-#include "../pugicast.h"
+#include "../core/pugicast.h"
 #include "../scripting/events.h" //pota
 
 extern ConfigManager g_config;

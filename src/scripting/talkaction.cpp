@@ -21,7 +21,7 @@
 
 #include "../player.h"
 #include "talkaction.h"
-#include "../pugicast.h"
+#include "../core/pugicast.h"
 
 TalkActions::TalkActions()
 	: scriptInterface("TalkAction Interface")

@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "depotchest.h"
-#include "../tools.h"
+#include "../core/tools.h"
 
 DepotChest::DepotChest(uint16_t type) :
 	Container(type), maxDepotItems(1500) {}

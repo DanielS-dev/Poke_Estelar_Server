@@ -21,8 +21,8 @@
 
 #include "baseevents.h"
 
-#include "../pugicast.h"
-#include "../tools.h"
+#include "../core/pugicast.h"
+#include "../core/tools.h"
 
 extern LuaEnvironment g_luaEnvironment;
 

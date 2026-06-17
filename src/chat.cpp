@@ -21,8 +21,8 @@
 
 #include "chat.h"
 #include "game.h"
-#include "pugicast.h"
-#include "scheduler.h"
+#include "core/pugicast.h"
+#include "core/scheduler.h"
 
 extern Chat* g_chat;
 extern Game g_game;

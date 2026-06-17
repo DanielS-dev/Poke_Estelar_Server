@@ -24,7 +24,7 @@
 #include "../movement.h"
 #include "../weapons.h"
 
-#include "../pugicast.h"
+#include "../core/pugicast.h"
 
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;

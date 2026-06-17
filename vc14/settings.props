@@ -6,7 +6,7 @@
     <VcpkgTriplet Condition="'$(Platform)'=='Win32'">x86-windows</VcpkgTriplet>
     <VcpkgInstallRoot>$(MSBuildThisFileDirectory)..\vcpkg_installed\$(VcpkgTriplet)\</VcpkgInstallRoot>
     <PREPROCESSOR_DEFS>_CRT_SECURE_NO_WARNINGS;</PREPROCESSOR_DEFS>
-    <TFS_INCLUDES>$(MSBuildThisFileDirectory)..\src;$(VcpkgInstallRoot)include;$(VcpkgInstallRoot)include\luajit;$(VcpkgInstallRoot)include\mysql;</TFS_INCLUDES>
+    <TFS_INCLUDES>$(MSBuildThisFileDirectory)..\src;$(MSBuildThisFileDirectory)..\src\core;$(VcpkgInstallRoot)include;$(VcpkgInstallRoot)include\luajit;$(VcpkgInstallRoot)include\mysql;</TFS_INCLUDES>
     <TFS_LIBS Condition="'$(Configuration)'=='Debug'">$(VcpkgInstallRoot)debug\lib</TFS_LIBS>
     <TFS_LIBS Condition="'$(Configuration)'!='Debug'">$(VcpkgInstallRoot)lib</TFS_LIBS>
     <TFS_LIBS64 Condition="'$(Configuration)'=='Debug'">$(VcpkgInstallRoot)debug\lib</TFS_LIBS64>

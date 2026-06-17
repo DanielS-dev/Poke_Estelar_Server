@@ -24,7 +24,7 @@
 #include "../config/configmanager.h"
 #include "../items/container.h"
 #include "../game.h"
-#include "../pugicast.h"
+#include "../core/pugicast.h"
 #include "../spells.h"
 
 extern Game g_game;

@@ -21,8 +21,8 @@
 
 #include "outfit.h"
 
-#include "pugicast.h"
-#include "tools.h"
+#include "core/pugicast.h"
+#include "core/tools.h"
 
 bool Outfits::loadFromXml()
 {

@@ -33,8 +33,8 @@
 #endif
 
 #include "../persistence/database.h"
-#include "../enums.h"
-#include "../position.h"
+#include "../core/enums.h"
+#include "../core/position.h"
 
 class Thing;
 class Creature;

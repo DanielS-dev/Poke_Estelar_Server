@@ -21,7 +21,7 @@
 #define FS_ACTIONS_H_87F60C5F587E4B84948F304A6451E6E6
 
 #include "baseevents.h"
-#include "../enums.h"
+#include "../core/enums.h"
 #include "luascript.h"
 
 typedef bool (ActionFunction)(Player* player, Item* item, const Position& fromPosition, Thing* target, const Position& toPosition, bool isHotkey);

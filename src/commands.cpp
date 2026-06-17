@@ -33,10 +33,10 @@
 #include "weapons.h"
 #include "scripting/globalevent.h"
 #include "monster.h"
-#include "scheduler.h"
+#include "core/scheduler.h"
 #include "scripting/events.h"
 
-#include "pugicast.h"
+#include "core/pugicast.h"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;

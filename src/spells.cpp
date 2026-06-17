@@ -23,7 +23,7 @@
 #include "config/configmanager.h"
 #include "game.h"
 #include "monster.h"
-#include "pugicast.h"
+#include "core/pugicast.h"
 #include "spells.h"
 
 extern Game g_game;

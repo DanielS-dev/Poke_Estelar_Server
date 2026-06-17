@@ -21,9 +21,9 @@
 #define FS_DATABASETASKS_H_9CBA08E9F5FEBA7275CCEE6560059576
 
 #include <condition_variable>
-#include "../thread_holder_base.h"
+#include "../core/thread_holder_base.h"
 #include "database.h"
-#include "../enums.h"
+#include "../core/enums.h"
 
 struct DatabaseTask {
 	DatabaseTask(std::string query, std::function<void(DBResult_ptr, bool)> callback, bool store) :

@@ -24,7 +24,7 @@
 #include "player.h"
 #include "scripting/baseevents.h"
 #include "combat.h"
-#include "const.h"
+#include "core/const.h"
 
 class Weapon;
 class WeaponMelee;

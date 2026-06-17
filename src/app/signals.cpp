@@ -21,7 +21,7 @@
 #include <csignal>
 
 #include "signals.h"
-#include "../tasks.h"
+#include "../core/tasks.h"
 #include "../game.h"
 #include "../scripting/actions.h"
 #include "../config/configmanager.h"
@@ -35,7 +35,7 @@
 #include "../scripting/globalevent.h"
 #include "../monster.h"
 #include "../scripting/events.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 #include "../persistence/databasetasks.h"
 
 

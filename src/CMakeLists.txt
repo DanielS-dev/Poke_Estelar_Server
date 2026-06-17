@@ -2,7 +2,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/app/otserv.cpp
 	${CMAKE_CURRENT_LIST_DIR}/app/server.cpp
 	${CMAKE_CURRENT_LIST_DIR}/app/signals.cpp
-	${CMAKE_CURRENT_LIST_DIR}/otpch.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/otpch.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/actions.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/ban.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
@@ -51,7 +51,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/network/outputmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/party.cpp
 	${CMAKE_CURRENT_LIST_DIR}/player.cpp
-	${CMAKE_CURRENT_LIST_DIR}/position.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/position.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocol.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocollogin.cpp
@@ -60,21 +60,21 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/quests.cpp
 	${CMAKE_CURRENT_LIST_DIR}/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scheduler.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/spawn.cpp
 	${CMAKE_CURRENT_LIST_DIR}/spells.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/talkaction.cpp
-	${CMAKE_CURRENT_LIST_DIR}/tasks.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/thing.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
-	${CMAKE_CURRENT_LIST_DIR}/tools.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp
-	${CMAKE_CURRENT_LIST_DIR}/waitlist.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/waitlist.cpp
 	${CMAKE_CURRENT_LIST_DIR}/weapons.cpp
-	${CMAKE_CURRENT_LIST_DIR}/wildcardtree.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/wildcardtree.cpp
 )
 
-include_directories(${CMAKE_CURRENT_LIST_DIR})
+include_directories(${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/core)

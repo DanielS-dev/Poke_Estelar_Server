@@ -32,9 +32,9 @@
 #include "../game.h"
 #include "../persistence/iologindata.h"
 #include "../persistence/iomarket.h"
-#include "../waitlist.h"
+#include "../core/waitlist.h"
 #include "../security/ban.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 
 #include "../monster.h" //pota
 

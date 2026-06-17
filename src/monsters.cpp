@@ -28,7 +28,7 @@
 #include "game.h"
 #include "player.h"
 
-#include "pugicast.h"
+#include "core/pugicast.h"
 
 extern Game g_game;
 extern Spells* g_spells;

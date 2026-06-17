@@ -22,7 +22,7 @@
 
 #include "item.h"
 #include "../world/cylinder.h"
-#include "../const.h"
+#include "../core/const.h"
 
 class Mailbox final : public Item, public Cylinder
 {

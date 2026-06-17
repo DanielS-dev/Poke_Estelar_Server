@@ -19,7 +19,7 @@
 
 #include "otpch.h"
 
-#include "../pugicast.h"
+#include "../core/pugicast.h"
 
 #include "house.h"
 #include "../persistence/iologindata.h"

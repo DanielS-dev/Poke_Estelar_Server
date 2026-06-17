@@ -23,7 +23,7 @@
 #include "connection.h"
 #include "outputmessage.h"
 #include "protocol.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 #include "../app/server.h"
 
 extern ConfigManager g_config;

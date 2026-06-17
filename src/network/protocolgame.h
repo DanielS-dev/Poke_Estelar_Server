@@ -23,7 +23,7 @@
 #include "protocol.h"
 #include "../chat.h"
 #include "../creature.h"
-#include "../tasks.h"
+#include "../core/tasks.h"
 
 class NetworkMessage;
 class Player;

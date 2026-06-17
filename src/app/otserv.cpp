@@ -32,7 +32,7 @@
 #include "../network/protocollogin.h"
 #include "../network/protocolstatus.h"
 #include "../persistence/databasemanager.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 #include "../persistence/databasetasks.h"
 
 DatabaseTasks g_databaseTasks;

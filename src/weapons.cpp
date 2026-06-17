@@ -22,7 +22,7 @@
 #include "combat.h"
 #include "config/configmanager.h"
 #include "game.h"
-#include "pugicast.h"
+#include "core/pugicast.h"
 #include "weapons.h"
 
 extern Game g_game;

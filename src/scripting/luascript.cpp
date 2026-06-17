@@ -33,7 +33,7 @@
 #include "../persistence/databasemanager.h"
 #include "../world/bed.h"
 #include "../monster.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 #include "../persistence/databasetasks.h"
 #include "events.h" //pota
 

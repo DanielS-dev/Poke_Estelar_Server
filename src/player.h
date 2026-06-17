@@ -24,7 +24,7 @@
 #include "items/container.h"
 #include "world/cylinder.h"
 #include "outfit.h"
-#include "enums.h"
+#include "core/enums.h"
 #include "vocation.h"
 #include "network/protocolgame.h"
 #include "persistence/ioguild.h"

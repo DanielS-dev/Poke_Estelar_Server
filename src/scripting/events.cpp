@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "events.h"
-#include "../tools.h"
+#include "../core/tools.h"
 #include "../items/item.h"
 #include "../player.h"
 

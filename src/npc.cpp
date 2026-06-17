@@ -21,7 +21,7 @@
 
 #include "npc.h"
 #include "game.h"
-#include "pugicast.h"
+#include "core/pugicast.h"
 
 extern Game g_game;
 extern LuaEnvironment g_luaEnvironment;

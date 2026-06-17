@@ -22,7 +22,7 @@
 #include "protocollogin.h"
 
 #include "outputmessage.h"
-#include "../tasks.h"
+#include "../core/tasks.h"
 
 #include "../config/configmanager.h"
 #include "../persistence/iologindata.h"

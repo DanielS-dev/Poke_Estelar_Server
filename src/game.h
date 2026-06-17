@@ -25,13 +25,13 @@
 #include "commands.h"
 #include "groups.h"
 #include "world/map.h"
-#include "position.h"
+#include "core/position.h"
 #include "items/item.h"
 #include "items/container.h"
 #include "player.h"
 #include "raids.h"
 #include "npc.h"
-#include "wildcardtree.h"
+#include "core/wildcardtree.h"
 #include "quests.h"
 
 class ServiceManager;

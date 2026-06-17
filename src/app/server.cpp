@@ -21,7 +21,7 @@
 
 #include "../network/outputmessage.h"
 #include "server.h"
-#include "../scheduler.h"
+#include "../core/scheduler.h"
 #include "../config/configmanager.h"
 #include "../security/ban.h"
 

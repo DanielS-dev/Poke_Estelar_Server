@@ -21,9 +21,9 @@
 
 #include "../config/configmanager.h"
 #include "globalevent.h"
-#include "../tools.h"
-#include "../scheduler.h"
-#include "../pugicast.h"
+#include "../core/tools.h"
+#include "../core/scheduler.h"
+#include "../core/pugicast.h"
 
 extern ConfigManager g_config;
 

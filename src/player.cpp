@@ -31,7 +31,7 @@
 #include "persistence/iologindata.h"
 #include "monster.h"
 #include "movement.h"
-#include "scheduler.h"
+#include "core/scheduler.h"
 #include "weapons.h"
 
 extern ConfigManager g_config;

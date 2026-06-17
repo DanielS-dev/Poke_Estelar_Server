@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "tools.h"
-#include "config/configmanager.h"
+#include "../config/configmanager.h"
 
 extern ConfigManager g_config;
 

@@ -20,7 +20,7 @@
 #ifndef FS_COMMANDS_H_C95A575CCADF434699D26CD042690970
 #define FS_COMMANDS_H_C95A575CCADF434699D26CD042690970
 
-#include "enums.h"
+#include "core/enums.h"
 
 class Player;
 

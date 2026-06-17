@@ -19,8 +19,8 @@
 
 #include "otpch.h"
 
-#include "config/configmanager.h"
-#include "game.h"
+#include "../config/configmanager.h"
+#include "../game.h"
 #include "waitlist.h"
 
 extern ConfigManager g_config;

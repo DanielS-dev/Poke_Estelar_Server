@@ -21,11 +21,11 @@
 #define FS_CREATURE_H_5363C04015254E298F84E6D59A139508
 
 #include "world/map.h"
-#include "position.h"
+#include "core/position.h"
 #include "condition.h"
-#include "const.h"
+#include "core/const.h"
 #include "world/tile.h"
-#include "enums.h"
+#include "core/enums.h"
 #include "scripting/creatureevent.h"
 
 typedef std::list<Condition*> ConditionList;
