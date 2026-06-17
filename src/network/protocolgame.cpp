@@ -25,18 +25,18 @@
 
 #include "outputmessage.h"
 
-#include "player.h"
+#include "../player.h"
 
-#include "config/configmanager.h"
-#include "scripting/actions.h"
-#include "game.h"
-#include "persistence/iologindata.h"
-#include "persistence/iomarket.h"
-#include "waitlist.h"
-#include "security/ban.h"
-#include "scheduler.h"
+#include "../config/configmanager.h"
+#include "../scripting/actions.h"
+#include "../game.h"
+#include "../persistence/iologindata.h"
+#include "../persistence/iomarket.h"
+#include "../waitlist.h"
+#include "../security/ban.h"
+#include "../scheduler.h"
 
-#include "monster.h" //pota
+#include "../monster.h" //pota
 
 extern ConfigManager g_config;
 extern Actions actions;

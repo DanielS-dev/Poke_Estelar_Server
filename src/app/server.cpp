@@ -19,7 +19,7 @@
 
 #include "otpch.h"
 
-#include "../outputmessage.h"
+#include "../network/outputmessage.h"
 #include "server.h"
 #include "../scheduler.h"
 #include "../config/configmanager.h"

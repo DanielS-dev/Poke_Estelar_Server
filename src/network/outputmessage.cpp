@@ -21,8 +21,8 @@
 
 #include "outputmessage.h"
 #include "protocol.h"
-#include "lockfree.h"
-#include "scheduler.h"
+#include "../lockfree.h"
+#include "../scheduler.h"
 
 extern Scheduler g_scheduler;
 

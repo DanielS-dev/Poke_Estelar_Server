@@ -12,7 +12,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/commands.cpp
 	${CMAKE_CURRENT_LIST_DIR}/condition.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/connection.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/container.cpp
 	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
@@ -45,18 +45,18 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/monsters.cpp
 	${CMAKE_CURRENT_LIST_DIR}/mounts.cpp
 	${CMAKE_CURRENT_LIST_DIR}/movement.cpp
-	${CMAKE_CURRENT_LIST_DIR}/networkmessage.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/networkmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/npc.cpp
 	${CMAKE_CURRENT_LIST_DIR}/outfit.cpp
-	${CMAKE_CURRENT_LIST_DIR}/outputmessage.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/outputmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/party.cpp
 	${CMAKE_CURRENT_LIST_DIR}/player.cpp
 	${CMAKE_CURRENT_LIST_DIR}/position.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocol.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocolgame.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocollogin.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocolold.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocolstatus.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocol.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocollogin.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolold.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolstatus.cpp
 	${CMAKE_CURRENT_LIST_DIR}/quests.cpp
 	${CMAKE_CURRENT_LIST_DIR}/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp

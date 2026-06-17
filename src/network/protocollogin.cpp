@@ -22,12 +22,12 @@
 #include "protocollogin.h"
 
 #include "outputmessage.h"
-#include "tasks.h"
+#include "../tasks.h"
 
-#include "config/configmanager.h"
-#include "persistence/iologindata.h"
-#include "security/ban.h"
-#include "game.h"
+#include "../config/configmanager.h"
+#include "../persistence/iologindata.h"
+#include "../security/ban.h"
+#include "../game.h"
 
 extern ConfigManager g_config;
 extern Game g_game;

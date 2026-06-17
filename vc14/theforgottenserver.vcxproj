@@ -142,7 +142,7 @@
     <ClCompile Include="..\src\commands.cpp" />
     <ClCompile Include="..\src\condition.cpp" />
     <ClCompile Include="..\src\config\configmanager.cpp" />
-    <ClCompile Include="..\src\connection.cpp" />
+    <ClCompile Include="..\src\network\connection.cpp" />
     <ClCompile Include="..\src\container.cpp" />
     <ClCompile Include="..\src\creature.cpp" />
     <ClCompile Include="..\src\scripting\creatureevent.cpp" />
@@ -175,7 +175,7 @@
     <ClCompile Include="..\src\monsters.cpp" />
     <ClCompile Include="..\src\mounts.cpp" />
     <ClCompile Include="..\src\movement.cpp" />
-    <ClCompile Include="..\src\networkmessage.cpp" />
+    <ClCompile Include="..\src\network\networkmessage.cpp" />
     <ClCompile Include="..\src\npc.cpp" />
     <ClCompile Include="..\src\otpch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -186,14 +186,14 @@
     </ClCompile>
     <ClCompile Include="..\src\app\otserv.cpp" />
     <ClCompile Include="..\src\outfit.cpp" />
-    <ClCompile Include="..\src\outputmessage.cpp" />
+    <ClCompile Include="..\src\network\outputmessage.cpp" />
     <ClCompile Include="..\src\party.cpp" />
     <ClCompile Include="..\src\player.cpp" />
     <ClCompile Include="..\src\position.cpp" />
-    <ClCompile Include="..\src\protocol.cpp" />
-    <ClCompile Include="..\src\protocolgame.cpp" />
-    <ClCompile Include="..\src\protocollogin.cpp" />
-    <ClCompile Include="..\src\protocolold.cpp" />
+    <ClCompile Include="..\src\network\protocol.cpp" />
+    <ClCompile Include="..\src\network\protocolgame.cpp" />
+    <ClCompile Include="..\src\network\protocollogin.cpp" />
+    <ClCompile Include="..\src\network\protocolold.cpp" />
     <ClCompile Include="..\src\quests.cpp" />
     <ClCompile Include="..\src\raids.cpp" />
     <ClCompile Include="..\src\security\rsa.cpp" />
@@ -203,7 +203,7 @@
     <ClCompile Include="..\src\app\signals.cpp" />
     <ClCompile Include="..\src\spawn.cpp" />
     <ClCompile Include="..\src\spells.cpp" />
-    <ClCompile Include="..\src\protocolstatus.cpp" />
+    <ClCompile Include="..\src\network\protocolstatus.cpp" />
     <ClCompile Include="..\src\scripting\talkaction.cpp" />
     <ClCompile Include="..\src\tasks.cpp" />
     <ClCompile Include="..\src\teleport.cpp" />
@@ -227,7 +227,7 @@
     <ClInclude Include="..\src\commands.h" />
     <ClInclude Include="..\src\condition.h" />
     <ClInclude Include="..\src\config\configmanager.h" />
-    <ClInclude Include="..\src\connection.h" />
+    <ClInclude Include="..\src\network\connection.h" />
     <ClInclude Include="..\src\const.h" />
     <ClInclude Include="..\src\container.h" />
     <ClInclude Include="..\src\creature.h" />
@@ -265,18 +265,18 @@
     <ClInclude Include="..\src\monsters.h" />
     <ClInclude Include="..\src\mounts.h" />
     <ClInclude Include="..\src\movement.h" />
-    <ClInclude Include="..\src\networkmessage.h" />
+    <ClInclude Include="..\src\network\networkmessage.h" />
     <ClInclude Include="..\src\npc.h" />
     <ClInclude Include="..\src\otpch.h" />
     <ClInclude Include="..\src\outfit.h" />
-    <ClInclude Include="..\src\outputmessage.h" />
+    <ClInclude Include="..\src\network\outputmessage.h" />
     <ClInclude Include="..\src\party.h" />
     <ClInclude Include="..\src\player.h" />
     <ClInclude Include="..\src\position.h" />
-    <ClInclude Include="..\src\protocol.h" />
-    <ClInclude Include="..\src\protocolgame.h" />
-    <ClInclude Include="..\src\protocollogin.h" />
-    <ClInclude Include="..\src\protocolold.h" />
+    <ClInclude Include="..\src\network\protocol.h" />
+    <ClInclude Include="..\src\network\protocolgame.h" />
+    <ClInclude Include="..\src\network\protocollogin.h" />
+    <ClInclude Include="..\src\network\protocolold.h" />
     <ClInclude Include="..\src\pugicast.h" />
     <ClInclude Include="..\src\quests.h" />
     <ClInclude Include="..\src\raids.h" />
@@ -287,7 +287,7 @@
     <ClInclude Include="..\src\app\signals.h" />
     <ClInclude Include="..\src\spawn.h" />
     <ClInclude Include="..\src\spells.h" />
-    <ClInclude Include="..\src\protocolstatus.h" />
+    <ClInclude Include="..\src\network\protocolstatus.h" />
     <ClInclude Include="..\src\scripting\talkaction.h" />
     <ClInclude Include="..\src\tasks.h" />
     <ClInclude Include="..\src\teleport.h" />

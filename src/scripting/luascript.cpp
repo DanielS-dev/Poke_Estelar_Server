@@ -25,7 +25,7 @@
 #include "../chat.h"
 #include "../player.h"
 #include "../game.h"
-#include "../protocolstatus.h"
+#include "../network/protocolstatus.h"
 #include "../spells.h"
 #include "../persistence/iologindata.h"
 #include "../config/configmanager.h"
