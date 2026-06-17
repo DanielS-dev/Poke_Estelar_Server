@@ -27,14 +27,14 @@
 #include "../game.h"
 #include "../protocolstatus.h"
 #include "../spells.h"
-#include "../iologindata.h"
+#include "../persistence/iologindata.h"
 #include "../config/configmanager.h"
 #include "../teleport.h"
-#include "../databasemanager.h"
+#include "../persistence/databasemanager.h"
 #include "../bed.h"
 #include "../monster.h"
 #include "../scheduler.h"
-#include "../databasetasks.h"
+#include "../persistence/databasetasks.h"
 #include "events.h" //pota
 
 extern Chat* g_chat;

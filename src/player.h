@@ -27,7 +27,7 @@
 #include "enums.h"
 #include "vocation.h"
 #include "protocolgame.h"
-#include "ioguild.h"
+#include "persistence/ioguild.h"
 #include "party.h"
 #include "inbox.h"
 #include "depotchest.h"

@@ -21,7 +21,7 @@
 
 #include "mailbox.h"
 #include "game.h"
-#include "iologindata.h"
+#include "persistence/iologindata.h"
 
 extern Game g_game;
 

@@ -19,9 +19,9 @@
 
 #include "otpch.h"
 
-#include "config/configmanager.h"
+#include "../config/configmanager.h"
 #include "databasemanager.h"
-#include "scripting/luascript.h"
+#include "../scripting/luascript.h"
 
 extern ConfigManager g_config;
 

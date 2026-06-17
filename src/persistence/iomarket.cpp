@@ -21,11 +21,11 @@
 
 #include "iomarket.h"
 
-#include "config/configmanager.h"
+#include "../config/configmanager.h"
 #include "databasetasks.h"
 #include "iologindata.h"
-#include "game.h"
-#include "scheduler.h"
+#include "../game.h"
+#include "../scheduler.h"
 
 extern ConfigManager g_config;
 extern Game g_game;

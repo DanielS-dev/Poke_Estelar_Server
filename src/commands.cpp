@@ -26,7 +26,7 @@
 #include "npc.h"
 #include "game.h"
 #include "scripting/actions.h"
-#include "iologindata.h"
+#include "persistence/iologindata.h"
 #include "config/configmanager.h"
 #include "spells.h"
 #include "movement.h"

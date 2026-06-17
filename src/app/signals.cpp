@@ -36,7 +36,7 @@
 #include "../monster.h"
 #include "../scripting/events.h"
 #include "../scheduler.h"
-#include "../databasetasks.h"
+#include "../persistence/databasetasks.h"
 
 
 extern Scheduler g_scheduler;

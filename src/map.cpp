@@ -19,8 +19,8 @@
 
 #include "otpch.h"
 
-#include "iomap.h"
-#include "iomapserialize.h"
+#include "persistence/iomap.h"
+#include "persistence/iomapserialize.h"
 #include "combat.h"
 #include "creature.h"
 #include "game.h"

@@ -28,7 +28,7 @@
 #include "scripting/creatureevent.h"
 #include "scripting/events.h"
 #include "game.h"
-#include "iologindata.h"
+#include "persistence/iologindata.h"
 #include "monster.h"
 #include "movement.h"
 #include "scheduler.h"

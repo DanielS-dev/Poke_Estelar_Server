@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "container.h"
-#include "iomap.h"
+#include "persistence/iomap.h"
 #include "game.h"
 
 extern Game g_game;

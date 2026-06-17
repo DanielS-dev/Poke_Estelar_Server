@@ -27,8 +27,8 @@
 #include "monster.h"
 #include "game.h"
 #include "scripting/actions.h"
-#include "iologindata.h"
-#include "iomarket.h"
+#include "persistence/iologindata.h"
+#include "persistence/iomarket.h"
 #include "scripting/talkaction.h"
 #include "spells.h"
 #include "config/configmanager.h"
@@ -37,7 +37,7 @@
 #include "bed.h"
 #include "scheduler.h"
 #include "scripting/events.h"
-#include "databasetasks.h"
+#include "persistence/databasetasks.h"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;

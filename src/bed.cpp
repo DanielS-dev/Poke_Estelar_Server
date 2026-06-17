@@ -21,7 +21,7 @@
 
 #include "bed.h"
 #include "game.h"
-#include "iologindata.h"
+#include "persistence/iologindata.h"
 #include "scheduler.h"
 
 extern Game g_game;

@@ -17,9 +17,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/cylinder.cpp
-	${CMAKE_CURRENT_LIST_DIR}/database.cpp
-	${CMAKE_CURRENT_LIST_DIR}/databasemanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/databasetasks.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/database.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/databasemanager.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/databasetasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/depotchest.cpp
 	${CMAKE_CURRENT_LIST_DIR}/depotlocker.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/events.cpp
@@ -31,11 +31,11 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/house.cpp
 	${CMAKE_CURRENT_LIST_DIR}/housetile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/inbox.cpp
-	${CMAKE_CURRENT_LIST_DIR}/ioguild.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iologindata.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iomap.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iomapserialize.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iomarket.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/ioguild.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/iologindata.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/iomap.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/iomapserialize.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/iomarket.cpp
 	${CMAKE_CURRENT_LIST_DIR}/item.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp

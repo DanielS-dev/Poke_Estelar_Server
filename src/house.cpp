@@ -22,7 +22,7 @@
 #include "pugicast.h"
 
 #include "house.h"
-#include "iologindata.h"
+#include "persistence/iologindata.h"
 #include "game.h"
 #include "config/configmanager.h"
 #include "bed.h"

@@ -25,7 +25,7 @@
 #include "tasks.h"
 
 #include "config/configmanager.h"
-#include "iologindata.h"
+#include "persistence/iologindata.h"
 #include "security/ban.h"
 #include "game.h"
 

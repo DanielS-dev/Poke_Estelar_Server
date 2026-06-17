@@ -21,7 +21,7 @@
 
 #include "iomap.h"
 
-#include "bed.h"
+#include "../bed.h"
 
 /*
 	OTBM_ROOTV1

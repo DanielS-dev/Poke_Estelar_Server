@@ -20,8 +20,8 @@
 #include "otpch.h"
 
 #include "iomapserialize.h"
-#include "game.h"
-#include "bed.h"
+#include "../game.h"
+#include "../bed.h"
 
 extern Game g_game;
 

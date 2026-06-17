@@ -23,7 +23,7 @@
 
 #include "../game.h"
 
-#include "../iomarket.h"
+#include "../persistence/iomarket.h"
 
 #include "../config/configmanager.h"
 #include "../scripting/scriptmanager.h"
@@ -31,9 +31,9 @@
 #include "../protocolold.h"
 #include "../protocollogin.h"
 #include "../protocolstatus.h"
-#include "../databasemanager.h"
+#include "../persistence/databasemanager.h"
 #include "../scheduler.h"
-#include "../databasetasks.h"
+#include "../persistence/databasetasks.h"
 
 DatabaseTasks g_databaseTasks;
 Dispatcher g_dispatcher;
