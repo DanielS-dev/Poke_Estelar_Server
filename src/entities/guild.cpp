@@ -21,7 +21,7 @@
 
 #include "guild.h"
 
-#include "game/game.h"
+#include "../game/game.h"
 
 extern Game g_game;
 

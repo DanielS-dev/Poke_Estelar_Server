@@ -22,8 +22,8 @@
 #include <fstream>
 
 #include "commands.h"
-#include "../player.h"
-#include "../npc.h"
+#include "../entities/player.h"
+#include "../entities/npc.h"
 #include "game.h"
 #include "../scripting/actions.h"
 #include "../persistence/iologindata.h"
@@ -32,7 +32,7 @@
 #include "movement.h"
 #include "weapons.h"
 #include "../scripting/globalevent.h"
-#include "../monster.h"
+#include "../entities/monster.h"
 #include "../core/scheduler.h"
 #include "../scripting/events.h"
 

@@ -20,7 +20,7 @@
 #ifndef FS_QUESTS_H_16E44051F23547BE8097F8EA9FCAACA0
 #define FS_QUESTS_H_16E44051F23547BE8097F8EA9FCAACA0
 
-#include "../player.h"
+#include "../entities/player.h"
 #include "../network/networkmessage.h"
 
 class Mission;

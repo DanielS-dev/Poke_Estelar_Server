@@ -23,7 +23,7 @@
 
 #include "luascript.h"
 #include "../game/chat.h"
-#include "../player.h"
+#include "../entities/player.h"
 #include "../game/game.h"
 #include "../network/protocolstatus.h"
 #include "../game/spells.h"
@@ -32,7 +32,7 @@
 #include "../world/teleport.h"
 #include "../persistence/databasemanager.h"
 #include "../world/bed.h"
-#include "../monster.h"
+#include "../entities/monster.h"
 #include "../core/scheduler.h"
 #include "../persistence/databasetasks.h"
 #include "events.h" //pota

@@ -21,7 +21,7 @@
 
 #include "spawn.h"
 #include "../game/game.h"
-#include "../monster.h"
+#include "../entities/monster.h"
 #include "../config/configmanager.h"
 #include "../core/scheduler.h"
 

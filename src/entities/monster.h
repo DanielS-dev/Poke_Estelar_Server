@@ -20,7 +20,7 @@
 #ifndef FS_MONSTER_H_9F5EEFE64314418CA7DA41D1B9409DD0
 #define FS_MONSTER_H_9F5EEFE64314418CA7DA41D1B9409DD0
 
-#include "world/tile.h"
+#include "../world/tile.h"
 #include "monsters.h"
 
 class Creature;

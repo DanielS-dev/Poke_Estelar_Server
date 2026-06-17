@@ -14,7 +14,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
-	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/cylinder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/database.cpp
@@ -26,8 +26,8 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/io/fileloader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/game.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
-	${CMAKE_CURRENT_LIST_DIR}/guild.cpp
-	${CMAKE_CURRENT_LIST_DIR}/groups.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/guild.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/groups.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/house.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/housetile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/inbox.cpp
@@ -41,16 +41,16 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/mailbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/map.cpp
-	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
-	${CMAKE_CURRENT_LIST_DIR}/monsters.cpp
-	${CMAKE_CURRENT_LIST_DIR}/mounts.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monsters.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/mounts.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/movement.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/networkmessage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/npc.cpp
-	${CMAKE_CURRENT_LIST_DIR}/outfit.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/outfit.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/outputmessage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/party.cpp
-	${CMAKE_CURRENT_LIST_DIR}/player.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/position.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocol.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame.cpp
@@ -71,7 +71,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
-	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/vocation.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/waitlist.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/weapons.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/wildcardtree.cpp

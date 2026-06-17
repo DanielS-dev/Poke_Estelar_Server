@@ -25,7 +25,7 @@
 
 #include "outputmessage.h"
 
-#include "../player.h"
+#include "../entities/player.h"
 
 #include "../config/configmanager.h"
 #include "../scripting/actions.h"
@@ -36,7 +36,7 @@
 #include "../security/ban.h"
 #include "../core/scheduler.h"
 
-#include "../monster.h" //pota
+#include "../entities/monster.h" //pota
 
 extern ConfigManager g_config;
 extern Actions actions;

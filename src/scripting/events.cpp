@@ -22,7 +22,7 @@
 #include "events.h"
 #include "../core/tools.h"
 #include "../items/item.h"
-#include "../player.h"
+#include "../entities/player.h"
 
 #include <set>
 

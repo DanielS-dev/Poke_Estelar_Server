@@ -19,7 +19,7 @@
 
 #include "otpch.h"
 
-#include "../player.h"
+#include "../entities/player.h"
 #include "talkaction.h"
 #include "../core/pugicast.h"
 

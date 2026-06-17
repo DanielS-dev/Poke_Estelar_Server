@@ -21,14 +21,14 @@
 
 #include "monsters.h"
 #include "monster.h"
-#include "game/spells.h"
-#include "game/combat.h"
-#include "game/weapons.h"
-#include "config/configmanager.h"
-#include "game/game.h"
+#include "../game/spells.h"
+#include "../game/combat.h"
+#include "../game/weapons.h"
+#include "../config/configmanager.h"
+#include "../game/game.h"
 #include "player.h"
 
-#include "core/pugicast.h"
+#include "../core/pugicast.h"
 
 extern Game g_game;
 extern Spells* g_spells;

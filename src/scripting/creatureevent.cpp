@@ -21,7 +21,7 @@
 
 #include "creatureevent.h"
 #include "../core/tools.h"
-#include "../player.h"
+#include "../entities/player.h"
 
 CreatureEvents::CreatureEvents() :
 	scriptInterface("CreatureScript Interface")

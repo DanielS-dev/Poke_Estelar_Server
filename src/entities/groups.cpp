@@ -21,8 +21,8 @@
 
 #include "groups.h"
 
-#include "core/pugicast.h"
-#include "core/tools.h"
+#include "../core/pugicast.h"
+#include "../core/tools.h"
 
 bool Groups::load()
 {

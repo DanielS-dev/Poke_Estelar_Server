@@ -22,7 +22,7 @@
 #include "../persistence/iomap.h"
 #include "../persistence/iomapserialize.h"
 #include "../game/combat.h"
-#include "../creature.h"
+#include "../entities/creature.h"
 #include "../game/game.h"
 
 extern Game g_game;

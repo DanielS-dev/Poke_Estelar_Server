@@ -20,8 +20,8 @@
 #ifndef FS_IOLOGINDATA_H_28B0440BEC594654AC0F4E1A5E42B2EF
 #define FS_IOLOGINDATA_H_28B0440BEC594654AC0F4E1A5E42B2EF
 
-#include "../account.h"
-#include "../player.h"
+#include "../entities/account.h"
+#include "../entities/player.h"
 #include "database.h"
 
 typedef std::list<std::pair<int32_t, Item*>> ItemBlockList;

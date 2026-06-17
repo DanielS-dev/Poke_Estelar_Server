@@ -20,10 +20,10 @@
 #include "otpch.h"
 
 #include "creature.h"
-#include "game/game.h"
+#include "../game/game.h"
 #include "monster.h"
-#include "config/configmanager.h"
-#include "core/scheduler.h"
+#include "../config/configmanager.h"
+#include "../core/scheduler.h"
 
 double Creature::speedA = 857.36;
 double Creature::speedB = 261.29;

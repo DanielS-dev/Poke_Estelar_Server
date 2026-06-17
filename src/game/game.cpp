@@ -23,8 +23,8 @@
 
 #include "../items/items.h"
 #include "commands.h"
-#include "../creature.h"
-#include "../monster.h"
+#include "../entities/creature.h"
+#include "../entities/monster.h"
 #include "game.h"
 #include "../scripting/actions.h"
 #include "../persistence/iologindata.h"

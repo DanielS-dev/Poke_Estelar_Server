@@ -22,7 +22,7 @@
 #include "combat.h"
 #include "../config/configmanager.h"
 #include "game.h"
-#include "../monster.h"
+#include "../entities/monster.h"
 #include "../core/pugicast.h"
 #include "spells.h"
 

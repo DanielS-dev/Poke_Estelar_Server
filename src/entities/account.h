@@ -20,7 +20,7 @@
 #ifndef FS_ACCOUNT_H_34817537BA2B4CB7B71AA562AFBB118F
 #define FS_ACCOUNT_H_34817537BA2B4CB7B71AA562AFBB118F
 
-#include "core/enums.h"
+#include "../core/enums.h"
 
 struct Account {
 	std::vector<std::string> characters;
