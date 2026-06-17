@@ -21,7 +21,7 @@
 
 #include "iomapserialize.h"
 #include "../game.h"
-#include "../bed.h"
+#include "../world/bed.h"
 
 extern Game g_game;
 

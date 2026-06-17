@@ -20,13 +20,13 @@
 #include "otpch.h"
 
 #include "spawn.h"
-#include "game.h"
-#include "monster.h"
-#include "config/configmanager.h"
-#include "scheduler.h"
+#include "../game.h"
+#include "../monster.h"
+#include "../config/configmanager.h"
+#include "../scheduler.h"
 
-#include "pugicast.h"
-#include "scripting/events.h" //pota
+#include "../pugicast.h"
+#include "../scripting/events.h" //pota
 
 extern ConfigManager g_config;
 extern Monsters g_monsters;

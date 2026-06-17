@@ -19,12 +19,12 @@
 
 #include "otpch.h"
 
-#include "pugicast.h"
+#include "../pugicast.h"
 
 #include "house.h"
-#include "persistence/iologindata.h"
-#include "game.h"
-#include "config/configmanager.h"
+#include "../persistence/iologindata.h"
+#include "../game.h"
+#include "../config/configmanager.h"
 #include "bed.h"
 
 extern ConfigManager g_config;

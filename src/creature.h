@@ -20,11 +20,11 @@
 #ifndef FS_CREATURE_H_5363C04015254E298F84E6D59A139508
 #define FS_CREATURE_H_5363C04015254E298F84E6D59A139508
 
-#include "map.h"
+#include "world/map.h"
 #include "position.h"
 #include "condition.h"
 #include "const.h"
-#include "tile.h"
+#include "world/tile.h"
 #include "enums.h"
 #include "scripting/creatureevent.h"
 

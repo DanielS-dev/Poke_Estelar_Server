@@ -21,7 +21,7 @@
 
 #include <bitset>
 
-#include "bed.h"
+#include "world/bed.h"
 #include "chat.h"
 #include "combat.h"
 #include "config/configmanager.h"

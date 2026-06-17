@@ -20,9 +20,9 @@
 #include "otpch.h"
 
 #include "bed.h"
-#include "game.h"
-#include "persistence/iologindata.h"
-#include "scheduler.h"
+#include "../game.h"
+#include "../persistence/iologindata.h"
+#include "../scheduler.h"
 
 extern Game g_game;
 

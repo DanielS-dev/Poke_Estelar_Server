@@ -20,11 +20,11 @@
 #ifndef FS_MAP_H_E3953D57C058461F856F5221D359DAFA
 #define FS_MAP_H_E3953D57C058461F856F5221D359DAFA
 
-#include "position.h"
-#include "items/item.h"
-#include "io/fileloader.h"
+#include "../position.h"
+#include "../items/item.h"
+#include "../io/fileloader.h"
 
-#include "tools.h"
+#include "../tools.h"
 #include "tile.h"
 #include "town.h"
 #include "house.h"

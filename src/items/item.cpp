@@ -21,12 +21,12 @@
 
 #include "item.h"
 #include "container.h"
-#include "../teleport.h"
+#include "../world/teleport.h"
 #include "trashholder.h"
 #include "mailbox.h"
-#include "../house.h"
+#include "../world/house.h"
 #include "../game.h"
-#include "../bed.h"
+#include "../world/bed.h"
 
 #include "../scripting/actions.h"
 #include "../spells.h"

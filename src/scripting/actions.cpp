@@ -20,7 +20,7 @@
 #include "otpch.h"
 
 #include "actions.h"
-#include "../bed.h"
+#include "../world/bed.h"
 #include "../config/configmanager.h"
 #include "../items/container.h"
 #include "../game.h"

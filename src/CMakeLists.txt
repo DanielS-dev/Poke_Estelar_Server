@@ -6,7 +6,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/actions.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/ban.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
-	${CMAKE_CURRENT_LIST_DIR}/bed.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/bed.cpp
 	${CMAKE_CURRENT_LIST_DIR}/chat.cpp
 	${CMAKE_CURRENT_LIST_DIR}/combat.cpp
 	${CMAKE_CURRENT_LIST_DIR}/commands.cpp
@@ -16,7 +16,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
 	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
-	${CMAKE_CURRENT_LIST_DIR}/cylinder.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/cylinder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/database.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/databasemanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/databasetasks.cpp
@@ -28,8 +28,8 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/guild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/groups.cpp
-	${CMAKE_CURRENT_LIST_DIR}/house.cpp
-	${CMAKE_CURRENT_LIST_DIR}/housetile.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/house.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/housetile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/inbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/ioguild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iologindata.cpp
@@ -40,7 +40,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/items/items.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/mailbox.cpp
-	${CMAKE_CURRENT_LIST_DIR}/map.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monsters.cpp
 	${CMAKE_CURRENT_LIST_DIR}/mounts.cpp
@@ -62,13 +62,13 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/spawn.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/spawn.cpp
 	${CMAKE_CURRENT_LIST_DIR}/spells.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/talkaction.cpp
 	${CMAKE_CURRENT_LIST_DIR}/tasks.cpp
-	${CMAKE_CURRENT_LIST_DIR}/teleport.cpp
-	${CMAKE_CURRENT_LIST_DIR}/thing.cpp
-	${CMAKE_CURRENT_LIST_DIR}/tile.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/thing.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/tools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp

@@ -21,7 +21,7 @@
 #define FS_MAILBOX_H_D231C6BE8D384CAAA3AE410C1323F9DB
 
 #include "item.h"
-#include "../cylinder.h"
+#include "../world/cylinder.h"
 #include "../const.h"
 
 class Mailbox final : public Item, public Cylinder

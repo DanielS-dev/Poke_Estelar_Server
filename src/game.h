@@ -24,7 +24,7 @@
 #include "combat.h"
 #include "commands.h"
 #include "groups.h"
-#include "map.h"
+#include "world/map.h"
 #include "position.h"
 #include "items/item.h"
 #include "items/container.h"

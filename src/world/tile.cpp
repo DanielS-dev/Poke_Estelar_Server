@@ -23,14 +23,14 @@
 
 #include "tile.h"
 
-#include "creature.h"
-#include "combat.h"
-#include "game.h"
-#include "items/mailbox.h"
-#include "monster.h"
-#include "movement.h"
+#include "../creature.h"
+#include "../combat.h"
+#include "../game.h"
+#include "../items/mailbox.h"
+#include "../monster.h"
+#include "../movement.h"
 #include "teleport.h"
-#include "items/trashholder.h"
+#include "../items/trashholder.h"
 
 extern Game g_game;
 extern MoveEvents* g_moveEvents;

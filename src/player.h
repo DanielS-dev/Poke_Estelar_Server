@@ -22,7 +22,7 @@
 
 #include "creature.h"
 #include "items/container.h"
-#include "cylinder.h"
+#include "world/cylinder.h"
 #include "outfit.h"
 #include "enums.h"
 #include "vocation.h"
@@ -34,7 +34,7 @@
 #include "items/depotlocker.h"
 #include "guild.h"
 #include "groups.h"
-#include "town.h"
+#include "world/town.h"
 #include "mounts.h"
 
 class House;

@@ -19,11 +19,11 @@
 
 #include "otpch.h"
 
-#include "persistence/iomap.h"
-#include "persistence/iomapserialize.h"
-#include "combat.h"
-#include "creature.h"
-#include "game.h"
+#include "../persistence/iomap.h"
+#include "../persistence/iomapserialize.h"
+#include "../combat.h"
+#include "../creature.h"
+#include "../game.h"
 
 extern Game g_game;
 

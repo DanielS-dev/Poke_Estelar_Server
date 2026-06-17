@@ -21,9 +21,9 @@
 #define FS_IOMAP_H_8085D4B1037A44288494A52FDBB775E4
 
 #include "../items/item.h"
-#include "../map.h"
-#include "../house.h"
-#include "../spawn.h"
+#include "../world/map.h"
+#include "../world/house.h"
+#include "../world/spawn.h"
 #include "../config/configmanager.h"
 
 extern ConfigManager g_config;

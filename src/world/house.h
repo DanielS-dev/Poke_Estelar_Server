@@ -22,9 +22,9 @@
 
 #include <regex>
 
-#include "items/container.h"
+#include "../items/container.h"
 #include "housetile.h"
-#include "position.h"
+#include "../position.h"
 
 class House;
 class BedItem;

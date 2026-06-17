@@ -20,8 +20,8 @@
 #ifndef FS_ITEM_H_009A319FB13D477D9EEFFBBD9BB83562
 #define FS_ITEM_H_009A319FB13D477D9EEFFBBD9BB83562
 
-#include "../cylinder.h"
-#include "../thing.h"
+#include "../world/cylinder.h"
+#include "../world/thing.h"
 #include "items.h"
 
 #include <deque>

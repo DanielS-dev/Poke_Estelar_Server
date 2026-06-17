@@ -34,7 +34,7 @@
 #include "config/configmanager.h"
 #include "app/server.h"
 #include "scripting/globalevent.h"
-#include "bed.h"
+#include "world/bed.h"
 #include "scheduler.h"
 #include "scripting/events.h"
 #include "persistence/databasetasks.h"
