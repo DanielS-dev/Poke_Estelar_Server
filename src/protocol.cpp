@@ -21,7 +21,7 @@
 
 #include "protocol.h"
 #include "outputmessage.h"
-#include "rsa.h"
+#include "security/rsa.h"
 
 extern RSA g_RSA;
 

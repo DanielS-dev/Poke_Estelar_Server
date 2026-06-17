@@ -33,7 +33,7 @@
 #include "iologindata.h"
 #include "iomarket.h"
 #include "waitlist.h"
-#include "ban.h"
+#include "security/ban.h"
 #include "scheduler.h"
 
 #include "monster.h" //pota

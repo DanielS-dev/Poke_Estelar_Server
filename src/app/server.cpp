@@ -23,7 +23,7 @@
 #include "server.h"
 #include "../scheduler.h"
 #include "../config/configmanager.h"
-#include "../ban.h"
+#include "../security/ban.h"
 
 extern ConfigManager g_config;
 Ban g_bans;

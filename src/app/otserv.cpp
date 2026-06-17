@@ -27,7 +27,7 @@
 
 #include "../config/configmanager.h"
 #include "../scriptmanager.h"
-#include "../rsa.h"
+#include "../security/rsa.h"
 #include "../protocolold.h"
 #include "../protocollogin.h"
 #include "../protocolstatus.h"

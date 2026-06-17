@@ -134,7 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\actions.cpp" />
-    <ClCompile Include="..\src\ban.cpp" />
+    <ClCompile Include="..\src\security\ban.cpp" />
     <ClCompile Include="..\src\baseevents.cpp" />
     <ClCompile Include="..\src\bed.cpp" />
     <ClCompile Include="..\src\chat.cpp" />
@@ -196,7 +196,7 @@
     <ClCompile Include="..\src\protocolold.cpp" />
     <ClCompile Include="..\src\quests.cpp" />
     <ClCompile Include="..\src\raids.cpp" />
-    <ClCompile Include="..\src\rsa.cpp" />
+    <ClCompile Include="..\src\security\rsa.cpp" />
     <ClCompile Include="..\src\scheduler.cpp" />
     <ClCompile Include="..\src\scriptmanager.cpp" />
     <ClCompile Include="..\src\app\server.cpp" />
@@ -219,7 +219,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\account.h" />
     <ClInclude Include="..\src\actions.h" />
-    <ClInclude Include="..\src\ban.h" />
+    <ClInclude Include="..\src\security\ban.h" />
     <ClInclude Include="..\src\baseevents.h" />
     <ClInclude Include="..\src\bed.h" />
     <ClInclude Include="..\src\chat.h" />
@@ -280,7 +280,7 @@
     <ClInclude Include="..\src\pugicast.h" />
     <ClInclude Include="..\src\quests.h" />
     <ClInclude Include="..\src\raids.h" />
-    <ClInclude Include="..\src\rsa.h" />
+    <ClInclude Include="..\src\security\rsa.h" />
     <ClInclude Include="..\src\scheduler.h" />
     <ClInclude Include="..\src\scriptmanager.h" />
     <ClInclude Include="..\src\app\server.h" />
