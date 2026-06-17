@@ -24,7 +24,7 @@
 #include "outputmessage.h"
 #include "protocol.h"
 #include "scheduler.h"
-#include "server.h"
+#include "app/server.h"
 
 extern ConfigManager g_config;
 

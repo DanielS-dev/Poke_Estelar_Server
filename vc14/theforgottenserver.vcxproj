@@ -184,7 +184,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile>otpch.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="..\src\otserv.cpp" />
+    <ClCompile Include="..\src\app\otserv.cpp" />
     <ClCompile Include="..\src\outfit.cpp" />
     <ClCompile Include="..\src\outputmessage.cpp" />
     <ClCompile Include="..\src\party.cpp" />
@@ -199,8 +199,8 @@
     <ClCompile Include="..\src\rsa.cpp" />
     <ClCompile Include="..\src\scheduler.cpp" />
     <ClCompile Include="..\src\scriptmanager.cpp" />
-    <ClCompile Include="..\src\server.cpp" />
-    <ClCompile Include="..\src\signals.cpp" />
+    <ClCompile Include="..\src\app\server.cpp" />
+    <ClCompile Include="..\src\app\signals.cpp" />
     <ClCompile Include="..\src\spawn.cpp" />
     <ClCompile Include="..\src\spells.cpp" />
     <ClCompile Include="..\src\protocolstatus.cpp" />
@@ -283,8 +283,8 @@
     <ClInclude Include="..\src\rsa.h" />
     <ClInclude Include="..\src\scheduler.h" />
     <ClInclude Include="..\src\scriptmanager.h" />
-    <ClInclude Include="..\src\server.h" />
-    <ClInclude Include="..\src\signals.h" />
+    <ClInclude Include="..\src\app\server.h" />
+    <ClInclude Include="..\src\app\signals.h" />
     <ClInclude Include="..\src\spawn.h" />
     <ClInclude Include="..\src\spells.h" />
     <ClInclude Include="..\src\protocolstatus.h" />

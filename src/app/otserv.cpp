@@ -21,19 +21,19 @@
 
 #include "server.h"
 
-#include "game.h"
+#include "../game.h"
 
-#include "iomarket.h"
+#include "../iomarket.h"
 
-#include "configmanager.h"
-#include "scriptmanager.h"
-#include "rsa.h"
-#include "protocolold.h"
-#include "protocollogin.h"
-#include "protocolstatus.h"
-#include "databasemanager.h"
-#include "scheduler.h"
-#include "databasetasks.h"
+#include "../configmanager.h"
+#include "../scriptmanager.h"
+#include "../rsa.h"
+#include "../protocolold.h"
+#include "../protocollogin.h"
+#include "../protocolstatus.h"
+#include "../databasemanager.h"
+#include "../scheduler.h"
+#include "../databasetasks.h"
 
 DatabaseTasks g_databaseTasks;
 Dispatcher g_dispatcher;

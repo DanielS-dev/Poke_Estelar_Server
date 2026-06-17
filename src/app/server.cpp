@@ -19,11 +19,11 @@
 
 #include "otpch.h"
 
-#include "outputmessage.h"
+#include "../outputmessage.h"
 #include "server.h"
-#include "scheduler.h"
-#include "configmanager.h"
-#include "ban.h"
+#include "../scheduler.h"
+#include "../configmanager.h"
+#include "../ban.h"
 
 extern ConfigManager g_config;
 Ban g_bans;

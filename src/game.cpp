@@ -32,7 +32,7 @@
 #include "talkaction.h"
 #include "spells.h"
 #include "configmanager.h"
-#include "server.h"
+#include "app/server.h"
 #include "globalevent.h"
 #include "bed.h"
 #include "scheduler.h"

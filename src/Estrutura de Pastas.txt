@@ -1,0 +1,12 @@
+app/          inicialização do servidor
+core/         utilitários, tipos globais, scheduler, tarefas
+config/       configuração
+game/         regras e sistemas de gameplay
+entities/     entidades vivas e sociais: player, creature, guild etc.
+world/        mapa, tile, house, spawn, teleport
+items/        item, container, mailbox, depot etc.
+network/      protocolo, conexão e mensagens
+persistence/  banco de dados e carregamento/salvamento persistente
+scripting/    Lua, eventos e scripts
+security/     banimento, RSA e segurança
+io/           leitura de arquivos/base loaders
