@@ -16,7 +16,7 @@
 #include "../scripting/talkaction.h"
 #include "spells.h"
 #include "../config/configmanager.h"
-#include "../app/server.h"
+#include "../app/services.hpp"
 #include "../scripting/globalevent.h"
 #include "../world/bed.h"
 #include "../core/scheduler.h"

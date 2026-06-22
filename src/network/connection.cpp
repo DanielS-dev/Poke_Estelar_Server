@@ -8,7 +8,7 @@
 #include "outputmessage.h"
 #include "protocol.h"
 #include "../core/scheduler.h"
-#include "../app/server.h"
+#include "../app/services.hpp"
 
 extern ConfigManager g_config;
 
