@@ -199,7 +199,8 @@
     <ClCompile Include="..\src\security\rsa.cpp" />
     <ClCompile Include="..\src\core\scheduler.cpp" />
     <ClCompile Include="..\src\scripting\scriptmanager.cpp" />
-    <ClCompile Include="..\src\app\server.cpp" />
+    <ClCompile Include="..\src\app\servicePort.cpp" />
+    <ClCompile Include="..\src\app\serviceManager.cpp" />
     <ClCompile Include="..\src\app\signals.cpp" />
     <ClCompile Include="..\src\world\spawn.cpp" />
     <ClCompile Include="..\src\game\spells.cpp" />

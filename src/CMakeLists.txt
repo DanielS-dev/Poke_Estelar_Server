@@ -1,6 +1,7 @@
 set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/app/otserv.cpp
-	${CMAKE_CURRENT_LIST_DIR}/app/server.cpp
+	${CMAKE_CURRENT_LIST_DIR}/app/servicePort.cpp
+	${CMAKE_CURRENT_LIST_DIR}/app/serviceManager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/app/signals.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/otpch.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/actions.cpp
