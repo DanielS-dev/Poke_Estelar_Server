@@ -1,15 +1,15 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "iomarket.h"
+#include "iomarket.hpp"
 
-#include "../config/configmanager.h"
-#include "databasetasks.h"
-#include "iologindata.h"
-#include "../game/game.h"
-#include "../core/scheduler.h"
+#include "../config/configmanager.hpp"
+#include "databasetasks.hpp"
+#include "iologindata.hpp"
+#include "../game/game.hpp"
+#include "../core/scheduler.hpp"
 
 extern ConfigManager g_config;
 extern Game g_game;

@@ -1,22 +1,22 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
 #include <bitset>
 
-#include "../world/bed.h"
-#include "../game/chat.h"
-#include "../game/combat.h"
-#include "../config/configmanager.h"
-#include "../scripting/creatureevent.h"
-#include "../scripting/events.h"
-#include "../game/game.h"
-#include "../persistence/iologindata.h"
-#include "monster.h"
-#include "../game/movement.h"
-#include "../core/scheduler.h"
-#include "../game/weapons.h"
+#include "../world/bed.hpp"
+#include "../game/chat.hpp"
+#include "../game/combat.hpp"
+#include "../config/configmanager.hpp"
+#include "../scripting/creatureevent.hpp"
+#include "../scripting/events.hpp"
+#include "../game/game.hpp"
+#include "../persistence/iologindata.hpp"
+#include "monster.hpp"
+#include "../game/movement.hpp"
+#include "../core/scheduler.hpp"
+#include "../game/weapons.hpp"
 
 extern ConfigManager g_config;
 extern Game g_game;

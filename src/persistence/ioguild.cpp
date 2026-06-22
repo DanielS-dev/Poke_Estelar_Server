@@ -1,10 +1,10 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "ioguild.h"
-#include "database.h"
+#include "ioguild.hpp"
+#include "database.hpp"
 
 uint32_t IOGuild::getGuildIdByName(const std::string& name)
 {

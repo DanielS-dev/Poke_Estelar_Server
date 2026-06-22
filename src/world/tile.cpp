@@ -1,20 +1,20 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
 #include <boost/range/adaptor/reversed.hpp>
 
-#include "tile.h"
+#include "tile.hpp"
 
-#include "../entities/creature.h"
-#include "../game/combat.h"
-#include "../game/game.h"
-#include "../items/mailbox.h"
-#include "../entities/monster.h"
-#include "../game/movement.h"
-#include "teleport.h"
-#include "../items/trashholder.h"
+#include "../entities/creature.hpp"
+#include "../game/combat.hpp"
+#include "../game/game.hpp"
+#include "../items/mailbox.hpp"
+#include "../entities/monster.hpp"
+#include "../game/movement.hpp"
+#include "teleport.hpp"
+#include "../items/trashholder.hpp"
 
 extern Game g_game;
 extern MoveEvents* g_moveEvents;

@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "networkmessage.h"
+#include "networkmessage.hpp"
 
-#include "../items/container.h"
-#include "../entities/creature.h"
+#include "../items/container.hpp"
+#include "../entities/creature.hpp"
 
 std::string NetworkMessage::getString(uint16_t stringLen/* = 0*/)
 {

@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "ban.h"
-#include "../persistence/database.h"
-#include "../persistence/databasetasks.h"
-#include "../core/tools.h"
+#include "ban.hpp"
+#include "../persistence/database.hpp"
+#include "../persistence/databasetasks.hpp"
+#include "../core/tools.hpp"
 
 bool Ban::acceptConnection(uint32_t clientip)
 {

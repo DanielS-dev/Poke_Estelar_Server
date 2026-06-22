@@ -1,18 +1,18 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "monsters.h"
-#include "monster.h"
-#include "../game/spells.h"
-#include "../game/combat.h"
-#include "../game/weapons.h"
-#include "../config/configmanager.h"
-#include "../game/game.h"
-#include "player.h"
+#include "monsters.hpp"
+#include "monster.hpp"
+#include "../game/spells.hpp"
+#include "../game/combat.hpp"
+#include "../game/weapons.hpp"
+#include "../config/configmanager.hpp"
+#include "../game/game.hpp"
+#include "player.hpp"
 
-#include "../core/pugicast.h"
+#include "../core/pugicast.hpp"
 
 extern Game g_game;
 extern Spells* g_spells;

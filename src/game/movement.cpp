@@ -1,13 +1,13 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "game.h"
+#include "game.hpp"
 
-#include "../core/pugicast.h"
+#include "../core/pugicast.hpp"
 
-#include "movement.h"
+#include "movement.hpp"
 
 extern Game g_game;
 extern Vocations g_vocations;

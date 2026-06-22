@@ -1,10 +1,10 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "../config/configmanager.h"
-#include "database.h"
+#include "../config/configmanager.hpp"
+#include "database.hpp"
 
 #include <errmsg.h>
 

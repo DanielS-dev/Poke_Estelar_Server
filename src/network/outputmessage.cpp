@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "outputmessage.h"
-#include "protocol.h"
-#include "../core/lockfree.h"
-#include "../core/scheduler.h"
+#include "outputmessage.hpp"
+#include "protocol.hpp"
+#include "../core/lockfree.hpp"
+#include "../core/scheduler.hpp"
 
 extern Scheduler g_scheduler;
 

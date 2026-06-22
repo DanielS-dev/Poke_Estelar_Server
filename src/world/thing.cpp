@@ -1,10 +1,10 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "thing.h"
-#include "tile.h"
+#include "thing.hpp"
+#include "tile.hpp"
 
 const Position& Thing::getPosition() const
 {

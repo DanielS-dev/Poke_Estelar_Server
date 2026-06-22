@@ -1,10 +1,10 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "databasetasks.h"
-#include "../core/tasks.h"
+#include "databasetasks.hpp"
+#include "../core/tasks.hpp"
 
 extern Dispatcher g_dispatcher;
 

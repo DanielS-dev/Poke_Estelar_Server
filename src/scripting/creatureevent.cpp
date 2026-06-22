@@ -1,11 +1,11 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "creatureevent.h"
-#include "../core/tools.h"
-#include "../entities/player.h"
+#include "creatureevent.hpp"
+#include "../core/tools.hpp"
+#include "../entities/player.hpp"
 
 CreatureEvents::CreatureEvents() :
 	scriptInterface("CreatureScript Interface")

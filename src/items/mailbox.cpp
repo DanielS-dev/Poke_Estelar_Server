@@ -1,11 +1,11 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "mailbox.h"
-#include "../game/game.h"
-#include "../persistence/iologindata.h"
+#include "mailbox.hpp"
+#include "../game/game.hpp"
+#include "../persistence/iologindata.hpp"
 
 extern Game g_game;
 

@@ -1,10 +1,10 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "inbox.h"
-#include "../core/tools.h"
+#include "inbox.hpp"
+#include "../core/tools.hpp"
 
 Inbox::Inbox(uint16_t type) : Container(type, 30, false, true) {}
 

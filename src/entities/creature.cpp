@@ -1,13 +1,13 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "creature.h"
-#include "../game/game.h"
-#include "monster.h"
-#include "../config/configmanager.h"
-#include "../core/scheduler.h"
+#include "creature.hpp"
+#include "../game/game.hpp"
+#include "monster.hpp"
+#include "../config/configmanager.hpp"
+#include "../core/scheduler.hpp"
 
 double Creature::speedA = 857.36;
 double Creature::speedB = 261.29;

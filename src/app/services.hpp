@@ -4,8 +4,8 @@
 #ifndef FS_SERVER_H_984DA68ABF744127850F90CC710F281B
 #define FS_SERVER_H_984DA68ABF744127850F90CC710F281B
 
-#include "../network/connection.h"
-#include "signals.h"
+#include "../network/connection.hpp"
+#include "signals.hpp"
 #include <memory>
 
 class Protocol;

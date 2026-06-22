@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "chat.h"
-#include "game.h"
-#include "../core/pugicast.h"
-#include "../core/scheduler.h"
+#include "chat.hpp"
+#include "game.hpp"
+#include "../core/pugicast.hpp"
+#include "../core/scheduler.hpp"
 
 extern Chat* g_chat;
 extern Game g_game;

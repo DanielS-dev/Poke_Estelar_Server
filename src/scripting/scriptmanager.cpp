@@ -1,18 +1,18 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "scriptmanager.h"
+#include "scriptmanager.hpp"
 
-#include "actions.h"
-#include "../game/chat.h"
-#include "talkaction.h"
-#include "../game/spells.h"
-#include "../game/movement.h"
-#include "../game/weapons.h"
-#include "globalevent.h"
-#include "events.h"
+#include "actions.hpp"
+#include "../game/chat.hpp"
+#include "talkaction.hpp"
+#include "../game/spells.hpp"
+#include "../game/movement.hpp"
+#include "../game/weapons.hpp"
+#include "globalevent.hpp"
+#include "events.hpp"
 
 Actions* g_actions = nullptr;
 CreatureEvents* g_creatureEvents = nullptr;

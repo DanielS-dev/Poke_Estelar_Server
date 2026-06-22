@@ -1,16 +1,16 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "spawn.h"
-#include "../game/game.h"
-#include "../entities/monster.h"
-#include "../config/configmanager.h"
-#include "../core/scheduler.h"
+#include "spawn.hpp"
+#include "../game/game.hpp"
+#include "../entities/monster.hpp"
+#include "../config/configmanager.hpp"
+#include "../core/scheduler.hpp"
 
-#include "../core/pugicast.h"
-#include "../scripting/events.h" //pota
+#include "../core/pugicast.hpp"
+#include "../scripting/events.hpp" //pota
 
 extern ConfigManager g_config;
 extern Monsters g_monsters;

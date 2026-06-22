@@ -1,26 +1,26 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 #include <csignal>
 
-#include "signals.h"
-#include "../core/tasks.h"
-#include "../game/game.h"
-#include "../scripting/actions.h"
-#include "../config/configmanager.h"
-#include "../game/spells.h"
-#include "../scripting/talkaction.h"
-#include "../game/movement.h"
-#include "../game/weapons.h"
-#include "../game/raids.h"
-#include "../game/quests.h"
-#include "../entities/mounts.h"
-#include "../scripting/globalevent.h"
-#include "../entities/monster.h"
-#include "../scripting/events.h"
-#include "../core/scheduler.h"
-#include "../persistence/databasetasks.h"
+#include "signals.hpp"
+#include "../core/tasks.hpp"
+#include "../game/game.hpp"
+#include "../scripting/actions.hpp"
+#include "../config/configmanager.hpp"
+#include "../game/spells.hpp"
+#include "../scripting/talkaction.hpp"
+#include "../game/movement.hpp"
+#include "../game/weapons.hpp"
+#include "../game/raids.hpp"
+#include "../game/quests.hpp"
+#include "../entities/mounts.hpp"
+#include "../scripting/globalevent.hpp"
+#include "../entities/monster.hpp"
+#include "../scripting/events.hpp"
+#include "../core/scheduler.hpp"
+#include "../persistence/databasetasks.hpp"
 
 
 extern Scheduler g_scheduler;

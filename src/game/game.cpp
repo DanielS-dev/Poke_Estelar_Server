@@ -1,27 +1,27 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "../core/pugicast.h"
+#include "../core/pugicast.hpp"
 
-#include "../items/items.h"
-#include "commands.h"
-#include "../entities/creature.h"
-#include "../entities/monster.h"
-#include "game.h"
-#include "../scripting/actions.h"
-#include "../persistence/iologindata.h"
-#include "../persistence/iomarket.h"
-#include "../scripting/talkaction.h"
-#include "spells.h"
-#include "../config/configmanager.h"
+#include "../items/items.hpp"
+#include "commands.hpp"
+#include "../entities/creature.hpp"
+#include "../entities/monster.hpp"
+#include "game.hpp"
+#include "../scripting/actions.hpp"
+#include "../persistence/iologindata.hpp"
+#include "../persistence/iomarket.hpp"
+#include "../scripting/talkaction.hpp"
+#include "spells.hpp"
+#include "../config/configmanager.hpp"
 #include "../app/services.hpp"
-#include "../scripting/globalevent.h"
-#include "../world/bed.h"
-#include "../core/scheduler.h"
-#include "../scripting/events.h"
-#include "../persistence/databasetasks.h"
+#include "../scripting/globalevent.hpp"
+#include "../world/bed.hpp"
+#include "../core/scheduler.hpp"
+#include "../scripting/events.hpp"
+#include "../persistence/databasetasks.hpp"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;

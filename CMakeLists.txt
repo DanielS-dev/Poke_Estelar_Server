@@ -44,6 +44,6 @@ set_target_properties(tfs PROPERTIES OUTPUT_NAME "Poke_Estelar")
 include_directories(${MYSQL_INCLUDE_DIR} ${LUA_INCLUDE_DIR} ${Boost_INCLUDE_DIRS} ${PUGIXML_INCLUDE_DIR} ${GMP_INCLUDE_DIR})
 target_link_libraries(tfs ${MYSQL_CLIENT_LIBS} ${LUA_LIBRARIES} ${Boost_LIBRARIES} ${PUGIXML_LIBRARIES} ${GMP_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
-set_target_properties(tfs PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "src/core/otpch.h")
+set_target_properties(tfs PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "src/core/otpch.hpp")
 set_target_properties(tfs PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE)
 cotire(tfs)

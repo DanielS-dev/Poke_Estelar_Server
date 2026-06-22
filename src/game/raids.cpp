@@ -1,16 +1,16 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "raids.h"
+#include "raids.hpp"
 
-#include "../core/pugicast.h"
+#include "../core/pugicast.hpp"
 
-#include "game.h"
-#include "../config/configmanager.h"
-#include "../core/scheduler.h"
-#include "../entities/monster.h"
+#include "game.hpp"
+#include "../config/configmanager.hpp"
+#include "../core/scheduler.hpp"
+#include "../entities/monster.hpp"
 
 extern Game g_game;
 extern ConfigManager g_config;

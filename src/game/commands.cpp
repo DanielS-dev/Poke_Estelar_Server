@@ -1,26 +1,26 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
 #include <fstream>
 
-#include "commands.h"
-#include "../entities/player.h"
-#include "../entities/npc.h"
-#include "game.h"
-#include "../scripting/actions.h"
-#include "../persistence/iologindata.h"
-#include "../config/configmanager.h"
-#include "spells.h"
-#include "movement.h"
-#include "weapons.h"
-#include "../scripting/globalevent.h"
-#include "../entities/monster.h"
-#include "../core/scheduler.h"
-#include "../scripting/events.h"
+#include "commands.hpp"
+#include "../entities/player.hpp"
+#include "../entities/npc.hpp"
+#include "game.hpp"
+#include "../scripting/actions.hpp"
+#include "../persistence/iologindata.hpp"
+#include "../config/configmanager.hpp"
+#include "spells.hpp"
+#include "movement.hpp"
+#include "weapons.hpp"
+#include "../scripting/globalevent.hpp"
+#include "../entities/monster.hpp"
+#include "../core/scheduler.hpp"
+#include "../scripting/events.hpp"
 
-#include "../core/pugicast.h"
+#include "../core/pugicast.hpp"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;

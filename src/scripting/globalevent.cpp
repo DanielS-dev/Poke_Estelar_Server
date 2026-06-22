@@ -1,13 +1,13 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "../config/configmanager.h"
-#include "globalevent.h"
-#include "../core/tools.h"
-#include "../core/scheduler.h"
-#include "../core/pugicast.h"
+#include "../config/configmanager.hpp"
+#include "globalevent.hpp"
+#include "../core/tools.hpp"
+#include "../core/scheduler.hpp"
+#include "../core/pugicast.hpp"
 
 extern ConfigManager g_config;
 

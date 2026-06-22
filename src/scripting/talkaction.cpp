@@ -1,11 +1,11 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "../entities/player.h"
-#include "talkaction.h"
-#include "../core/pugicast.h"
+#include "../entities/player.hpp"
+#include "talkaction.hpp"
+#include "../core/pugicast.hpp"
 
 TalkActions::TalkActions()
 	: scriptInterface("TalkAction Interface")

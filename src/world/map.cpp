@@ -1,13 +1,13 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "../persistence/iomap.h"
-#include "../persistence/iomapserialize.h"
-#include "../game/combat.h"
-#include "../entities/creature.h"
-#include "../game/game.h"
+#include "../persistence/iomap.hpp"
+#include "../persistence/iomapserialize.hpp"
+#include "../game/combat.hpp"
+#include "../entities/creature.hpp"
+#include "../game/game.hpp"
 
 extern Game g_game;
 

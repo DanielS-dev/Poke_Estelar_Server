@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "protocolstatus.h"
-#include "../config/configmanager.h"
-#include "../game/game.h"
-#include "outputmessage.h"
+#include "protocolstatus.hpp"
+#include "../config/configmanager.hpp"
+#include "../game/game.hpp"
+#include "outputmessage.hpp"
 
 extern ConfigManager g_config;
 extern Game g_game;

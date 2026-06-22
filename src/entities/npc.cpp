@@ -1,11 +1,11 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "npc.h"
-#include "../game/game.h"
-#include "../core/pugicast.h"
+#include "npc.hpp"
+#include "../game/game.hpp"
+#include "../core/pugicast.hpp"
 
 extern Game g_game;
 extern LuaEnvironment g_luaEnvironment;

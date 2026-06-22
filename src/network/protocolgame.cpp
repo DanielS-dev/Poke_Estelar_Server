@@ -1,26 +1,26 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
 #include <boost/range/adaptor/reversed.hpp>
 
-#include "protocolgame.h"
+#include "protocolgame.hpp"
 
-#include "outputmessage.h"
+#include "outputmessage.hpp"
 
-#include "../entities/player.h"
+#include "../entities/player.hpp"
 
-#include "../config/configmanager.h"
-#include "../scripting/actions.h"
-#include "../game/game.h"
-#include "../persistence/iologindata.h"
-#include "../persistence/iomarket.h"
-#include "../core/waitlist.h"
-#include "../security/ban.h"
-#include "../core/scheduler.h"
+#include "../config/configmanager.hpp"
+#include "../scripting/actions.hpp"
+#include "../game/game.hpp"
+#include "../persistence/iologindata.hpp"
+#include "../persistence/iomarket.hpp"
+#include "../core/waitlist.hpp"
+#include "../security/ban.hpp"
+#include "../core/scheduler.hpp"
 
-#include "../entities/monster.h" //pota
+#include "../entities/monster.hpp" //pota
 
 extern ConfigManager g_config;
 extern Actions actions;

@@ -1,14 +1,14 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "items.h"
-#include "../game/spells.h"
-#include "../game/movement.h"
-#include "../game/weapons.h"
+#include "items.hpp"
+#include "../game/spells.hpp"
+#include "../game/movement.hpp"
+#include "../game/weapons.hpp"
 
-#include "../core/pugicast.h"
+#include "../core/pugicast.hpp"
 
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;

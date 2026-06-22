@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "monster.h"
-#include "../game/game.h"
-#include "../game/spells.h"
-#include "../config/configmanager.h" //pota
+#include "monster.hpp"
+#include "../game/game.hpp"
+#include "../game/spells.hpp"
+#include "../config/configmanager.hpp" //pota
 
 extern Game g_game;
 extern Monsters g_monsters;

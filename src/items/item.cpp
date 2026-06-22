@@ -1,19 +1,19 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "item.h"
-#include "container.h"
-#include "../world/teleport.h"
-#include "trashholder.h"
-#include "mailbox.h"
-#include "../world/house.h"
-#include "../game/game.h"
-#include "../world/bed.h"
+#include "item.hpp"
+#include "container.hpp"
+#include "../world/teleport.hpp"
+#include "trashholder.hpp"
+#include "mailbox.hpp"
+#include "../world/house.hpp"
+#include "../game/game.hpp"
+#include "../world/bed.hpp"
 
-#include "../scripting/actions.h"
-#include "../game/spells.h"
+#include "../scripting/actions.hpp"
+#include "../game/spells.hpp"
 
 extern Game g_game;
 extern Spells* g_spells;

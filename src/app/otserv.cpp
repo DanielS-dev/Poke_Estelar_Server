@@ -1,23 +1,23 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
 #include "services.hpp"
 
-#include "../game/game.h"
+#include "../game/game.hpp"
 
-#include "../persistence/iomarket.h"
+#include "../persistence/iomarket.hpp"
 
-#include "../config/configmanager.h"
-#include "../scripting/scriptmanager.h"
-#include "../security/rsa.h"
-#include "../network/protocolold.h"
-#include "../network/protocollogin.h"
-#include "../network/protocolstatus.h"
-#include "../persistence/databasemanager.h"
-#include "../core/scheduler.h"
-#include "../persistence/databasetasks.h"
+#include "../config/configmanager.hpp"
+#include "../scripting/scriptmanager.hpp"
+#include "../security/rsa.hpp"
+#include "../network/protocolold.hpp"
+#include "../network/protocollogin.hpp"
+#include "../network/protocolstatus.hpp"
+#include "../persistence/databasemanager.hpp"
+#include "../core/scheduler.hpp"
+#include "../persistence/databasetasks.hpp"
 
 DatabaseTasks g_databaseTasks;
 Dispatcher g_dispatcher;

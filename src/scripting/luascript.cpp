@@ -1,25 +1,25 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
 #include <boost/range/adaptor/reversed.hpp>
 
-#include "luascript.h"
-#include "../game/chat.h"
-#include "../entities/player.h"
-#include "../game/game.h"
-#include "../network/protocolstatus.h"
-#include "../game/spells.h"
-#include "../persistence/iologindata.h"
-#include "../config/configmanager.h"
-#include "../world/teleport.h"
-#include "../persistence/databasemanager.h"
-#include "../world/bed.h"
-#include "../entities/monster.h"
-#include "../core/scheduler.h"
-#include "../persistence/databasetasks.h"
-#include "events.h" //pota
+#include "luascript.hpp"
+#include "../game/chat.hpp"
+#include "../entities/player.hpp"
+#include "../game/game.hpp"
+#include "../network/protocolstatus.hpp"
+#include "../game/spells.hpp"
+#include "../persistence/iologindata.hpp"
+#include "../config/configmanager.hpp"
+#include "../world/teleport.hpp"
+#include "../persistence/databasemanager.hpp"
+#include "../world/bed.hpp"
+#include "../entities/monster.hpp"
+#include "../core/scheduler.hpp"
+#include "../persistence/databasetasks.hpp"
+#include "events.hpp" //pota
 
 extern Chat* g_chat;
 extern Game g_game;

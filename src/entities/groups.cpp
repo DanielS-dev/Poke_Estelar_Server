@@ -1,12 +1,12 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "groups.h"
+#include "groups.hpp"
 
-#include "../core/pugicast.h"
-#include "../core/tools.h"
+#include "../core/pugicast.hpp"
+#include "../core/tools.hpp"
 
 bool Groups::load()
 {

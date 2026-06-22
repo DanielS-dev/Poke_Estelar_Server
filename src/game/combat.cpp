@@ -1,15 +1,15 @@
 // This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "otpch.h"
+#include "otpch.hpp"
 
-#include "combat.h"
+#include "combat.hpp"
 
-#include "game.h"
-#include "weapons.h"
-#include "../config/configmanager.h"
-#include "../scripting/events.h"
-#include "../entities/monster.h" //pota
+#include "game.hpp"
+#include "weapons.hpp"
+#include "../config/configmanager.hpp"
+#include "../scripting/events.hpp"
+#include "../entities/monster.hpp" //pota
 
 extern Game g_game;
 extern Weapons* g_weapons;
