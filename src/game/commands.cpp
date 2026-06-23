@@ -20,6 +20,7 @@
 #include "../core/scheduler.hpp"
 #include "../scripting/events.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 #include "../core/pugicast.hpp"
 

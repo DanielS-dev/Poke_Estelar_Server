@@ -7,6 +7,7 @@
 #include "../game/game.hpp"
 #include "../core/pugicast.hpp"
 #include "../core/tools/random.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 extern Game g_game;
 extern LuaEnvironment g_luaEnvironment;

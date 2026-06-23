@@ -7,6 +7,7 @@
 #include "game.hpp"
 #include "../core/pugicast.hpp"
 #include "../core/scheduler.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 extern Chat* g_chat;
 extern Game g_game;

@@ -10,6 +10,7 @@
 
 #include "../core/pugicast.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;

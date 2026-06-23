@@ -11,6 +11,7 @@
 
 #include "../core/pugicast.hpp"
 #include "../scripting/events.hpp" //pota
+#include "../core/tools/xmlErro.hpp"
 
 extern ConfigManager g_config;
 extern Monsters g_monsters;

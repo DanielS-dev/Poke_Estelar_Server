@@ -11,6 +11,7 @@
 #include "../config/configmanager.hpp"
 #include "bed.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 extern ConfigManager g_config;
 extern Game g_game;

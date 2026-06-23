@@ -72,7 +72,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/auths.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools/dateTools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/stringsTools.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools/xmlErro.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/checksum.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/random.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp

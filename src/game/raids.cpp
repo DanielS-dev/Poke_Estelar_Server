@@ -13,6 +13,7 @@
 #include "../entities/monster.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 extern Game g_game;
 extern ConfigManager g_config;

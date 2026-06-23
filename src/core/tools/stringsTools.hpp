@@ -24,5 +24,6 @@ std::string getFirstLine(const std::string& str);
 std::string ucfirst(std::string str);
 std::string ucwords(std::string str);
 bool booleanString(const std::string& str);
+std::string convertIPToString(uint32_t ip);
 
 #endif

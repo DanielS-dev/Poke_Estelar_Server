@@ -10,6 +10,7 @@
 #include "../core/scheduler.hpp"
 #include "../app/services.hpp"
 #include "../core/tools/checksum.hpp"
+#include "../core/tools/stringsTools.hpp"
 #include "../core/tools.hpp"
 
 extern ConfigManager g_config;

@@ -7,6 +7,7 @@
 #include "../config/configmanager.hpp"
 #include "../game/game.hpp"
 #include "outputmessage.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;
 extern Game g_game;

@@ -8,8 +8,6 @@
 #include "const.hpp"
 #include "enums.hpp"
 
-void printXMLError(const std::string& where, const std::string& fileName, const pugi::xml_parse_result& result);
-
 inline bool hasBitSet(uint32_t flag, uint32_t flags) {
 	return (flags & flag) != 0;
 }
@@ -17,10 +15,6 @@ inline bool hasBitSet(uint32_t flag, uint32_t flags) {
 Direction getDirection(const std::string& string);
 Position getNextPosition(Direction direction, Position pos);
 Direction getDirectionTo(const Position& from, const Position& to);
-
-std::string formatDate(time_t time);
-std::string formatDateShort(time_t time);
-std::string convertIPToString(uint32_t ip);
 
 MagicEffectClasses getMagicEffect(const std::string& strValue);
 ShootType_t getShootType(const std::string& strValue);

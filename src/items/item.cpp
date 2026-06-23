@@ -14,6 +14,7 @@
 
 #include "../scripting/actions.hpp"
 #include "../game/spells.hpp"
+#include "../core/tools/dateTools.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern Game g_game;

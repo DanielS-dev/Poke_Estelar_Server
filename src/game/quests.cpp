@@ -7,6 +7,7 @@
 
 #include "../core/pugicast.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 std::string Mission::getDescription(Player* player) const
 {

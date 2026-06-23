@@ -7,6 +7,7 @@
 
 #include "../core/pugicast.hpp"
 #include "../core/tools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 extern LuaEnvironment g_luaEnvironment;
 

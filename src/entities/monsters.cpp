@@ -13,6 +13,7 @@
 #include "player.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/tools/xmlErro.hpp"
 
 #include "../core/pugicast.hpp"
 

@@ -8,6 +8,7 @@
 #include "outputmessage.hpp"
 #include "../core/tasks.hpp"
 #include "../core/tools/auths.hpp"
+#include "../core/tools/dateTools.hpp"
 
 #include "../config/configmanager.hpp"
 #include "../persistence/iologindata.hpp"
