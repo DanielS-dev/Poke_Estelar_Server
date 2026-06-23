@@ -115,7 +115,11 @@ Contém os sistemas centrais de gameplay.
 - `raidLoader.cpp/.hpp`: carregamento das raids a partir dos XMLs.
 - `raids.cpp/.hpp`: fachada, agendamento e coleção de raids.
 - `spells.cpp/.hpp`: spells, runes e regras de conjuração.
-- `weapons.cpp/.hpp`: armas, ataques e regras de weapon use.
+- `weapon.cpp/.hpp`: base comum de armas, validações, consumo e execução de scripts.
+- `weaponDistance.cpp/.hpp`: armas à distância, munições, chance de acerto e dano.
+- `weaponMelee.cpp/.hpp`: armas corpo a corpo, skill e dano elemental.
+- `weaponWand.cpp/.hpp`: wands/rods e dano mágico configurado por XML.
+- `weapons.cpp/.hpp`: fachada, registro e carregamento padrão das armas.
 
 ### `src/io`
 

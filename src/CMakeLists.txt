@@ -82,6 +82,10 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/thing.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapon.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weaponDistance.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weaponMelee.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weaponWand.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/auths.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/dateTools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/fluidTools.cpp
