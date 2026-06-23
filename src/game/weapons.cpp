@@ -8,7 +8,7 @@
 #include "game.hpp"
 #include "../core/pugicast.hpp"
 #include "weapons.hpp"
-#include "../core/random.hpp"
+#include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern Game g_game;

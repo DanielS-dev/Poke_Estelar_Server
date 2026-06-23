@@ -212,8 +212,8 @@
     <ClCompile Include="..\src\world\tile.cpp" />
     <ClCompile Include="..\src\core\tools.cpp" />
     <ClCompile Include="..\src\core\tools\stringsTools.cpp" />
-    <ClCompile Include="..\src\core\checksum.cpp" />
-    <ClCompile Include="..\src\core\random.cpp" />
+    <ClCompile Include="..\src\core\tools\checksum.cpp" />
+    <ClCompile Include="..\src\core\tools\random.cpp" />
     <ClCompile Include="..\src\items\trashholder.cpp" />
     <ClCompile Include="..\src\entities\vocation.cpp" />
     <ClCompile Include="..\src\core\waitlist.cpp" />
@@ -300,8 +300,8 @@
     <ClInclude Include="..\src\world\tile.hpp" />
     <ClInclude Include="..\src\core\tools.hpp" />
     <ClInclude Include="..\src\core\tools\stringsTools.hpp" />
-    <ClInclude Include="..\src\core\checksum.hpp" />
-    <ClInclude Include="..\src\core\random.hpp" />
+    <ClInclude Include="..\src\core\tools\checksum.hpp" />
+    <ClInclude Include="..\src\core\tools\random.hpp" />
     <ClInclude Include="..\src\world\town.hpp" />
     <ClInclude Include="..\src\items\trashholder.hpp" />
     <ClInclude Include="..\src\entities\vocation.hpp" />

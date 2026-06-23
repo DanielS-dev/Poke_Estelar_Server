@@ -10,7 +10,7 @@
 #include "../config/configmanager.hpp"
 #include "../scripting/events.hpp"
 #include "../entities/monster.hpp" //pota
-#include "../core/random.hpp"
+#include "../core/tools/random.hpp"
 
 extern Game g_game;
 extern Weapons* g_weapons;

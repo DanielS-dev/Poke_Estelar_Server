@@ -22,7 +22,7 @@
 #include "../core/scheduler.hpp"
 #include "../scripting/events.hpp"
 #include "../persistence/databasetasks.hpp"
-#include "../core/random.hpp"
+#include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;

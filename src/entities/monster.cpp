@@ -7,7 +7,7 @@
 #include "../game/game.hpp"
 #include "../game/spells.hpp"
 #include "../config/configmanager.hpp" //pota
-#include "../core/random.hpp"
+#include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern Game g_game;

@@ -9,7 +9,7 @@
 #include "protocol.hpp"
 #include "../core/scheduler.hpp"
 #include "../app/services.hpp"
-#include "../core/checksum.hpp"
+#include "../core/tools/checksum.hpp"
 #include "../core/tools.hpp"
 
 extern ConfigManager g_config;

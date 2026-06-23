@@ -6,7 +6,7 @@
 
 #include "networkmessage.hpp"
 #include "connection.hpp"
-#include "../core/checksum.hpp"
+#include "../core/tools/checksum.hpp"
 
 class Protocol;
 
