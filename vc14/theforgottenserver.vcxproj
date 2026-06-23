@@ -200,6 +200,9 @@
     <ClCompile Include="..\src\network\protocolgame.cpp" />
     <ClCompile Include="..\src\network\protocollogin.cpp" />
     <ClCompile Include="..\src\network\protocolold.cpp" />
+    <ClCompile Include="..\src\game\quest.cpp" />
+    <ClCompile Include="..\src\game\questLoader.cpp" />
+    <ClCompile Include="..\src\game\questMission.cpp" />
     <ClCompile Include="..\src\game\quests.cpp" />
     <ClCompile Include="..\src\game\raids.cpp" />
     <ClCompile Include="..\src\security\rsa.cpp" />
@@ -300,6 +303,9 @@
     <ClInclude Include="..\src\network\protocollogin.hpp" />
     <ClInclude Include="..\src\network\protocolold.hpp" />
     <ClInclude Include="..\src\core\pugicast.hpp" />
+    <ClInclude Include="..\src\game\quest.hpp" />
+    <ClInclude Include="..\src\game\questLoader.hpp" />
+    <ClInclude Include="..\src\game\questMission.hpp" />
     <ClInclude Include="..\src\game\quests.hpp" />
     <ClInclude Include="..\src\game\raids.hpp" />
     <ClInclude Include="..\src\security\rsa.hpp" />

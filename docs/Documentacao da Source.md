@@ -106,7 +106,10 @@ Contém os sistemas centrais de gameplay.
 - `condition.cpp/.hpp`: condições aplicadas em criaturas.
 - `game.cpp/.hpp`: núcleo de coordenação da lógica do jogo.
 - `movement.cpp/.hpp`: eventos e regras de movement.
-- `quests.cpp/.hpp`: quests e missões.
+- `quest.cpp/.hpp`: entidade de quest, progresso geral e contagem de missões.
+- `questLoader.cpp/.hpp`: carregamento das quests e missões a partir do XML.
+- `questMission.cpp/.hpp`: entidade de missão, estado, descrição e conclusão.
+- `quests.cpp/.hpp`: fachada e coleção de quests disponíveis.
 - `raids.cpp/.hpp`: raids, eventos de invasão e carregamento de raids.
 - `spells.cpp/.hpp`: spells, runes e regras de conjuração.
 - `weapons.cpp/.hpp`: armas, ataques e regras de weapon use.

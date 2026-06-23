@@ -64,6 +64,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/network/protocollogin.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolold.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolstatus.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/quest.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/questLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/questMission.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/quests.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
