@@ -9,6 +9,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/bed.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/chat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chatChannel.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chatLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chatRules.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/combat.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/condition.cpp
