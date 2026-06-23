@@ -19,6 +19,7 @@
 #include "../core/waitlist.hpp"
 #include "../security/ban.hpp"
 #include "../core/scheduler.hpp"
+#include "../core/checksum.hpp"
 
 #include "../entities/monster.hpp" //pota
 
