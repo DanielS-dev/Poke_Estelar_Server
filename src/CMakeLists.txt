@@ -68,6 +68,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/game/questLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/questMission.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/quests.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raid.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raidEvent.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raidLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/scheduler.cpp

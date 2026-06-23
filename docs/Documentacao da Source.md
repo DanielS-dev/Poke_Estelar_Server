@@ -110,7 +110,10 @@ Contém os sistemas centrais de gameplay.
 - `questLoader.cpp/.hpp`: carregamento das quests e missões a partir do XML.
 - `questMission.cpp/.hpp`: entidade de missão, estado, descrição e conclusão.
 - `quests.cpp/.hpp`: fachada e coleção de quests disponíveis.
-- `raids.cpp/.hpp`: raids, eventos de invasão e carregamento de raids.
+- `raid.cpp/.hpp`: entidade de raid, fila de eventos e execução sequencial.
+- `raidEvent.cpp/.hpp`: eventos de raid, anúncios, spawns e scripts.
+- `raidLoader.cpp/.hpp`: carregamento das raids a partir dos XMLs.
+- `raids.cpp/.hpp`: fachada, agendamento e coleção de raids.
 - `spells.cpp/.hpp`: spells, runes e regras de conjuração.
 - `weapons.cpp/.hpp`: armas, ataques e regras de weapon use.
 

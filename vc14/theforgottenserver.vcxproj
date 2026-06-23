@@ -204,6 +204,9 @@
     <ClCompile Include="..\src\game\questLoader.cpp" />
     <ClCompile Include="..\src\game\questMission.cpp" />
     <ClCompile Include="..\src\game\quests.cpp" />
+    <ClCompile Include="..\src\game\raid.cpp" />
+    <ClCompile Include="..\src\game\raidEvent.cpp" />
+    <ClCompile Include="..\src\game\raidLoader.cpp" />
     <ClCompile Include="..\src\game\raids.cpp" />
     <ClCompile Include="..\src\security\rsa.cpp" />
     <ClCompile Include="..\src\core\scheduler.cpp" />
@@ -307,6 +310,9 @@
     <ClInclude Include="..\src\game\questLoader.hpp" />
     <ClInclude Include="..\src\game\questMission.hpp" />
     <ClInclude Include="..\src\game\quests.hpp" />
+    <ClInclude Include="..\src\game\raid.hpp" />
+    <ClInclude Include="..\src\game\raidEvent.hpp" />
+    <ClInclude Include="..\src\game\raidLoader.hpp" />
     <ClInclude Include="..\src\game\raids.hpp" />
     <ClInclude Include="..\src\security\rsa.hpp" />
     <ClInclude Include="..\src\core\scheduler.hpp" />
