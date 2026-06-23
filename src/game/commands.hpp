@@ -4,12 +4,13 @@
 #ifndef FS_COMMANDS_H_C95A575CCADF434699D26CD042690970
 #define FS_COMMANDS_H_C95A575CCADF434699D26CD042690970
 
-#include "../core/enums.hpp"
+#include <map>
+#include <string>
 
+#include "command.hpp"
+
+class CommandLoader;
 class Player;
-
-struct Command;
-struct s_defcommands;
 
 class Commands
 {
@@ -36,23 +37,8 @@ class Commands
 		static s_defcommands defined_commands[];
 
 		std::map<std::string, Command*> commandMap;
-};
 
-typedef void (Commands::*CommandFunc)(Player&, const std::string&);
-
-struct Command {
-	Command(CommandFunc f, uint32_t groupId, AccountType_t accountType, bool log)
-		: f(f), groupId(groupId), accountType(accountType), log(log) {}
-
-	CommandFunc f;
-	uint32_t groupId;
-	AccountType_t accountType;
-	bool log;
-};
-
-struct s_defcommands {
-	const char* name;
-	CommandFunc f;
+	friend class CommandLoader;
 };
 
 #endif

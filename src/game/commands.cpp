@@ -3,8 +3,8 @@
 
 #include "otpch.hpp"
 
-#include <fstream>
-
+#include "commandLoader.hpp"
+#include "commandRules.hpp"
 #include "commands.hpp"
 #include "../entities/player.hpp"
 #include "../entities/npc.hpp"
@@ -20,9 +20,6 @@
 #include "../core/scheduler.hpp"
 #include "../scripting/events.hpp"
 #include "../core/tools/stringsTools.hpp"
-#include "../core/tools/xmlErro.hpp"
-
-#include "../core/pugicast.hpp"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;
@@ -66,51 +63,7 @@ Commands::~Commands()
 
 bool Commands::loadFromXml()
 {
-	pugi::xml_document doc;
-	pugi::xml_parse_result result = doc.load_file("data/XML/commands.xml");
-	if (!result) {
-		printXMLError("Error - Commands::loadFromXml", "data/XML/commands.xml", result);
-		return false;
-	}
-
-	for (auto commandNode : doc.child("commands").children()) {
-		pugi::xml_attribute cmdAttribute = commandNode.attribute("cmd");
-		if (!cmdAttribute) {
-			std::cout << "[Warning - Commands::loadFromXml] Missing cmd" << std::endl;
-			continue;
-		}
-
-		auto it = commandMap.find(cmdAttribute.as_string());
-		if (it == commandMap.end()) {
-			std::cout << "[Warning - Commands::loadFromXml] Unknown command " << cmdAttribute.as_string() << std::endl;
-			continue;
-		}
-
-		Command* command = it->second;
-
-		pugi::xml_attribute groupAttribute = commandNode.attribute("group");
-		if (groupAttribute) {
-			command->groupId = pugi::cast<uint32_t>(groupAttribute.value());
-		} else {
-			std::cout << "[Warning - Commands::loadFromXml] Missing group for command " << it->first << std::endl;
-		}
-
-		pugi::xml_attribute acctypeAttribute = commandNode.attribute("acctype");
-		if (acctypeAttribute) {
-			command->accountType = static_cast<AccountType_t>(pugi::cast<uint32_t>(acctypeAttribute.value()));
-		} else {
-			std::cout << "[Warning - Commands::loadFromXml] Missing acctype for command " << it->first << std::endl;
-		}
-
-		pugi::xml_attribute logAttribute = commandNode.attribute("log");
-		if (logAttribute) {
-			command->log = booleanString(logAttribute.as_string());
-		} else {
-			std::cout << "[Warning - Commands::loadFromXml] Missing log for command " << it->first << std::endl;
-		}
-		g_game.addCommandTag(it->first.front());
-	}
-	return true;
+	return CommandLoader::loadFromXml(*this);
 }
 
 bool Commands::reload()
@@ -146,11 +99,7 @@ bool Commands::exeCommand(Player& player, const std::string& cmd)
 	}
 
 	Command* command = it->second;
-	if (command->groupId > player.getGroup()->id || command->accountType > player.getAccountType()) {
-		if (player.getGroup()->access) {
-			player.sendTextMessage(MESSAGE_STATUS_SMALL, "You can not execute this command.");
-		}
-
+	if (!CommandRules::canExecute(player, *command)) {
 		return false;
 	}
 
@@ -159,20 +108,7 @@ bool Commands::exeCommand(Player& player, const std::string& cmd)
 	(this->*cfunc)(player, str_param);
 
 	if (command->log) {
-		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, cmd);
-
-		std::ostringstream logFile;
-		logFile << "data/logs/" << player.getName() << " commands.log";
-		std::ofstream out(logFile.str(), std::ios::app);
-		if (out.is_open()) {
-			time_t ticks = time(nullptr);
-			const tm* now = localtime(&ticks);
-			char buf[32];
-			strftime(buf, sizeof(buf), "%d/%m/%Y %H:%M", now);
-
-			out << '[' << buf << "] " << cmd << std::endl;
-			out.close();
-		}
+		CommandRules::logCommand(player, cmd);
 	}
 	return true;
 }

@@ -142,6 +142,9 @@
     <ClCompile Include="..\src\game\chatLoader.cpp" />
     <ClCompile Include="..\src\game\chatRules.cpp" />
     <ClCompile Include="..\src\game\combat.cpp" />
+    <ClCompile Include="..\src\game\command.cpp" />
+    <ClCompile Include="..\src\game\commandLoader.cpp" />
+    <ClCompile Include="..\src\game\commandRules.cpp" />
     <ClCompile Include="..\src\game\commands.cpp" />
     <ClCompile Include="..\src\game\condition.cpp" />
     <ClCompile Include="..\src\config\configmanager.cpp" />
@@ -240,6 +243,9 @@
     <ClInclude Include="..\src\game\chatLoader.hpp" />
     <ClInclude Include="..\src\game\chatRules.hpp" />
     <ClInclude Include="..\src\game\combat.hpp" />
+    <ClInclude Include="..\src\game\command.hpp" />
+    <ClInclude Include="..\src\game\commandLoader.hpp" />
+    <ClInclude Include="..\src\game\commandRules.hpp" />
     <ClInclude Include="..\src\game\commands.hpp" />
     <ClInclude Include="..\src\game\condition.hpp" />
     <ClInclude Include="..\src\config\configmanager.hpp" />

@@ -95,8 +95,14 @@ Contém as entidades principais do servidor e seus comportamentos associados.
 Contém os sistemas centrais de gameplay.
 
 - `chat.cpp/.hpp`: canais e regras de chat.
+- `chatChannel.cpp/.hpp`: canais de chat, usuários, convites, eventos Lua e envio de mensagens.
+- `chatLoader.cpp/.hpp`: carregamento dos canais via XML e scripts.
+- `chatRules.cpp/.hpp`: regras de fala e normalização do tipo de mensagem por canal.
 - `combat.cpp/.hpp`: combate, dano, áreas e condições de combate.
-- `commands.cpp/.hpp`: comandos administrativos ou de servidor.
+- `command.cpp/.hpp`: representação de um comando individual.
+- `commandLoader.cpp/.hpp`: carregamento dos comandos via XML.
+- `commandRules.cpp/.hpp`: validação de permissão e log de execução dos comandos.
+- `commands.cpp/.hpp`: fachada e orquestração dos comandos administrativos ou de servidor.
 - `condition.cpp/.hpp`: condições aplicadas em criaturas.
 - `game.cpp/.hpp`: núcleo de coordenação da lógica do jogo.
 - `movement.cpp/.hpp`: eventos e regras de movement.

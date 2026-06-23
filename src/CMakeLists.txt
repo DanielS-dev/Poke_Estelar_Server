@@ -13,6 +13,9 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/game/chatLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/chatRules.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/combat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/command.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commandLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commandRules.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/condition.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
