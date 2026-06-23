@@ -8,6 +8,7 @@
 #include "game.hpp"
 #include "../core/pugicast.hpp"
 #include "weapons.hpp"
+#include "../core/random.hpp"
 
 extern Game g_game;
 extern Vocations g_vocations;

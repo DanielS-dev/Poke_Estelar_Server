@@ -11,6 +11,7 @@
 #include "../config/configmanager.hpp"
 #include "../core/scheduler.hpp"
 #include "../entities/monster.hpp"
+#include "../core/random.hpp"
 
 extern Game g_game;
 extern ConfigManager g_config;

@@ -6,6 +6,7 @@
 #include "npc.hpp"
 #include "../game/game.hpp"
 #include "../core/pugicast.hpp"
+#include "../core/random.hpp"
 
 extern Game g_game;
 extern LuaEnvironment g_luaEnvironment;

@@ -11,6 +11,7 @@
 #include "../config/configmanager.hpp"
 #include "../game/game.hpp"
 #include "player.hpp"
+#include "../core/random.hpp"
 
 #include "../core/pugicast.hpp"
 

@@ -20,6 +20,7 @@
 #include "../security/ban.hpp"
 #include "../core/scheduler.hpp"
 #include "../core/checksum.hpp"
+#include "../core/random.hpp"
 
 #include "../entities/monster.hpp" //pota
 

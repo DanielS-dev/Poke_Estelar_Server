@@ -72,6 +72,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/checksum.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/random.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/vocation.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/waitlist.cpp

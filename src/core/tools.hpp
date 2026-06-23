@@ -4,8 +4,6 @@
 #ifndef FS_TOOLS_H_5F9A9742DA194628830AA1C64909AE43
 #define FS_TOOLS_H_5F9A9742DA194628830AA1C64909AE43
 
-#include <random>
-
 #include "position.hpp"
 #include "const.hpp"
 #include "enums.hpp"
@@ -30,11 +28,6 @@ IntegerVec vectorAtoi(const StringVec& stringVector);
 inline bool hasBitSet(uint32_t flag, uint32_t flags) {
 	return (flags & flag) != 0;
 }
-
-std::mt19937& getRandomGenerator();
-int32_t uniform_random(int32_t minNumber, int32_t maxNumber);
-int32_t normal_random(int32_t minNumber, int32_t maxNumber);
-bool boolean_random(double probability = 0.5);
 
 Direction getDirection(const std::string& string);
 Position getNextPosition(Direction direction, Position pos);

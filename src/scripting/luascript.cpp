@@ -20,6 +20,7 @@
 #include "../core/scheduler.hpp"
 #include "../persistence/databasetasks.hpp"
 #include "events.hpp" //pota
+#include "../core/random.hpp"
 
 extern Chat* g_chat;
 extern Game g_game;

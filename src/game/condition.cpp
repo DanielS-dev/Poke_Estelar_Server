@@ -5,6 +5,7 @@
 
 #include "condition.hpp"
 #include "game.hpp"
+#include "../core/random.hpp"
 
 extern Game g_game;
 

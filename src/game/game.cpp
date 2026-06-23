@@ -22,6 +22,7 @@
 #include "../core/scheduler.hpp"
 #include "../scripting/events.hpp"
 #include "../persistence/databasetasks.hpp"
+#include "../core/random.hpp"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;

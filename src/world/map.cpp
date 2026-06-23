@@ -8,6 +8,7 @@
 #include "../game/combat.hpp"
 #include "../entities/creature.hpp"
 #include "../game/game.hpp"
+#include "../core/random.hpp"
 
 extern Game g_game;
 

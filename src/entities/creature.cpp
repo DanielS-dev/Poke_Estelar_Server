@@ -8,6 +8,7 @@
 #include "monster.hpp"
 #include "../config/configmanager.hpp"
 #include "../core/scheduler.hpp"
+#include "../core/random.hpp"
 
 double Creature::speedA = 857.36;
 double Creature::speedB = 261.29;
