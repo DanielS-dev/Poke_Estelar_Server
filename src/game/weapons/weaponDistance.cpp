@@ -10,10 +10,10 @@
 
 #include "weaponDistance.hpp"
 
-#include "../core/tools/random.hpp"
-#include "../items/items.hpp"
-#include "game.hpp"
-#include "weapons.hpp"
+#include "../../core/tools/random.hpp"
+#include "../../items/items.hpp"
+#include "../game.hpp"
+#include "../weapons/weapons.hpp"
 
 extern Game g_game;
 extern Weapons* g_weapons;

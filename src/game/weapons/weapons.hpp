@@ -8,7 +8,7 @@
 #include <map>
 #include <string>
 
-#include "../scripting/baseevents.hpp"
+#include "../../scripting/baseevents.hpp"
 #include "weapon.hpp"
 #include "weaponDistance.hpp"
 #include "weaponMelee.hpp"

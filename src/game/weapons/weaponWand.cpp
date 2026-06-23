@@ -8,10 +8,10 @@
 
 #include "weaponWand.hpp"
 
-#include "../core/pugicast.hpp"
-#include "../core/tools/random.hpp"
-#include "../core/tools/stringsTools.hpp"
-#include "../items/items.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/tools/random.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../items/items.hpp"
 
 bool WeaponWand::configureEvent(const pugi::xml_node& node)
 {

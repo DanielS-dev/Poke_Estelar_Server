@@ -5,7 +5,7 @@
 #define FS_PROTOCOLGAME_H_FACA2A2D1A9348B78E8FD7E8003EBB87
 
 #include "protocol.hpp"
-#include "../game/chat.hpp"
+#include "../game/chat/chat.hpp"
 #include "../entities/creature.hpp"
 #include "../core/tasks.hpp"
 

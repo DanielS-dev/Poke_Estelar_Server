@@ -5,8 +5,8 @@
 
 #include "questMission.hpp"
 
-#include "../core/tools/stringsTools.hpp"
-#include "../entities/player.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../entities/player.hpp"
 
 std::string Mission::getDescription(Player* player) const
 {

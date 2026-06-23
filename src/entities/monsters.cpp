@@ -7,7 +7,7 @@
 #include "monster.hpp"
 #include "../game/spells.hpp"
 #include "../game/combat.hpp"
-#include "../game/weapons.hpp"
+#include "../game/weapons/weapons.hpp"
 #include "../config/configmanager.hpp"
 #include "../game/game.hpp"
 #include "player.hpp"

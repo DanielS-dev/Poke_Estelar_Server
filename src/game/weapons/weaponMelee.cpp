@@ -7,9 +7,9 @@
 
 #include "weaponMelee.hpp"
 
-#include "../core/tools/random.hpp"
-#include "../items/items.hpp"
-#include "weapons.hpp"
+#include "../../core/tools/random.hpp"
+#include "../../items/items.hpp"
+#include "../weapons/weapons.hpp"
 
 WeaponMelee::WeaponMelee(LuaScriptInterface* interface) :
 	Weapon(interface)

@@ -7,7 +7,7 @@
 
 #include "command.hpp"
 #include "commandRules.hpp"
-#include "../entities/player.hpp"
+#include "../../entities/player.hpp"
 
 namespace CommandRules
 {

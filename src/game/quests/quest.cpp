@@ -5,7 +5,7 @@
 
 #include "quest.hpp"
 
-#include "../entities/player.hpp"
+#include "../../entities/player.hpp"
 
 uint16_t Quest::getMissionsCount(Player* player) const
 {

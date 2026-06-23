@@ -6,7 +6,7 @@
 #include <boost/range/adaptor/reversed.hpp>
 
 #include "luascript.hpp"
-#include "../game/chat.hpp"
+#include "../game/chat/chat.hpp"
 #include "../entities/player.hpp"
 #include "../game/game.hpp"
 #include "../network/protocolstatus.hpp"

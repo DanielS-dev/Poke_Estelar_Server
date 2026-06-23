@@ -9,9 +9,9 @@
 #include <string>
 #include <utility>
 
-#include "../core/const.hpp"
-#include "../core/position.hpp"
-#include "../scripting/baseevents.hpp"
+#include "../../core/const.hpp"
+#include "../../core/position.hpp"
+#include "../../scripting/baseevents.hpp"
 
 struct MonsterSpawn {
 	MonsterSpawn(std::string name, uint32_t minAmount, uint32_t maxAmount) :

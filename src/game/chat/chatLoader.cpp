@@ -5,8 +5,8 @@
 
 #include "chatLoader.hpp"
 #include "chat.hpp"
-#include "../core/pugicast.hpp"
-#include "../core/tools/xmlErro.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/tools/xmlErro.hpp"
 
 bool ChatLoader::load(Chat& chat)
 {

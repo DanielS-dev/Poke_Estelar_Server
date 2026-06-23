@@ -8,10 +8,10 @@
 #include <map>
 #include <string>
 
-#include "../core/const.hpp"
-#include "../entities/player.hpp"
-#include "../scripting/baseevents.hpp"
-#include "combat.hpp"
+#include "../../core/const.hpp"
+#include "../../entities/player.hpp"
+#include "../../scripting/baseevents.hpp"
+#include "../combat.hpp"
 
 class ItemType;
 

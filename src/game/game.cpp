@@ -6,7 +6,7 @@
 #include "../core/pugicast.hpp"
 
 #include "../items/items.hpp"
-#include "commands.hpp"
+#include "commands/commands.hpp"
 #include "../entities/creature.hpp"
 #include "../entities/monster.hpp"
 #include "game.hpp"

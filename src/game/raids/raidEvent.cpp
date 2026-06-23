@@ -9,11 +9,11 @@
 
 #include "raidEvent.hpp"
 
-#include "../core/pugicast.hpp"
-#include "../core/tools/random.hpp"
-#include "../core/tools/stringsTools.hpp"
-#include "../entities/monster.hpp"
-#include "game.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/tools/random.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../entities/monster.hpp"
+#include "../game.hpp"
 
 extern Game g_game;
 

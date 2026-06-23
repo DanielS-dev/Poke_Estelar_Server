@@ -8,7 +8,7 @@
 #include <list>
 #include <string>
 
-#include "../scripting/baseevents.hpp"
+#include "../../scripting/baseevents.hpp"
 #include "raid.hpp"
 
 static constexpr int32_t CHECK_RAIDS_INTERVAL = 60;

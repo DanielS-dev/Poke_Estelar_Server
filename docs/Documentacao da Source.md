@@ -94,32 +94,32 @@ Contém as entidades principais do servidor e seus comportamentos associados.
 
 Contém os sistemas centrais de gameplay.
 
-- `chat.cpp/.hpp`: canais e regras de chat.
-- `chatChannel.cpp/.hpp`: canais de chat, usuários, convites, eventos Lua e envio de mensagens.
-- `chatLoader.cpp/.hpp`: carregamento dos canais via XML e scripts.
-- `chatRules.cpp/.hpp`: regras de fala e normalização do tipo de mensagem por canal.
+- `chat/chat.cpp/.hpp`: fachada e orquestração do sistema de chat.
+- `chat/chatChannel.cpp/.hpp`: canais de chat, usuários, convites, eventos Lua e envio de mensagens.
+- `chat/chatLoader.cpp/.hpp`: carregamento dos canais via XML e scripts.
+- `chat/chatRules.cpp/.hpp`: regras de fala e normalização do tipo de mensagem por canal.
 - `combat.cpp/.hpp`: combate, dano, áreas e condições de combate.
-- `command.cpp/.hpp`: representação de um comando individual.
-- `commandLoader.cpp/.hpp`: carregamento dos comandos via XML.
-- `commandRules.cpp/.hpp`: validação de permissão e log de execução dos comandos.
-- `commands.cpp/.hpp`: fachada e orquestração dos comandos administrativos ou de servidor.
+- `commands/command.cpp/.hpp`: representação de um comando individual.
+- `commands/commandLoader.cpp/.hpp`: carregamento dos comandos via XML.
+- `commands/commandRules.cpp/.hpp`: validação de permissão e log de execução dos comandos.
+- `commands/commands.cpp/.hpp`: fachada e orquestração dos comandos administrativos ou de servidor.
 - `condition.cpp/.hpp`: condições aplicadas em criaturas.
 - `game.cpp/.hpp`: núcleo de coordenação da lógica do jogo.
 - `movement.cpp/.hpp`: eventos e regras de movement.
-- `quest.cpp/.hpp`: entidade de quest, progresso geral e contagem de missões.
-- `questLoader.cpp/.hpp`: carregamento das quests e missões a partir do XML.
-- `questMission.cpp/.hpp`: entidade de missão, estado, descrição e conclusão.
-- `quests.cpp/.hpp`: fachada e coleção de quests disponíveis.
-- `raid.cpp/.hpp`: entidade de raid, fila de eventos e execução sequencial.
-- `raidEvent.cpp/.hpp`: eventos de raid, anúncios, spawns e scripts.
-- `raidLoader.cpp/.hpp`: carregamento das raids a partir dos XMLs.
-- `raids.cpp/.hpp`: fachada, agendamento e coleção de raids.
+- `quests/quest.cpp/.hpp`: entidade de quest, progresso geral e contagem de missões.
+- `quests/questLoader.cpp/.hpp`: carregamento das quests e missões a partir do XML.
+- `quests/questMission.cpp/.hpp`: entidade de missão, estado, descrição e conclusão.
+- `quests/quests.cpp/.hpp`: fachada e coleção de quests disponíveis.
+- `raids/raid.cpp/.hpp`: entidade de raid, fila de eventos e execução sequencial.
+- `raids/raidEvent.cpp/.hpp`: eventos de raid, anúncios, spawns e scripts.
+- `raids/raidLoader.cpp/.hpp`: carregamento das raids a partir dos XMLs.
+- `raids/raids.cpp/.hpp`: fachada, agendamento e coleção de raids.
 - `spells.cpp/.hpp`: spells, runes e regras de conjuração.
-- `weapon.cpp/.hpp`: base comum de armas, validações, consumo e execução de scripts.
-- `weaponDistance.cpp/.hpp`: armas à distância, munições, chance de acerto e dano.
-- `weaponMelee.cpp/.hpp`: armas corpo a corpo, skill e dano elemental.
-- `weaponWand.cpp/.hpp`: wands/rods e dano mágico configurado por XML.
-- `weapons.cpp/.hpp`: fachada, registro e carregamento padrão das armas.
+- `weapons/weapon.cpp/.hpp`: base comum de armas, validações, consumo e execução de scripts.
+- `weapons/weaponDistance.cpp/.hpp`: armas à distância, munições, chance de acerto e dano.
+- `weapons/weaponMelee.cpp/.hpp`: armas corpo a corpo, skill e dano elemental.
+- `weapons/weaponWand.cpp/.hpp`: wands/rods e dano mágico configurado por XML.
+- `weapons/weapons.cpp/.hpp`: fachada, registro e carregamento padrão das armas.
 
 ### `src/io`
 

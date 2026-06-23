@@ -11,15 +11,15 @@
 
 #include "weapon.hpp"
 
-#include "../core/pugicast.hpp"
-#include "../core/tools/gameEnumTools.hpp"
-#include "../core/tools/random.hpp"
-#include "../core/tools/stringsTools.hpp"
-#include "../entities/groups.hpp"
-#include "../entities/vocation.hpp"
-#include "../items/items.hpp"
-#include "game.hpp"
-#include "weapons.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/tools/gameEnumTools.hpp"
+#include "../../core/tools/random.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../entities/groups.hpp"
+#include "../../entities/vocation.hpp"
+#include "../../items/items.hpp"
+#include "../game.hpp"
+#include "../weapons/weapons.hpp"
 
 extern Game g_game;
 extern Vocations g_vocations;

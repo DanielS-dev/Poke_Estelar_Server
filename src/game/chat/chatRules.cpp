@@ -4,7 +4,7 @@
 #include "otpch.hpp"
 
 #include "chatRules.hpp"
-#include "../entities/player.hpp"
+#include "../../entities/player.hpp"
 
 namespace ChatRules
 {

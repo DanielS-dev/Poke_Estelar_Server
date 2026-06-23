@@ -6,17 +6,17 @@
 
 #include "../entities/account.hpp"
 #include "combat.hpp"
-#include "commands.hpp"
+#include "commands/commands.hpp"
 #include "../entities/groups.hpp"
 #include "../world/map.hpp"
 #include "../core/position.hpp"
 #include "../items/item.hpp"
 #include "../items/container.hpp"
 #include "../entities/player.hpp"
-#include "raids.hpp"
+#include "raids/raids.hpp"
 #include "../entities/npc.hpp"
 #include "../core/wildcardtree.hpp"
-#include "quests.hpp"
+#include "quests/quests.hpp"
 
 class ServiceManager;
 class Creature;

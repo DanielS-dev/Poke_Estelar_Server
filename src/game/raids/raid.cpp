@@ -8,11 +8,11 @@
 
 #include "raid.hpp"
 
-#include "../core/pugicast.hpp"
-#include "../core/scheduler.hpp"
-#include "../core/tools/systemTools.hpp"
-#include "../core/tools/xmlErro.hpp"
-#include "game.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/scheduler.hpp"
+#include "../../core/tools/systemTools.hpp"
+#include "../../core/tools/xmlErro.hpp"
+#include "../game.hpp"
 
 extern Game g_game;
 

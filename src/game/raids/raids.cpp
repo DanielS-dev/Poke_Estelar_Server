@@ -8,10 +8,10 @@
 
 #include "raids.hpp"
 
-#include "../core/scheduler.hpp"
-#include "../core/tools/random.hpp"
-#include "../core/tools/stringsTools.hpp"
-#include "../core/tools/systemTools.hpp"
+#include "../../core/scheduler.hpp"
+#include "../../core/tools/random.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../core/tools/systemTools.hpp"
 #include "raidLoader.hpp"
 
 extern Scheduler g_scheduler;

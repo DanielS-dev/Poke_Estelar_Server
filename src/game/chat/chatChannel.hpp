@@ -10,7 +10,7 @@
 #include <string>
 #include <utility>
 
-#include "../core/const.hpp"
+#include "../../core/const.hpp"
 
 class Chat;
 class Player;

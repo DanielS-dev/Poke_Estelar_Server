@@ -6,7 +6,7 @@
 #include "chat.hpp"
 #include "chatLoader.hpp"
 #include "chatRules.hpp"
-#include "../entities/player.hpp"
+#include "../../entities/player.hpp"
 
 Chat::Chat():
 	scriptInterface("Chat Interface"),

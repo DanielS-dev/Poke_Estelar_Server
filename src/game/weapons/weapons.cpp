@@ -6,9 +6,9 @@
 #include <cmath>
 #include <iostream>
 
-#include "weapons.hpp"
+#include "../weapons/weapons.hpp"
 
-#include "../items/items.hpp"
+#include "../../items/items.hpp"
 
 Weapons::Weapons()
 {

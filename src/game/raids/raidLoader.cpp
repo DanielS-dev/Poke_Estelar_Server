@@ -11,9 +11,9 @@
 #include "raidLoader.hpp"
 #include "raids.hpp"
 
-#include "../core/pugicast.hpp"
-#include "../core/tools/stringsTools.hpp"
-#include "../core/tools/xmlErro.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../core/tools/xmlErro.hpp"
 
 bool RaidLoader::loadFromXml(Raids& raids)
 {

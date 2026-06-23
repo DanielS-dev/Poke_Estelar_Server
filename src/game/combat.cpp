@@ -6,7 +6,7 @@
 #include "combat.hpp"
 
 #include "game.hpp"
-#include "weapons.hpp"
+#include "weapons/weapons.hpp"
 #include "../config/configmanager.hpp"
 #include "../scripting/events.hpp"
 #include "../entities/monster.hpp" //pota

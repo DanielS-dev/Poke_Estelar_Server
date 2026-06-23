@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <string>
 
-#include "../core/enums.hpp"
+#include "../../core/enums.hpp"
 
 class Commands;
 class Player;

@@ -5,10 +5,10 @@
 
 #include "commandLoader.hpp"
 #include "commands.hpp"
-#include "game.hpp"
-#include "../core/pugicast.hpp"
-#include "../core/tools/stringsTools.hpp"
-#include "../core/tools/xmlErro.hpp"
+#include "../game.hpp"
+#include "../../core/pugicast.hpp"
+#include "../../core/tools/stringsTools.hpp"
+#include "../../core/tools/xmlErro.hpp"
 
 extern Game g_game;
 

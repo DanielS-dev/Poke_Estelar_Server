@@ -6,7 +6,7 @@
 #include <bitset>
 
 #include "../world/bed.hpp"
-#include "../game/chat.hpp"
+#include "../game/chat/chat.hpp"
 #include "../game/combat.hpp"
 #include "../config/configmanager.hpp"
 #include "../scripting/creatureevent.hpp"
@@ -16,7 +16,7 @@
 #include "monster.hpp"
 #include "../game/movement.hpp"
 #include "../core/scheduler.hpp"
-#include "../game/weapons.hpp"
+#include "../game/weapons/weapons.hpp"
 #include "../core/tools/gameEnumTools.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/returnMessageTools.hpp"

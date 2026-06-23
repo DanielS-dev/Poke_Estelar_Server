@@ -5,9 +5,9 @@
 
 #include "chatChannel.hpp"
 #include "chat.hpp"
-#include "game.hpp"
-#include "../core/scheduler.hpp"
-#include "../entities/player.hpp"
+#include "../game.hpp"
+#include "../../core/scheduler.hpp"
+#include "../../entities/player.hpp"
 
 extern Chat* g_chat;
 extern Game g_game;

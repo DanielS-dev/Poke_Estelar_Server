@@ -8,15 +8,15 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/security/ban.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/bed.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/chat.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/chatChannel.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/chatLoader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/chatRules.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chat/chat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chat/chatChannel.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chat/chatLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/chat/chatRules.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/combat.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/command.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/commandLoader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/commandRules.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/commands.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commands/command.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commands/commandLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commands/commandRules.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/commands/commands.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/condition.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
@@ -64,14 +64,14 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/network/protocollogin.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolold.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolstatus.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/quest.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/questLoader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/questMission.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/quests.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/raid.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/raidEvent.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/raidLoader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/raids.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/quests/quest.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/quests/questLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/quests/questMission.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/quests/quests.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raids/raid.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raids/raidEvent.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raids/raidLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/raids/raids.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
@@ -82,10 +82,10 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/thing.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/weapon.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/weaponDistance.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/weaponMelee.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/weaponWand.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weapon.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weaponDistance.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weaponMelee.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weaponWand.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/auths.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/dateTools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/fluidTools.cpp
@@ -99,7 +99,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/items/trashholder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/vocation.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/waitlist.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/weapons.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weapons.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/wildcardtree.cpp
 )
 
