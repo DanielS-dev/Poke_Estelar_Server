@@ -5,6 +5,7 @@
 
 #include "iologindata.hpp"
 #include "../config/configmanager.hpp"
+#include "../core/tools/auths.hpp"
 #include "../game/game.hpp"
 
 extern ConfigManager g_config;

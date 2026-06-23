@@ -10,9 +10,6 @@
 
 void printXMLError(const std::string& where, const std::string& fileName, const pugi::xml_parse_result& result);
 
-std::string transformToSHA1(const std::string& input);
-std::string generateToken(const std::string& secret, uint32_t ticks);
-
 inline bool hasBitSet(uint32_t flag, uint32_t flags) {
 	return (flags & flag) != 0;
 }

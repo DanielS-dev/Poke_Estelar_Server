@@ -211,6 +211,7 @@
     <ClCompile Include="..\src\world\thing.cpp" />
     <ClCompile Include="..\src\world\tile.cpp" />
     <ClCompile Include="..\src\core\tools.cpp" />
+    <ClCompile Include="..\src\core\tools\auths.cpp" />
     <ClCompile Include="..\src\core\tools\stringsTools.cpp" />
     <ClCompile Include="..\src\core\tools\checksum.cpp" />
     <ClCompile Include="..\src\core\tools\random.cpp" />
@@ -299,6 +300,7 @@
     <ClInclude Include="..\src\core\thread_holder_base.hpp" />
     <ClInclude Include="..\src\world\tile.hpp" />
     <ClInclude Include="..\src\core\tools.hpp" />
+    <ClInclude Include="..\src\core\tools\auths.hpp" />
     <ClInclude Include="..\src\core\tools\stringsTools.hpp" />
     <ClInclude Include="..\src\core\tools\checksum.hpp" />
     <ClInclude Include="..\src\core\tools\random.hpp" />
