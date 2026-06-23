@@ -9,7 +9,7 @@
 #include "../game/game.hpp"
 #include "../scripting/actions.hpp"
 #include "../config/configmanager.hpp"
-#include "../game/spells.hpp"
+#include "../game/spells/spells.hpp"
 #include "../scripting/talkaction.hpp"
 #include "../game/movement/movement.hpp"
 #include "../game/weapons/weapons.hpp"

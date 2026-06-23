@@ -119,7 +119,15 @@ Contém os sistemas centrais de gameplay.
 - `raids/raidEvent.cpp/.hpp`: eventos de raid, anúncios, spawns e scripts.
 - `raids/raidLoader.cpp/.hpp`: carregamento das raids a partir dos XMLs.
 - `raids/raids.cpp/.hpp`: fachada, agendamento e coleção de raids.
-- `spells.cpp/.hpp`: spells, runes e regras de conjuração.
+- `spells/spells.cpp/.hpp`: fachada e registro do sistema de spells.
+- `spells/spell.cpp/.hpp`: base comum, custos e efeitos auxiliares.
+- `spells/spellConfig.cpp`: configuração XML da base comum de spell.
+- `spells/spellChecks.cpp`: validações comuns de cast, instant spell e rune spell.
+- `spells/combatSpell.cpp/.hpp`: spell baseada em combate e execução Lua de combate.
+- `spells/instantSpell.cpp/.hpp`: instant spells, fala, parâmetros e execução Lua.
+- `spells/instantSpellHandlers.cpp`: funções nativas de instant spell, como house, exiva, summon, levitate e illusion.
+- `spells/conjureSpell.cpp/.hpp`: spells de conjuração de itens.
+- `spells/runeSpell.cpp/.hpp`: runes, uso por item e callbacks nativos.
 - `weapons/weapon.cpp/.hpp`: base comum de armas, validações, consumo e execução de scripts.
 - `weapons/weaponDistance.cpp/.hpp`: armas à distância, munições, chance de acerto e dano.
 - `weapons/weaponMelee.cpp/.hpp`: armas corpo a corpo, skill e dano elemental.

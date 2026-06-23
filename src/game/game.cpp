@@ -14,7 +14,7 @@
 #include "../persistence/iologindata.hpp"
 #include "../persistence/iomarket.hpp"
 #include "../scripting/talkaction.hpp"
-#include "spells.hpp"
+#include "spells/spells.hpp"
 #include "../config/configmanager.hpp"
 #include "../app/services.hpp"
 #include "../scripting/globalevent.hpp"

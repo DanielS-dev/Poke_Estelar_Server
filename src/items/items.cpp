@@ -4,7 +4,7 @@
 #include "otpch.hpp"
 
 #include "items.hpp"
-#include "../game/spells.hpp"
+#include "../game/spells/spells.hpp"
 #include "../game/movement/movement.hpp"
 #include "../game/weapons/weapons.hpp"
 

@@ -5,7 +5,7 @@
 
 #include "monster.hpp"
 #include "../game/game.hpp"
-#include "../game/spells.hpp"
+#include "../game/spells/spells.hpp"
 #include "../config/configmanager.hpp" //pota
 #include "../core/tools/positionTools.hpp"
 #include "../core/tools/random.hpp"

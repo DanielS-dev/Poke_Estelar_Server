@@ -13,7 +13,7 @@
 #include "../world/bed.hpp"
 
 #include "../scripting/actions.hpp"
-#include "../game/spells.hpp"
+#include "../game/spells/spells.hpp"
 #include "../core/tools/dateTools.hpp"
 #include "../core/tools/gameEnumTools.hpp"
 #include "../core/tools/stringsTools.hpp"

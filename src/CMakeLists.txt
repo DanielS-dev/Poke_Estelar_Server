@@ -80,7 +80,15 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/core/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/spawn.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/spells.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/spells.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/combatSpell.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/spell.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/spellConfig.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/spellChecks.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/instantSpell.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/instantSpellHandlers.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/conjureSpell.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/spells/runeSpell.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/talkaction.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp

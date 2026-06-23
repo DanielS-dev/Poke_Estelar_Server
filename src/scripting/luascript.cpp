@@ -10,7 +10,7 @@
 #include "../entities/player.hpp"
 #include "../game/game.hpp"
 #include "../network/protocolstatus.hpp"
-#include "../game/spells.hpp"
+#include "../game/spells/spells.hpp"
 #include "../persistence/iologindata.hpp"
 #include "../config/configmanager.hpp"
 #include "../world/teleport.hpp"

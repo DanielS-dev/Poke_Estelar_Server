@@ -9,7 +9,7 @@
 #include "../items/container.hpp"
 #include "../game/game.hpp"
 #include "../core/pugicast.hpp"
-#include "../game/spells.hpp"
+#include "../game/spells/spells.hpp"
 
 extern Game g_game;
 extern Spells* g_spells;
