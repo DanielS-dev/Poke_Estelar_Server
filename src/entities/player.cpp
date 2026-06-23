@@ -17,7 +17,9 @@
 #include "../game/movement.hpp"
 #include "../core/scheduler.hpp"
 #include "../game/weapons.hpp"
+#include "../core/tools/gameEnumTools.hpp"
 #include "../core/tools/random.hpp"
+#include "../core/tools/returnMessageTools.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;

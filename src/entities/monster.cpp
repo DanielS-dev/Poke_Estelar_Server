@@ -7,6 +7,7 @@
 #include "../game/game.hpp"
 #include "../game/spells.hpp"
 #include "../config/configmanager.hpp" //pota
+#include "../core/tools/positionTools.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 

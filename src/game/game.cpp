@@ -24,6 +24,8 @@
 #include "../persistence/databasetasks.hpp"
 #include "../core/tools/auths.hpp"
 #include "../core/tools/dateTools.hpp"
+#include "../core/tools/fluidTools.hpp"
+#include "../core/tools/positionTools.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 #include "../core/tools/xmlErro.hpp"

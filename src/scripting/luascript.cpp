@@ -21,6 +21,8 @@
 #include "../persistence/databasetasks.hpp"
 #include "events.hpp" //pota
 #include "../core/tools/random.hpp"
+#include "../core/tools/gameEnumTools.hpp"
+#include "../core/tools/returnMessageTools.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern Chat* g_chat;

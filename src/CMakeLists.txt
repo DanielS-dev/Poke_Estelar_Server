@@ -70,9 +70,12 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/thing.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
-	${CMAKE_CURRENT_LIST_DIR}/core/tools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/auths.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/dateTools.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools/fluidTools.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools/gameEnumTools.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools/positionTools.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/tools/returnMessageTools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/stringsTools.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/xmlErro.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/tools/checksum.cpp

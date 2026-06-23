@@ -5,7 +5,7 @@
 
 #include "../config/configmanager.hpp"
 #include "globalevent.hpp"
-#include "../core/tools.hpp"
+#include "../core/tools/systemTools.hpp"
 #include "../core/scheduler.hpp"
 #include "../core/pugicast.hpp"
 #include "../core/tools/stringsTools.hpp"

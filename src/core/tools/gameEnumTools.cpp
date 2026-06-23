@@ -3,119 +3,7 @@
 
 #include "otpch.hpp"
 
-#include "tools.hpp"
-#include "../config/configmanager.hpp"
-
-extern ConfigManager g_config;
-
-Direction getDirection(const std::string& string)
-{
-	Direction direction = DIRECTION_NORTH;
-
-	if (string == "north" || string == "n" || string == "0") {
-		direction = DIRECTION_NORTH;
-	} else if (string == "east" || string == "e" || string == "1") {
-		direction = DIRECTION_EAST;
-	} else if (string == "south" || string == "s" || string == "2") {
-		direction = DIRECTION_SOUTH;
-	} else if (string == "west" || string == "w" || string == "3") {
-		direction = DIRECTION_WEST;
-	} else if (string == "southwest" || string == "south west" || string == "south-west" || string == "sw" || string == "4") {
-		direction = DIRECTION_SOUTHWEST;
-	} else if (string == "southeast" || string == "south east" || string == "south-east" || string == "se" || string == "5") {
-		direction = DIRECTION_SOUTHEAST;
-	} else if (string == "northwest" || string == "north west" || string == "north-west" || string == "nw" || string == "6") {
-		direction = DIRECTION_NORTHWEST;
-	} else if (string == "northeast" || string == "north east" || string == "north-east" || string == "ne" || string == "7") {
-		direction = DIRECTION_NORTHEAST;
-	}
-
-	return direction;
-}
-
-Position getNextPosition(Direction direction, Position pos)
-{
-	switch (direction) {
-		case DIRECTION_NORTH:
-			pos.y--;
-			break;
-
-		case DIRECTION_SOUTH:
-			pos.y++;
-			break;
-
-		case DIRECTION_WEST:
-			pos.x--;
-			break;
-
-		case DIRECTION_EAST:
-			pos.x++;
-			break;
-
-		case DIRECTION_SOUTHWEST:
-			pos.x--;
-			pos.y++;
-			break;
-
-		case DIRECTION_NORTHWEST:
-			pos.x--;
-			pos.y--;
-			break;
-
-		case DIRECTION_NORTHEAST:
-			pos.x++;
-			pos.y--;
-			break;
-
-		case DIRECTION_SOUTHEAST:
-			pos.x++;
-			pos.y++;
-			break;
-
-		default:
-			break;
-	}
-
-	return pos;
-}
-
-Direction getDirectionTo(const Position& from, const Position& to)
-{
-	Direction dir;
-
-	int32_t x_offset = Position::getOffsetX(from, to);
-	if (x_offset < 0) {
-		dir = DIRECTION_EAST;
-		x_offset = std::abs(x_offset);
-	} else {
-		dir = DIRECTION_WEST;
-	}
-
-	int32_t y_offset = Position::getOffsetY(from, to);
-	if (y_offset >= 0) {
-		if (y_offset > x_offset) {
-			dir = DIRECTION_NORTH;
-		} else if (y_offset == x_offset) {
-			if (dir == DIRECTION_EAST) {
-				dir = DIRECTION_NORTHEAST;
-			} else {
-				dir = DIRECTION_NORTHWEST;
-			}
-		}
-	} else {
-		y_offset = std::abs(y_offset);
-		if (y_offset > x_offset) {
-			dir = DIRECTION_SOUTH;
-		} else if (y_offset == x_offset) {
-			if (dir == DIRECTION_EAST) {
-				dir = DIRECTION_SOUTHEAST;
-			} else {
-				dir = DIRECTION_SOUTHWEST;
-			}
-		}
-	}
-	return dir;
-}
+#include "gameEnumTools.hpp"
 
 struct MagicEffectNames {
 	const char* name;
@@ -434,35 +322,16 @@ Skulls_t getSkullType(const std::string& strValue)
 std::string getSkillName(uint8_t skillid)
 {
 	switch (skillid) {
-		case SKILL_FIST:
-			return "fist fighting";
-
-		case SKILL_CLUB:
-			return "club fighting";
-
-		case SKILL_SWORD:
-			return "sword fighting";
-
-		case SKILL_AXE:
-			return "axe fighting";
-
-		case SKILL_DISTANCE:
-			return "distance fighting";
-
-		case SKILL_SHIELD:
-			return "shielding";
-
-		case SKILL_FISHING:
-			return "fishing";
-
-		case SKILL_MAGLEVEL:
-			return "magic level";
-
-		case SKILL_LEVEL:
-			return "level";
-
-		default:
-			return "unknown";
+		case SKILL_FIST: return "fist fighting";
+		case SKILL_CLUB: return "club fighting";
+		case SKILL_SWORD: return "sword fighting";
+		case SKILL_AXE: return "axe fighting";
+		case SKILL_DISTANCE: return "distance fighting";
+		case SKILL_SHIELD: return "shielding";
+		case SKILL_FISHING: return "fishing";
+		case SKILL_MAGLEVEL: return "magic level";
+		case SKILL_LEVEL: return "level";
+		default: return "unknown";
 	}
 }
 
@@ -482,90 +351,41 @@ std::string getWeaponName(WeaponType_t weaponType)
 size_t combatTypeToIndex(CombatType_t combatType)
 {
 	switch (combatType) {
-		case COMBAT_PHYSICALDAMAGE:
-			return 0;
-		case COMBAT_ENERGYDAMAGE:
-			return 1;
-		case COMBAT_EARTHDAMAGE:
-			return 2;
-		case COMBAT_FIREDAMAGE:
-			return 3;
-		case COMBAT_UNDEFINEDDAMAGE:
-			return 4;
-		case COMBAT_LIFEDRAIN:
-			return 5;
-		case COMBAT_MANADRAIN:
-			return 6;
-		case COMBAT_HEALING:
-			return 7;
-		case COMBAT_DROWNDAMAGE:
-			return 8;
-		case COMBAT_ICEDAMAGE:
-			return 9;
-		case COMBAT_HOLYDAMAGE:
-			return 10;
-		case COMBAT_DEATHDAMAGE:
-			return 11;
-		case COMBAT_PSYCHICDAMAGE: //pota
-			return 12;
-		case COMBAT_GRASSDAMAGE: //pota
-			return 13;
-		case COMBAT_NORMALDAMAGE: //pota
-			return 14;
-		case COMBAT_WATERDAMAGE: //pota
-			return 15;
-		case COMBAT_FLYINGDAMAGE: //pota
-			return 16;
-		case COMBAT_POISONDAMAGE: //pota
-			return 17;
-		case COMBAT_ELECTRICDAMAGE: //pota
-			return 18;
-		case COMBAT_GROUNDDAMAGE: //pota
-			return 19;
-		case COMBAT_ROCKDAMAGE: //pota
-			return 20;
-		case COMBAT_BUGDAMAGE: //pota
-			return 21;
-		case COMBAT_DRAGONDAMAGE: //pota
-			return 22;
-		case COMBAT_GHOSTDAMAGE: //pota
-			return 23;
-		case COMBAT_DARKDAMAGE: //pota
-			return 24;
-		case COMBAT_STEELDAMAGE: //pota
-			return 25;
-		case COMBAT_FAIRYDAMAGE: //pota
-			return 26;
-		case COMBAT_FIGHTINGDAMAGE: //pota
-			return 27;
-		default:
-			return 0;
+		case COMBAT_PHYSICALDAMAGE: return 0;
+		case COMBAT_ENERGYDAMAGE: return 1;
+		case COMBAT_EARTHDAMAGE: return 2;
+		case COMBAT_FIREDAMAGE: return 3;
+		case COMBAT_UNDEFINEDDAMAGE: return 4;
+		case COMBAT_LIFEDRAIN: return 5;
+		case COMBAT_MANADRAIN: return 6;
+		case COMBAT_HEALING: return 7;
+		case COMBAT_DROWNDAMAGE: return 8;
+		case COMBAT_ICEDAMAGE: return 9;
+		case COMBAT_HOLYDAMAGE: return 10;
+		case COMBAT_DEATHDAMAGE: return 11;
+		case COMBAT_PSYCHICDAMAGE: return 12;
+		case COMBAT_GRASSDAMAGE: return 13;
+		case COMBAT_NORMALDAMAGE: return 14;
+		case COMBAT_WATERDAMAGE: return 15;
+		case COMBAT_FLYINGDAMAGE: return 16;
+		case COMBAT_POISONDAMAGE: return 17;
+		case COMBAT_ELECTRICDAMAGE: return 18;
+		case COMBAT_GROUNDDAMAGE: return 19;
+		case COMBAT_ROCKDAMAGE: return 20;
+		case COMBAT_BUGDAMAGE: return 21;
+		case COMBAT_DRAGONDAMAGE: return 22;
+		case COMBAT_GHOSTDAMAGE: return 23;
+		case COMBAT_DARKDAMAGE: return 24;
+		case COMBAT_STEELDAMAGE: return 25;
+		case COMBAT_FAIRYDAMAGE: return 26;
+		case COMBAT_FIGHTINGDAMAGE: return 27;
+		default: return 0;
 	}
 }
 
 CombatType_t indexToCombatType(size_t v)
 {
 	return static_cast<CombatType_t>(1 << v);
-}
-
-uint8_t serverFluidToClient(uint8_t serverFluid)
-{
-	uint8_t size = sizeof(clientToServerFluidMap) / sizeof(uint8_t);
-	for (uint8_t i = 0; i < size; ++i) {
-		if (clientToServerFluidMap[i] == serverFluid) {
-			return i;
-		}
-	}
-	return 0;
-}
-
-uint8_t clientFluidToServer(uint8_t clientFluid)
-{
-	uint8_t size = sizeof(clientToServerFluidMap) / sizeof(uint8_t);
-	if (clientFluid >= size) {
-		return 0;
-	}
-	return clientToServerFluidMap[clientFluid];
 }
 
 itemAttrTypes stringToItemAttribute(const std::string& str)
@@ -618,190 +438,4 @@ itemAttrTypes stringToItemAttribute(const std::string& str)
 		return ITEM_ATTRIBUTE_DOORID;
 	}
 	return ITEM_ATTRIBUTE_NONE;
-}
-
-const char* getReturnMessage(ReturnValue value)
-{
-	switch (value) {
-		case RETURNVALUE_DESTINATIONOUTOFREACH:
-			return "Destination is out of reach.";
-
-		case RETURNVALUE_NOTMOVEABLE:
-			return "You cannot move this object.";
-
-		case RETURNVALUE_DROPTWOHANDEDITEM:
-			return "Drop the double-handed object first.";
-
-		case RETURNVALUE_BOTHHANDSNEEDTOBEFREE:
-			return "Both hands need to be free.";
-
-		case RETURNVALUE_CANNOTBEDRESSED:
-			return "You cannot dress this object there.";
-
-		case RETURNVALUE_PUTTHISOBJECTINYOURHAND:
-			return "Put this object in your hand.";
-
-		case RETURNVALUE_PUTTHISOBJECTINBOTHHANDS:
-			return "Put this object in both hands.";
-
-		case RETURNVALUE_CANONLYUSEONEWEAPON:
-			return "You may only use one weapon.";
-
-		case RETURNVALUE_TOOFARAWAY:
-			return "Too far away.";
-
-		case RETURNVALUE_FIRSTGODOWNSTAIRS:
-			return "First go downstairs.";
-
-		case RETURNVALUE_FIRSTGOUPSTAIRS:
-			return "First go upstairs.";
-
-		case RETURNVALUE_NOTENOUGHCAPACITY:
-			return "This object is too heavy for you to carry.";
-
-		case RETURNVALUE_CONTAINERNOTENOUGHROOM:
-			return "You cannot put more objects in this container.";
-
-		case RETURNVALUE_NEEDEXCHANGE:
-		case RETURNVALUE_NOTENOUGHROOM:
-			return "There is not enough room.";
-
-		case RETURNVALUE_CANNOTPICKUP:
-			return "You cannot take this object.";
-
-		case RETURNVALUE_CANNOTTHROW:
-			return "You cannot throw there.";
-
-		case RETURNVALUE_THEREISNOWAY:
-			return "There is no way.";
-
-		case RETURNVALUE_THISISIMPOSSIBLE:
-			return "This is impossible.";
-
-		case RETURNVALUE_PLAYERISPZLOCKED:
-			return "You can not enter a protection zone after attacking another player.";
-
-		case RETURNVALUE_PLAYERISNOTINVITED:
-			return "You are not invited.";
-
-		case RETURNVALUE_CREATUREDOESNOTEXIST:
-			return "Creature does not exist.";
-
-		case RETURNVALUE_DEPOTISFULL:
-			return "You cannot put more items in this depot.";
-
-		case RETURNVALUE_CANNOTUSETHISOBJECT:
-			return "You cannot use this object.";
-
-		case RETURNVALUE_PLAYERWITHTHISNAMEISNOTONLINE:
-			return "A player with this name is not online.";
-
-		case RETURNVALUE_NOTREQUIREDLEVELTOUSERUNE:
-			return "You do not have the required magic level to use this rune.";
-
-		case RETURNVALUE_YOUAREALREADYTRADING:
-			return "You are already trading.";
-
-		case RETURNVALUE_THISPLAYERISALREADYTRADING:
-			return "This player is already trading.";
-
-		case RETURNVALUE_YOUMAYNOTLOGOUTDURINGAFIGHT:
-			return "You may not logout during or immediately after a fight!";
-
-		case RETURNVALUE_DIRECTPLAYERSHOOT:
-			return "You are not allowed to shoot directly on players.";
-
-		case RETURNVALUE_NOTENOUGHLEVEL:
-			return "You do not have enough level.";
-
-		case RETURNVALUE_NOTENOUGHMAGICLEVEL:
-			return "You do not have enough magic level.";
-
-		case RETURNVALUE_NOTENOUGHMANA:
-			return "You do not have enough mana.";
-
-		case RETURNVALUE_NOTENOUGHSOUL:
-			return "You do not have enough soul.";
-
-		case RETURNVALUE_YOUAREEXHAUSTED:
-			return "You are exhausted.";
-
-		case RETURNVALUE_CANONLYUSETHISRUNEONCREATURES:
-			return "You can only use this rune on creatures.";
-
-		case RETURNVALUE_PLAYERISNOTREACHABLE:
-			return "Player is not reachable.";
-
-		case RETURNVALUE_CREATUREISNOTREACHABLE:
-			return "Creature is not reachable.";
-
-		case RETURNVALUE_ACTIONNOTPERMITTEDINPROTECTIONZONE:
-			return "This action is not permitted in a protection zone.";
-
-		case RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER:
-			return "You may not attack this player.";
-
-		case RETURNVALUE_YOUMAYNOTATTACKTHISCREATURE:
-			return "You may not attack this creature.";
-
-		case RETURNVALUE_YOUMAYNOTATTACKAPERSONINPROTECTIONZONE:
-			return "You may not attack a person in a protection zone.";
-
-		case RETURNVALUE_YOUMAYNOTATTACKAPERSONWHILEINPROTECTIONZONE:
-			return "You may not attack a person while you are in a protection zone.";
-
-		case RETURNVALUE_YOUCANONLYUSEITONCREATURES:
-			return "You can only use it on creatures.";
-
-		case RETURNVALUE_TURNSECUREMODETOATTACKUNMARKEDPLAYERS:
-			return "Turn secure mode off if you really want to attack unmarked players.";
-
-		case RETURNVALUE_YOUNEEDPREMIUMACCOUNT:
-			return "You need a premium account.";
-
-		case RETURNVALUE_YOUNEEDTOLEARNTHISSPELL:
-			return "You need to learn this spell first.";
-
-		case RETURNVALUE_YOURVOCATIONCANNOTUSETHISSPELL:
-			return "Your vocation cannot use this spell.";
-
-		case RETURNVALUE_YOUNEEDAWEAPONTOUSETHISSPELL:
-			return "You need to equip a weapon to use this spell.";
-
-		case RETURNVALUE_PLAYERISPZLOCKEDLEAVEPVPZONE:
-			return "You can not leave a pvp zone after attacking another player.";
-
-		case RETURNVALUE_PLAYERISPZLOCKEDENTERPVPZONE:
-			return "You can not enter a pvp zone after attacking another player.";
-
-		case RETURNVALUE_ACTIONNOTPERMITTEDINANOPVPZONE:
-			return "This action is not permitted in a non pvp zone.";
-
-		case RETURNVALUE_YOUCANNOTLOGOUTHERE:
-			return "You can not logout here.";
-
-		case RETURNVALUE_YOUNEEDAMAGICITEMTOCASTSPELL:
-			return "You need a magic item to cast this spell.";
-
-		case RETURNVALUE_CANNOTCONJUREITEMHERE:
-			return "You cannot conjure items here.";
-
-		case RETURNVALUE_YOUNEEDTOSPLITYOURSPEARS:
-			return "You need to split your spears first.";
-
-		case RETURNVALUE_NAMEISTOOAMBIGIOUS:
-			return "Name is too ambigious.";
-
-		case RETURNVALUE_CANONLYUSEONESHIELD:
-			return "You may use only one shield.";
-
-		case RETURNVALUE_NOPARTYMEMBERSINRANGE:
-			return "No party members in range.";
-
-		case RETURNVALUE_YOUARENOTTHEOWNER:
-			return "You are not the owner.";
-
-		default: // RETURNVALUE_NOTPOSSIBLE, etc
-			return "Sorry, not possible.";
-	}
 }

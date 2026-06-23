@@ -8,6 +8,7 @@
 #include "game.hpp"
 #include "../core/pugicast.hpp"
 #include "weapons.hpp"
+#include "../core/tools/gameEnumTools.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 

@@ -5,6 +5,7 @@
 
 #include "bed.hpp"
 #include "../game/game.hpp"
+#include "../core/tools/positionTools.hpp"
 #include "../persistence/iologindata.hpp"
 #include "../core/scheduler.hpp"
 

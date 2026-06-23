@@ -9,6 +9,8 @@
 #include "../game/weapons.hpp"
 
 #include "../core/pugicast.hpp"
+#include "../core/tools/gameEnumTools.hpp"
+#include "../core/tools/positionTools.hpp"
 #include "../core/tools/stringsTools.hpp"
 #include "../core/tools/xmlErro.hpp"
 

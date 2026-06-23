@@ -4,7 +4,7 @@
 #include "otpch.hpp"
 
 #include "depotchest.hpp"
-#include "../core/tools.hpp"
+#include "../core/tools/systemTools.hpp"
 
 DepotChest::DepotChest(uint16_t type) :
 	Container(type), maxDepotItems(1500) {}

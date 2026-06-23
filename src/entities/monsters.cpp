@@ -11,6 +11,7 @@
 #include "../config/configmanager.hpp"
 #include "../game/game.hpp"
 #include "player.hpp"
+#include "../core/tools/gameEnumTools.hpp"
 #include "../core/tools/random.hpp"
 #include "../core/tools/stringsTools.hpp"
 #include "../core/tools/xmlErro.hpp"

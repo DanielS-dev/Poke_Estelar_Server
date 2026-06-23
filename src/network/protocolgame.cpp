@@ -21,6 +21,8 @@
 #include "../core/scheduler.hpp"
 #include "../core/tools/checksum.hpp"
 #include "../core/tools/dateTools.hpp"
+#include "../core/tools/fluidTools.hpp"
+#include "../core/tools/gameEnumTools.hpp"
 #include "../core/tools/random.hpp"
 
 #include "../entities/monster.hpp" //pota

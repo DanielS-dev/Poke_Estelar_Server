@@ -6,7 +6,7 @@
 #include "ban.hpp"
 #include "../persistence/database.hpp"
 #include "../persistence/databasetasks.hpp"
-#include "../core/tools.hpp"
+#include "../core/tools/systemTools.hpp"
 
 bool Ban::acceptConnection(uint32_t clientip)
 {
