@@ -13,7 +13,7 @@
 #include "../../persistence/iologindata.hpp"
 #include "../../config/configmanager.hpp"
 #include "../spells.hpp"
-#include "../movement.hpp"
+#include "../movement/movement.hpp"
 #include "../weapons/weapons.hpp"
 #include "../../scripting/globalevent.hpp"
 #include "../../entities/monster.hpp"

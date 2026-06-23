@@ -12,7 +12,7 @@
 #include "../game/game.hpp"
 #include "../items/mailbox.hpp"
 #include "../entities/monster.hpp"
-#include "../game/movement.hpp"
+#include "../game/movement/movement.hpp"
 #include "teleport.hpp"
 #include "../items/trashholder.hpp"
 

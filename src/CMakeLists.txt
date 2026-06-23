@@ -51,7 +51,11 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/entities/monster.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/monsters.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/mounts.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/movement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/movement/movement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEvent.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEventConfig.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEventHandlers.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEventScript.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/networkmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/npc.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/outfit.cpp

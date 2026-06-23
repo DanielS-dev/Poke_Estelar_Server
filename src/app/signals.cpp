@@ -11,7 +11,7 @@
 #include "../config/configmanager.hpp"
 #include "../game/spells.hpp"
 #include "../scripting/talkaction.hpp"
-#include "../game/movement.hpp"
+#include "../game/movement/movement.hpp"
 #include "../game/weapons/weapons.hpp"
 #include "../game/raids/raids.hpp"
 #include "../game/quests/quests.hpp"

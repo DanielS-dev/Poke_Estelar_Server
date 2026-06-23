@@ -9,7 +9,7 @@
 #include "../game/chat/chat.hpp"
 #include "talkaction.hpp"
 #include "../game/spells.hpp"
-#include "../game/movement.hpp"
+#include "../game/movement/movement.hpp"
 #include "../game/weapons/weapons.hpp"
 #include "globalevent.hpp"
 #include "events.hpp"

@@ -105,7 +105,12 @@ Contém os sistemas centrais de gameplay.
 - `commands/commands.cpp/.hpp`: fachada e orquestração dos comandos administrativos ou de servidor.
 - `condition.cpp/.hpp`: condições aplicadas em criaturas.
 - `game.cpp/.hpp`: núcleo de coordenação da lógica do jogo.
-- `movement.cpp/.hpp`: eventos e regras de movement.
+- `movement/movement.cpp/.hpp`: fachada e registro dos eventos de movement.
+- `movement/movementEvent.cpp/.hpp`: evento individual de movement, ciclo de vida e dados de equip.
+- `movement/movementEventConfig.cpp`: configuração XML, nome de evento Lua e resolução de funções nativas.
+- `movement/movementEventHandlers.cpp`: callbacks nativos de field, equip e deequip.
+- `movement/movementEventScript.cpp`: disparo e execução dos callbacks Lua.
+- `movement/movementTypes.hpp`: enums e aliases compartilhados pelo módulo de movement.
 - `quests/quest.cpp/.hpp`: entidade de quest, progresso geral e contagem de missões.
 - `quests/questLoader.cpp/.hpp`: carregamento das quests e missões a partir do XML.
 - `quests/questMission.cpp/.hpp`: entidade de missão, estado, descrição e conclusão.

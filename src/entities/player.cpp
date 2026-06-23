@@ -14,7 +14,7 @@
 #include "../game/game.hpp"
 #include "../persistence/iologindata.hpp"
 #include "monster.hpp"
-#include "../game/movement.hpp"
+#include "../game/movement/movement.hpp"
 #include "../core/scheduler.hpp"
 #include "../game/weapons/weapons.hpp"
 #include "../core/tools/gameEnumTools.hpp"

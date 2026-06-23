@@ -180,7 +180,11 @@
     <ClCompile Include="..\src\entities\monster.cpp" />
     <ClCompile Include="..\src\entities\monsters.cpp" />
     <ClCompile Include="..\src\entities\mounts.cpp" />
-    <ClCompile Include="..\src\game\movement.cpp" />
+    <ClCompile Include="..\src\game\movement\movement.cpp" />
+    <ClCompile Include="..\src\game\movement\movementEvent.cpp" />
+    <ClCompile Include="..\src\game\movement\movementEventConfig.cpp" />
+    <ClCompile Include="..\src\game\movement\movementEventHandlers.cpp" />
+    <ClCompile Include="..\src\game\movement\movementEventScript.cpp" />
     <ClCompile Include="..\src\network\networkmessage.cpp" />
     <ClCompile Include="..\src\entities\npc.cpp" />
     <ClCompile Include="..\src\core\otpch.cpp">
@@ -296,7 +300,9 @@
     <ClInclude Include="..\src\entities\monster.hpp" />
     <ClInclude Include="..\src\entities\monsters.hpp" />
     <ClInclude Include="..\src\entities\mounts.hpp" />
-    <ClInclude Include="..\src\game\movement.hpp" />
+    <ClInclude Include="..\src\game\movement\movement.hpp" />
+    <ClInclude Include="..\src\game\movement\movementEvent.hpp" />
+    <ClInclude Include="..\src\game\movement\movementTypes.hpp" />
     <ClInclude Include="..\src\network\networkmessage.hpp" />
     <ClInclude Include="..\src\entities\npc.hpp" />
     <ClInclude Include="..\src\core\otpch.hpp" />

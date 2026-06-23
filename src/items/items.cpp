@@ -5,7 +5,7 @@
 
 #include "items.hpp"
 #include "../game/spells.hpp"
-#include "../game/movement.hpp"
+#include "../game/movement/movement.hpp"
 #include "../game/weapons/weapons.hpp"
 
 #include "../core/pugicast.hpp"
