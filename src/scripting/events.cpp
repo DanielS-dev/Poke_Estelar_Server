@@ -5,6 +5,7 @@
 
 #include "events.hpp"
 #include "../core/tools.hpp"
+#include "../core/tools/stringsTools.hpp"
 #include "../items/item.hpp"
 #include "../entities/player.hpp"
 

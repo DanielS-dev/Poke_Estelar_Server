@@ -5,6 +5,7 @@
 
 #include "creatureevent.hpp"
 #include "../core/tools.hpp"
+#include "../core/tools/stringsTools.hpp"
 #include "../entities/player.hpp"
 
 CreatureEvents::CreatureEvents() :

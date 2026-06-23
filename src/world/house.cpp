@@ -10,6 +10,7 @@
 #include "../game/game.hpp"
 #include "../config/configmanager.hpp"
 #include "bed.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;
 extern Game g_game;

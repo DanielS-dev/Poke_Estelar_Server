@@ -8,6 +8,7 @@
 #include "../core/tools.hpp"
 #include "../core/scheduler.hpp"
 #include "../core/pugicast.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;
 

@@ -6,6 +6,7 @@
 #include "../entities/player.hpp"
 #include "talkaction.hpp"
 #include "../core/pugicast.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 TalkActions::TalkActions()
 	: scriptInterface("TalkAction Interface")

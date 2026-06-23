@@ -9,6 +9,7 @@
 #include "../game/weapons.hpp"
 
 #include "../core/pugicast.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;

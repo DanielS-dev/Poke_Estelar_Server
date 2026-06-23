@@ -8,6 +8,7 @@
 #include "../core/pugicast.hpp"
 
 #include "movement.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern Game g_game;
 extern Vocations g_vocations;

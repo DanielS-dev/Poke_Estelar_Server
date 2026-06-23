@@ -19,6 +19,7 @@
 #include "../entities/monster.hpp"
 #include "../core/scheduler.hpp"
 #include "../scripting/events.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 #include "../core/pugicast.hpp"
 

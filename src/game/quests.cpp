@@ -6,6 +6,7 @@
 #include "quests.hpp"
 
 #include "../core/pugicast.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 std::string Mission::getDescription(Player* player) const
 {

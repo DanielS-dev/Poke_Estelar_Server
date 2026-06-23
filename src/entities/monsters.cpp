@@ -12,6 +12,7 @@
 #include "../game/game.hpp"
 #include "player.hpp"
 #include "../core/random.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 #include "../core/pugicast.hpp"
 

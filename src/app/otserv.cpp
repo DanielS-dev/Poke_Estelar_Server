@@ -18,6 +18,7 @@
 #include "../persistence/databasemanager.hpp"
 #include "../core/scheduler.hpp"
 #include "../persistence/databasetasks.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 DatabaseTasks g_databaseTasks;
 Dispatcher g_dispatcher;

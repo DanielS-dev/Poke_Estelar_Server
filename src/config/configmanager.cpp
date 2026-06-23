@@ -5,6 +5,7 @@
 
 #include "configmanager.hpp"
 #include "../game/game.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 #if LUA_VERSION_NUM >= 502
 #undef lua_strlen

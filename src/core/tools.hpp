@@ -13,18 +13,6 @@ void printXMLError(const std::string& where, const std::string& fileName, const 
 std::string transformToSHA1(const std::string& input);
 std::string generateToken(const std::string& secret, uint32_t ticks);
 
-void replaceString(std::string& str, const std::string& sought, const std::string& replacement);
-void trim_right(std::string& source, char t);
-void trim_left(std::string& source, char t);
-void toLowerCaseString(std::string& source);
-std::string asLowerCaseString(std::string source);
-std::string asUpperCaseString(std::string source);
-
-typedef std::vector<std::string> StringVec;
-typedef std::vector<int32_t> IntegerVec;
-
-StringVec explodeString(const std::string& inString, const std::string& separator, int32_t limit = -1);
-IntegerVec vectorAtoi(const StringVec& stringVector);
 inline bool hasBitSet(uint32_t flag, uint32_t flags) {
 	return (flags & flag) != 0;
 }
@@ -33,13 +21,9 @@ Direction getDirection(const std::string& string);
 Position getNextPosition(Direction direction, Position pos);
 Direction getDirectionTo(const Position& from, const Position& to);
 
-std::string getFirstLine(const std::string& str);
-
 std::string formatDate(time_t time);
 std::string formatDateShort(time_t time);
 std::string convertIPToString(uint32_t ip);
-
-void trimString(std::string& str);
 
 MagicEffectClasses getMagicEffect(const std::string& strValue);
 ShootType_t getShootType(const std::string& strValue);
@@ -50,10 +34,6 @@ Skulls_t getSkullType(const std::string& strValue);
 std::string getCombatName(CombatType_t combatType);
 
 std::string getSkillName(uint8_t skillid);
-
-std::string ucfirst(std::string str);
-std::string ucwords(std::string str);
-bool booleanString(const std::string& str);
 
 std::string getWeaponName(WeaponType_t weaponType);
 

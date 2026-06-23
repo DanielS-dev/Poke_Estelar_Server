@@ -9,6 +9,7 @@
 #include "../entities/monster.hpp"
 #include "../core/pugicast.hpp"
 #include "spells.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern Game g_game;
 extern Spells* g_spells;
