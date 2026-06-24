@@ -1,29 +1,29 @@
-// This file is part of The Forgotten Server.
+﻿// This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "otpch.hpp"
 
 #include <boost/range/adaptor/reversed.hpp>
 
-#include "luascript.hpp"
-#include "../events/events.hpp" //pota
-#include "../../game/chat/chat.hpp"
-#include "../../entities/player.hpp"
-#include "../../game/game.hpp"
-#include "../../network/protocolstatus.hpp"
-#include "../../game/spells/spells.hpp"
-#include "../../persistence/login/iologindata.hpp"
-#include "../../config/configmanager.hpp"
-#include "../../world/teleport.hpp"
-#include "../../persistence/databasemanager.hpp"
-#include "../../world/bed.hpp"
-#include "../../entities/monster.hpp"
-#include "../../core/scheduler.hpp"
-#include "../../persistence/databasetasks.hpp"
-#include "../../core/tools/random.hpp"
-#include "../../core/tools/gameEnumTools.hpp"
-#include "../../core/tools/returnMessageTools.hpp"
-#include "../../core/tools/stringsTools.hpp"
+#include "../luascript.hpp"
+#include "../../events/events.hpp"
+#include "../../../game/chat/chat.hpp"
+#include "../../../entities/player.hpp"
+#include "../../../game/game.hpp"
+#include "../../../network/protocolstatus.hpp"
+#include "../../../game/spells/spells.hpp"
+#include "../../../persistence/login/iologindata.hpp"
+#include "../../../config/configmanager.hpp"
+#include "../../../world/teleport.hpp"
+#include "../../../persistence/databasemanager.hpp"
+#include "../../../world/bed.hpp"
+#include "../../../entities/monster.hpp"
+#include "../../../core/scheduler.hpp"
+#include "../../../persistence/databasetasks.hpp"
+#include "../../../core/tools/random.hpp"
+#include "../../../core/tools/gameEnumTools.hpp"
+#include "../../../core/tools/returnMessageTools.hpp"
+#include "../../../core/tools/stringsTools.hpp"
 
 extern Chat* g_chat;
 extern Game g_game;
@@ -31,209 +31,7 @@ extern Monsters g_monsters;
 extern ConfigManager g_config;
 extern Vocations g_vocations;
 extern Spells* g_spells;
-extern Events* g_events; //pota
-
-int LuaScriptInterface::luaVariantCreate(lua_State* L)
-{
-	// Variant(number or string or position or thing)
-	LuaVariant variant;
-	if (isUserdata(L, 2)) {
-		if (Thing* thing = getThing(L, 2)) {
-			variant.type = VARIANT_TARGETPOSITION;
-			variant.pos = thing->getPosition();
-		}
-	} else if (isTable(L, 2)) {
-		variant.type = VARIANT_POSITION;
-		variant.pos = getPosition(L, 2);
-	} else if (isNumber(L, 2)) {
-		variant.type = VARIANT_NUMBER;
-		variant.number = getNumber<uint32_t>(L, 2);
-	} else if (isString(L, 2)) {
-		variant.type = VARIANT_STRING;
-		variant.text = getString(L, 2);
-	}
-	pushVariant(L, variant);
-	return 1;
-}
-
-int LuaScriptInterface::luaVariantGetNumber(lua_State* L)
-{
-	// Variant:getNumber()
-	const LuaVariant& variant = getVariant(L, 1);
-	if (variant.type == VARIANT_NUMBER) {
-		lua_pushnumber(L, variant.number);
-	} else {
-		lua_pushnumber(L, 0);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaVariantGetString(lua_State* L)
-{
-	// Variant:getString()
-	const LuaVariant& variant = getVariant(L, 1);
-	if (variant.type == VARIANT_STRING) {
-		pushString(L, variant.text);
-	} else {
-		pushString(L, std::string());
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaVariantGetPosition(lua_State* L)
-{
-	// Variant:getPosition()
-	const LuaVariant& variant = getVariant(L, 1);
-	if (variant.type == VARIANT_POSITION || variant.type == VARIANT_TARGETPOSITION) {
-		pushPosition(L, variant.pos);
-	} else {
-		pushPosition(L, Position());
-	}
-	return 1;
-}
-
-// Position
-
-int LuaScriptInterface::luaPositionCreate(lua_State* L)
-{
-	// Position([x = 0[, y = 0[, z = 0[, stackpos = 0]]]])
-	// Position([position])
-	if (lua_gettop(L) <= 1) {
-		pushPosition(L, Position());
-		return 1;
-	}
-
-	int32_t stackpos;
-	if (isTable(L, 2)) {
-		const Position& position = getPosition(L, 2, stackpos);
-		pushPosition(L, position, stackpos);
-	} else {
-		uint16_t x = getNumber<uint16_t>(L, 2, 0);
-		uint16_t y = getNumber<uint16_t>(L, 3, 0);
-		uint8_t z = getNumber<uint8_t>(L, 4, 0);
-		stackpos = getNumber<int32_t>(L, 5, 0);
-
-		pushPosition(L, Position(x, y, z), stackpos);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionAdd(lua_State* L)
-{
-	// positionValue = position + positionEx
-	int32_t stackpos;
-	const Position& position = getPosition(L, 1, stackpos);
-
-	Position positionEx;
-	if (stackpos == 0) {
-		positionEx = getPosition(L, 2, stackpos);
-	} else {
-		positionEx = getPosition(L, 2);
-	}
-
-	pushPosition(L, position + positionEx, stackpos);
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionSub(lua_State* L)
-{
-	// positionValue = position - positionEx
-	int32_t stackpos;
-	const Position& position = getPosition(L, 1, stackpos);
-
-	Position positionEx;
-	if (stackpos == 0) {
-		positionEx = getPosition(L, 2, stackpos);
-	} else {
-		positionEx = getPosition(L, 2);
-	}
-
-	pushPosition(L, position - positionEx, stackpos);
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionCompare(lua_State* L)
-{
-	// position == positionEx
-	const Position& positionEx = getPosition(L, 2);
-	const Position& position = getPosition(L, 1);
-	pushBoolean(L, position == positionEx);
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionGetDistance(lua_State* L)
-{
-	// position:getDistance(positionEx)
-	const Position& positionEx = getPosition(L, 2);
-	const Position& position = getPosition(L, 1);
-	lua_pushnumber(L, std::max<int32_t>(
-		std::max<int32_t>(
-			std::abs(Position::getDistanceX(position, positionEx)),
-			std::abs(Position::getDistanceY(position, positionEx))
-		),
-		std::abs(Position::getDistanceZ(position, positionEx))
-	));
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionIsSightClear(lua_State* L)
-{
-	// position:isSightClear(positionEx[, sameFloor = true])
-	bool sameFloor = getBoolean(L, 3, true);
-	const Position& positionEx = getPosition(L, 2);
-	const Position& position = getPosition(L, 1);
-	pushBoolean(L, g_game.isSightClear(position, positionEx, sameFloor));
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionSendMagicEffect(lua_State* L)
-{
-	// position:sendMagicEffect(magicEffect[, player = nullptr])
-	SpectatorVec list;
-	if (lua_gettop(L) >= 3) {
-		Player* player = getPlayer(L, 3);
-		if (player) {
-			list.insert(player);
-		}
-	}
-
-	MagicEffectClasses magicEffect = getNumber<MagicEffectClasses>(L, 2);
-	const Position& position = getPosition(L, 1);
-	if (!list.empty()) {
-		Game::addMagicEffect(list, position, magicEffect);
-	} else {
-		g_game.addMagicEffect(position, magicEffect);
-	}
-
-	pushBoolean(L, true);
-	return 1;
-}
-
-int LuaScriptInterface::luaPositionSendDistanceEffect(lua_State* L)
-{
-	// position:sendDistanceEffect(positionEx, distanceEffect[, player = nullptr])
-	SpectatorVec list;
-	if (lua_gettop(L) >= 4) {
-		Player* player = getPlayer(L, 4);
-		if (player) {
-			list.insert(player);
-		}
-	}
-
-	ShootType_t distanceEffect = getNumber<ShootType_t>(L, 3);
-	const Position& positionEx = getPosition(L, 2);
-	const Position& position = getPosition(L, 1);
-	if (!list.empty()) {
-		Game::addDistanceEffect(list, position, positionEx, distanceEffect);
-	} else {
-		g_game.addDistanceEffect(position, positionEx, distanceEffect);
-	}
-
-	pushBoolean(L, true);
-	return 1;
-}
-
-// Tile
+extern Events* g_events;
 
 int LuaScriptInterface::luaTileCreate(lua_State* L)
 {
@@ -258,6 +56,7 @@ int LuaScriptInterface::luaTileCreate(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetPosition(lua_State* L)
 {
 	// tile:getPosition()
@@ -269,6 +68,7 @@ int LuaScriptInterface::luaTileGetPosition(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetGround(lua_State* L)
 {
@@ -282,6 +82,7 @@ int LuaScriptInterface::luaTileGetGround(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetThing(lua_State* L)
 {
@@ -311,6 +112,7 @@ int LuaScriptInterface::luaTileGetThing(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetThingCount(lua_State* L)
 {
 	// tile:getThingCount()
@@ -322,6 +124,7 @@ int LuaScriptInterface::luaTileGetThingCount(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetTopVisibleThing(lua_State* L)
 {
@@ -351,6 +154,7 @@ int LuaScriptInterface::luaTileGetTopVisibleThing(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetTopTopItem(lua_State* L)
 {
 	// tile:getTopTopItem()
@@ -369,6 +173,7 @@ int LuaScriptInterface::luaTileGetTopTopItem(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetTopDownItem(lua_State* L)
 {
@@ -389,6 +194,7 @@ int LuaScriptInterface::luaTileGetTopDownItem(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetFieldItem(lua_State* L)
 {
 	// tile:getFieldItem()
@@ -407,6 +213,7 @@ int LuaScriptInterface::luaTileGetFieldItem(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetItemById(lua_State* L)
 {
@@ -438,6 +245,7 @@ int LuaScriptInterface::luaTileGetItemById(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetItemByType(lua_State* L)
 {
@@ -504,6 +312,7 @@ int LuaScriptInterface::luaTileGetItemByType(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetItemByTopOrder(lua_State* L)
 {
 	// tile:getItemByTopOrder(topOrder)
@@ -525,6 +334,7 @@ int LuaScriptInterface::luaTileGetItemByTopOrder(lua_State* L)
 	setItemMetatable(L, -1, item);
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetItemCountById(lua_State* L)
 {
@@ -552,6 +362,7 @@ int LuaScriptInterface::luaTileGetItemCountById(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetBottomCreature(lua_State* L)
 {
 	// tile:getBottomCreature()
@@ -572,6 +383,7 @@ int LuaScriptInterface::luaTileGetBottomCreature(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetTopCreature(lua_State* L)
 {
 	// tile:getTopCreature()
@@ -591,6 +403,7 @@ int LuaScriptInterface::luaTileGetTopCreature(lua_State* L)
 	setCreatureMetatable(L, -1, creature);
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetBottomVisibleCreature(lua_State* L)
 {
@@ -617,6 +430,7 @@ int LuaScriptInterface::luaTileGetBottomVisibleCreature(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetTopVisibleCreature(lua_State* L)
 {
 	// tile:getTopVisibleCreature(creature)
@@ -641,6 +455,7 @@ int LuaScriptInterface::luaTileGetTopVisibleCreature(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetItems(lua_State* L)
 {
@@ -668,6 +483,7 @@ int LuaScriptInterface::luaTileGetItems(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetItemCount(lua_State* L)
 {
 	// tile:getItemCount()
@@ -681,6 +497,7 @@ int LuaScriptInterface::luaTileGetItemCount(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetDownItemCount(lua_State* L)
 {
 	// tile:getDownItemCount()
@@ -692,6 +509,7 @@ int LuaScriptInterface::luaTileGetDownItemCount(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetTopItemCount(lua_State* L)
 {
@@ -705,6 +523,7 @@ int LuaScriptInterface::luaTileGetTopItemCount(lua_State* L)
 	lua_pushnumber(L, tile->getTopItemCount());
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetCreatures(lua_State* L)
 {
@@ -732,6 +551,7 @@ int LuaScriptInterface::luaTileGetCreatures(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetCreatureCount(lua_State* L)
 {
 	// tile:getCreatureCount()
@@ -744,6 +564,7 @@ int LuaScriptInterface::luaTileGetCreatureCount(lua_State* L)
 	lua_pushnumber(L, tile->getCreatureCount());
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileHasProperty(lua_State* L)
 {
@@ -770,6 +591,7 @@ int LuaScriptInterface::luaTileHasProperty(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileGetThingIndex(lua_State* L)
 {
 	// tile:getThingIndex(thing)
@@ -788,6 +610,7 @@ int LuaScriptInterface::luaTileGetThingIndex(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaTileHasFlag(lua_State* L)
 {
 	// tile:hasFlag(flag)
@@ -800,6 +623,7 @@ int LuaScriptInterface::luaTileHasFlag(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileQueryAdd(lua_State* L)
 {
@@ -819,6 +643,7 @@ int LuaScriptInterface::luaTileQueryAdd(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaTileGetHouse(lua_State* L)
 {
@@ -840,305 +665,4 @@ int LuaScriptInterface::luaTileGetHouse(lua_State* L)
 
 // NetworkMessage
 
-int LuaScriptInterface::luaTownCreate(lua_State* L)
-{
-	// Town(id or name)
-	Town* town;
-	if (isNumber(L, 2)) {
-		town = g_game.map.towns.getTown(getNumber<uint32_t>(L, 2));
-	} else if (isString(L, 2)) {
-		town = g_game.map.towns.getTown(getString(L, 2));
-	} else {
-		town = nullptr;
-	}
-
-	if (town) {
-		pushUserdata<Town>(L, town);
-		setMetatable(L, -1, "Town");
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaTownGetId(lua_State* L)
-{
-	// town:getId()
-	Town* town = getUserdata<Town>(L, 1);
-	if (town) {
-		lua_pushnumber(L, town->getID());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaTownGetName(lua_State* L)
-{
-	// town:getName()
-	Town* town = getUserdata<Town>(L, 1);
-	if (town) {
-		pushString(L, town->getName());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaTownGetTemplePosition(lua_State* L)
-{
-	// town:getTemplePosition()
-	Town* town = getUserdata<Town>(L, 1);
-	if (town) {
-		pushPosition(L, town->getTemplePosition());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-// House
-
-int LuaScriptInterface::luaHouseCreate(lua_State* L)
-{
-	// House(id)
-	House* house = g_game.map.houses.getHouse(getNumber<uint32_t>(L, 2));
-	if (house) {
-		pushUserdata<House>(L, house);
-		setMetatable(L, -1, "House");
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetId(lua_State* L)
-{
-	// house:getId()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		lua_pushnumber(L, house->getId());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetName(lua_State* L)
-{
-	// house:getName()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		pushString(L, house->getName());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetTown(lua_State* L)
-{
-	// house:getTown()
-	House* house = getUserdata<House>(L, 1);
-	if (!house) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	Town* town = g_game.map.towns.getTown(house->getTownId());
-	if (town) {
-		pushUserdata<Town>(L, town);
-		setMetatable(L, -1, "Town");
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetExitPosition(lua_State* L)
-{
-	// house:getExitPosition()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		pushPosition(L, house->getEntryPosition());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetRent(lua_State* L)
-{
-	// house:getRent()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		lua_pushnumber(L, house->getRent());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetOwnerGuid(lua_State* L)
-{
-	// house:getOwnerGuid()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		lua_pushnumber(L, house->getOwner());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseSetOwnerGuid(lua_State* L)
-{
-	// house:setOwnerGuid(guid[, updateDatabase = true])
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		uint32_t guid = getNumber<uint32_t>(L, 2);
-		bool updateDatabase = getBoolean(L, 3, true);
-		house->setOwner(guid, updateDatabase);
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetBeds(lua_State* L)
-{
-	// house:getBeds()
-	House* house = getUserdata<House>(L, 1);
-	if (!house) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	const auto& beds = house->getBeds();
-	lua_createtable(L, beds.size(), 0);
-
-	int index = 0;
-	for (BedItem* bedItem : beds) {
-		pushUserdata<Item>(L, bedItem);
-		setItemMetatable(L, -1, bedItem);
-		lua_rawseti(L, -2, ++index);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetBedCount(lua_State* L)
-{
-	// house:getBedCount()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		lua_pushnumber(L, house->getBedCount());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetDoors(lua_State* L)
-{
-	// house:getDoors()
-	House* house = getUserdata<House>(L, 1);
-	if (!house) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	const auto& doors = house->getDoors();
-	lua_createtable(L, doors.size(), 0);
-
-	int index = 0;
-	for (Door* door : doors) {
-		pushUserdata<Item>(L, door);
-		setItemMetatable(L, -1, door);
-		lua_rawseti(L, -2, ++index);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetDoorCount(lua_State* L)
-{
-	// house:getDoorCount()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		lua_pushnumber(L, house->getDoors().size());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetTiles(lua_State* L)
-{
-	// house:getTiles()
-	House* house = getUserdata<House>(L, 1);
-	if (!house) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	const auto& tiles = house->getTiles();
-	lua_createtable(L, tiles.size(), 0);
-
-	int index = 0;
-	for (Tile* tile : tiles) {
-		pushUserdata<Tile>(L, tile);
-		setMetatable(L, -1, "Tile");
-		lua_rawseti(L, -2, ++index);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetTileCount(lua_State* L)
-{
-	// house:getTileCount()
-	House* house = getUserdata<House>(L, 1);
-	if (house) {
-		lua_pushnumber(L, house->getTiles().size());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseGetAccessList(lua_State* L)
-{
-	// house:getAccessList(listId)
-	House* house = getUserdata<House>(L, 1);
-	if (!house) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	std::string list;
-	uint32_t listId = getNumber<uint32_t>(L, 2);
-	if (house->getAccessList(listId, list)) {
-		pushString(L, list);
-	} else {
-		pushBoolean(L, false);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaHouseSetAccessList(lua_State* L)
-{
-	// house:setAccessList(listId, list)
-	House* house = getUserdata<House>(L, 1);
-	if (!house) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	uint32_t listId = getNumber<uint32_t>(L, 2);
-	const std::string& list = getString(L, 3);
-	house->setAccessList(listId, list);
-	pushBoolean(L, true);
-	return 1;
-}
-
-// ItemType
 

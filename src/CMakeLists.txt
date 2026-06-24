@@ -123,18 +123,42 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptEnvironment.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptInterface.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptStack.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptRegistry.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistry.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaRegistryHelpers.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsLegacy.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCore.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsDatabase.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsGame.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsWorld.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/world/luaHouse.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/world/luaPosition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/world/luaTile.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/world/luaTown.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/world/luaVariant.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsNetwork.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsItem.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCombatCondition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/item/luaContainer.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/item/luaItem.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/item/luaItemLegacy.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/item/luaItemType.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/item/luaTeleport.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/combat_condition/luaCombatLegacy.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/combat_condition/luaCombatObject.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/combat_condition/luaCondition.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCreature.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsPlayer.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsMonsterNpc.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerAppearance.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerIdentity.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerInventory.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerMessaging.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerProgression.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerSocial.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerStats.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerStorage.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerUtilities.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/monster_npc/luaMonster.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/monster_npc/luaMonsterTypeCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/monster_npc/luaMonsterTypeLists.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/monster_npc/luaMonsterTypeStats.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/monster_npc/luaNpc.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsSocial.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaEnvironment.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/mailbox.cpp

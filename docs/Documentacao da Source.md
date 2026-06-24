@@ -327,17 +327,41 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `lua/luaScriptEnvironment.cpp`: ambiente de script, UIDs temporários e resultados de banco.
 - `lua/luaScriptInterface.cpp`: ciclo de vida, carregamento, chamadas e tratamento de erro Lua.
 - `lua/luaScriptStack.cpp`: helpers de stack, push/get/pop, metatables e conversões.
-- `lua/luaScriptRegistry.cpp`: registro de classes, métodos, tabelas e funções Lua.
+- `lua/registry/luaGlobalFunctionsRegistry.cpp`: registro das funções globais, enums, classes e métodos expostos ao Lua.
+- `lua/registry/luaRegistryHelpers.cpp`: helpers para registrar classes, tabelas, métodos, metatables e variáveis globais.
 - `lua/luaBindingsCore.cpp`: bindings utilitários, eventos agendados, bit/config e helpers gerais.
 - `lua/luaBindingsDatabase.cpp`: bindings de database e result.
 - `lua/luaBindingsGame.cpp`: bindings da classe Game.
-- `lua/luaBindingsWorld.cpp`: bindings de variant, position, tile, town e house.
+- `lua/world/luaVariant.cpp`: bindings de `Variant`.
+- `lua/world/luaPosition.cpp`: bindings de `Position`, distância, visão e efeitos.
+- `lua/world/luaTile.cpp`: bindings de `Tile`, itens, criaturas, flags, propriedades e house lookup.
+- `lua/world/luaTown.cpp`: bindings de `Town`, nome, ID e templo.
+- `lua/world/luaHouse.cpp`: bindings de `House`, owner, beds, doors, tiles e access lists.
 - `lua/luaBindingsNetwork.cpp`: bindings de network message e modal window.
-- `lua/luaBindingsItem.cpp`: bindings de item, container, teleport e item type.
-- `lua/luaBindingsCombatCondition.cpp`: bindings de combat, condition e área de combate.
+- `lua/item/luaItemLegacy.cpp`: funções globais legadas de criação, UID, depot e manipulação básica de itens.
+- `lua/item/luaItem.cpp`: bindings da classe `Item`, atributos, clone, split, move, transform, decay e descrição.
+- `lua/item/luaContainer.cpp`: bindings de `Container`, capacidade, slots, itens internos e adição de itens.
+- `lua/item/luaTeleport.cpp`: bindings de `Teleport` e destino.
+- `lua/item/luaItemType.cpp`: bindings de `ItemType`, flags, propriedades, atributos de combate e transformações.
+- `lua/combat_condition/luaCombatLegacy.cpp`: funções globais legadas de área, alvo, dispel, outfit, movimento, luz e condição.
+- `lua/combat_condition/luaCombatObject.cpp`: bindings do objeto `Combat`, parâmetros, fórmula, área, condição, callback, origem e execução.
+- `lua/combat_condition/luaCondition.cpp`: bindings de `Condition`, ticks, parâmetros, fórmula, outfit, danos e imunidades de `MonsterType`.
 - `lua/luaBindingsCreature.cpp`: bindings de creature.
-- `lua/luaBindingsPlayer.cpp`: bindings de player.
-- `lua/luaBindingsMonsterNpc.cpp`: bindings de monster, monster type e npc.
+- `lua/player/luaPlayerCore.cpp`: criação, validação e dados básicos de `Player`.
+- `lua/player/luaPlayerStats.cpp`: capacity, experiência, level, mana, skills, stamina, soul e banco.
+- `lua/player/luaPlayerInventory.cpp`: itens, depot, inbox, dinheiro, slots e containers abertos.
+- `lua/player/luaPlayerIdentity.cpp`: vocation, sexo e town.
+- `lua/player/luaPlayerSocial.cpp`: guild, group e party.
+- `lua/player/luaPlayerStorage.cpp`: storage values de player.
+- `lua/player/luaPlayerMessaging.cpp`: text dialog, mensagens, canais e private messages.
+- `lua/player/luaPlayerAppearance.cpp`: outfits, addons, janela de outfit e mounts.
+- `lua/player/luaPlayerProgression.cpp`: premium, blessings e spells aprendidas.
+- `lua/player/luaPlayerUtilities.cpp`: tutorial, map mark, save, FYI, PZ lock, client, house e ghost mode.
+- `lua/monster_npc/luaMonster.cpp`: bindings da classe `Monster`, alvos, amigos, spawn, idle e experiência.
+- `lua/monster_npc/luaNpc.cpp`: bindings da classe `Npc`, master position e speech bubble.
+- `lua/monster_npc/luaMonsterTypeCore.cpp`: bindings centrais de `MonsterType`, flags, nomes, stats básicos e propriedades.
+- `lua/monster_npc/luaMonsterTypeLists.cpp`: bindings de listas de ataques, moves, defesas, elementos, vozes, loot, summons e evoluções.
+- `lua/monster_npc/luaMonsterTypeStats.cpp`: bindings de atributos finais de `MonsterType`, outfit, race, levels, corpse, mana, velocidade e target.
 - `lua/luaBindingsSocial.cpp`: bindings de guild, group, vocation e party.
 - `lua/luaBindingsLegacy.cpp`: bindings legados que ficaram fora dos grupos principais.
 - `lua/luaEnvironment.cpp`: gerenciamento do LuaEnvironment global.

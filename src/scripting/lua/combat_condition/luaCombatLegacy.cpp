@@ -1,29 +1,29 @@
-// This file is part of The Forgotten Server.
+﻿// This file is part of The Forgotten Server.
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "otpch.hpp"
 
 #include <boost/range/adaptor/reversed.hpp>
 
-#include "luascript.hpp"
-#include "../events/events.hpp" //pota
-#include "../../game/chat/chat.hpp"
-#include "../../entities/player.hpp"
-#include "../../game/game.hpp"
-#include "../../network/protocolstatus.hpp"
-#include "../../game/spells/spells.hpp"
-#include "../../persistence/login/iologindata.hpp"
-#include "../../config/configmanager.hpp"
-#include "../../world/teleport.hpp"
-#include "../../persistence/databasemanager.hpp"
-#include "../../world/bed.hpp"
-#include "../../entities/monster.hpp"
-#include "../../core/scheduler.hpp"
-#include "../../persistence/databasetasks.hpp"
-#include "../../core/tools/random.hpp"
-#include "../../core/tools/gameEnumTools.hpp"
-#include "../../core/tools/returnMessageTools.hpp"
-#include "../../core/tools/stringsTools.hpp"
+#include "../luascript.hpp"
+#include "../../events/events.hpp"
+#include "../../../game/chat/chat.hpp"
+#include "../../../entities/player.hpp"
+#include "../../../game/game.hpp"
+#include "../../../network/protocolstatus.hpp"
+#include "../../../game/spells/spells.hpp"
+#include "../../../persistence/login/iologindata.hpp"
+#include "../../../config/configmanager.hpp"
+#include "../../../world/teleport.hpp"
+#include "../../../persistence/databasemanager.hpp"
+#include "../../../world/bed.hpp"
+#include "../../../entities/monster.hpp"
+#include "../../../core/scheduler.hpp"
+#include "../../../persistence/databasetasks.hpp"
+#include "../../../core/tools/random.hpp"
+#include "../../../core/tools/gameEnumTools.hpp"
+#include "../../../core/tools/returnMessageTools.hpp"
+#include "../../../core/tools/stringsTools.hpp"
 
 extern Chat* g_chat;
 extern Game g_game;
@@ -31,7 +31,7 @@ extern Monsters g_monsters;
 extern ConfigManager g_config;
 extern Vocations g_vocations;
 extern Spells* g_spells;
-extern Events* g_events; //pota
+extern Events* g_events;
 
 bool LuaScriptInterface::getArea(lua_State* L, std::list<uint32_t>& list, uint32_t& rows)
 {
@@ -56,6 +56,7 @@ bool LuaScriptInterface::getArea(lua_State* L, std::list<uint32_t>& list, uint32
 	lua_pop(L, 1);
 	return (rows != 0);
 }
+
 
 int LuaScriptInterface::luaCreateCombatArea(lua_State* L)
 {
@@ -95,6 +96,7 @@ int LuaScriptInterface::luaCreateCombatArea(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoAreaCombatHealth(lua_State* L)
 {
 	//doAreaCombatHealth(cid, type, pos, area, min, max, effect[, type2, origin = ORIGIN_SPELL])
@@ -131,6 +133,7 @@ int LuaScriptInterface::luaDoAreaCombatHealth(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaDoTargetCombatHealth(lua_State* L)
 {
@@ -169,6 +172,7 @@ int LuaScriptInterface::luaDoTargetCombatHealth(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoAreaCombatMana(lua_State* L)
 {
 	//doAreaCombatMana(cid, pos, area, min, max, effect[, origin = ORIGIN_SPELL])
@@ -200,6 +204,7 @@ int LuaScriptInterface::luaDoAreaCombatMana(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoTargetCombatMana(lua_State* L)
 {
 	//doTargetCombatMana(cid, target, min, max, effect[, origin = ORIGIN_SPELL)
@@ -229,6 +234,7 @@ int LuaScriptInterface::luaDoTargetCombatMana(lua_State* L)
 	pushBoolean(L, true);
 	return 1;
 }
+
 
 int LuaScriptInterface::luaDoAreaCombatCondition(lua_State* L)
 {
@@ -262,6 +268,7 @@ int LuaScriptInterface::luaDoAreaCombatCondition(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoTargetCombatCondition(lua_State* L)
 {
 	//doTargetCombatCondition(cid, target, condition, effect)
@@ -294,6 +301,7 @@ int LuaScriptInterface::luaDoTargetCombatCondition(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoAreaCombatDispel(lua_State* L)
 {
 	//doAreaCombatDispel(cid, pos, area, type, effect)
@@ -320,6 +328,7 @@ int LuaScriptInterface::luaDoAreaCombatDispel(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoTargetCombatDispel(lua_State* L)
 {
 	//doTargetCombatDispel(cid, target, type, effect)
@@ -345,6 +354,7 @@ int LuaScriptInterface::luaDoTargetCombatDispel(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaDoChallengeCreature(lua_State* L)
 {
 	//doChallengeCreature(cid, target)
@@ -367,6 +377,7 @@ int LuaScriptInterface::luaDoChallengeCreature(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaSetCreatureOutfit(lua_State* L)
 {
 	//doSetCreatureOutfit(cid, outfit, time)
@@ -382,6 +393,7 @@ int LuaScriptInterface::luaSetCreatureOutfit(lua_State* L)
 	pushBoolean(L, Spell::CreateIllusion(creature, outfit, time) == RETURNVALUE_NOERROR);
 	return 1;
 }
+
 
 int LuaScriptInterface::luaSetMonsterOutfit(lua_State* L)
 {
@@ -399,6 +411,7 @@ int LuaScriptInterface::luaSetMonsterOutfit(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaSetItemOutfit(lua_State* L)
 {
 	//doSetItemOutfit(cid, item, time)
@@ -414,6 +427,7 @@ int LuaScriptInterface::luaSetItemOutfit(lua_State* L)
 	pushBoolean(L, Spell::CreateIllusion(creature, item, time) == RETURNVALUE_NOERROR);
 	return 1;
 }
+
 
 int LuaScriptInterface::luaDoMoveCreature(lua_State* L)
 {
@@ -437,6 +451,7 @@ int LuaScriptInterface::luaDoMoveCreature(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaGetCombatName(lua_State* L) //pota
 {
 	//getCombatName(COMBAT_TYPE)
@@ -444,6 +459,7 @@ int LuaScriptInterface::luaGetCombatName(lua_State* L) //pota
 	pushString(L, getCombatName(combatType));
 	return 1;
 }
+
 
 int LuaScriptInterface::luaDoSetCreatureLight(lua_State* L)
 {
@@ -464,6 +480,7 @@ int LuaScriptInterface::luaDoSetCreatureLight(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaGetCreatureCondition(lua_State* L)
 {
 	Creature* creature = getCreature(L, 1);
@@ -478,6 +495,7 @@ int LuaScriptInterface::luaGetCreatureCondition(lua_State* L)
 	pushBoolean(L, creature->hasCondition(condition, subId));
 	return 1;
 }
+
 
 int LuaScriptInterface::luaCreatureGetCondition(lua_State* L)
 {
@@ -502,6 +520,7 @@ int LuaScriptInterface::luaCreatureGetCondition(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaCreatureAddCondition(lua_State* L)
 {
 	// creature:addCondition(condition[, force = false])
@@ -515,6 +534,7 @@ int LuaScriptInterface::luaCreatureAddCondition(lua_State* L)
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaCreatureRemoveCondition(lua_State* L)
 {
@@ -539,434 +559,4 @@ int LuaScriptInterface::luaCreatureRemoveCondition(lua_State* L)
 	return 1;
 }
 
-int LuaScriptInterface::luaCombatCreate(lua_State* L)
-{
-	// Combat()
-	pushUserdata<Combat>(L, g_luaEnvironment.createCombatObject(getScriptEnv()->getScriptInterface()));
-	setMetatable(L, -1, "Combat");
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatSetParameter(lua_State* L)
-{
-	// combat:setParameter(key, value)
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (!combat) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	CombatParam_t key = getNumber<CombatParam_t>(L, 2);
-	uint32_t value;
-	if (isBoolean(L, 3)) {
-		value = getBoolean(L, 3) ? 1 : 0;
-	} else {
-		value = getNumber<uint32_t>(L, 3);
-	}
-	combat->setParam(key, value);
-	pushBoolean(L, true);
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatSetFormula(lua_State* L)
-{
-	// combat:setFormula(type, mina, minb, maxa, maxb)
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (!combat) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	formulaType_t type = getNumber<formulaType_t>(L, 2);
-	double mina = getNumber<double>(L, 3);
-	double minb = getNumber<double>(L, 4);
-	double maxa = getNumber<double>(L, 5);
-	double maxb = getNumber<double>(L, 6);
-	combat->setPlayerCombatValues(type, mina, minb, maxa, maxb);
-	pushBoolean(L, true);
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatSetArea(lua_State* L)
-{
-	// combat:setArea(area)
-	if (getScriptEnv()->getScriptId() != EVENT_ID_LOADING) {
-		reportErrorFunc("This function can only be used while loading the script.");
-		lua_pushnil(L);
-		return 1;
-	}
-
-	const AreaCombat* area = g_luaEnvironment.getAreaObject(getNumber<uint32_t>(L, 2));
-	if (!area) {
-		reportErrorFunc(getErrorDesc(LUA_ERROR_AREA_NOT_FOUND));
-		lua_pushnil(L);
-		return 1;
-	}
-
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (combat) {
-		combat->setArea(new AreaCombat(*area));
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatSetCondition(lua_State* L)
-{
-	// combat:setCondition(condition)
-	Condition* condition = getUserdata<Condition>(L, 2);
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (combat && condition) {
-		combat->setCondition(condition->clone());
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatSetCallback(lua_State* L)
-{
-	// combat:setCallback(key, function)
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (!combat) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	CallBackParam_t key = getNumber<CallBackParam_t>(L, 2);
-	if (!combat->setCallback(key)) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	CallBack* callback = combat->getCallback(key);
-	if (!callback) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	const std::string& function = getString(L, 3);
-	pushBoolean(L, callback->loadCallBack(getScriptEnv()->getScriptInterface(), function));
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatSetOrigin(lua_State* L)
-{
-	// combat:setOrigin(origin)
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (combat) {
-		combat->setOrigin(getNumber<CombatOrigin>(L, 2));
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaCombatExecute(lua_State* L)
-{
-	// combat:execute(creature, variant)
-	Combat* combat = getUserdata<Combat>(L, 1);
-	if (!combat) {
-		pushBoolean(L, false);
-		return 1;
-	}
-
-	Creature* creature = getCreature(L, 2);
-
-	const LuaVariant& variant = getVariant(L, 3);
-	switch (variant.type) {
-		case VARIANT_NUMBER: {
-			Creature* target = g_game.getCreatureByID(variant.number);
-			if (!target) {
-				pushBoolean(L, false);
-				return 1;
-			}
-
-			if (combat->hasArea()) {
-				combat->doCombat(creature, target->getPosition());
-			} else {
-				combat->doCombat(creature, target);
-			}
-			break;
-		}
-
-		case VARIANT_POSITION: {
-			combat->doCombat(creature, variant.pos);
-			break;
-		}
-
-		case VARIANT_TARGETPOSITION: {
-			if (combat->hasArea()) {
-				combat->doCombat(creature, variant.pos);
-			} else {
-				combat->postCombatEffects(creature, variant.pos);
-				g_game.addMagicEffect(variant.pos, CONST_ME_POFF);
-			}
-			break;
-		}
-
-		case VARIANT_STRING: {
-			Player* target = g_game.getPlayerByName(variant.text);
-			if (!target) {
-				pushBoolean(L, false);
-				return 1;
-			}
-
-			combat->doCombat(creature, target);
-			break;
-		}
-
-		case VARIANT_NONE: {
-			reportErrorFunc(getErrorDesc(LUA_ERROR_VARIANT_NOT_FOUND));
-			pushBoolean(L, false);
-			return 1;
-		}
-
-		default: {
-			break;
-		}
-	}
-
-	pushBoolean(L, true);
-	return 1;
-}
-
-// Condition
-
-int LuaScriptInterface::luaConditionCreate(lua_State* L)
-{
-	// Condition(conditionType[, conditionId = CONDITIONID_COMBAT])
-	ConditionType_t conditionType = getNumber<ConditionType_t>(L, 2);
-	ConditionId_t conditionId = getNumber<ConditionId_t>(L, 3, CONDITIONID_COMBAT);
-
-	Condition* condition = Condition::createCondition(conditionId, conditionType, 0, 0);
-	if (condition) {
-		pushUserdata<Condition>(L, condition);
-		setMetatable(L, -1, "Condition");
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionDelete(lua_State* L)
-{
-	// condition:delete()
-	Condition** conditionPtr = getRawUserdata<Condition>(L, 1);
-	if (conditionPtr && *conditionPtr) {
-		delete *conditionPtr;
-		*conditionPtr = nullptr;
-	}
-	return 0;
-}
-
-int LuaScriptInterface::luaConditionGetId(lua_State* L)
-{
-	// condition:getId()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		lua_pushnumber(L, condition->getId());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionGetSubId(lua_State* L)
-{
-	// condition:getSubId()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		lua_pushnumber(L, condition->getSubId());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionGetType(lua_State* L)
-{
-	// condition:getType()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		lua_pushnumber(L, condition->getType());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionGetIcons(lua_State* L)
-{
-	// condition:getIcons()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		lua_pushnumber(L, condition->getIcons());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionGetEndTime(lua_State* L)
-{
-	// condition:getEndTime()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		lua_pushnumber(L, condition->getEndTime());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionClone(lua_State* L)
-{
-	// condition:clone()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		pushUserdata<Condition>(L, condition->clone());
-		setMetatable(L, -1, "Condition");
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionGetTicks(lua_State* L)
-{
-	// condition:getTicks()
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		lua_pushnumber(L, condition->getTicks());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionSetTicks(lua_State* L)
-{
-	// condition:setTicks(ticks)
-	int32_t ticks = getNumber<int32_t>(L, 2);
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (condition) {
-		condition->setTicks(ticks);
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionSetParameter(lua_State* L)
-{
-	// condition:setParameter(key, value)
-	Condition* condition = getUserdata<Condition>(L, 1);
-	if (!condition) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	ConditionParam_t key = getNumber<ConditionParam_t>(L, 2);
-	int32_t value;
-	if (isBoolean(L, 3)) {
-		value = getBoolean(L, 3) ? 1 : 0;
-	} else {
-		value = getNumber<int32_t>(L, 3);
-	}
-	condition->setParam(key, value);
-	pushBoolean(L, true);
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionSetFormula(lua_State* L)
-{
-	// condition:setFormula(mina, minb, maxa, maxb)
-	double maxb = getNumber<double>(L, 5);
-	double maxa = getNumber<double>(L, 4);
-	double minb = getNumber<double>(L, 3);
-	double mina = getNumber<double>(L, 2);
-	ConditionSpeed* condition = dynamic_cast<ConditionSpeed*>(getUserdata<Condition>(L, 1));
-	if (condition) {
-		condition->setFormulaVars(mina, minb, maxa, maxb);
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionSetOutfit(lua_State* L)
-{
-	// condition:setOutfit(outfit)
-	// condition:setOutfit(lookTypeEx, lookType, lookHead, lookBody, lookLegs, lookFeet[, lookAddons[, lookMount]])
-	Outfit_t outfit;
-	if (isTable(L, 2)) {
-		outfit = getOutfit(L, 2);
-	} else {
-		outfit.lookMount = getNumber<uint16_t>(L, 9, outfit.lookMount);
-		outfit.lookAddons = getNumber<uint8_t>(L, 8, outfit.lookAddons);
-		outfit.lookFeet = getNumber<uint8_t>(L, 7);
-		outfit.lookLegs = getNumber<uint8_t>(L, 6);
-		outfit.lookBody = getNumber<uint8_t>(L, 5);
-		outfit.lookHead = getNumber<uint8_t>(L, 4);
-		outfit.lookType = getNumber<uint16_t>(L, 3);
-		outfit.lookTypeEx = getNumber<uint16_t>(L, 2);
-	}
-
-	ConditionOutfit* condition = dynamic_cast<ConditionOutfit*>(getUserdata<Condition>(L, 1));
-	if (condition) {
-		condition->setOutfit(outfit);
-		pushBoolean(L, true);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaConditionAddDamage(lua_State* L)
-{
-	// condition:addDamage(rounds, time, value)
-	int32_t value = getNumber<int32_t>(L, 4);
-	int32_t time = getNumber<int32_t>(L, 3);
-	int32_t rounds = getNumber<int32_t>(L, 2);
-	ConditionDamage* condition = dynamic_cast<ConditionDamage*>(getUserdata<Condition>(L, 1));
-	if (condition) {
-		pushBoolean(L, condition->addDamage(rounds, time, value));
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-// MonsterType
-
-int LuaScriptInterface::luaMonsterTypeGetCombatImmunities(lua_State* L)
-{
-	// monsterType:getCombatImmunities()
-	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-	if (monsterType) {
-		lua_pushnumber(L, monsterType->info.damageImmunities);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaMonsterTypeGetConditionImmunities(lua_State* L)
-{
-	// monsterType:getConditionImmunities()
-	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
-	if (monsterType) {
-		lua_pushnumber(L, monsterType->info.conditionImmunities);
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
 
