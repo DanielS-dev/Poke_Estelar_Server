@@ -61,7 +61,11 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/guild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/groups.cpp
-	${CMAKE_CURRENT_LIST_DIR}/world/house.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/house/house.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/house/houseAccess.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/house/houseDoor.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/house/houses.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/house/houseTransfer.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/housetile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/inbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/ioguild.cpp
@@ -101,7 +105,15 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsSocial.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaEnvironment.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/mailbox.cpp
-	${CMAKE_CURRENT_LIST_DIR}/world/map.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/map.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapAStar.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapCreature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapMaintenance.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapPathfinding.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapQTree.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapSight.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapSpectators.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/map/mapStorage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/monster.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/monsters.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/mounts.cpp
@@ -140,7 +152,10 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/security/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/scriptmanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/world/spawn.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/spawn/spawn.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/spawn/spawnMonster.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/spawn/spawnScheduler.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/spawn/spawns.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/spells/spells.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/spells/combatSpell.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/spells/spell.cpp

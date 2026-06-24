@@ -279,10 +279,28 @@ Contém estruturas físicas e lógicas do mundo.
 
 - `bed.cpp/.hpp`: camas e regras associadas.
 - `cylinder.cpp/.hpp`: base para objetos que podem conter coisas.
-- `house.cpp/.hpp`: casas e seus dados.
+- `house.hpp`: interface de casas, portas, listas de acesso e gerenciador de casas.
+- `house/house.cpp`: dados principais da casa, dono, tiles, portas, camas e permissões gerais.
+- `house/houseAccess.cpp`: listas de acesso, convidados, subdonos e expressões de permissão.
+- `house/houseDoor.cpp`: portas de casas, leitura de atributos e acesso por porta.
+- `house/houseTransfer.cpp`: transferência de casas e envio de itens ao depot/inbox.
+- `house/houses.cpp`: gerenciador de casas, carregamento XML e cobrança de aluguel.
 - `housetile.cpp/.hpp`: tiles associados a casas.
-- `map.cpp/.hpp`: mapa, carregamento e consultas espaciais.
-- `spawn.cpp/.hpp`: spawns de criaturas.
+- `map.hpp`: interface do mapa, quadtree, pathfinding e consultas espaciais.
+- `map/map.cpp`: carregamento e salvamento do mapa.
+- `map/mapStorage.cpp`: leitura e escrita de tiles na estrutura espacial.
+- `map/mapCreature.cpp`: posicionamento e movimentação de criaturas no mapa.
+- `map/mapSpectators.cpp`: busca e cache de espectadores.
+- `map/mapSight.cpp`: linha de visão e alcance de arremesso.
+- `map/mapPathfinding.cpp`: busca de caminho em alto nível.
+- `map/mapAStar.cpp`: nós e custos do algoritmo A*.
+- `map/mapQTree.cpp`: floors, quadtree e folhas do mapa.
+- `map/mapMaintenance.cpp`: limpeza de itens do mapa.
+- `spawn.hpp`: interface de spawns de criaturas e NPCs.
+- `spawn/spawns.cpp`: carregamento XML e ciclo do gerenciador `Spawns`.
+- `spawn/spawn.cpp`: núcleo do spawn, registro e remoção de monstros.
+- `spawn/spawnMonster.cpp`: criação e posicionamento de monstros.
+- `spawn/spawnScheduler.cpp`: agendamento, checagem e limpeza de respawns.
 - `teleport.cpp/.hpp`: teleports.
 - `thing.cpp/.hpp`: base comum para entidades posicionáveis.
 - `tile.hpp`: interface de tiles, flags, itens e criaturas no mapa.
