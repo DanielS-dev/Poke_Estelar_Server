@@ -8,7 +8,7 @@
 #include <memory>
 
 #include "../../core/const.hpp"
-#include "../condition.hpp"
+#include "../condition/condition.hpp"
 
 class Creature;
 class Player;

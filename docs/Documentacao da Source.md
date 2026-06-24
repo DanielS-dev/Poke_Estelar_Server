@@ -109,7 +109,13 @@ Contém os sistemas centrais de gameplay.
 - `commands/commandLoader.cpp/.hpp`: carregamento dos comandos via XML.
 - `commands/commandRules.cpp/.hpp`: validação de permissão e log de execução dos comandos.
 - `commands/commands.cpp/.hpp`: fachada e orquestração dos comandos administrativos ou de servidor.
-- `condition.cpp/.hpp`: condições aplicadas em criaturas.
+- `condition/condition.cpp/.hpp`: fachada, base comum, factory e serialização geral de conditions.
+- `condition/conditionAttributes.cpp`: modifiers de skills/stats e atributos temporários.
+- `condition/conditionRegeneration.cpp`: regeneração de vida, mana e soul.
+- `condition/conditionDamage.cpp`: condições de dano periódico e damage list.
+- `condition/conditionSpeed.cpp`: haste, paralyze, sleep/silence e fórmula de speed.
+- `condition/conditionVisual.cpp`: invisibilidade, outfit e light.
+- `condition/conditionCooldown.cpp`: cooldown de spell, grupo e status simples.
 - `game.cpp/.hpp`: núcleo de coordenação da lógica do jogo.
 - `movement/movement.cpp/.hpp`: fachada e registro dos eventos de movement.
 - `movement/movementEvent.cpp/.hpp`: evento individual de movement, ciclo de vida e dados de equip.
@@ -168,7 +174,15 @@ Contém conexões, protocolos e mensagens trocadas entre cliente e servidor.
 - `networkmessage.cpp/.hpp`: leitura e escrita de mensagens de rede.
 - `outputmessage.cpp/.hpp`: mensagens de saída.
 - `protocol.cpp/.hpp`: base comum dos protocolos.
-- `protocolgame.cpp/.hpp`: protocolo principal de gameplay.
+- `protocolgame.hpp`: interface do protocolo principal de gameplay.
+- `protocolgame/protocolgame.cpp`: lifecycle, login, conexão e dispatcher de pacotes.
+- `protocolgame/protocolgameMap.cpp`: descrição de mapa, visibilidade e criaturas conhecidas.
+- `protocolgame/protocolgameParse.cpp`: parsers dos pacotes recebidos do cliente.
+- `protocolgame/protocolgameSend.cpp`: envios gerais, chat, status e canais.
+- `protocolgame/protocolgameShopMarket.cpp`: shop, market e detalhes de ofertas.
+- `protocolgame/protocolgameQuestTrade.cpp`: quest log, quest line e trade.
+- `protocolgame/protocolgameWorld.cpp`: containers, inventário, tiles, world state e movement visual.
+- `protocolgame/protocolgameHelpers.cpp`: helpers de serialização para criaturas, stats, outfit, luz e shop item.
 - `protocollogin.cpp/.hpp`: protocolo de login.
 - `protocolold.cpp/.hpp`: suporte a protocolo antigo.
 - `protocolstatus.cpp/.hpp`: protocolo de status do servidor.

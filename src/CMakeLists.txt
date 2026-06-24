@@ -21,7 +21,13 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/game/commands/commandLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands/commandRules.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands/commands.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/condition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/condition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionAttributes.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionRegeneration.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionDamage.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionSpeed.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionVisual.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionCooldown.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
@@ -68,7 +74,14 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/entities/player.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/position.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocol.cpp
-	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgame.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameMap.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameParse.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameSend.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameShopMarket.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameQuestTrade.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameWorld.cpp
+	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgameHelpers.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocollogin.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolold.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolstatus.cpp

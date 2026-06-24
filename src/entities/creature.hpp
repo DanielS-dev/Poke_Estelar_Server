@@ -6,7 +6,7 @@
 
 #include "../world/map.hpp"
 #include "../core/position.hpp"
-#include "../game/condition.hpp"
+#include "../game/condition/condition.hpp"
 #include "../core/const.hpp"
 #include "../world/tile.hpp"
 #include "../core/enums.hpp"

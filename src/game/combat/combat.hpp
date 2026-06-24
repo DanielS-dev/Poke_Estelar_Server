@@ -8,7 +8,7 @@
 #include "combatCallbacks.hpp"
 #include "combatTypes.hpp"
 #include "magicField.hpp"
-#include "../condition.hpp"
+#include "../condition/condition.hpp"
 #include "../../world/map.hpp"
 
 class Combat

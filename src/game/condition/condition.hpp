@@ -4,8 +4,8 @@
 #ifndef FS_CONDITION_H_F92FF8BDDD5B4EA59E2B1BB5C9C0A086
 #define FS_CONDITION_H_F92FF8BDDD5B4EA59E2B1BB5C9C0A086
 
-#include "../io/fileloader.hpp"
-#include "../core/enums.hpp"
+#include "../../io/fileloader.hpp"
+#include "../../core/enums.hpp"
 
 class Creature;
 class Player;
