@@ -285,7 +285,13 @@ Contém estruturas físicas e lógicas do mundo.
 - `spawn.cpp/.hpp`: spawns de criaturas.
 - `teleport.cpp/.hpp`: teleports.
 - `thing.cpp/.hpp`: base comum para entidades posicionáveis.
-- `tile.cpp/.hpp`: tiles, flags, itens e criaturas no mapa.
+- `tile.hpp`: interface de tiles, flags, itens e criaturas no mapa.
+- `tile/tile.cpp`: definições base e tile nulo.
+- `tile/tileFlags.cpp`: flags, propriedades e bloqueios do tile.
+- `tile/tileLookup.cpp`: consultas de itens, criaturas, stackpos e item de uso.
+- `tile/tileNotifications.cpp`: notificações de adição, atualização, remoção e eventos de movimento.
+- `tile/tileQueries.cpp`: regras de adição, remoção e destino.
+- `tile/tileThingManagement.cpp`: adição, atualização, substituição e remoção de things.
 - `town.hpp`: representação de cidades.
 
 ## Convenções de Manutenção

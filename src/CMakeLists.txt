@@ -154,7 +154,12 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/core/tasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/teleport.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/thing.cpp
-	${CMAKE_CURRENT_LIST_DIR}/world/tile.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile/tile.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile/tileFlags.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile/tileLookup.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile/tileNotifications.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile/tileQueries.cpp
+	${CMAKE_CURRENT_LIST_DIR}/world/tile/tileThingManagement.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weapon.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weaponDistance.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/weapons/weaponMelee.cpp

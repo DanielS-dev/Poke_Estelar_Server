@@ -294,7 +294,12 @@
     <ClCompile Include="..\src\core\tasks.cpp" />
     <ClCompile Include="..\src\world\teleport.cpp" />
     <ClCompile Include="..\src\world\thing.cpp" />
-    <ClCompile Include="..\src\world\tile.cpp" />
+    <ClCompile Include="..\src\world\tile\tile.cpp" />
+    <ClCompile Include="..\src\world\tile\tileFlags.cpp" />
+    <ClCompile Include="..\src\world\tile\tileLookup.cpp" />
+    <ClCompile Include="..\src\world\tile\tileNotifications.cpp" />
+    <ClCompile Include="..\src\world\tile\tileQueries.cpp" />
+    <ClCompile Include="..\src\world\tile\tileThingManagement.cpp" />
     <ClCompile Include="..\src\game\weapons\weapon.cpp" />
     <ClCompile Include="..\src\game\weapons\weaponDistance.cpp" />
     <ClCompile Include="..\src\game\weapons\weaponMelee.cpp" />
