@@ -4,7 +4,7 @@
 #include "otpch.hpp"
 
 #include "container.hpp"
-#include "../persistence/iomap.hpp"
+#include "../persistence/map/iomap.hpp"
 #include "../game/game.hpp"
 
 extern Game g_game;

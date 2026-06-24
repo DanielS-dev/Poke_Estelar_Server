@@ -3,8 +3,8 @@
 
 #include "otpch.hpp"
 
-#include "../persistence/iomap.hpp"
-#include "../persistence/iomapserialize.hpp"
+#include "../persistence/map/iomap.hpp"
+#include "../persistence/map/iomapserialize.hpp"
 #include "../game/combat/combat.hpp"
 #include "../entities/creature.hpp"
 #include "../game/game.hpp"

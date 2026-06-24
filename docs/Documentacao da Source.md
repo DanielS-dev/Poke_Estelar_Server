@@ -204,9 +204,18 @@ Contém acesso ao banco de dados e carregamento/salvamento persistente.
 - `login/loginDataPlayerQueries.cpp`: consultas auxiliares de jogador, guid, nome, banco e house bid.
 - `login/loginDataVip.cpp`: persistência da VIP list.
 - `login/loginDataPremium.cpp`: ajustes de dias premium.
-- `iomap.cpp/.hpp`: carregamento do mapa.
-- `iomapserialize.cpp/.hpp`: serialização de itens e estado do mapa.
-- `iomarket.cpp/.hpp`: persistência do market.
+- `map/iomap.hpp`: fachada do carregamento de mapa OTBM.
+- `map/iomap.cpp`: carregamento do mapa, tiles, towns e waypoints.
+- `map/iomapserialize.hpp`: fachada da serialização persistente de mapa e houses.
+- `map/mapHouseItems.cpp`: carregamento e salvamento dos itens de houses.
+- `map/mapItemSerialization.cpp`: helpers para serializar/deserializar itens, containers e tiles.
+- `map/mapHouseInfo.cpp`: carregamento e salvamento de informações e listas das houses.
+- `map/otbmTypes.hpp`: enums e structs do formato OTBM.
+- `market/iomarket.hpp`: fachada da persistência do market.
+- `market/marketOffers.cpp`: consultas, criação, aceite e remoção de ofertas.
+- `market/marketHistory.cpp`: histórico e movimentação de ofertas para histórico.
+- `market/marketExpiration.cpp`: processamento de ofertas expiradas.
+- `market/marketStatistics.cpp`: estatísticas de compra e venda do market.
 
 ### `src/scripting`
 

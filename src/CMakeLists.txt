@@ -57,9 +57,14 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataPlayerQueries.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataVip.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataPremium.cpp
-	${CMAKE_CURRENT_LIST_DIR}/persistence/iomap.cpp
-	${CMAKE_CURRENT_LIST_DIR}/persistence/iomapserialize.cpp
-	${CMAKE_CURRENT_LIST_DIR}/persistence/iomarket.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/map/iomap.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/map/mapHouseItems.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/map/mapItemSerialization.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/map/mapHouseInfo.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketOffers.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketHistory.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketExpiration.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketStatistics.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/item.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/items.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp

@@ -12,7 +12,7 @@
 #include "game.hpp"
 #include "../scripting/actions.hpp"
 #include "../persistence/login/iologindata.hpp"
-#include "../persistence/iomarket.hpp"
+#include "../persistence/market/iomarket.hpp"
 #include "../scripting/talkaction.hpp"
 #include "spells/spells.hpp"
 #include "../config/configmanager.hpp"

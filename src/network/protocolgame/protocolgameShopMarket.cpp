@@ -14,7 +14,7 @@
 #include "../../scripting/actions.hpp"
 #include "../../game/game.hpp"
 #include "../../persistence/login/iologindata.hpp"
-#include "../../persistence/iomarket.hpp"
+#include "../../persistence/market/iomarket.hpp"
 #include "../../core/waitlist.hpp"
 #include "../../security/ban.hpp"
 #include "../../core/scheduler.hpp"

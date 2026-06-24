@@ -7,7 +7,7 @@
 
 #include "../game/game.hpp"
 
-#include "../persistence/iomarket.hpp"
+#include "../persistence/market/iomarket.hpp"
 
 #include "../config/configmanager.hpp"
 #include "../scripting/scriptmanager.hpp"

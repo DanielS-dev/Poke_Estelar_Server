@@ -5,7 +5,7 @@
 
 #include "iomap.hpp"
 
-#include "../world/bed.hpp"
+#include "../../world/bed.hpp"
 
 /*
 	OTBM_ROOTV1
