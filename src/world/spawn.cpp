@@ -10,7 +10,7 @@
 #include "../core/scheduler.hpp"
 
 #include "../core/pugicast.hpp"
-#include "../scripting/events.hpp" //pota
+#include "../scripting/events/events.hpp" //pota
 #include "../core/tools/xmlErro.hpp"
 
 extern ConfigManager g_config;

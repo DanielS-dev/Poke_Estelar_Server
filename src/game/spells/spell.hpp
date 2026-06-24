@@ -8,7 +8,7 @@
 #include <string>
 
 #include "../../entities/player.hpp"
-#include "../../scripting/luascript.hpp"
+#include "../../scripting/lua/luascript.hpp"
 
 typedef std::map<uint16_t, bool> VocSpellMap;
 

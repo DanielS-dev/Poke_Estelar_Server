@@ -7,7 +7,7 @@
 #include "../game.hpp"
 #include "../weapons/weapons.hpp"
 #include "../../config/configmanager.hpp"
-#include "../../scripting/events.hpp"
+#include "../../scripting/events/events.hpp"
 #include "../../entities/monster.hpp"
 #include "../../core/tools/random.hpp"
 

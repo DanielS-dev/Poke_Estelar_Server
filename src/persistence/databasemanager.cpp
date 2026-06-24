@@ -5,7 +5,7 @@
 
 #include "../config/configmanager.hpp"
 #include "databasemanager.hpp"
-#include "../scripting/luascript.hpp"
+#include "../scripting/lua/luascript.hpp"
 
 extern ConfigManager g_config;
 

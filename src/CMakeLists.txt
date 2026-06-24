@@ -4,7 +4,11 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/app/serviceManager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/app/signals.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/otpch.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/actions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actionRules.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actionExecution.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actionConfig.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actionBuiltins.cpp
 	${CMAKE_CURRENT_LIST_DIR}/security/ban.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/baseevents.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/bed.cpp
@@ -32,14 +36,26 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/creature.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEvents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventConfig.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventPlayer.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventDeath.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventMisc.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/cylinder.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/database.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/databasemanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/databasetasks.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/depotchest.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/depotlocker.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/events.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/events.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsMonster.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsCreature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsParty.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsPlayer.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsPlayerLook.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsPlayerMove.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsPlayerProgress.cpp
 	${CMAKE_CURRENT_LIST_DIR}/io/fileloader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/game.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
@@ -67,7 +83,23 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketStatistics.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/item.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/items.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/luascript.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptEnvironment.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptInterface.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptStack.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptRegistry.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsLegacy.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsDatabase.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsGame.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsWorld.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsNetwork.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsItem.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCombatCondition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCreature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsPlayer.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsMonsterNpc.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsSocial.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaEnvironment.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/mailbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/map.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/monster.cpp

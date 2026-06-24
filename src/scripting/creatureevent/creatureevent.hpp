@@ -4,9 +4,9 @@
 #ifndef FS_CREATUREEVENT_H_73FCAF4608CB41399D53C919316646A9
 #define FS_CREATUREEVENT_H_73FCAF4608CB41399D53C919316646A9
 
-#include "luascript.hpp"
-#include "baseevents.hpp"
-#include "../core/enums.hpp"
+#include "../lua/luascript.hpp"
+#include "../baseevents.hpp"
+#include "../../core/enums.hpp"
 
 enum CreatureEventType_t {
 	CREATURE_EVENT_NONE,

@@ -10,7 +10,7 @@
 #include "../core/const.hpp"
 #include "../world/tile.hpp"
 #include "../core/enums.hpp"
-#include "../scripting/creatureevent.hpp"
+#include "../scripting/creatureevent/creatureevent.hpp"
 
 typedef std::list<Condition*> ConditionList;
 typedef std::list<CreatureEvent*> CreatureEventList;

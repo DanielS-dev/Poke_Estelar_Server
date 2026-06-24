@@ -4,9 +4,9 @@
 #ifndef FS_ACTIONS_H_87F60C5F587E4B84948F304A6451E6E6
 #define FS_ACTIONS_H_87F60C5F587E4B84948F304A6451E6E6
 
-#include "baseevents.hpp"
-#include "../core/enums.hpp"
-#include "luascript.hpp"
+#include "../baseevents.hpp"
+#include "../../core/enums.hpp"
+#include "../lua/luascript.hpp"
 
 typedef bool (ActionFunction)(Player* player, Item* item, const Position& fromPosition, Thing* target, const Position& toPosition, bool isHotkey);
 

@@ -5,7 +5,7 @@
 #define FS_CHAT_H_F1574642D0384ABFAB52B7ED906E5628
 
 #include "chatChannel.hpp"
-#include "../../scripting/luascript.hpp"
+#include "../../scripting/lua/luascript.hpp"
 
 class ChatLoader;
 class Party;

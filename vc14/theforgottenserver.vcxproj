@@ -133,7 +133,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\scripting\actions.cpp" />
+    <ClCompile Include="..\src\scripting\actions\actions.cpp" />
+    <ClCompile Include="..\src\scripting\actions\actionRules.cpp" />
+    <ClCompile Include="..\src\scripting\actions\actionExecution.cpp" />
+    <ClCompile Include="..\src\scripting\actions\actionConfig.cpp" />
+    <ClCompile Include="..\src\scripting\actions\actionBuiltins.cpp" />
     <ClCompile Include="..\src\security\ban.cpp" />
     <ClCompile Include="..\src\scripting\baseevents.cpp" />
     <ClCompile Include="..\src\world\bed.cpp" />
@@ -161,14 +165,26 @@
     <ClCompile Include="..\src\network\connection.cpp" />
     <ClCompile Include="..\src\items\container.cpp" />
     <ClCompile Include="..\src\entities\creature.cpp" />
-    <ClCompile Include="..\src\scripting\creatureevent.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent\creatureEvents.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent\creatureEventConfig.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent\creatureEventPlayer.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent\creatureEventDeath.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent\creatureEventCombat.cpp" />
+    <ClCompile Include="..\src\scripting\creatureevent\creatureEventMisc.cpp" />
     <ClCompile Include="..\src\world\cylinder.cpp" />
     <ClCompile Include="..\src\persistence\database.cpp" />
     <ClCompile Include="..\src\persistence\databasemanager.cpp" />
     <ClCompile Include="..\src\persistence\databasetasks.cpp" />
     <ClCompile Include="..\src\items\depotchest.cpp" />
     <ClCompile Include="..\src\items\depotlocker.cpp" />
-    <ClCompile Include="..\src\scripting\events.cpp" />
+    <ClCompile Include="..\src\scripting\events\events.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsMonster.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsCreature.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsParty.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsPlayer.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsPlayerLook.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsPlayerMove.cpp" />
+    <ClCompile Include="..\src\scripting\events\eventsPlayerProgress.cpp" />
     <ClCompile Include="..\src\io\fileloader.cpp" />
     <ClCompile Include="..\src\game\game.cpp" />
     <ClCompile Include="..\src\scripting\globalevent.cpp" />
@@ -196,7 +212,23 @@
     <ClCompile Include="..\src\persistence\market\marketStatistics.cpp" />
     <ClCompile Include="..\src\items\item.cpp" />
     <ClCompile Include="..\src\items\items.cpp" />
-    <ClCompile Include="..\src\scripting\luascript.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaScriptEnvironment.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaScriptInterface.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaScriptStack.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaScriptRegistry.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsLegacy.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsCore.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsDatabase.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsGame.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsWorld.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsNetwork.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsItem.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsCombatCondition.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsCreature.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsPlayer.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsMonsterNpc.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaBindingsSocial.cpp" />
+    <ClCompile Include="..\src\scripting\lua\luaEnvironment.cpp" />
     <ClCompile Include="..\src\items\mailbox.cpp" />
     <ClCompile Include="..\src\world\map.cpp" />
     <ClCompile Include="..\src\entities\monster.cpp" />
@@ -285,7 +317,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\entities\account.hpp" />
-    <ClInclude Include="..\src\scripting\actions.hpp" />
+    <ClInclude Include="..\src\scripting\actions\actions.hpp" />
     <ClInclude Include="..\src\security\ban.hpp" />
     <ClInclude Include="..\src\scripting\baseevents.hpp" />
     <ClInclude Include="..\src\world\bed.hpp" />
@@ -309,7 +341,7 @@
     <ClInclude Include="..\src\core\const.hpp" />
     <ClInclude Include="..\src\items\container.hpp" />
     <ClInclude Include="..\src\entities\creature.hpp" />
-    <ClInclude Include="..\src\scripting\creatureevent.hpp" />
+    <ClInclude Include="..\src\scripting\creatureevent\creatureevent.hpp" />
     <ClInclude Include="..\src\world\cylinder.hpp" />
     <ClInclude Include="..\src\persistence\database.hpp" />
     <ClInclude Include="..\src\persistence\databasemanager.hpp" />
@@ -318,7 +350,7 @@
     <ClInclude Include="..\src\items\depotchest.hpp" />
     <ClInclude Include="..\src\items\depotlocker.hpp" />
     <ClInclude Include="..\src\core\enums.hpp" />
-    <ClInclude Include="..\src\scripting\events.hpp" />
+    <ClInclude Include="..\src\scripting\events\events.hpp" />
     <ClInclude Include="..\src\io\fileloader.hpp" />
     <ClInclude Include="..\src\game\game.hpp" />
     <ClInclude Include="..\src\scripting\globalevent.hpp" />
@@ -337,7 +369,7 @@
     <ClInclude Include="..\src\items\itemloader.hpp" />
     <ClInclude Include="..\src\items\items.hpp" />
     <ClInclude Include="..\src\core\lockfree.hpp" />
-    <ClInclude Include="..\src\scripting\luascript.hpp" />
+    <ClInclude Include="..\src\scripting\lua\luascript.hpp" />
     <ClInclude Include="..\src\items\mailbox.hpp" />
     <ClInclude Include="..\src\world\map.hpp" />
     <ClInclude Include="..\src\entities\monster.hpp" />

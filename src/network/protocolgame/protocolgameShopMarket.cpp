@@ -11,7 +11,7 @@
 #include "../../entities/player.hpp"
 #include "../../entities/monster.hpp"
 #include "../../config/configmanager.hpp"
-#include "../../scripting/actions.hpp"
+#include "../../scripting/actions/actions.hpp"
 #include "../../game/game.hpp"
 #include "../../persistence/login/iologindata.hpp"
 #include "../../persistence/market/iomarket.hpp"

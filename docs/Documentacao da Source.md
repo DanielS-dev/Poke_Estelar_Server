@@ -221,12 +221,48 @@ Contém acesso ao banco de dados e carregamento/salvamento persistente.
 
 Contém a integração com Lua e os sistemas de eventos scriptáveis.
 
-- `actions.cpp/.hpp`: actions usadas por itens e scripts.
+- `actions/actions.hpp`: fachada das actions usadas por itens e scripts.
+- `actions/actions.cpp`: manager, registro e lookup de actions.
+- `actions/actionRules.cpp`: regras de alcance, floor, linha de visão e target.
+- `actions/actionExecution.cpp`: fluxo de uso de item e execução de script.
+- `actions/actionConfig.cpp`: configuração do Action e binding de função nativa.
+- `actions/actionBuiltins.cpp`: funções nativas increase/decrease item id e market.
 - `baseevents.cpp/.hpp`: base para sistemas de eventos.
-- `creatureevent.cpp/.hpp`: eventos ligados a criaturas.
-- `events.cpp/.hpp`: eventos globais registrados via script.
+- `creatureevent/creatureevent.hpp`: fachada dos eventos ligados a criaturas.
+- `creatureevent/creatureEvents.cpp`: manager, registro, reload e disparo global de login/logout/advance.
+- `creatureevent/creatureEventConfig.cpp`: configuração, tipo e metadados do evento.
+- `creatureevent/creatureEventPlayer.cpp`: execuções de login, logout e advance.
+- `creatureevent/creatureEventDeath.cpp`: execuções de death, post death, prepare death e kill.
+- `creatureevent/creatureEventCombat.cpp`: execuções de health change e mana change.
+- `creatureevent/creatureEventMisc.cpp`: execuções de think, modal, text edit, extended opcode e move.
+- `events/events.hpp`: fachada dos eventos globais registrados via script.
+- `events/events.cpp`: carregamento e registro dos eventos configurados.
+- `events/eventsMonster.cpp`: callbacks de monster.
+- `events/eventsCreature.cpp`: callbacks de creature.
+- `events/eventsParty.cpp`: callbacks de party.
+- `events/eventsPlayerLook.cpp`: callbacks de look do player.
+- `events/eventsPlayerMove.cpp`: callbacks de movement, turn e trade do player.
+- `events/eventsPlayerProgress.cpp`: callbacks de experiência e skill do player.
+- `events/eventsPlayer.cpp`: callbacks de player que não pertencem aos grupos principais.
 - `globalevent.cpp/.hpp`: globalevents e eventos agendados.
-- `luascript.cpp/.hpp`: interface principal entre C++ e Lua.
+- `lua/luascript.hpp`: fachada da interface principal entre C++ e Lua.
+- `lua/luaScriptEnvironment.cpp`: ambiente de script, UIDs temporários e resultados de banco.
+- `lua/luaScriptInterface.cpp`: ciclo de vida, carregamento, chamadas e tratamento de erro Lua.
+- `lua/luaScriptStack.cpp`: helpers de stack, push/get/pop, metatables e conversões.
+- `lua/luaScriptRegistry.cpp`: registro de classes, métodos, tabelas e funções Lua.
+- `lua/luaBindingsCore.cpp`: bindings utilitários, eventos agendados, bit/config e helpers gerais.
+- `lua/luaBindingsDatabase.cpp`: bindings de database e result.
+- `lua/luaBindingsGame.cpp`: bindings da classe Game.
+- `lua/luaBindingsWorld.cpp`: bindings de variant, position, tile, town e house.
+- `lua/luaBindingsNetwork.cpp`: bindings de network message e modal window.
+- `lua/luaBindingsItem.cpp`: bindings de item, container, teleport e item type.
+- `lua/luaBindingsCombatCondition.cpp`: bindings de combat, condition e área de combate.
+- `lua/luaBindingsCreature.cpp`: bindings de creature.
+- `lua/luaBindingsPlayer.cpp`: bindings de player.
+- `lua/luaBindingsMonsterNpc.cpp`: bindings de monster, monster type e npc.
+- `lua/luaBindingsSocial.cpp`: bindings de guild, group, vocation e party.
+- `lua/luaBindingsLegacy.cpp`: bindings legados que ficaram fora dos grupos principais.
+- `lua/luaEnvironment.cpp`: gerenciamento do LuaEnvironment global.
 - `scriptmanager.cpp/.hpp`: carregamento e gerenciamento de scripts.
 - `talkaction.cpp/.hpp`: talkactions e comandos por fala.
 

@@ -9,7 +9,7 @@
 #include "movementTypes.hpp"
 #include "../../scripting/baseevents.hpp"
 #include "../../items/item.hpp"
-#include "../../scripting/luascript.hpp"
+#include "../../scripting/lua/luascript.hpp"
 
 class MoveEvent final : public Event
 {

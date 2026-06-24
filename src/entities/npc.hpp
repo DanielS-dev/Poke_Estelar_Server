@@ -5,7 +5,7 @@
 #define FS_NPC_H_B090D0CB549D4435AFA03647195D156F
 
 #include "creature.hpp"
-#include "../scripting/luascript.hpp"
+#include "../scripting/lua/luascript.hpp"
 
 #include <set>
 

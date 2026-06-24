@@ -7,7 +7,7 @@
 #include "signals.hpp"
 #include "../core/tasks.hpp"
 #include "../game/game.hpp"
-#include "../scripting/actions.hpp"
+#include "../scripting/actions/actions.hpp"
 #include "../config/configmanager.hpp"
 #include "../game/spells/spells.hpp"
 #include "../scripting/talkaction.hpp"
@@ -18,7 +18,7 @@
 #include "../entities/mounts.hpp"
 #include "../scripting/globalevent.hpp"
 #include "../entities/monster.hpp"
-#include "../scripting/events.hpp"
+#include "../scripting/events/events.hpp"
 #include "../core/scheduler.hpp"
 #include "../persistence/databasetasks.hpp"
 

@@ -9,7 +9,7 @@
 #include "../../entities/player.hpp"
 #include "../../entities/npc.hpp"
 #include "../game.hpp"
-#include "../../scripting/actions.hpp"
+#include "../../scripting/actions/actions.hpp"
 #include "../../persistence/login/iologindata.hpp"
 #include "../../config/configmanager.hpp"
 #include "../spells/spells.hpp"
@@ -18,7 +18,7 @@
 #include "../../scripting/globalevent.hpp"
 #include "../../entities/monster.hpp"
 #include "../../core/scheduler.hpp"
-#include "../../scripting/events.hpp"
+#include "../../scripting/events/events.hpp"
 #include "../../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;

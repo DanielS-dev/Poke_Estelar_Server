@@ -4,7 +4,7 @@
 #ifndef FS_EVENTS_H_BD444CC0EE167E5777E4C90C766B36DC
 #define FS_EVENTS_H_BD444CC0EE167E5777E4C90C766B36DC
 
-#include "luascript.hpp"
+#include "../lua/luascript.hpp"
 
 class Party;
 class ItemType;

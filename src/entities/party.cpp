@@ -6,7 +6,7 @@
 #include "party.hpp"
 #include "../game/game.hpp"
 #include "../config/configmanager.hpp"
-#include "../scripting/events.hpp"
+#include "../scripting/events/events.hpp"
 
 extern Game g_game;
 extern ConfigManager g_config;

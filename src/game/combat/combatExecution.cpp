@@ -6,7 +6,7 @@
 
 #include "../game.hpp"
 #include "../../config/configmanager.hpp"
-#include "../../scripting/events.hpp"
+#include "../../scripting/events/events.hpp"
 #include "../../entities/monster.hpp"
 
 extern Game g_game;

@@ -5,7 +5,7 @@
 #define FS_RUNESPELL_H_D8852D21136044FDBD5EC9840264CD86
 
 #include "spell.hpp"
-#include "../../scripting/actions.hpp"
+#include "../../scripting/actions/actions.hpp"
 
 class RuneSpell;
 

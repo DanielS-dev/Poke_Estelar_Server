@@ -5,14 +5,14 @@
 
 #include "scriptmanager.hpp"
 
-#include "actions.hpp"
+#include "actions/actions.hpp"
 #include "../game/chat/chat.hpp"
 #include "talkaction.hpp"
 #include "../game/spells/spells.hpp"
 #include "../game/movement/movement.hpp"
 #include "../game/weapons/weapons.hpp"
 #include "globalevent.hpp"
-#include "events.hpp"
+#include "events/events.hpp"
 
 Actions* g_actions = nullptr;
 CreatureEvents* g_creatureEvents = nullptr;

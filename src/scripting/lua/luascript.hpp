@@ -16,9 +16,9 @@
 #endif
 #endif
 
-#include "../persistence/database.hpp"
-#include "../core/enums.hpp"
-#include "../core/position.hpp"
+#include "../../persistence/database.hpp"
+#include "../../core/enums.hpp"
+#include "../../core/position.hpp"
 
 class Thing;
 class Creature;
@@ -1281,8 +1281,8 @@ class LuaScriptInterface
 
 class LuaEnvironment : public LuaScriptInterface
 {
-	public:
-		LuaEnvironment();
+public:
+	LuaEnvironment();
 		~LuaEnvironment();
 
 		// non-copyable
@@ -1319,8 +1319,10 @@ class LuaEnvironment : public LuaScriptInterface
 		uint32_t lastCombatId = 0;
 		uint32_t lastAreaId = 0;
 
-		friend class LuaScriptInterface;
-		friend class CombatSpell;
+	friend class LuaScriptInterface;
+	friend class CombatSpell;
 };
+
+extern LuaEnvironment g_luaEnvironment;
 
 #endif

@@ -4,7 +4,7 @@
 #ifndef FS_BASEEVENTS_H_9994E32C91CE4D95912A5FDD1F41884A
 #define FS_BASEEVENTS_H_9994E32C91CE4D95912A5FDD1F41884A
 
-#include "luascript.hpp"
+#include "lua/luascript.hpp"
 
 class Event
 {
