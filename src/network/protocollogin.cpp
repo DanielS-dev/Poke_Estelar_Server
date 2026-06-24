@@ -11,7 +11,7 @@
 #include "../core/tools/dateTools.hpp"
 
 #include "../config/configmanager.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "../security/ban.hpp"
 #include "../game/game.hpp"
 

@@ -4,9 +4,9 @@
 #ifndef FS_IOLOGINDATA_H_28B0440BEC594654AC0F4E1A5E42B2EF
 #define FS_IOLOGINDATA_H_28B0440BEC594654AC0F4E1A5E42B2EF
 
-#include "../entities/account.hpp"
-#include "../entities/player.hpp"
-#include "database.hpp"
+#include "../../entities/account.hpp"
+#include "../../entities/player.hpp"
+#include "../database.hpp"
 
 typedef std::list<std::pair<int32_t, Item*>> ItemBlockList;
 

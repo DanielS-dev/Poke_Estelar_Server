@@ -178,7 +178,14 @@
     <ClCompile Include="..\src\world\housetile.cpp" />
     <ClCompile Include="..\src\items\inbox.cpp" />
     <ClCompile Include="..\src\persistence\ioguild.cpp" />
-    <ClCompile Include="..\src\persistence\iologindata.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataAccount.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataAuthentication.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataPlayerLoad.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataItems.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataPlayerSave.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataPlayerQueries.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataVip.cpp" />
+    <ClCompile Include="..\src\persistence\login\loginDataPremium.cpp" />
     <ClCompile Include="..\src\persistence\iomap.cpp" />
     <ClCompile Include="..\src\persistence\iomapserialize.cpp" />
     <ClCompile Include="..\src\persistence\iomarket.cpp" />
@@ -316,7 +323,7 @@
     <ClInclude Include="..\src\world\housetile.hpp" />
     <ClInclude Include="..\src\items\inbox.hpp" />
     <ClInclude Include="..\src\persistence\ioguild.hpp" />
-    <ClInclude Include="..\src\persistence\iologindata.hpp" />
+    <ClInclude Include="..\src\persistence\login\iologindata.hpp" />
     <ClInclude Include="..\src\persistence\iomap.hpp" />
     <ClInclude Include="..\src\persistence\iomapserialize.hpp" />
     <ClInclude Include="..\src\persistence\iomarket.hpp" />

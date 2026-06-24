@@ -5,7 +5,7 @@
 
 #include "mailbox.hpp"
 #include "../game/game.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern Game g_game;

@@ -11,7 +11,7 @@
 #include "../entities/monster.hpp"
 #include "game.hpp"
 #include "../scripting/actions.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "../persistence/iomarket.hpp"
 #include "../scripting/talkaction.hpp"
 #include "spells/spells.hpp"

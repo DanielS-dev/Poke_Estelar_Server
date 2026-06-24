@@ -12,7 +12,7 @@
 #include "../scripting/creatureevent.hpp"
 #include "../scripting/events.hpp"
 #include "../game/game.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "monster.hpp"
 #include "../game/movement/movement.hpp"
 #include "../core/scheduler.hpp"

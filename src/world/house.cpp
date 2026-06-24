@@ -6,7 +6,7 @@
 #include "../core/pugicast.hpp"
 
 #include "house.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "../game/game.hpp"
 #include "../config/configmanager.hpp"
 #include "bed.hpp"

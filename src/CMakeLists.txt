@@ -49,7 +49,14 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/housetile.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/inbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/ioguild.cpp
-	${CMAKE_CURRENT_LIST_DIR}/persistence/iologindata.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataAccount.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataAuthentication.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataPlayerLoad.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataItems.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataPlayerSave.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataPlayerQueries.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataVip.cpp
+	${CMAKE_CURRENT_LIST_DIR}/persistence/login/loginDataPremium.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iomap.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iomapserialize.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/iomarket.cpp

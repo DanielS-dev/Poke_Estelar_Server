@@ -13,7 +13,7 @@
 #include "../../config/configmanager.hpp"
 #include "../../scripting/actions.hpp"
 #include "../../game/game.hpp"
-#include "../../persistence/iologindata.hpp"
+#include "../../persistence/login/iologindata.hpp"
 #include "../../persistence/iomarket.hpp"
 #include "../../core/waitlist.hpp"
 #include "../../security/ban.hpp"

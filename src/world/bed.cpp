@@ -6,7 +6,7 @@
 #include "bed.hpp"
 #include "../game/game.hpp"
 #include "../core/tools/positionTools.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "../core/scheduler.hpp"
 
 extern Game g_game;

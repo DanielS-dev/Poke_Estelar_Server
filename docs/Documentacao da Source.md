@@ -195,7 +195,15 @@ Contém acesso ao banco de dados e carregamento/salvamento persistente.
 - `databasemanager.cpp/.hpp`: gerenciamento de schema e tarefas administrativas de banco.
 - `databasetasks.cpp/.hpp`: execução assíncrona de tarefas de banco.
 - `ioguild.cpp/.hpp`: persistência de guilds.
-- `iologindata.cpp/.hpp`: login, conta e dados iniciais do jogador.
+- `login/iologindata.hpp`: fachada dos dados de login, conta e jogador.
+- `login/loginDataAccount.cpp`: persistência de contas e tipo de conta.
+- `login/loginDataAuthentication.cpp`: autenticação do login server e gameworld.
+- `login/loginDataPlayerLoad.cpp`: carregamento e preload dos dados do jogador.
+- `login/loginDataItems.cpp`: serialização e desserialização de itens do jogador.
+- `login/loginDataPlayerSave.cpp`: salvamento completo do jogador.
+- `login/loginDataPlayerQueries.cpp`: consultas auxiliares de jogador, guid, nome, banco e house bid.
+- `login/loginDataVip.cpp`: persistência da VIP list.
+- `login/loginDataPremium.cpp`: ajustes de dias premium.
 - `iomap.cpp/.hpp`: carregamento do mapa.
 - `iomapserialize.cpp/.hpp`: serialização de itens e estado do mapa.
 - `iomarket.cpp/.hpp`: persistência do market.

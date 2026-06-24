@@ -11,7 +11,7 @@
 #include "../game/game.hpp"
 #include "../network/protocolstatus.hpp"
 #include "../game/spells/spells.hpp"
-#include "../persistence/iologindata.hpp"
+#include "../persistence/login/iologindata.hpp"
 #include "../config/configmanager.hpp"
 #include "../world/teleport.hpp"
 #include "../persistence/databasemanager.hpp"

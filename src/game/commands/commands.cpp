@@ -10,7 +10,7 @@
 #include "../../entities/npc.hpp"
 #include "../game.hpp"
 #include "../../scripting/actions.hpp"
-#include "../../persistence/iologindata.hpp"
+#include "../../persistence/login/iologindata.hpp"
 #include "../../config/configmanager.hpp"
 #include "../spells/spells.hpp"
 #include "../movement/movement.hpp"
