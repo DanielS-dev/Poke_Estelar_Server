@@ -78,16 +78,67 @@ Contém funções utilitárias divididas por responsabilidade. Novos helpers gen
 Contém as entidades principais do servidor e seus comportamentos associados.
 
 - `account.hpp`: estrutura de conta.
-- `creature.cpp/.hpp`: base para criaturas vivas no mundo.
+- `creature.hpp`: interface base para criaturas vivas no mundo.
+- `creature/creature.cpp`: estado básico, visibilidade, skull e delays de caminhada.
+- `creature/creatureThink.cpp`: ciclo de pensamento, ataque periódico e estado idle.
+- `creature/creatureMovement.cpp`: caminhada, auto-walk, cache de mapa, duração de passos e luz.
+- `creature/creatureEvents.cpp`: eventos de tile, movimentação, zona e registros de scripts.
+- `creature/creatureDeath.cpp`: morte, corpse, experiência e histórico de ataques.
+- `creature/creatureCombat.cpp`: vida, mana, dano, bloqueio de hits, follow/target e mapa de dano.
+- `creature/creatureConditions.cpp`: condições, summons, imunidades, supressões e ticks de condição.
+- `creature/creaturePathfinding.cpp`: busca de caminho, invisibilidade e `FrozenPathingConditionCall`.
 - `groups.cpp/.hpp`: grupos de acesso e permissões.
 - `guild.cpp/.hpp`: dados e regras de guild.
-- `monster.cpp/.hpp`: comportamento individual de monstros.
-- `monsters.cpp/.hpp`: carregamento e registro dos tipos de monstros.
+- `monster.hpp`: interface do comportamento individual de monstros.
+- `monster/monster.cpp`: criação, construtor, lista global e visibilidade básica.
+- `monster/monsterEvents.cpp`: eventos de criatura vistos pelo monstro.
+- `monster/monsterTarget.cpp`: amigos, alvos, busca e seleção de target.
+- `monster/monsterCombat.cpp`: bloqueio de dano e validação de alvos.
+- `monster/monsterThink.cpp`: ciclo de think, ataques, defesa e yells.
+- `monster/monsterMovement.cpp`: caminhada, push, dança, fuga e distância.
+- `monster/monsterLifecycle.cpp`: morte, corpse, loot, convince/challenge e path params.
+- `monsters.hpp`: interface de tipos de monstros, loot, spells e registro de `MonsterType`.
+- `monsters/monsters.cpp`: manager `Monsters`, carregamento principal, reload e busca de tipo.
+- `monsters/monsterTypeLoader.cpp`: leitura do XML de cada `MonsterType`.
+- `monsters/monsterSpellLoader.cpp`: parsing de spells, ataques, defesas e condições.
+- `monsters/monsterTypeLoot.cpp`: criação de loot em runtime.
+- `monsters/monsterLootLoader.cpp`: parsing de loot no XML.
 - `mounts.cpp/.hpp`: carregamento e controle de mounts.
-- `npc.cpp/.hpp`: comportamento e carregamento de NPCs.
+- `npc.hpp`: interface de NPCs, scripts Lua e handlers de eventos.
+- `npc/npc.cpp`: núcleo do NPC, criação, reload, fala e estado básico.
+- `npc/npcLoader.cpp`: carregamento XML de NPC.
+- `npc/npcEvents.cpp`: eventos de criatura e think recebidos pelo NPC.
+- `npc/npcMovement.cpp`: caminhada, foco e movimentação do NPC.
+- `npc/npcShop.cpp`: trade, callbacks e janelas de shop.
+- `npc/npcScriptInterface.cpp`: inicialização da interface Lua de NPC.
+- `npc/npcLuaActions.cpp`: bindings Lua básicos de ação do NPC.
+- `npc/npcLuaShop.cpp`: bindings Lua de shop e metatable `Npc`.
+- `npc/npcEventsHandler.cpp`: execução dos callbacks de evento do script do NPC.
 - `outfit.cpp/.hpp`: outfits disponíveis.
-- `party.cpp/.hpp`: sistema de party.
-- `player.cpp/.hpp`: comportamento, estado e interações do jogador.
+- `party.hpp`: interface e estado do sistema de party.
+- `party/party.cpp`: criação, disband e saída de membros.
+- `party/partyMembership.cpp`: troca de liderança e entrada de jogadores.
+- `party/partyInvitations.cpp`: convites, revogação e remoção de invites.
+- `party/partyMessaging.cpp`: ícones, mensagens e loot broadcast da party.
+- `party/partySharedExperience.cpp`: experiência compartilhada, vocations e ticks de participação.
+- `party/partyCorpse.cpp`: regra de acesso ao corpse pelo grupo.
+- `player.hpp`: interface principal, estado e contrato público do jogador.
+- `player/player.cpp`: construção, destruição, descrição e dados básicos do jogador.
+- `player/playerStats.cpp`: vocation, skills, atributos, inventário equipado e cálculo de defesa/ataque.
+- `player/playerContainers.cpp`: containers abertos, envio de itens de container e eventos de container.
+- `player/playerStorageDepot.cpp`: storage, depot, depot locker, mail e corpse lookup.
+- `player/playerVisibility.cpp`: visibilidade, ghost mode e walkthrough.
+- `player/playerMessaging.cpp`: mensagens, ping, modal windows, canais privados e mute conditions.
+- `player/playerEvents.cpp`: eventos de tile, criatura, zona e remoção/aparição.
+- `player/playerShop.cpp`: shop, trade state e lista de venda.
+- `player/playerMovement.cpp`: caminhada, tarefas de movimento, follow/chase, path params e luz.
+- `player/playerThink.cpp`: ciclo de think, mute e message buffer.
+- `player/playerProgression.cpp`: experiência, level, treino offline e janelas modais.
+- `player/playerDeath.cpp`: morte, perda de experiência, blessings e corpse.
+- `player/playerCombat.cpp`: vida, mana, bloqueio de dano, condições, imunidades e eventos de combate.
+- `player/playerInventory.cpp`: regras de `Cylinder`, capacidade, query de itens, contagem e dinheiro.
+- `player/playerSession.cpp`: IP, entrada/saída da lista, kick, logout e outfits.
+- `player/playerSocial.cpp`: VIP, guild, party, skull, war, mounts e limites sociais.
 - `vocation.cpp/.hpp`: vocations e suas configurações.
 
 ### `src/game`
@@ -229,7 +280,7 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `actions/actionBuiltins.cpp`: funções nativas increase/decrease item id e market.
 - `baseevents.cpp/.hpp`: base para sistemas de eventos.
 - `creatureevent/creatureevent.hpp`: fachada dos eventos ligados a criaturas.
-- `creatureevent/creatureEvents.cpp`: manager, registro, reload e disparo global de login/logout/advance.
+- `creatureevent/creatureEventManager.cpp`: manager, registro, reload e disparo global de login/logout/advance.
 - `creatureevent/creatureEventConfig.cpp`: configuração, tipo e metadados do evento.
 - `creatureevent/creatureEventPlayer.cpp`: execuções de login, logout e advance.
 - `creatureevent/creatureEventDeath.cpp`: execuções de death, post death, prepare death e kill.

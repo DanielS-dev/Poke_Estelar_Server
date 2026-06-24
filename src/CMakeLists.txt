@@ -35,8 +35,15 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
 	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
-	${CMAKE_CURRENT_LIST_DIR}/entities/creature.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEvents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureConditions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureDeath.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureEvents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureMovement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creaturePathfinding.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureThink.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventManager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventConfig.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventPlayer.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/creatureevent/creatureEventDeath.cpp
@@ -114,8 +121,18 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/world/map/mapSight.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/map/mapSpectators.cpp
 	${CMAKE_CURRENT_LIST_DIR}/world/map/mapStorage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/entities/monster.cpp
-	${CMAKE_CURRENT_LIST_DIR}/entities/monsters.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monster.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monsterCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monsterEvents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monsterLifecycle.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monsterMovement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monsterTarget.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monster/monsterThink.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monsters/monsterLootLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monsters/monsters.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monsters/monsterSpellLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monsters/monsterTypeLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/monsters/monsterTypeLoot.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/mounts.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/movement/movement.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEvent.cpp
@@ -123,11 +140,39 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEventHandlers.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/movement/movementEventScript.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/networkmessage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/entities/npc.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npc.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcEvents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcEventsHandler.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcLuaActions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcLuaShop.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcMovement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcScriptInterface.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/npc/npcShop.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/outfit.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/outputmessage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/entities/party.cpp
-	${CMAKE_CURRENT_LIST_DIR}/entities/player.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party/party.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party/partyCorpse.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party/partyInvitations.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party/partyMembership.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party/partyMessaging.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/party/partySharedExperience.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/player.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerContainers.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerDeath.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerEvents.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerInventory.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerMessaging.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerMovement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerProgression.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerSession.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerShop.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerSocial.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerStats.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerStorageDepot.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerThink.cpp
+	${CMAKE_CURRENT_LIST_DIR}/entities/player/playerVisibility.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/position.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocol.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/protocolgame/protocolgame.cpp
