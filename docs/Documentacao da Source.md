@@ -167,7 +167,34 @@ Contém os sistemas centrais de gameplay.
 - `condition/conditionSpeed.cpp`: haste, paralyze, sleep/silence e fórmula de speed.
 - `condition/conditionVisual.cpp`: invisibilidade, outfit e light.
 - `condition/conditionCooldown.cpp`: cooldown de spell, grupo e status simples.
-- `game.cpp/.hpp`: núcleo de coordenação da lógica do jogo.
+- `game.hpp`: fachada principal, estado e contrato público do orquestrador do jogo.
+- `game/game.cpp`: construção, inicialização e agendamento base do jogo.
+- `game/gameState.cpp`: estado do servidor, world type, save state, shutdown e cleanup.
+- `game/gameMap.cpp`: carregamento de mapa, busca de cylinder/thing e posição interna.
+- `game/gameLookup.cpp`: busca de criaturas, monstros, NPCs e jogadores por ID, nome, GUID e conta.
+- `game/gameCreature.cpp`: criação, posicionamento, remoção e release de criaturas.
+- `game/gameMovement.cpp`: movimentação de criaturas e players no mapa.
+- `game/gameItems.cpp`: movimentação, adição, remoção, transformação, teleport e dinheiro de itens.
+- `game/gamePlayerActions.cpp`: ações gerais do jogador, ping, auto-walk, outfit, quest e mount.
+- `game/gamePlayerChannels.cpp`: canais, private channel e comunicação de chat por canal.
+- `game/gamePlayerItemActions.cpp`: uso de itens, containers, escrita, browse field e house window.
+- `game/gamePlayerTrade.cpp`: trade entre jogadores e mensagens de erro de trade.
+- `game/gamePlayerShop.cpp`: compra, venda, fechamento e consulta de shop.
+- `game/gamePlayerLook.cpp`: look em tile, item, criatura e battle list.
+- `game/gamePlayerCombat.cpp`: attack, follow, fight modes e cancelamento de combate.
+- `game/gamePlayerVip.cpp`: adição, remoção e edição de VIP.
+- `game/gamePlayerChat.cpp`: fala, comandos, spells, whisper, yell e NPC talk.
+- `game/gameCreatureRuntime.cpp`: visão, fala interna, checks de criatura, velocidade, outfit e visibilidade.
+- `game/gameCombat.cpp`: bloqueio de hit, dano, mana, efeitos de combate e callbacks.
+- `game/gameEffects.cpp`: health update, magic effect e distance effect.
+- `game/gameDecay.cpp`: decay de itens e buckets de decay.
+- `game/gameLight.cpp`: luz global e atualização de ciclo dia/noite.
+- `game/gameWorld.cpp`: broadcast, MOTD, records, premium, experience stages e atualizações visuais.
+- `game/gameParty.cpp`: convites, entrada, liderança, saída e shared experience de party.
+- `game/gameReports.cpp`: guild MOTD, kick, bug report e debug assert.
+- `game/gameMarket.cpp`: market, ofertas, histórico, aceite/cancelamento e lista de itens.
+- `game/gameModalCondition.cpp`: condições forçadas, treino offline e modal windows.
+- `game/gameRegistry.cpp`: registro de players, NPCs, monstros, guilds, beds e unique items.
 - `movement/movement.cpp/.hpp`: fachada e registro dos eventos de movement.
 - `movement/movementEvent.cpp/.hpp`: evento individual de movement, ciclo de vida e dados de equip.
 - `movement/movementEventConfig.cpp`: configuração XML, nome de evento Lua e resolução de funções nativas.

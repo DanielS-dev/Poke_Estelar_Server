@@ -64,7 +64,33 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsPlayerMove.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/events/eventsPlayerProgress.cpp
 	${CMAKE_CURRENT_LIST_DIR}/io/fileloader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/game.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/game.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameCreature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameCreatureRuntime.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameDecay.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameEffects.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameItems.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameLight.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameLookup.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameMap.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameMarket.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameModalCondition.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameMovement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameParty.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerActions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerChannels.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerChat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerItemActions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerLook.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerShop.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerTrade.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gamePlayerVip.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameRegistry.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameReports.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameState.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/game/gameWorld.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/globalevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/guild.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/groups.cpp
