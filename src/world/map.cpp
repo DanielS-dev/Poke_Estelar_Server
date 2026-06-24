@@ -5,7 +5,7 @@
 
 #include "../persistence/iomap.hpp"
 #include "../persistence/iomapserialize.hpp"
-#include "../game/combat.hpp"
+#include "../game/combat/combat.hpp"
 #include "../entities/creature.hpp"
 #include "../game/game.hpp"
 #include "../core/tools/random.hpp"

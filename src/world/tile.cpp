@@ -8,7 +8,7 @@
 #include "tile.hpp"
 
 #include "../entities/creature.hpp"
-#include "../game/combat.hpp"
+#include "../game/combat/combat.hpp"
 #include "../game/game.hpp"
 #include "../items/mailbox.hpp"
 #include "../entities/monster.hpp"

@@ -7,7 +7,7 @@
 
 #include "../world/bed.hpp"
 #include "../game/chat/chat.hpp"
-#include "../game/combat.hpp"
+#include "../game/combat/combat.hpp"
 #include "../config/configmanager.hpp"
 #include "../scripting/creatureevent.hpp"
 #include "../scripting/events.hpp"

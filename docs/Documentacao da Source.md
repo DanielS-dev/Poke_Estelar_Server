@@ -98,7 +98,13 @@ Contém os sistemas centrais de gameplay.
 - `chat/chatChannel.cpp/.hpp`: canais de chat, usuários, convites, eventos Lua e envio de mensagens.
 - `chat/chatLoader.cpp/.hpp`: carregamento dos canais via XML e scripts.
 - `chat/chatRules.cpp/.hpp`: regras de fala e normalização do tipo de mensagem por canal.
-- `combat.cpp/.hpp`: combate, dano, áreas e condições de combate.
+- `combat/combat.cpp/.hpp`: fachada, regras principais e configuração do combate.
+- `combat/combatExecution.cpp`: execução de dano, mana, condições, dispel e efeitos em tiles.
+- `combat/combatCallbacks.cpp/.hpp`: callbacks Lua de valor, tile e alvo.
+- `combat/combatTypes.hpp`: parâmetros e tipos compartilhados do combate.
+- `combat/areaCombat.cpp/.hpp`: áreas de combate e seleção de tiles.
+- `combat/matrixArea.hpp`: matriz usada para montar áreas de combate.
+- `combat/magicField.cpp/.hpp`: comportamento de magic fields ao pisar.
 - `commands/command.cpp/.hpp`: representação de um comando individual.
 - `commands/commandLoader.cpp/.hpp`: carregamento dos comandos via XML.
 - `commands/commandRules.cpp/.hpp`: validação de permissão e log de execução dos comandos.

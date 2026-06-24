@@ -3,7 +3,7 @@
 
 #include "otpch.hpp"
 
-#include "../combat.hpp"
+#include "../combat/combat.hpp"
 #include "../game.hpp"
 #include "../../items/items.hpp"
 

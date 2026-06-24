@@ -5,7 +5,7 @@
 #define FS_GAME_H_3EC96D67DD024E6093B3BAC29B7A6D7F
 
 #include "../entities/account.hpp"
-#include "combat.hpp"
+#include "combat/combat.hpp"
 #include "commands/commands.hpp"
 #include "../entities/groups.hpp"
 #include "../world/map.hpp"

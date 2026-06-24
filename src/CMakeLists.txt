@@ -12,7 +12,11 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/game/chat/chatChannel.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/chat/chatLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/chat/chatRules.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game/combat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/combat/combat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/combat/combatExecution.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/combat/combatCallbacks.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/combat/areaCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/game/combat/magicField.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands/command.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands/commandLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game/commands/commandRules.cpp

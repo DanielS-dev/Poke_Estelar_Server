@@ -11,7 +11,7 @@
 #include "../../core/const.hpp"
 #include "../../entities/player.hpp"
 #include "../../scripting/baseevents.hpp"
-#include "../combat.hpp"
+#include "../combat/combat.hpp"
 
 class ItemType;
 

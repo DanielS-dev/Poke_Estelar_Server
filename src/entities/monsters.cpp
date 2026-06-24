@@ -6,7 +6,7 @@
 #include "monsters.hpp"
 #include "monster.hpp"
 #include "../game/spells/spells.hpp"
-#include "../game/combat.hpp"
+#include "../game/combat/combat.hpp"
 #include "../game/weapons/weapons.hpp"
 #include "../config/configmanager.hpp"
 #include "../game/game.hpp"

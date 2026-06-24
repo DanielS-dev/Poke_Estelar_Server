@@ -141,7 +141,11 @@
     <ClCompile Include="..\src\game\chat\chatChannel.cpp" />
     <ClCompile Include="..\src\game\chat\chatLoader.cpp" />
     <ClCompile Include="..\src\game\chat\chatRules.cpp" />
-    <ClCompile Include="..\src\game\combat.cpp" />
+    <ClCompile Include="..\src\game\combat\combat.cpp" />
+    <ClCompile Include="..\src\game\combat\combatExecution.cpp" />
+    <ClCompile Include="..\src\game\combat\combatCallbacks.cpp" />
+    <ClCompile Include="..\src\game\combat\areaCombat.cpp" />
+    <ClCompile Include="..\src\game\combat\magicField.cpp" />
     <ClCompile Include="..\src\game\commands\command.cpp" />
     <ClCompile Include="..\src\game\commands\commandLoader.cpp" />
     <ClCompile Include="..\src\game\commands\commandRules.cpp" />
@@ -264,7 +268,12 @@
     <ClInclude Include="..\src\game\chat\chatChannel.hpp" />
     <ClInclude Include="..\src\game\chat\chatLoader.hpp" />
     <ClInclude Include="..\src\game\chat\chatRules.hpp" />
-    <ClInclude Include="..\src\game\combat.hpp" />
+    <ClInclude Include="..\src\game\combat\combat.hpp" />
+    <ClInclude Include="..\src\game\combat\combatTypes.hpp" />
+    <ClInclude Include="..\src\game\combat\combatCallbacks.hpp" />
+    <ClInclude Include="..\src\game\combat\matrixArea.hpp" />
+    <ClInclude Include="..\src\game\combat\areaCombat.hpp" />
+    <ClInclude Include="..\src\game\combat\magicField.hpp" />
     <ClInclude Include="..\src\game\commands\command.hpp" />
     <ClInclude Include="..\src\game\commands\commandLoader.hpp" />
     <ClInclude Include="..\src\game\commands\commandRules.hpp" />
