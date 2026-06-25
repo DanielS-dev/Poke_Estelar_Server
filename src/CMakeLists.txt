@@ -138,6 +138,11 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptInterface.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptStack.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistry.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistryGameWorld.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistryItemCreature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistryPlayerMonsterNpc.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistrySocialCombat.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaGlobalFunctionsRegistryParty.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/registry/luaRegistryHelpers.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsLegacy.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCore.cpp

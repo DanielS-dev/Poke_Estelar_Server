@@ -6,6 +6,11 @@
 		virtual bool closeState();
 
 		void registerFunctions();
+		void registerGameWorldBindings();
+		void registerItemCreatureBindings();
+		void registerPlayerMonsterNpcBindings();
+		void registerSocialCombatBindings();
+		void registerPartyBindings();
 
 		void registerClass(const std::string& className, const std::string& baseClass, lua_CFunction newFunction = nullptr);
 		void registerTable(const std::string& tableName);

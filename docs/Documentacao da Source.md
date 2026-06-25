@@ -393,7 +393,12 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `lua/luaScriptEnvironment.cpp`: ambiente de script, UIDs temporários e resultados de banco.
 - `lua/luaScriptInterface.cpp`: ciclo de vida, carregamento, chamadas e tratamento de erro Lua.
 - `lua/luaScriptStack.cpp`: helpers de stack, push/get/pop, metatables e conversões.
-- `lua/registry/luaGlobalFunctionsRegistry.cpp` [CRÍTICO]: registro das funções globais, enums, classes e métodos expostos ao Lua; mudanças aqui podem quebrar scripts sem alterar código C++ consumidor.
+- `lua/registry/luaGlobalFunctionsRegistry.cpp` [CRÍTICO]: ponto de entrada do registro da API Lua; concentra funções globais, enums e a orquestração dos registradores por domínio. Mudanças aqui podem quebrar scripts sem alterar código C++ consumidor.
+- `lua/registry/luaGlobalFunctionsRegistryGameWorld.cpp`: registro das classes e tabelas de `Game`, `Variant`, `Position`, `Tile`, `NetworkMessage` e `ModalWindow`.
+- `lua/registry/luaGlobalFunctionsRegistryItemCreature.cpp`: registro das classes `Item`, `Container`, `Teleport` e `Creature`.
+- `lua/registry/luaGlobalFunctionsRegistryPlayerMonsterNpc.cpp`: registro das classes `Player`, `Monster` e `Npc`.
+- `lua/registry/luaGlobalFunctionsRegistrySocialCombat.cpp`: registro das classes sociais e de combate, como `Guild`, `Group`, `Vocation`, `Town`, `House`, `ItemType`, `Combat`, `Condition` e `MonsterType`.
+- `lua/registry/luaGlobalFunctionsRegistryParty.cpp`: registro isolado da classe `Party`.
 - `lua/registry/luaRegistryHelpers.cpp`: helpers para registrar classes, tabelas, métodos, metatables e variáveis globais.
 - `lua/luaBindingsCore.cpp`: bindings utilitários, eventos agendados, bit/config e helpers gerais.
 - `lua/luaBindingsDatabase.cpp` [CRÍTICO]: bindings de database e result expostos aos scripts.

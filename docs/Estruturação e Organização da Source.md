@@ -67,6 +67,7 @@ Ao mover, criar ou remover arquivos, siga o Processo Padrão de Refatoração de
 - Headers públicos muito consumidos devem preservar o caminho antigo sempre que possível.
 - `luascript.hpp` permanece como fachada pública da interface Lua, agregando headers menores em `src/scripting/lua/luascript`.
 - Bindings Lua de uma mesma classe ou domínio devem ficar agrupados em subpastas, como `src/scripting/lua/creature`.
+- O registry da API Lua pode ser dividido em múltiplos `.cpp` por domínio, mantendo `luaGlobalFunctionsRegistry.cpp` como orquestrador central.
 - A documentação da source deve ser atualizada junto com a refatoração, no mesmo ciclo de trabalho.
 - Arquivos marcados como `CRÍTICO` na documentação principal exigem revisão mais cuidadosa dos consumidores antes de qualquer mudança.
 

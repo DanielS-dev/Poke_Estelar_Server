@@ -267,6 +267,11 @@
     <ClCompile Include="..\src\scripting\lua\luaScriptInterface.cpp" />
     <ClCompile Include="..\src\scripting\lua\luaScriptStack.cpp" />
     <ClCompile Include="..\src\scripting\lua\registry\luaGlobalFunctionsRegistry.cpp" />
+    <ClCompile Include="..\src\scripting\lua\registry\luaGlobalFunctionsRegistryGameWorld.cpp" />
+    <ClCompile Include="..\src\scripting\lua\registry\luaGlobalFunctionsRegistryItemCreature.cpp" />
+    <ClCompile Include="..\src\scripting\lua\registry\luaGlobalFunctionsRegistryPlayerMonsterNpc.cpp" />
+    <ClCompile Include="..\src\scripting\lua\registry\luaGlobalFunctionsRegistrySocialCombat.cpp" />
+    <ClCompile Include="..\src\scripting\lua\registry\luaGlobalFunctionsRegistryParty.cpp" />
     <ClCompile Include="..\src\scripting\lua\registry\luaRegistryHelpers.cpp" />
     <ClCompile Include="..\src\scripting\lua\luaBindingsLegacy.cpp" />
     <ClCompile Include="..\src\scripting\lua\luaBindingsCore.cpp" />
