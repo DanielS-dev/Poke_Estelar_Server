@@ -143,7 +143,12 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/combat_condition/luaCombatLegacy.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/combat_condition/luaCombatObject.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/combat_condition/luaCondition.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaBindingsCreature.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/creature/luaCreatureActions.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/creature/luaCreatureAttributes.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/creature/luaCreatureCollections.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/creature/luaCreatureCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/creature/luaCreatureMovement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/creature/luaCreatureRelations.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerAppearance.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerCore.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/player/luaPlayerIdentity.cpp

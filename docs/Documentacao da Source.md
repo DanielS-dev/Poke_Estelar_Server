@@ -323,7 +323,19 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `events/eventsPlayerProgress.cpp`: callbacks de experiência e skill do player.
 - `events/eventsPlayer.cpp`: callbacks de player que não pertencem aos grupos principais.
 - `globalevent.cpp/.hpp`: globalevents e eventos agendados.
-- `lua/luascript.hpp`: fachada da interface principal entre C++ e Lua.
+- `lua/luascript.hpp`: fachada pública da interface principal entre C++ e Lua; agrega os headers menores de `lua/luascript`.
+- `lua/luascript/luaScriptTypes.hpp`: forward declarations, enums e estruturas compartilhadas pelo scripting Lua.
+- `lua/luascript/scriptEnvironment.hpp`: declaração do `ScriptEnvironment`, UIDs locais, itens temporários, NPC atual e resultados de banco.
+- `lua/luascript/luaScriptInterfacePublic.hpp`: API pública de `LuaScriptInterface`, helpers de stack, userdata, metatables, getters e pushers.
+- `lua/luascript/luaScriptInterfaceCore.hpp`: ciclo protegido da interface, registro de classes/tabelas/métodos e helpers centrais.
+- `lua/luascript/luaScriptInterfaceLegacy.hpp`: declarações de funções globais legadas e utilitárias expostas ao Lua.
+- `lua/luascript/luaScriptInterfaceGameWorld.hpp`: declarações de bindings de `Game`, `Variant`, `Position`, `Tile`, `NetworkMessage` e `ModalWindow`.
+- `lua/luascript/luaScriptInterfaceItemCreature.hpp`: declarações de bindings de `Item`, `Container`, `Teleport` e `Creature`.
+- `lua/luascript/luaScriptInterfacePlayerMonsterNpc.hpp`: declarações de bindings de `Player`, `Monster` e `Npc`.
+- `lua/luascript/luaScriptInterfaceSocialCombat.hpp`: declarações de bindings de guild, group, vocation, town, house, item type, combat, condition e monster type.
+- `lua/luascript/luaScriptInterfaceParty.hpp`: declarações de bindings de `Party`.
+- `lua/luascript/luaScriptInterfacePrivate.hpp`: estado protegido da interface Lua, cache de arquivos e ambiente de scripts.
+- `lua/luascript/luaEnvironment.hpp`: declaração de `LuaEnvironment`, timers, mapas de combat/area e interface de teste.
 - `lua/luaScriptEnvironment.cpp`: ambiente de script, UIDs temporários e resultados de banco.
 - `lua/luaScriptInterface.cpp`: ciclo de vida, carregamento, chamadas e tratamento de erro Lua.
 - `lua/luaScriptStack.cpp`: helpers de stack, push/get/pop, metatables e conversões.
@@ -346,7 +358,12 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `lua/combat_condition/luaCombatLegacy.cpp`: funções globais legadas de área, alvo, dispel, outfit, movimento, luz e condição.
 - `lua/combat_condition/luaCombatObject.cpp`: bindings do objeto `Combat`, parâmetros, fórmula, área, condição, callback, origem e execução.
 - `lua/combat_condition/luaCondition.cpp`: bindings de `Condition`, ticks, parâmetros, fórmula, outfit, danos e imunidades de `MonsterType`.
-- `lua/luaBindingsCreature.cpp`: bindings de creature.
+- `lua/creature/luaCreatureCore.cpp`: criação, eventos, validações básicas, visão, parent, ID e nome de `Creature`.
+- `lua/creature/luaCreatureRelations.cpp`: bindings de relações entre criaturas, como target, follow e master.
+- `lua/creature/luaCreatureAttributes.cpp`: bindings de atributos de `Creature`, incluindo luz, velocidade, drop loot, vida, mana, skull e outfit.
+- `lua/creature/luaCreatureMovement.cpp`: bindings de posição, tile, direção, teleport, pathfinding, movimento e walk delay.
+- `lua/creature/luaCreatureActions.cpp`: ações diretas de `Creature`, como remove e say.
+- `lua/creature/luaCreatureCollections.cpp`: coleções expostas ao Lua, como damage map e summons.
 - `lua/player/luaPlayerCore.cpp`: criação, validação e dados básicos de `Player`.
 - `lua/player/luaPlayerStats.cpp`: capacity, experiência, level, mana, skills, stamina, soul e banco.
 - `lua/player/luaPlayerInventory.cpp`: itens, depot, inbox, dinheiro, slots e containers abertos.
