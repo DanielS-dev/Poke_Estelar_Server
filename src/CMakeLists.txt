@@ -34,7 +34,14 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/game/condition/conditionCooldown.cpp
 	${CMAKE_CURRENT_LIST_DIR}/config/configmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/network/connection.cpp
-	${CMAKE_CURRENT_LIST_DIR}/items/container.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerSerialization.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerDescription.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerNotifications.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerQueries.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerMutations.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerCounts.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/container/containerIterator.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creature.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureCombat.cpp
 	${CMAKE_CURRENT_LIST_DIR}/entities/creature/creatureConditions.cpp
@@ -118,8 +125,15 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketHistory.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketExpiration.cpp
 	${CMAKE_CURRENT_LIST_DIR}/persistence/market/marketStatistics.cpp
-	${CMAKE_CURRENT_LIST_DIR}/items/item.cpp
-	${CMAKE_CURRENT_LIST_DIR}/items/items.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/item/itemAttributes.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/item/itemCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/item/itemDecay.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/item/itemDescription.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/item/itemSerialization.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/items/itemsCore.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/items/itemsLookup.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/items/itemsOtbLoader.cpp
+	${CMAKE_CURRENT_LIST_DIR}/items/items/itemsXmlLoader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptEnvironment.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptInterface.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/lua/luaScriptStack.cpp

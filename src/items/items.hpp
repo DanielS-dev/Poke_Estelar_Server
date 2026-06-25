@@ -81,14 +81,15 @@ class ConditionDamage;
 class ItemType
 {
 	public:
-		ItemType() = default;
+		ItemType();
 
 		//non-copyable
 		ItemType(const ItemType& other) = delete;
 		ItemType& operator=(const ItemType& other) = delete;
 
-		ItemType(ItemType&& other) = default;
-		ItemType& operator=(ItemType&& other) = default;
+		ItemType(ItemType&& other) noexcept;
+		ItemType& operator=(ItemType&& other) noexcept;
+		~ItemType();
 
 		bool isGroundTile() const {
 			return group == ITEM_GROUP_GROUND;
@@ -254,6 +255,7 @@ class Items
 		using nameMap = std::unordered_multimap<std::string, uint16_t>;
 
 		Items();
+		~Items();
 
 		// non-copyable
 		Items(const Items&) = delete;

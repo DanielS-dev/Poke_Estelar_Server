@@ -271,13 +271,30 @@ Contém componentes de leitura de arquivos usados por outras áreas.
 
 Contém o sistema de itens e containers.
 
-- `container.cpp/.hpp`: comportamento base de containers.
+- `container.hpp`: contrato publico de `Container` e `ContainerIterator`, integrando `Item` com `Cylinder`.
+- `container/containerCore.cpp`: ciclo de vida, clonagem, parent, peso e estado basico de containers.
+- `container/containerSerialization.cpp`: leitura e desserializacao de itens internos do container.
+- `container/containerDescription.cpp`: descricao textual e consultas diretas de conteudo.
+- `container/containerNotifications.cpp`: notificacoes para espectadores, clientes e cadeia de parent.
+- `container/containerQueries.cpp`: regras de adicao, remocao, limite, destino e auto-stack.
+- `container/containerMutations.cpp`: adicao, remocao, troca, atualizacao, insercao interna e decay.
+- `container/containerCounts.cpp`: indices, contagem e acesso generico a itens.
+- `container/containerIterator.cpp`: iteracao recursiva pelos itens internos.
 - `depotchest.cpp/.hpp`: depot chest e regras de limite.
 - `depotlocker.cpp/.hpp`: locker de depot.
 - `inbox.cpp/.hpp`: inbox do jogador.
-- `item.cpp/.hpp`: comportamento principal de um item.
+- `item.hpp`: contrato público de `Item` e `ItemAttributes`, atributos dinâmicos, propriedades, descrição e integração com `Thing`/`Cylinder`.
+- `item/itemCore.cpp`: criação, clonagem, identidade, parent/tile, subtype, propriedades, unique id e light de `Item`.
+- `item/itemSerialization.cpp`: leitura, escrita, serialização e desserialização de atributos de item.
+- `item/itemDescription.cpp`: descrição visual/textual, nome, artigo, peso, requisitos, abilities e detalhes exibidos ao jogador.
+- `item/itemAttributes.cpp`: armazenamento e manipulação dos atributos dinâmicos de `ItemAttributes`.
+- `item/itemDecay.cpp`: início de decay e verificação de atributos de market.
 - `itemloader.hpp`: estruturas auxiliares para carregar itens.
-- `items.cpp/.hpp`: registro, carregamento e configuração de tipos de itens.
+- `items.hpp`: contrato de `ItemType`, `Abilities` e registry global `Items`.
+- `items/itemsCore.cpp`: inicialização, limpeza e reload do registry de tipos de itens.
+- `items/itemsOtbLoader.cpp`: carregamento do `items.otb` e atributos vindos do formato OTB.
+- `items/itemsXmlLoader.cpp`: carregamento de `items.xml` e parsing dos atributos XML de cada `ItemType`.
+- `items/itemsLookup.cpp`: consultas por item id, client id e acesso ao `ItemType`.
 - `mailbox.cpp/.hpp`: mailbox e envio de correspondências.
 - `trashholder.cpp/.hpp`: lixeira e descarte de itens.
 
