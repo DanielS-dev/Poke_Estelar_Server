@@ -22,6 +22,43 @@ Esta documentação não substitui a leitura do código. Ela resume a ideia gera
 | Security | `src/security` | Banimentos, RSA e regras de segurança. |
 | World | `src/world` | Mapa, tiles, houses, spawns, teleports e estruturas do mundo. |
 
+## Dependências Entre Módulos
+
+Esta visão ajuda a planejar refatorações sem quebrar consumidores indiretos. As setas indicam dependências frequentes ou contratos públicos importantes.
+
+```text
+app -> config, core, game, network, persistence, scripting, security, world
+game -> core, entities, items, network, persistence, scripting, world
+entities -> core, game/condition, items, scripting, world
+world -> core, entities, game, items, persistence
+network -> core, entities, game, items, scripting, world
+persistence -> core, entities, items, world
+scripting -> core, entities, game, items, network, persistence, world
+items -> core, world
+security -> core, persistence
+```
+
+Regras práticas:
+
+- `game` é o orquestrador central e costuma conhecer vários módulos.
+- `scripting` expõe contratos C++ para Lua; mudanças em nomes, assinaturas ou metatables podem quebrar scripts.
+- `network` traduz estado interno para pacotes do cliente 10.98; mudanças devem ser compatíveis com o protocolo.
+- `persistence` serializa estruturas de `entities`, `items` e `world`; alterações de schema ou atributos exigem migração.
+- `core` e `core/tools` devem continuar genéricos, sem depender de domínios altos como `game` ou `network`.
+
+## Arquivos Críticos
+
+Use a marcação `CRÍTICO` para arquivos de alto impacto. Alterações nesses pontos exigem leitura dos consumidores, atualização de CMake/Visual Studio quando houver arquivos novos, revisão da documentação e compilação/teste local.
+
+Arquivos críticos conhecidos:
+
+- `src/game/game.hpp` e `src/game/game/*.cpp`: contrato e implementação do orquestrador principal do jogo.
+- `src/network/protocolgame.hpp` e `src/network/protocolgame/*.cpp`: contrato do cliente/protocolo 10.98.
+- `src/scripting/lua/luascript.hpp` e `src/scripting/lua/registry/luaGlobalFunctionsRegistry.cpp`: API C++ exposta ao Lua.
+- `src/persistence/database.cpp/.hpp` e `src/persistence/login/iologindata.hpp`: acesso a banco, login, load/save de jogador.
+- `src/entities/player.hpp`, `src/entities/creature.hpp` e `src/entities/monster.hpp`: contratos públicos das entidades centrais.
+- `src/world/map.hpp`, `src/world/tile.hpp` e `src/world/cylinder.hpp`: contratos de mapa, tiles e movimentação de things.
+
 ## Estrutura de Pastas
 
 ### `src/app`
@@ -78,7 +115,7 @@ Contém funções utilitárias divididas por responsabilidade. Novos helpers gen
 Contém as entidades principais do servidor e seus comportamentos associados.
 
 - `account.hpp`: estrutura de conta.
-- `creature.hpp`: interface base para criaturas vivas no mundo.
+- `creature.hpp` [CRÍTICO]: contrato base para criaturas vivas; expõe identidade, posição, vida/mana, eventos, visão, movimento, combate e integração com `Tile`, `Game` e scripting.
 - `creature/creature.cpp`: estado básico, visibilidade, skull e delays de caminhada.
 - `creature/creatureThink.cpp`: ciclo de pensamento, ataque periódico e estado idle.
 - `creature/creatureMovement.cpp`: caminhada, auto-walk, cache de mapa, duração de passos e luz.
@@ -89,7 +126,7 @@ Contém as entidades principais do servidor e seus comportamentos associados.
 - `creature/creaturePathfinding.cpp`: busca de caminho, invisibilidade e `FrozenPathingConditionCall`.
 - `groups.cpp/.hpp`: grupos de acesso e permissões.
 - `guild.cpp/.hpp`: dados e regras de guild.
-- `monster.hpp`: interface do comportamento individual de monstros.
+- `monster.hpp` [CRÍTICO]: contrato do comportamento individual de monstros; conecta AI, alvo, spawn, loot, spells, summons e regras herdadas de `Creature`.
 - `monster/monster.cpp`: criação, construtor, lista global e visibilidade básica.
 - `monster/monsterEvents.cpp`: eventos de criatura vistos pelo monstro.
 - `monster/monsterTarget.cpp`: amigos, alvos, busca e seleção de target.
@@ -97,14 +134,14 @@ Contém as entidades principais do servidor e seus comportamentos associados.
 - `monster/monsterThink.cpp`: ciclo de think, ataques, defesa e yells.
 - `monster/monsterMovement.cpp`: caminhada, push, dança, fuga e distância.
 - `monster/monsterLifecycle.cpp`: morte, corpse, loot, convince/challenge e path params.
-- `monsters.hpp`: interface de tipos de monstros, loot, spells e registro de `MonsterType`.
+- `monsters.hpp`: contrato do catálogo global de monstros; expõe carregamento, busca e registro de `MonsterType`, loot, spells, flags e atributos usados por game, Lua e spawn.
 - `monsters/monsters.cpp`: manager `Monsters`, carregamento principal, reload e busca de tipo.
 - `monsters/monsterTypeLoader.cpp`: leitura do XML de cada `MonsterType`.
 - `monsters/monsterSpellLoader.cpp`: parsing de spells, ataques, defesas e condições.
 - `monsters/monsterTypeLoot.cpp`: criação de loot em runtime.
 - `monsters/monsterLootLoader.cpp`: parsing de loot no XML.
 - `mounts.cpp/.hpp`: carregamento e controle de mounts.
-- `npc.hpp`: interface de NPCs, scripts Lua e handlers de eventos.
+- `npc.hpp`: contrato público de NPCs; expõe foco, fala, shop, scripts Lua, handlers de eventos e integração com `Game` e `Creature`.
 - `npc/npc.cpp`: núcleo do NPC, criação, reload, fala e estado básico.
 - `npc/npcLoader.cpp`: carregamento XML de NPC.
 - `npc/npcEvents.cpp`: eventos de criatura e think recebidos pelo NPC.
@@ -115,14 +152,14 @@ Contém as entidades principais do servidor e seus comportamentos associados.
 - `npc/npcLuaShop.cpp`: bindings Lua de shop e metatable `Npc`.
 - `npc/npcEventsHandler.cpp`: execução dos callbacks de evento do script do NPC.
 - `outfit.cpp/.hpp`: outfits disponíveis.
-- `party.hpp`: interface e estado do sistema de party.
+- `party.hpp`: contrato do sistema de party; expõe liderança, membros, convites, shared experience, mensagens e regras de corpse/loot.
 - `party/party.cpp`: criação, disband e saída de membros.
 - `party/partyMembership.cpp`: troca de liderança e entrada de jogadores.
 - `party/partyInvitations.cpp`: convites, revogação e remoção de invites.
 - `party/partyMessaging.cpp`: ícones, mensagens e loot broadcast da party.
 - `party/partySharedExperience.cpp`: experiência compartilhada, vocations e ticks de participação.
 - `party/partyCorpse.cpp`: regra de acesso ao corpse pelo grupo.
-- `player.hpp`: interface principal, estado e contrato público do jogador.
+- `player.hpp` [CRÍTICO]: contrato público do jogador; concentra sessão, inventário, storage, skills, guild, party, combat, movement, containers, protocol e eventos Lua.
 - `player/player.cpp`: construção, destruição, descrição e dados básicos do jogador.
 - `player/playerStats.cpp`: vocation, skills, atributos, inventário equipado e cálculo de defesa/ataque.
 - `player/playerContainers.cpp`: containers abertos, envio de itens de container e eventos de container.
@@ -149,7 +186,7 @@ Contém os sistemas centrais de gameplay.
 - `chat/chatChannel.cpp/.hpp`: canais de chat, usuários, convites, eventos Lua e envio de mensagens.
 - `chat/chatLoader.cpp/.hpp`: carregamento dos canais via XML e scripts.
 - `chat/chatRules.cpp/.hpp`: regras de fala e normalização do tipo de mensagem por canal.
-- `combat/combat.cpp/.hpp`: fachada, regras principais e configuração do combate.
+- `combat/combat.cpp/.hpp`: fachada e contrato do combate; define parâmetros, áreas, callbacks Lua, dano, mana, condições e execução contra criaturas/tiles.
 - `combat/combatExecution.cpp`: execução de dano, mana, condições, dispel e efeitos em tiles.
 - `combat/combatCallbacks.cpp/.hpp`: callbacks Lua de valor, tile e alvo.
 - `combat/combatTypes.hpp`: parâmetros e tipos compartilhados do combate.
@@ -159,22 +196,22 @@ Contém os sistemas centrais de gameplay.
 - `commands/command.cpp/.hpp`: representação de um comando individual.
 - `commands/commandLoader.cpp/.hpp`: carregamento dos comandos via XML.
 - `commands/commandRules.cpp/.hpp`: validação de permissão e log de execução dos comandos.
-- `commands/commands.cpp/.hpp`: fachada e orquestração dos comandos administrativos ou de servidor.
-- `condition/condition.cpp/.hpp`: fachada, base comum, factory e serialização geral de conditions.
+- `commands/commands.cpp/.hpp`: fachada dos comandos administrativos ou de servidor; expõe carregamento, permissões e dispatch de comandos.
+- `condition/condition.cpp/.hpp`: contrato de conditions; expõe factory, serialização, ticks, atributos, dano periódico, velocidade, visual e cooldown.
 - `condition/conditionAttributes.cpp`: modifiers de skills/stats e atributos temporários.
 - `condition/conditionRegeneration.cpp`: regeneração de vida, mana e soul.
 - `condition/conditionDamage.cpp`: condições de dano periódico e damage list.
 - `condition/conditionSpeed.cpp`: haste, paralyze, sleep/silence e fórmula de speed.
 - `condition/conditionVisual.cpp`: invisibilidade, outfit e light.
 - `condition/conditionCooldown.cpp`: cooldown de spell, grupo e status simples.
-- `game.hpp`: fachada principal, estado e contrato público do orquestrador do jogo.
-- `game/game.cpp`: construção, inicialização e agendamento base do jogo.
+- `game.hpp` [CRÍTICO]: contrato público do orquestrador do jogo; expõe operações de criaturas, players, itens, mapa, combate, chat, market, raids, world state e integração com quase todos os módulos.
+- `game/game.cpp` [CRÍTICO]: construção, inicialização e agendamento base do jogo.
 - `game/gameState.cpp`: estado do servidor, world type, save state, shutdown e cleanup.
 - `game/gameMap.cpp`: carregamento de mapa, busca de cylinder/thing e posição interna.
 - `game/gameLookup.cpp`: busca de criaturas, monstros, NPCs e jogadores por ID, nome, GUID e conta.
 - `game/gameCreature.cpp`: criação, posicionamento, remoção e release de criaturas.
-- `game/gameMovement.cpp`: movimentação de criaturas e players no mapa.
-- `game/gameItems.cpp`: movimentação, adição, remoção, transformação, teleport e dinheiro de itens.
+- `game/gameMovement.cpp` [CRÍTICO]: movimentação de criaturas e players no mapa; depende de `Map`, `Tile`, `Cylinder`, `Creature`, `Player` e eventos.
+- `game/gameItems.cpp` [CRÍTICO]: movimentação, adição, remoção, transformação, teleport e dinheiro de itens; altera estado compartilhado de mapa/inventário.
 - `game/gamePlayerActions.cpp`: ações gerais do jogador, ping, auto-walk, outfit, quest e mount.
 - `game/gamePlayerChannels.cpp`: canais, private channel e comunicação de chat por canal.
 - `game/gamePlayerItemActions.cpp`: uso de itens, containers, escrita, browse field e house window.
@@ -185,7 +222,7 @@ Contém os sistemas centrais de gameplay.
 - `game/gamePlayerVip.cpp`: adição, remoção e edição de VIP.
 - `game/gamePlayerChat.cpp`: fala, comandos, spells, whisper, yell e NPC talk.
 - `game/gameCreatureRuntime.cpp`: visão, fala interna, checks de criatura, velocidade, outfit e visibilidade.
-- `game/gameCombat.cpp`: bloqueio de hit, dano, mana, efeitos de combate e callbacks.
+- `game/gameCombat.cpp` [CRÍTICO]: bloqueio de hit, dano, mana, efeitos de combate e callbacks; impacta entidades, conditions, scripts e feedback visual.
 - `game/gameEffects.cpp`: health update, magic effect e distance effect.
 - `game/gameDecay.cpp`: decay de itens e buckets de decay.
 - `game/gameLight.cpp`: luz global e atualização de ciclo dia/noite.
@@ -209,7 +246,7 @@ Contém os sistemas centrais de gameplay.
 - `raids/raidEvent.cpp/.hpp`: eventos de raid, anúncios, spawns e scripts.
 - `raids/raidLoader.cpp/.hpp`: carregamento das raids a partir dos XMLs.
 - `raids/raids.cpp/.hpp`: fachada, agendamento e coleção de raids.
-- `spells/spells.cpp/.hpp`: fachada e registro do sistema de spells.
+- `spells/spells.cpp/.hpp`: contrato do sistema de spells; expõe registro, lookup, carregamento XML, instant spells, rune spells e integração com Lua/combat.
 - `spells/spell.cpp/.hpp`: base comum, custos e efeitos auxiliares.
 - `spells/spellConfig.cpp`: configuração XML da base comum de spell.
 - `spells/spellChecks.cpp`: validações comuns de cast, instant spell e rune spell.
@@ -222,7 +259,7 @@ Contém os sistemas centrais de gameplay.
 - `weapons/weaponDistance.cpp/.hpp`: armas à distância, munições, chance de acerto e dano.
 - `weapons/weaponMelee.cpp/.hpp`: armas corpo a corpo, skill e dano elemental.
 - `weapons/weaponWand.cpp/.hpp`: wands/rods e dano mágico configurado por XML.
-- `weapons/weapons.cpp/.hpp`: fachada, registro e carregamento padrão das armas.
+- `weapons/weapons.cpp/.hpp`: contrato do sistema de armas; expõe registro, carregamento XML, validações de uso e execução via combat/scripts.
 
 ### `src/io`
 
@@ -251,17 +288,17 @@ Contém conexões, protocolos e mensagens trocadas entre cliente e servidor.
 - `connection.cpp/.hpp`: conexão de rede e controle de pacotes.
 - `networkmessage.cpp/.hpp`: leitura e escrita de mensagens de rede.
 - `outputmessage.cpp/.hpp`: mensagens de saída.
-- `protocol.cpp/.hpp`: base comum dos protocolos.
-- `protocolgame.hpp`: interface do protocolo principal de gameplay.
-- `protocolgame/protocolgame.cpp`: lifecycle, login, conexão e dispatcher de pacotes.
-- `protocolgame/protocolgameMap.cpp`: descrição de mapa, visibilidade e criaturas conhecidas.
-- `protocolgame/protocolgameParse.cpp`: parsers dos pacotes recebidos do cliente.
-- `protocolgame/protocolgameSend.cpp`: envios gerais, chat, status e canais.
+- `protocol.cpp/.hpp`: contrato base dos protocolos; controla ciclo de conexão, mensagens, timeout e hooks comuns.
+- `protocolgame.hpp` [CRÍTICO]: contrato do protocolo principal de gameplay para cliente 10.98; expõe parse/send, estado da sessão, mapa conhecido, containers, shop, trade e callbacks de jogo.
+- `protocolgame/protocolgame.cpp` [CRÍTICO]: lifecycle, login, conexão e dispatcher de pacotes.
+- `protocolgame/protocolgameMap.cpp` [CRÍTICO]: descrição de mapa, visibilidade e criaturas conhecidas.
+- `protocolgame/protocolgameParse.cpp` [CRÍTICO]: parsers dos pacotes recebidos do cliente 10.98.
+- `protocolgame/protocolgameSend.cpp` [CRÍTICO]: envios gerais, chat, status e canais.
 - `protocolgame/protocolgameShopMarket.cpp`: shop, market e detalhes de ofertas.
 - `protocolgame/protocolgameQuestTrade.cpp`: quest log, quest line e trade.
 - `protocolgame/protocolgameWorld.cpp`: containers, inventário, tiles, world state e movement visual.
 - `protocolgame/protocolgameHelpers.cpp`: helpers de serialização para criaturas, stats, outfit, luz e shop item.
-- `protocollogin.cpp/.hpp`: protocolo de login.
+- `protocollogin.cpp/.hpp` [CRÍTICO]: protocolo de login; depende de autenticação, banco, conta/personagens e compatibilidade com cliente.
 - `protocolold.cpp/.hpp`: suporte a protocolo antigo.
 - `protocolstatus.cpp/.hpp`: protocolo de status do servidor.
 
@@ -269,24 +306,24 @@ Contém conexões, protocolos e mensagens trocadas entre cliente e servidor.
 
 Contém acesso ao banco de dados e carregamento/salvamento persistente.
 
-- `database.cpp/.hpp`: conexão e execução de queries.
+- `database.cpp/.hpp` [CRÍTICO]: contrato de conexão e execução de queries; impacta login, saves, market, guilds e tarefas assíncronas.
 - `databasemanager.cpp/.hpp`: gerenciamento de schema e tarefas administrativas de banco.
-- `databasetasks.cpp/.hpp`: execução assíncrona de tarefas de banco.
+- `databasetasks.cpp/.hpp` [CRÍTICO]: execução assíncrona de tarefas de banco; mudanças podem afetar ordem, concorrência e lifetime de queries.
 - `ioguild.cpp/.hpp`: persistência de guilds.
-- `login/iologindata.hpp`: fachada dos dados de login, conta e jogador.
+- `login/iologindata.hpp` [CRÍTICO]: contrato de login/load/save de contas e jogadores; expõe autenticação, preload, inventário, storage, premium, VIP e persistência de player.
 - `login/loginDataAccount.cpp`: persistência de contas e tipo de conta.
 - `login/loginDataAuthentication.cpp`: autenticação do login server e gameworld.
-- `login/loginDataPlayerLoad.cpp`: carregamento e preload dos dados do jogador.
-- `login/loginDataItems.cpp`: serialização e desserialização de itens do jogador.
-- `login/loginDataPlayerSave.cpp`: salvamento completo do jogador.
+- `login/loginDataPlayerLoad.cpp` [CRÍTICO]: carregamento e preload dos dados do jogador.
+- `login/loginDataItems.cpp` [CRÍTICO]: serialização e desserialização de itens do jogador.
+- `login/loginDataPlayerSave.cpp` [CRÍTICO]: salvamento completo do jogador.
 - `login/loginDataPlayerQueries.cpp`: consultas auxiliares de jogador, guid, nome, banco e house bid.
 - `login/loginDataVip.cpp`: persistência da VIP list.
 - `login/loginDataPremium.cpp`: ajustes de dias premium.
-- `map/iomap.hpp`: fachada do carregamento de mapa OTBM.
+- `map/iomap.hpp`: contrato do carregamento de mapa OTBM; expõe leitura de tiles, towns, waypoints e atributos persistentes do mapa.
 - `map/iomap.cpp`: carregamento do mapa, tiles, towns e waypoints.
-- `map/iomapserialize.hpp`: fachada da serialização persistente de mapa e houses.
+- `map/iomapserialize.hpp` [CRÍTICO]: contrato da serialização persistente de mapa e houses; impacta itens de houses, containers e atributos salvos.
 - `map/mapHouseItems.cpp`: carregamento e salvamento dos itens de houses.
-- `map/mapItemSerialization.cpp`: helpers para serializar/deserializar itens, containers e tiles.
+- `map/mapItemSerialization.cpp` [CRÍTICO]: helpers para serializar/deserializar itens, containers e tiles.
 - `map/mapHouseInfo.cpp`: carregamento e salvamento de informações e listas das houses.
 - `map/otbmTypes.hpp`: enums e structs do formato OTBM.
 - `market/iomarket.hpp`: fachada da persistência do market.
@@ -299,21 +336,21 @@ Contém acesso ao banco de dados e carregamento/salvamento persistente.
 
 Contém a integração com Lua e os sistemas de eventos scriptáveis.
 
-- `actions/actions.hpp`: fachada das actions usadas por itens e scripts.
+- `actions/actions.hpp`: contrato das actions usadas por itens e scripts; expõe registro, lookup e execução por item/action id.
 - `actions/actions.cpp`: manager, registro e lookup de actions.
 - `actions/actionRules.cpp`: regras de alcance, floor, linha de visão e target.
 - `actions/actionExecution.cpp`: fluxo de uso de item e execução de script.
 - `actions/actionConfig.cpp`: configuração do Action e binding de função nativa.
 - `actions/actionBuiltins.cpp`: funções nativas increase/decrease item id e market.
-- `baseevents.cpp/.hpp`: base para sistemas de eventos.
-- `creatureevent/creatureevent.hpp`: fachada dos eventos ligados a criaturas.
+- `baseevents.cpp/.hpp`: contrato base para sistemas de eventos; centraliza carregamento XML, script id e ligação com Lua.
+- `creatureevent/creatureevent.hpp`: contrato dos eventos ligados a criaturas; expõe tipos, registro e callbacks usados por player, monster, NPC e scripts.
 - `creatureevent/creatureEventManager.cpp`: manager, registro, reload e disparo global de login/logout/advance.
 - `creatureevent/creatureEventConfig.cpp`: configuração, tipo e metadados do evento.
 - `creatureevent/creatureEventPlayer.cpp`: execuções de login, logout e advance.
 - `creatureevent/creatureEventDeath.cpp`: execuções de death, post death, prepare death e kill.
 - `creatureevent/creatureEventCombat.cpp`: execuções de health change e mana change.
 - `creatureevent/creatureEventMisc.cpp`: execuções de think, modal, text edit, extended opcode e move.
-- `events/events.hpp`: fachada dos eventos globais registrados via script.
+- `events/events.hpp`: contrato dos eventos globais registrados via script; expõe callbacks de player, creature, monster e party.
 - `events/events.cpp`: carregamento e registro dos eventos configurados.
 - `events/eventsMonster.cpp`: callbacks de monster.
 - `events/eventsCreature.cpp`: callbacks de creature.
@@ -323,7 +360,7 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `events/eventsPlayerProgress.cpp`: callbacks de experiência e skill do player.
 - `events/eventsPlayer.cpp`: callbacks de player que não pertencem aos grupos principais.
 - `globalevent.cpp/.hpp`: globalevents e eventos agendados.
-- `lua/luascript.hpp`: fachada pública da interface principal entre C++ e Lua; agrega os headers menores de `lua/luascript`.
+- `lua/luascript.hpp` [CRÍTICO]: fachada pública da interface principal entre C++ e Lua; agrega os headers menores de `lua/luascript` e define contratos de stack, userdata, metatables, ambiente, eventos e bindings.
 - `lua/luascript/luaScriptTypes.hpp`: forward declarations, enums e estruturas compartilhadas pelo scripting Lua.
 - `lua/luascript/scriptEnvironment.hpp`: declaração do `ScriptEnvironment`, UIDs locais, itens temporários, NPC atual e resultados de banco.
 - `lua/luascript/luaScriptInterfacePublic.hpp`: API pública de `LuaScriptInterface`, helpers de stack, userdata, metatables, getters e pushers.
@@ -339,11 +376,11 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `lua/luaScriptEnvironment.cpp`: ambiente de script, UIDs temporários e resultados de banco.
 - `lua/luaScriptInterface.cpp`: ciclo de vida, carregamento, chamadas e tratamento de erro Lua.
 - `lua/luaScriptStack.cpp`: helpers de stack, push/get/pop, metatables e conversões.
-- `lua/registry/luaGlobalFunctionsRegistry.cpp`: registro das funções globais, enums, classes e métodos expostos ao Lua.
+- `lua/registry/luaGlobalFunctionsRegistry.cpp` [CRÍTICO]: registro das funções globais, enums, classes e métodos expostos ao Lua; mudanças aqui podem quebrar scripts sem alterar código C++ consumidor.
 - `lua/registry/luaRegistryHelpers.cpp`: helpers para registrar classes, tabelas, métodos, metatables e variáveis globais.
 - `lua/luaBindingsCore.cpp`: bindings utilitários, eventos agendados, bit/config e helpers gerais.
-- `lua/luaBindingsDatabase.cpp`: bindings de database e result.
-- `lua/luaBindingsGame.cpp`: bindings da classe Game.
+- `lua/luaBindingsDatabase.cpp` [CRÍTICO]: bindings de database e result expostos aos scripts.
+- `lua/luaBindingsGame.cpp` [CRÍTICO]: bindings da classe Game expostos aos scripts.
 - `lua/world/luaVariant.cpp`: bindings de `Variant`.
 - `lua/world/luaPosition.cpp`: bindings de `Position`, distância, visão e efeitos.
 - `lua/world/luaTile.cpp`: bindings de `Tile`, itens, criaturas, flags, propriedades e house lookup.
@@ -382,8 +419,8 @@ Contém a integração com Lua e os sistemas de eventos scriptáveis.
 - `lua/luaBindingsSocial.cpp`: bindings de guild, group, vocation e party.
 - `lua/luaBindingsLegacy.cpp`: bindings legados que ficaram fora dos grupos principais.
 - `lua/luaEnvironment.cpp`: gerenciamento do LuaEnvironment global.
-- `scriptmanager.cpp/.hpp`: carregamento e gerenciamento de scripts.
-- `talkaction.cpp/.hpp`: talkactions e comandos por fala.
+- `scriptmanager.cpp/.hpp`: contrato de carregamento e gerenciamento de scripts.
+- `talkaction.cpp/.hpp`: contrato de talkactions e comandos por fala; expõe registro, permissões e execução Lua.
 
 ### `src/security`
 
@@ -397,38 +434,38 @@ Contém componentes ligados à segurança.
 Contém estruturas físicas e lógicas do mundo.
 
 - `bed.cpp/.hpp`: camas e regras associadas.
-- `cylinder.cpp/.hpp`: base para objetos que podem conter coisas.
-- `house.hpp`: interface de casas, portas, listas de acesso e gerenciador de casas.
+- `cylinder.cpp/.hpp` [CRÍTICO]: contrato base para objetos que contêm ou recebem `Thing`; usado por tiles, containers, players e movimentação.
+- `house.hpp`: contrato de casas, portas, listas de acesso e gerenciador de casas; expõe owner, permissões, tiles, beds e transferência.
 - `house/house.cpp`: dados principais da casa, dono, tiles, portas, camas e permissões gerais.
 - `house/houseAccess.cpp`: listas de acesso, convidados, subdonos e expressões de permissão.
 - `house/houseDoor.cpp`: portas de casas, leitura de atributos e acesso por porta.
 - `house/houseTransfer.cpp`: transferência de casas e envio de itens ao depot/inbox.
 - `house/houses.cpp`: gerenciador de casas, carregamento XML e cobrança de aluguel.
 - `housetile.cpp/.hpp`: tiles associados a casas.
-- `map.hpp`: interface do mapa, quadtree, pathfinding e consultas espaciais.
+- `map.hpp` [CRÍTICO]: contrato do mapa; expõe quadtree, pathfinding, spectators, tiles, criaturas, queries espaciais e operações usadas por game/network/world.
 - `map/map.cpp`: carregamento e salvamento do mapa.
 - `map/mapStorage.cpp`: leitura e escrita de tiles na estrutura espacial.
-- `map/mapCreature.cpp`: posicionamento e movimentação de criaturas no mapa.
-- `map/mapSpectators.cpp`: busca e cache de espectadores.
+- `map/mapCreature.cpp` [CRÍTICO]: posicionamento e movimentação de criaturas no mapa.
+- `map/mapSpectators.cpp` [CRÍTICO]: busca e cache de espectadores usados por visão, fala, efeitos e protocolo.
 - `map/mapSight.cpp`: linha de visão e alcance de arremesso.
-- `map/mapPathfinding.cpp`: busca de caminho em alto nível.
+- `map/mapPathfinding.cpp` [CRÍTICO]: busca de caminho em alto nível.
 - `map/mapAStar.cpp`: nós e custos do algoritmo A*.
 - `map/mapQTree.cpp`: floors, quadtree e folhas do mapa.
 - `map/mapMaintenance.cpp`: limpeza de itens do mapa.
-- `spawn.hpp`: interface de spawns de criaturas e NPCs.
+- `spawn.hpp`: contrato de spawns de criaturas e NPCs; expõe carregamento, agendamento e lifecycle de respawn.
 - `spawn/spawns.cpp`: carregamento XML e ciclo do gerenciador `Spawns`.
 - `spawn/spawn.cpp`: núcleo do spawn, registro e remoção de monstros.
 - `spawn/spawnMonster.cpp`: criação e posicionamento de monstros.
 - `spawn/spawnScheduler.cpp`: agendamento, checagem e limpeza de respawns.
 - `teleport.cpp/.hpp`: teleports.
-- `thing.cpp/.hpp`: base comum para entidades posicionáveis.
-- `tile.hpp`: interface de tiles, flags, itens e criaturas no mapa.
+- `thing.cpp/.hpp`: contrato base para entidades posicionáveis; raiz comum de itens, criaturas e outras things.
+- `tile.hpp` [CRÍTICO]: contrato de tiles; expõe flags, itens, criaturas, stackpos, queries, notificações e regras de add/remove.
 - `tile/tile.cpp`: definições base e tile nulo.
 - `tile/tileFlags.cpp`: flags, propriedades e bloqueios do tile.
 - `tile/tileLookup.cpp`: consultas de itens, criaturas, stackpos e item de uso.
 - `tile/tileNotifications.cpp`: notificações de adição, atualização, remoção e eventos de movimento.
-- `tile/tileQueries.cpp`: regras de adição, remoção e destino.
-- `tile/tileThingManagement.cpp`: adição, atualização, substituição e remoção de things.
+- `tile/tileQueries.cpp` [CRÍTICO]: regras de adição, remoção e destino.
+- `tile/tileThingManagement.cpp` [CRÍTICO]: adição, atualização, substituição e remoção de things.
 - `town.hpp`: representação de cidades.
 
 ## Convenções de Manutenção
