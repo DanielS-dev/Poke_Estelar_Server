@@ -65,6 +65,7 @@ Ao mover, criar ou remover arquivos, siga o Processo Padrão de Refatoração de
 - Arquivos grandes devem ser divididos por responsabilidade, não apenas por tamanho.
 - Quando um arquivo for separado em vários, deve ser criada uma subpasta para agrupar os novos arquivos.
 - Headers públicos muito consumidos devem preservar o caminho antigo sempre que possível.
+- Headers públicos críticos podem agregar headers auxiliares menores, como `player.hpp` incluindo `player/playerTypes.hpp`, para reduzir concentração sem quebrar consumidores.
 - `luascript.hpp` permanece como fachada pública da interface Lua, agregando headers menores em `src/scripting/lua/luascript`.
 - Bindings Lua de uma mesma classe ou domínio devem ficar agrupados em subpastas, como `src/scripting/lua/creature`.
 - O registry da API Lua pode ser dividido em múltiplos `.cpp` por domínio, mantendo `luaGlobalFunctionsRegistry.cpp` como orquestrador central.

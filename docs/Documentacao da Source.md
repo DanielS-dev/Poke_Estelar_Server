@@ -159,7 +159,8 @@ Contém as entidades principais do servidor e seus comportamentos associados.
 - `party/partyMessaging.cpp`: ícones, mensagens e loot broadcast da party.
 - `party/partySharedExperience.cpp`: experiência compartilhada, vocations e ticks de participação.
 - `party/partyCorpse.cpp`: regra de acesso ao corpse pelo grupo.
-- `player.hpp` [CRÍTICO]: contrato público do jogador; concentra sessão, inventário, storage, skills, guild, party, combat, movement, containers, protocol e eventos Lua.
+- `player.hpp` [CRÍTICO]: fachada e contrato público do jogador; concentra sessão, inventário, storage, skills, guild, party, combat, movement, containers, protocol e eventos Lua.
+- `player/playerTypes.hpp`: tipos auxiliares do contrato de jogador, como enums de modo, estado de trade, entradas de VIP/container/outfit, skills e limites de velocidade.
 - `player/player.cpp`: construção, destruição, descrição e dados básicos do jogador.
 - `player/playerStats.cpp`: vocation, skills, atributos, inventário equipado e cálculo de defesa/ataque.
 - `player/playerContainers.cpp`: containers abertos, envio de itens de container e eventos de container.

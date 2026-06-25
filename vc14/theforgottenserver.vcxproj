@@ -536,6 +536,7 @@
     <ClInclude Include="..\src\network\outputmessage.hpp" />
     <ClInclude Include="..\src\entities\party.hpp" />
     <ClInclude Include="..\src\entities\player.hpp" />
+    <ClInclude Include="..\src\entities\player\playerTypes.hpp" />
     <ClInclude Include="..\src\core\position.hpp" />
     <ClInclude Include="..\src\network\protocol.hpp" />
     <ClInclude Include="..\src\network\protocolgame.hpp" />

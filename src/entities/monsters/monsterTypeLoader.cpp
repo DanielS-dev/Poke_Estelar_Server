@@ -22,6 +22,68 @@ extern Spells* g_spells;
 extern Monsters g_monsters;
 extern ConfigManager g_config;
 
+namespace {
+
+struct RaceTypeMapping {
+	const char* name;
+	uint16_t id;
+	RaceType_t type;
+};
+
+const RaceTypeMapping raceTypeMappings[] = {
+	{"venom", 1, RACE_VENOM},
+	{"blood", 2, RACE_BLOOD},
+	{"undead", 3, RACE_UNDEAD},
+	{"fire", 4, RACE_FIRE},
+	{"energy", 5, RACE_ENERGY},
+	{"grass", 6, RACE_GRASS},
+	{"normal", 7, RACE_NORMAL},
+	{"water", 8, RACE_WATER},
+	{"flying", 9, RACE_FLYING},
+	{"poison", 10, RACE_POISON},
+	{"electric", 11, RACE_ELECTRIC},
+	{"ground", 12, RACE_GROUND},
+	{"psychic", 13, RACE_PSYCHIC},
+	{"rock", 14, RACE_ROCK},
+	{"ice", 15, RACE_ICE},
+	{"bug", 16, RACE_BUG},
+	{"dragon", 17, RACE_DRAGON},
+	{"ghost", 18, RACE_GHOST},
+	{"dark", 19, RACE_DARK},
+	{"steel", 20, RACE_STEEL},
+	{"fairy", 21, RACE_FAIRY},
+	{"fighting", 22, RACE_FIGHTING},
+	{"none", 23, RACE_NONE},
+};
+
+bool getRaceType(const pugi::xml_attribute& attr, RaceType_t& raceType)
+{
+	const std::string raceName = asLowerCaseString(attr.as_string());
+	const uint16_t raceId = pugi::cast<uint16_t>(attr.value());
+
+	for (const RaceTypeMapping& mapping : raceTypeMappings) {
+		if (raceName == mapping.name || raceId == mapping.id) {
+			raceType = mapping.type;
+			return true;
+		}
+	}
+	return false;
+}
+
+void loadRaceType(const pugi::xml_node& monsterNode, const char* attributeName, RaceType_t& raceType, const std::string& file)
+{
+	const pugi::xml_attribute attr = monsterNode.attribute(attributeName);
+	if (!attr) {
+		return;
+	}
+
+	if (!getRaceType(attr, raceType)) {
+		std::cout << "[Warning - Monsters::loadMonster] Unknown " << attributeName << " type " << attr.as_string() << ". " << file << std::endl;
+	}
+}
+
+}
+
 bool Monsters::loadMonster(const std::string& file, const std::string& monsterName, std::list<std::pair<MonsterType*, std::string>>& monsterScriptList, bool reloading /*= false*/)
 {
 	MonsterType* mType = nullptr;
@@ -66,113 +128,8 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		mType->nameDescription = "a " + asLowerCaseString(mType->name);
 	}
 
-	if ((attr = monsterNode.attribute("race"))) { //pota
-		std::string tmpStrValue = asLowerCaseString(attr.as_string());
-		uint16_t tmpInt = pugi::cast<uint16_t>(attr.value());
-		if (tmpStrValue == "venom" || tmpInt == 1) {
-			mType->info.race = RACE_VENOM;
-		} else if (tmpStrValue == "blood" || tmpInt == 2) {
-			mType->info.race = RACE_BLOOD;
-		} else if (tmpStrValue == "undead" || tmpInt == 3) {
-			mType->info.race = RACE_UNDEAD;
-		} else if (tmpStrValue == "fire" || tmpInt == 4) {
-			mType->info.race = RACE_FIRE;
-		} else if (tmpStrValue == "energy" || tmpInt == 5) {
-			mType->info.race = RACE_ENERGY;
-		} else if (tmpStrValue == "grass" || tmpInt == 6) {
-			mType->info.race = RACE_GRASS;
-		} else if (tmpStrValue == "normal" || tmpInt == 7) {
-			mType->info.race = RACE_NORMAL;
-		} else if (tmpStrValue == "water" || tmpInt == 8) {
-			mType->info.race = RACE_WATER;
-		} else if (tmpStrValue == "flying" || tmpInt == 9) {
-			mType->info.race = RACE_FLYING;
-		} else if (tmpStrValue == "poison" || tmpInt == 10) {
-			mType->info.race = RACE_POISON;
-		} else if (tmpStrValue == "electric" || tmpInt == 11) {
-			mType->info.race = RACE_ELECTRIC;
-		} else if (tmpStrValue == "ground" || tmpInt == 12) {
-			mType->info.race = RACE_GROUND;
-		} else if (tmpStrValue == "psychic" || tmpInt == 13) {
-			mType->info.race = RACE_PSYCHIC;
-		} else if (tmpStrValue == "rock" || tmpInt == 14) {
-			mType->info.race = RACE_ROCK;
-		} else if (tmpStrValue == "ice" || tmpInt == 15) {
-			mType->info.race = RACE_ICE;
-		} else if (tmpStrValue == "bug" || tmpInt == 16) {
-			mType->info.race = RACE_BUG;
-		} else if (tmpStrValue == "dragon" || tmpInt == 17) {
-			mType->info.race = RACE_DRAGON;
-		} else if (tmpStrValue == "ghost" || tmpInt == 18) {
-			mType->info.race = RACE_GHOST;
-		} else if (tmpStrValue == "dark" || tmpInt == 19) {
-			mType->info.race = RACE_DARK;
-		} else if (tmpStrValue == "steel" || tmpInt == 20) {
-			mType->info.race = RACE_STEEL;
-		} else if (tmpStrValue == "fairy" || tmpInt == 21) {
-			mType->info.race = RACE_FAIRY;
-		} else if (tmpStrValue == "fighting" || tmpInt == 22) {
-			mType->info.race = RACE_FIGHTING;
-		} else if (tmpStrValue == "none" || tmpInt == 23) {
-			mType->info.race = RACE_NONE;
-		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Unknown race type " << attr.as_string() << ". " << file << std::endl;
-		}
-	}
-
-	if ((attr = monsterNode.attribute("race2"))) { //pota
-		std::string tmpStrValue = asLowerCaseString(attr.as_string());
-		uint16_t tmpInt = pugi::cast<uint16_t>(attr.value());
-		if (tmpStrValue == "venom" || tmpInt == 1) {
-			mType->info.race2 = RACE_VENOM;
-		} else if (tmpStrValue == "blood" || tmpInt == 2) {
-			mType->info.race2 = RACE_BLOOD;
-		} else if (tmpStrValue == "undead" || tmpInt == 3) {
-			mType->info.race2 = RACE_UNDEAD;
-		} else if (tmpStrValue == "fire" || tmpInt == 4) {
-			mType->info.race2 = RACE_FIRE;
-		} else if (tmpStrValue == "energy" || tmpInt == 5) {
-			mType->info.race2 = RACE_ENERGY;
-		} else if (tmpStrValue == "grass" || tmpInt == 6) {
-			mType->info.race2 = RACE_GRASS;
-		} else if (tmpStrValue == "normal" || tmpInt == 7) {
-			mType->info.race2 = RACE_NORMAL;
-		} else if (tmpStrValue == "water" || tmpInt == 8) {
-			mType->info.race2 = RACE_WATER;
-		} else if (tmpStrValue == "flying" || tmpInt == 9) {
-			mType->info.race2 = RACE_FLYING;
-		} else if (tmpStrValue == "poison" || tmpInt == 10) {
-			mType->info.race2 = RACE_POISON;
-		} else if (tmpStrValue == "electric" || tmpInt == 11) {
-			mType->info.race2 = RACE_ELECTRIC;
-		} else if (tmpStrValue == "ground" || tmpInt == 12) {
-			mType->info.race2 = RACE_GROUND;
-		} else if (tmpStrValue == "psychic" || tmpInt == 13) {
-			mType->info.race2 = RACE_PSYCHIC;
-		} else if (tmpStrValue == "rock" || tmpInt == 14) {
-			mType->info.race2 = RACE_ROCK;
-		} else if (tmpStrValue == "ice" || tmpInt == 15) {
-			mType->info.race2 = RACE_ICE;
-		} else if (tmpStrValue == "bug" || tmpInt == 16) {
-			mType->info.race2 = RACE_BUG;
-		} else if (tmpStrValue == "dragon" || tmpInt == 17) {
-			mType->info.race2 = RACE_DRAGON;
-		} else if (tmpStrValue == "ghost" || tmpInt == 18) {
-			mType->info.race2 = RACE_GHOST;
-		} else if (tmpStrValue == "dark" || tmpInt == 19) {
-			mType->info.race2 = RACE_DARK;
-		} else if (tmpStrValue == "steel" || tmpInt == 20) {
-			mType->info.race2 = RACE_STEEL;
-		} else if (tmpStrValue == "fairy" || tmpInt == 21) {
-			mType->info.race2 = RACE_FAIRY;
-		} else if (tmpStrValue == "fighting" || tmpInt == 22) {
-			mType->info.race2 = RACE_FIGHTING;
-		} else if (tmpStrValue == "none" || tmpInt == 23) {
-			mType->info.race2 = RACE_NONE;
-		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Unknown race2 type " << attr.as_string() << ". " << file << std::endl;
-		}
-	}
+	loadRaceType(monsterNode, "race", mType->info.race, file); //pota
+	loadRaceType(monsterNode, "race2", mType->info.race2, file); //pota
 
 	if ((attr = monsterNode.attribute("experience"))) {
 		mType->info.experience = pugi::cast<uint64_t>(attr.value());

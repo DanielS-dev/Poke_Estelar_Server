@@ -32,6 +32,109 @@ extern Weapons* g_weapons;
 extern CreatureEvents* g_creatureEvents;
 extern Events* g_events;
 
+namespace {
+
+bool hasSlotPosition(int32_t slotPosition, int32_t requiredSlotPosition)
+{
+	return (slotPosition & requiredSlotPosition) != 0;
+}
+
+ReturnValue getDefaultEquipReturnValue(int32_t slotPosition)
+{
+	if ((slotPosition & SLOTP_HEAD) || (slotPosition & SLOTP_NECKLACE) ||
+	        (slotPosition & SLOTP_BACKPACK) || (slotPosition & SLOTP_ARMOR) ||
+	        (slotPosition & SLOTP_LEGS) || (slotPosition & SLOTP_FEET) ||
+	        (slotPosition & SLOTP_ORDER) || (slotPosition & SLOTP_INFO) ||
+	        (slotPosition & SLOTP_RING)) {
+		return RETURNVALUE_CANNOTBEDRESSED;
+	}
+
+	if (slotPosition & SLOTP_TWO_HAND) {
+		return RETURNVALUE_PUTTHISOBJECTINBOTHHANDS;
+	}
+
+	if ((slotPosition & SLOTP_RIGHT) || (slotPosition & SLOTP_LEFT)) {
+		if (!g_config.getBoolean(ConfigManager::CLASSIC_EQUIPMENT_SLOTS)) {
+			return RETURNVALUE_CANNOTBEDRESSED;
+		}
+		return RETURNVALUE_PUTTHISOBJECTINYOURHAND;
+	}
+
+	return RETURNVALUE_NOERROR;
+}
+
+ReturnValue queryClassicHandAdd(const Item* item, const Item* equippedItem, uint32_t count, int32_t slotPosition)
+{
+	if (slotPosition & SLOTP_TWO_HAND) {
+		if (equippedItem && equippedItem != item) {
+			return RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
+		}
+		return RETURNVALUE_NOERROR;
+	}
+
+	if (!equippedItem) {
+		return RETURNVALUE_NOERROR;
+	}
+
+	const WeaponType_t type = item->getWeaponType();
+	const WeaponType_t equippedType = equippedItem->getWeaponType();
+
+	if (equippedItem->getSlotPosition() & SLOTP_TWO_HAND) {
+		return RETURNVALUE_DROPTWOHANDEDITEM;
+	}
+
+	if (item == equippedItem && count == item->getItemCount()) {
+		return RETURNVALUE_NOERROR;
+	}
+
+	if (equippedType == WEAPON_SHIELD && type == WEAPON_SHIELD) {
+		return RETURNVALUE_CANONLYUSEONESHIELD;
+	}
+
+	if (equippedType == WEAPON_NONE || type == WEAPON_NONE ||
+	        equippedType == WEAPON_SHIELD || equippedType == WEAPON_AMMO ||
+	        type == WEAPON_SHIELD || type == WEAPON_AMMO) {
+		return RETURNVALUE_NOERROR;
+	}
+
+	return RETURNVALUE_CANONLYUSEONEWEAPON;
+}
+
+ReturnValue queryRightHandAdd(const Item* item, const Item* leftItem, uint32_t count, int32_t slotPosition)
+{
+	if (!g_config.getBoolean(ConfigManager::CLASSIC_EQUIPMENT_SLOTS)) {
+		if (item->getWeaponType() != WEAPON_SHIELD) {
+			return RETURNVALUE_CANNOTBEDRESSED;
+		}
+
+		if (leftItem && ((leftItem->getSlotPosition() | slotPosition) & SLOTP_TWO_HAND)) {
+			return RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
+		}
+		return RETURNVALUE_NOERROR;
+	}
+
+	return queryClassicHandAdd(item, leftItem, count, slotPosition);
+}
+
+ReturnValue queryLeftHandAdd(const Item* item, const Item* rightItem, uint32_t count, int32_t slotPosition)
+{
+	if (!g_config.getBoolean(ConfigManager::CLASSIC_EQUIPMENT_SLOTS)) {
+		const WeaponType_t type = item->getWeaponType();
+		if (type == WEAPON_NONE || type == WEAPON_SHIELD) {
+			return RETURNVALUE_CANNOTBEDRESSED;
+		}
+
+		if (rightItem && (slotPosition & SLOTP_TWO_HAND)) {
+			return RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
+		}
+		return RETURNVALUE_NOERROR;
+	}
+
+	return queryClassicHandAdd(item, rightItem, count, slotPosition);
+}
+
+}
+
 bool Player::hasCapacity(const Item* item, uint32_t count) const
 {
 	if (hasFlag(PlayerFlag_CannotPickupItem)) {
@@ -74,153 +177,67 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 	ReturnValue ret = RETURNVALUE_NOERROR;
 
 	const int32_t& slotPosition = item->getSlotPosition(); //pota
-	if ((slotPosition & SLOTP_HEAD) || (slotPosition & SLOTP_NECKLACE) ||
-	        (slotPosition & SLOTP_BACKPACK) || (slotPosition & SLOTP_ARMOR) ||
-	        (slotPosition & SLOTP_LEGS) || (slotPosition & SLOTP_FEET) || (slotPosition & SLOTP_ORDER) || (slotPosition & SLOTP_INFO) || 			(slotPosition & SLOTP_RING)) {
-		ret = RETURNVALUE_CANNOTBEDRESSED;
-	} else if (slotPosition & SLOTP_TWO_HAND) {
-		ret = RETURNVALUE_PUTTHISOBJECTINBOTHHANDS;
-	} else if ((slotPosition & SLOTP_RIGHT) || (slotPosition & SLOTP_LEFT)) {
-		if (!g_config.getBoolean(ConfigManager::CLASSIC_EQUIPMENT_SLOTS)) {
-			ret = RETURNVALUE_CANNOTBEDRESSED;
-		} else {
-			ret = RETURNVALUE_PUTTHISOBJECTINYOURHAND;
-		}
-	}
+	ret = getDefaultEquipReturnValue(slotPosition);
 
 	switch (index) {
 		case CONST_SLOT_HEAD: {
-			if (slotPosition & SLOTP_HEAD) {
+			if (hasSlotPosition(slotPosition, SLOTP_HEAD)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_NECKLACE: {
-			if (slotPosition & SLOTP_NECKLACE) {
+			if (hasSlotPosition(slotPosition, SLOTP_NECKLACE)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_BACKPACK: {
-			if (slotPosition & SLOTP_BACKPACK) {
+			if (hasSlotPosition(slotPosition, SLOTP_BACKPACK)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_ARMOR: {
-			if (slotPosition & SLOTP_ARMOR) {
+			if (hasSlotPosition(slotPosition, SLOTP_ARMOR)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_RIGHT: {
-			if (slotPosition & SLOTP_RIGHT) {
-				if (!g_config.getBoolean(ConfigManager::CLASSIC_EQUIPMENT_SLOTS)) {
-					if (item->getWeaponType() != WEAPON_SHIELD) {
-						ret = RETURNVALUE_CANNOTBEDRESSED;
-					} else {
-						const Item* leftItem = inventory[CONST_SLOT_LEFT];
-						if (leftItem) {
-							if ((leftItem->getSlotPosition() | slotPosition) & SLOTP_TWO_HAND) {
-								ret = RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
-							} else {
-								ret = RETURNVALUE_NOERROR;
-							}
-						} else {
-							ret = RETURNVALUE_NOERROR;
-						}
-					}
-				} else if (slotPosition & SLOTP_TWO_HAND) {
-					if (inventory[CONST_SLOT_LEFT] && inventory[CONST_SLOT_LEFT] != item) {
-						ret = RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
-					} else {
-						ret = RETURNVALUE_NOERROR;
-					}
-				} else if (inventory[CONST_SLOT_LEFT]) {
-					const Item* leftItem = inventory[CONST_SLOT_LEFT];
-					WeaponType_t type = item->getWeaponType(), leftType = leftItem->getWeaponType();
-
-					if (leftItem->getSlotPosition() & SLOTP_TWO_HAND) {
-						ret = RETURNVALUE_DROPTWOHANDEDITEM;
-					} else if (item == leftItem && count == item->getItemCount()) {
-						ret = RETURNVALUE_NOERROR;
-					} else if (leftType == WEAPON_SHIELD && type == WEAPON_SHIELD) {
-						ret = RETURNVALUE_CANONLYUSEONESHIELD;
-					} else if (leftType == WEAPON_NONE || type == WEAPON_NONE ||
-					           leftType == WEAPON_SHIELD || leftType == WEAPON_AMMO
-					           || type == WEAPON_SHIELD || type == WEAPON_AMMO) {
-						ret = RETURNVALUE_NOERROR;
-					} else {
-						ret = RETURNVALUE_CANONLYUSEONEWEAPON;
-					}
-				} else {
-					ret = RETURNVALUE_NOERROR;
-				}
+			if (hasSlotPosition(slotPosition, SLOTP_RIGHT)) {
+				ret = queryRightHandAdd(item, inventory[CONST_SLOT_LEFT], count, slotPosition);
 			}
 			break;
 		}
 
 		case CONST_SLOT_LEFT: {
-			if (slotPosition & SLOTP_LEFT) {
-				if (!g_config.getBoolean(ConfigManager::CLASSIC_EQUIPMENT_SLOTS)) {
-					WeaponType_t type = item->getWeaponType();
-					if (type == WEAPON_NONE || type == WEAPON_SHIELD) {
-						ret = RETURNVALUE_CANNOTBEDRESSED;
-					} else if (inventory[CONST_SLOT_RIGHT] && (slotPosition & SLOTP_TWO_HAND)) {
-						ret = RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
-					} else {
-						ret = RETURNVALUE_NOERROR;
-					}
-				} else if (slotPosition & SLOTP_TWO_HAND) {
-					if (inventory[CONST_SLOT_RIGHT] && inventory[CONST_SLOT_RIGHT] != item) {
-						ret = RETURNVALUE_BOTHHANDSNEEDTOBEFREE;
-					} else {
-						ret = RETURNVALUE_NOERROR;
-					}
-				} else if (inventory[CONST_SLOT_RIGHT]) {
-					const Item* rightItem = inventory[CONST_SLOT_RIGHT];
-					WeaponType_t type = item->getWeaponType(), rightType = rightItem->getWeaponType();
-
-					if (rightItem->getSlotPosition() & SLOTP_TWO_HAND) {
-						ret = RETURNVALUE_DROPTWOHANDEDITEM;
-					} else if (item == rightItem && count == item->getItemCount()) {
-						ret = RETURNVALUE_NOERROR;
-					} else if (rightType == WEAPON_SHIELD && type == WEAPON_SHIELD) {
-						ret = RETURNVALUE_CANONLYUSEONESHIELD;
-					} else if (rightType == WEAPON_NONE || type == WEAPON_NONE ||
-					           rightType == WEAPON_SHIELD || rightType == WEAPON_AMMO
-					           || type == WEAPON_SHIELD || type == WEAPON_AMMO) {
-						ret = RETURNVALUE_NOERROR;
-					} else {
-						ret = RETURNVALUE_CANONLYUSEONEWEAPON;
-					}
-				} else {
-					ret = RETURNVALUE_NOERROR;
-				}
+			if (hasSlotPosition(slotPosition, SLOTP_LEFT)) {
+				ret = queryLeftHandAdd(item, inventory[CONST_SLOT_RIGHT], count, slotPosition);
 			}
 			break;
 		}
 
 		case CONST_SLOT_LEGS: {
-			if (slotPosition & SLOTP_LEGS) {
+			if (hasSlotPosition(slotPosition, SLOTP_LEGS)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_FEET: {
-			if (slotPosition & SLOTP_FEET) {
+			if (hasSlotPosition(slotPosition, SLOTP_FEET)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_RING: {
-			if (slotPosition & SLOTP_RING) {
+			if (hasSlotPosition(slotPosition, SLOTP_RING)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
@@ -234,14 +251,14 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 		}
 
 		case CONST_SLOT_ORDER: { //pota
-			if (slotPosition & SLOTP_ORDER) {
+			if (hasSlotPosition(slotPosition, SLOTP_ORDER)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
 		}
 
 		case CONST_SLOT_INFO: { //pota
-			if (slotPosition & SLOTP_INFO) {
+			if (hasSlotPosition(slotPosition, SLOTP_INFO)) {
 				ret = RETURNVALUE_NOERROR;
 			}
 			break;
