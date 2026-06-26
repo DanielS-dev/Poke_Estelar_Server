@@ -8,12 +8,60 @@
 #include "../core/tools/auths.hpp"
 #include "../core/tools/stringsTools.hpp"
 
+#include <cerrno>
+#include <cctype>
+#include <cstdlib>
+#include <fstream>
+
 #if LUA_VERSION_NUM >= 502
 #undef lua_strlen
 #define lua_strlen lua_rawlen
 #endif
 
 extern Game g_game;
+
+namespace {
+	std::string trimEnvValue(const std::string& value)
+	{
+		auto start = std::find_if_not(value.begin(), value.end(), [](unsigned char ch) {
+			return std::isspace(ch) != 0;
+		});
+
+		auto end = std::find_if_not(value.rbegin(), value.rend(), [](unsigned char ch) {
+			return std::isspace(ch) != 0;
+		}).base();
+
+		if (start >= end) {
+			return std::string();
+		}
+
+		return std::string(start, end);
+	}
+
+	std::string parseEnvValue(std::string value)
+	{
+		value = trimEnvValue(value);
+		if (value.empty()) {
+			return value;
+		}
+
+		const char quote = value.front();
+		if (quote == '"' || quote == '\'') {
+			const size_t endQuote = value.find(quote, 1);
+			if (endQuote != std::string::npos) {
+				return value.substr(1, endQuote - 1);
+			}
+			return value.substr(1);
+		}
+
+		const size_t comment = value.find('#');
+		if (comment != std::string::npos) {
+			value.erase(comment);
+		}
+
+		return trimEnvValue(value);
+	}
+}
 
 bool ConfigManager::load()
 {
@@ -30,27 +78,19 @@ bool ConfigManager::load()
 		return false;
 	}
 
+	const auto env = loadEnvFile(".env");
+
 	//parse config
 	if (!loaded) { //info that must be loaded one time (unless we reset the modules involved)
 		boolean[BIND_ONLY_GLOBAL_ADDRESS] = getGlobalBoolean(L, "bindOnlyGlobalAddress", false);
 		boolean[OPTIMIZE_DATABASE] = getGlobalBoolean(L, "startupDatabaseOptimization", true);
 
-		string[IP] = getGlobalString(L, "ip", "127.0.0.1");
 		string[MAP_NAME] = getGlobalString(L, "mapName", "forgotten");
 		string[MAP_AUTHOR] = getGlobalString(L, "mapAuthor", "Unknown");
 		string[HOUSE_RENT_PERIOD] = getGlobalString(L, "houseRentPeriod", "never");
-		string[MYSQL_HOST] = getGlobalString(L, "mysqlHost", "127.0.0.1");
-		string[MYSQL_USER] = getGlobalString(L, "mysqlUser", "forgottenserver");
-		string[MYSQL_PASS] = getGlobalString(L, "mysqlPass", "");
-		string[MYSQL_DB] = getGlobalString(L, "mysqlDatabase", "forgottenserver");
-		string[MYSQL_SOCK] = getGlobalString(L, "mysqlSock", "");
-
-		integer[SQL_PORT] = getGlobalNumber(L, "mysqlPort", 3306);
-		integer[GAME_PORT] = getGlobalNumber(L, "gameProtocolPort", 7172);
-		integer[LOGIN_PORT] = getGlobalNumber(L, "loginProtocolPort", 7171);
-		integer[STATUS_PORT] = getGlobalNumber(L, "statusProtocolPort", 7171);
 
 		integer[MARKET_OFFER_DURATION] = getGlobalNumber(L, "marketOfferDuration", 30 * 24 * 60 * 60);
+		loadEnvConfig(env);
 	}
 
 	boolean[ALLOW_CHANGEOUTFIT] = getGlobalBoolean(L, "allowChangeOutfit", true);
@@ -215,4 +255,79 @@ double ConfigManager::getGlobalDouble(lua_State* L, const char* identifier, cons
 	double val = lua_tonumber(L, -1);
 	lua_pop(L, 1);
 	return val;
+}
+
+std::unordered_map<std::string, std::string> ConfigManager::loadEnvFile(const std::string& fileName)
+{
+	std::unordered_map<std::string, std::string> env;
+	std::ifstream file(fileName);
+	if (!file.is_open()) {
+		return env;
+	}
+
+	std::string line;
+	while (std::getline(file, line)) {
+		line = trimEnvValue(line);
+		if (line.empty() || line.front() == '#') {
+			continue;
+		}
+
+		const size_t separator = line.find('=');
+		if (separator == std::string::npos) {
+			continue;
+		}
+
+		std::string key = trimEnvValue(line.substr(0, separator));
+		if (key.empty()) {
+			continue;
+		}
+
+		env[key] = parseEnvValue(line.substr(separator + 1));
+	}
+
+	return env;
+}
+
+std::string ConfigManager::getEnvString(const std::unordered_map<std::string, std::string>& env, const char* identifier, const char* defaultValue)
+{
+	auto it = env.find(identifier);
+	if (it == env.end()) {
+		return defaultValue;
+	}
+	return it->second;
+}
+
+int32_t ConfigManager::getEnvNumber(const std::unordered_map<std::string, std::string>& env, const char* identifier, const int32_t defaultValue)
+{
+	auto it = env.find(identifier);
+	if (it == env.end()) {
+		return defaultValue;
+	}
+
+	char* end = nullptr;
+	errno = 0;
+	const long value = std::strtol(it->second.c_str(), &end, 10);
+	if (errno != 0 || end == it->second.c_str() || *end != '\0') {
+		std::cout << "[Warning - ConfigManager::getEnvNumber] Invalid value for " << identifier << ": " << it->second << std::endl;
+		return defaultValue;
+	}
+
+	return static_cast<int32_t>(value);
+}
+
+void ConfigManager::loadEnvConfig(const std::unordered_map<std::string, std::string>& env)
+{
+	string[IP] = getEnvString(env, "IP", "127.0.0.1");
+	string[MYSQL_HOST] = getEnvString(env, "MYSQL_HOST", "127.0.0.1");
+	string[MYSQL_USER] = getEnvString(env, "MYSQL_USER", "forgottenserver");
+	string[MYSQL_PASS] = getEnvString(env, "MYSQL_PASS", "");
+	string[MYSQL_DB] = getEnvString(env, "MYSQL_DB", "forgottenserver");
+	string[MYSQL_SOCK] = getEnvString(env, "MYSQL_SOCK", "");
+	string[RSA_P] = getEnvString(env, "RSA_P", "14299623962416399520070177382898895550795403345466153217470516082934737582776038882967213386204600674145392845853859217990626450972452084065728686565928113");
+	string[RSA_Q] = getEnvString(env, "RSA_Q", "7630979195970404721891201847792002125535401292779123937207447574596692788513647179235335529307251350570728407373705564708871762033017096809910315212884101");
+
+	integer[SQL_PORT] = getEnvNumber(env, "SQL_PORT", 3306);
+	integer[GAME_PORT] = getEnvNumber(env, "GAME_PORT", 7172);
+	integer[LOGIN_PORT] = getEnvNumber(env, "LOGIN_PORT", 7171);
+	integer[STATUS_PORT] = getEnvNumber(env, "STATUS_PORT", 7171);
 }

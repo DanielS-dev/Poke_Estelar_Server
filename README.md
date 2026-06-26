@@ -60,37 +60,64 @@ O executável gerado será `Poke_Estelar.exe`.
 
 ## Como Configurar e Executar
 
-1. Configure o banco de dados em `config.lua`:
+1. Crie o arquivo local de ambiente a partir do exemplo:
 
-```lua
-mysqlHost = "127.0.0.1"
-mysqlUser = "root"
-mysqlPass = ""
-mysqlDatabase = "pokeestelar"
-mysqlPort = 3306
+```powershell
+copy .env.example .env
 ```
 
-2. Importe a estrutura do banco de dados:
+2. Configure no `.env` os dados de rede, banco de dados e RSA:
+
+```env
+IP = "127.0.0.1"
+
+MYSQL_HOST = "127.0.0.1"
+MYSQL_USER = "root"
+MYSQL_PASS = ""
+MYSQL_DB = "pokeestelar"
+MYSQL_SOCK = ""
+
+RSA_P = "sua-chave-rsa-p"
+RSA_Q = "sua-chave-rsa-q"
+
+SQL_PORT = 3306
+GAME_PORT = 7172
+LOGIN_PORT = 7171
+STATUS_PORT = 7171
+```
+
+Essas variáveis são carregadas pelo `ConfigManager` a partir do `.env`. O arquivo `.env` deve ficar apenas na máquina local e não deve ser enviado para o GitHub. Use o `.env.example` como modelo versionado.
+
+3. As demais configurações do servidor continuam em `config.lua`, como regras de gameplay, nome do mapa, rates, nome do servidor e informações do status.
+
+Exemplo de configurações que ainda ficam em `config.lua`:
+
+```lua
+serverName = "Poke Estelar"
+mapName = "global_dash"
+worldType = "no-pvp"
+rateExp = 2
+```
+
+4. Importe a estrutura do banco de dados:
 
 ```text
 schema.sql
 ```
 
-3. Se necessário, importe também os dados do projeto:
+5. Se necessário, importe também os dados do projeto:
 
 ```text
 pokeestelar - dados.sql
 ```
 
-4. Confira as principais configurações em `config.lua`, como IP, portas, nome do mapa e nome do servidor.
-
-5. Copie as DLLs necessárias para a pasta do executável. Elas podem ser obtidas em:
+6. Copie as DLLs necessárias para a pasta do executável. Elas podem ser obtidas em:
 
 ```text
 vcpkg_installed/x64-windows/bin
 ```
 
-6. Execute o servidor:
+7. Execute o servidor:
 
 ```text
 Poke_Estelar.exe
@@ -104,13 +131,15 @@ Poke_Estelar.exe
 - `cmake/`: módulos auxiliares do CMake.
 - `vc14/`: solution e projeto do Visual Studio.
 - `vcpkg.json`: manifesto das dependências externas.
-- `config.lua`: configuração principal de execução do servidor.
+- `config.lua`: configuração principal de gameplay e execução do servidor.
+- `.env.example`: modelo das variáveis de ambiente usadas pelo `ConfigManager`.
 - `schema.sql`: estrutura inicial do banco de dados.
 - `pokeestelar - dados.sql`: dados adicionais do projeto.
 
 ## Observações
 
 - A pasta `vcpkg_installed/` não deve ser enviada para o GitHub.
+- O arquivo `.env` não deve ser enviado para o GitHub.
 - Arquivos `.exe`, `.dll` e saídas de build também devem ficar fora do repositório.
 - As DLLs necessárias para execução podem ser copiadas de `vcpkg_installed/x64-windows/bin` após a instalação das dependências.
 

@@ -5,6 +5,7 @@
 #define FS_CONFIGMANAGER_H_6BDD23BD0B8344F4B7C40E8BE6AF6F39
 
 #include <lua.hpp>
+#include <unordered_map>
 
 class ConfigManager
 {
@@ -57,6 +58,8 @@ class ConfigManager
 			MYSQL_PASS,
 			MYSQL_DB,
 			MYSQL_SOCK,
+			RSA_P,
+			RSA_Q,
 			DEFAULT_PRIORITY,
 			MAP_AUTHOR,
 			MONSTERLEVEL_PREFIX, //pota
@@ -113,6 +116,10 @@ class ConfigManager
 		static int32_t getGlobalNumber(lua_State* L, const char* identifier, const int32_t defaultValue = 0);
 		static bool getGlobalBoolean(lua_State* L, const char* identifier, const bool defaultValue);
 		static double getGlobalDouble(lua_State* L, const char* identifier, const double defaultValue = 0.0); //pota
+		static std::unordered_map<std::string, std::string> loadEnvFile(const std::string& fileName);
+		static std::string getEnvString(const std::unordered_map<std::string, std::string>& env, const char* identifier, const char* defaultValue);
+		static int32_t getEnvNumber(const std::unordered_map<std::string, std::string>& env, const char* identifier, const int32_t defaultValue);
+		void loadEnvConfig(const std::unordered_map<std::string, std::string>& env);
 
 		std::string string[LAST_STRING_CONFIG] = {};
 		int32_t integer[LAST_INTEGER_CONFIG] = {};

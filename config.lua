@@ -63,12 +63,12 @@ checkExpiredMarketOffersEachMinutes = 60
 maxMarketOffersAtATimePerPlayer = 100
 
 -- MySQL
-mysqlHost = "127.0.0.1"
-mysqlUser = "root"
-mysqlPass = ""
-mysqlDatabase = "pokeestelar"
-mysqlPort = 3306
-mysqlSock = ""
+--mysqlHost = "127.0.0.1"
+--mysqlUser = "root"
+--mysqlPass = ""
+--mysqlDatabase = "pokeestelar"
+--mysqlPort = 3306
+--mysqlSock = ""
 passwordType = "sha1"
 
 -- Misc.
