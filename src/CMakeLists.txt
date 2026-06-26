@@ -4,6 +4,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/app/serviceManager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/app/signals.cpp
 	${CMAKE_CURRENT_LIST_DIR}/core/otpch.cpp
+	${CMAKE_CURRENT_LIST_DIR}/core/logger.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actions.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actionRules.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scripting/actions/actionExecution.cpp

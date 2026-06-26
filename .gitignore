@@ -57,6 +57,7 @@ vc14/*.user
 *.dll
 
 # Logs and temporary files.
+/logs/
 *.log
 *.tmp
 *.temp

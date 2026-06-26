@@ -138,6 +138,7 @@
     <ClCompile Include="..\src\scripting\actions\actionExecution.cpp" />
     <ClCompile Include="..\src\scripting\actions\actionConfig.cpp" />
     <ClCompile Include="..\src\scripting\actions\actionBuiltins.cpp" />
+    <ClCompile Include="..\src\core\logger.cpp" />
     <ClCompile Include="..\src\security\ban.cpp" />
     <ClCompile Include="..\src\scripting\baseevents.cpp" />
     <ClCompile Include="..\src\world\bed.cpp" />
@@ -531,6 +532,7 @@
     <ClInclude Include="..\src\game\movement\movementTypes.hpp" />
     <ClInclude Include="..\src\network\networkmessage.hpp" />
     <ClInclude Include="..\src\entities\npc.hpp" />
+    <ClInclude Include="..\src\core\logger.hpp" />
     <ClInclude Include="..\src\core\otpch.hpp" />
     <ClInclude Include="..\src\entities\outfit.hpp" />
     <ClInclude Include="..\src\network\outputmessage.hpp" />

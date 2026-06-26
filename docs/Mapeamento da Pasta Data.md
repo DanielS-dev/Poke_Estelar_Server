@@ -47,7 +47,7 @@ Regras para adicionar, mover, renomear ou remover arquivos nessa pasta.
 | Conteudo de entidades | `monster`, `npc`, `items` | Define monstros, NPCs e itens usados pelo jogo. |
 | Mundo | `world`, `bkup_world` | Mapa, spawns, houses e backups. |
 | Configuracoes globais | `XML` | Configuracoes estruturais como vocations, groups, commands, quests, mounts, outfits e stages. |
-| Operacional/runtime | `logs`, `reports`, `migrations` | Saidas geradas, reports e scripts de migracao. |
+| Operacional/runtime | `logs`, `reports`, `migrations` | Saidas geradas por sistemas de jogo, reports e scripts de migracao. |
 
 ## Ponte Geral com a Source
 
@@ -77,7 +77,7 @@ Regras para adicionar, mover, renomear ou remover arquivos nessa pasta.
 | `XML/commands.xml` | `src/game/commands/commandLoader.cpp` | Carrega comandos internos da source. |
 | `raids` | `src/game/raids/*.cpp` | Carrega `raids.xml` e arquivos individuais de raid. |
 | `migrations` | `src/persistence/databasemanager.cpp` | Executa scripts de migracao por versao. |
-| `logs`, `reports` | `src/game/commands/commandRules.cpp`, `src/game/game/gameReports.cpp` | Recebem arquivos gerados em runtime. |
+| `logs`, `reports` | `src/game/commands/commandRules.cpp`, `src/game/game/gameReports.cpp` | Recebem arquivos gerados em runtime por comandos e reports de jogo. |
 
 ## Visao Geral
 
@@ -105,6 +105,8 @@ Regras para adicionar, mover, renomear ou remover arquivos nessa pasta.
 | `XML` | 7 | 0 | 7 | 0 | Configuracoes globais em XML: vocations, groups, commands, quests etc. |
 
 Total aproximado no momento do mapeamento: 2307 arquivos, sendo 1149 `.xml`, 1145 `.lua`, 4 `.otbm`, 2 `.py`, 2 `.gitignore`, 1 `.zip`, 1 `.txt` e 1 `.otb`.
+
+Observacao: `data/logs` e usada para logs gerados por sistemas de jogo, como comandos de GM. Os logs tecnicos do servidor gerados pelo logger central ficam, por padrao, em `/logs/server.log` na raiz do projeto. Consulte `docs/Sistema de Logger.md`.
 
 ## Fluxo de Carregamento Lua
 

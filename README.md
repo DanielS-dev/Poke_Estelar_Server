@@ -84,9 +84,18 @@ SQL_PORT = 3306
 GAME_PORT = 7172
 LOGIN_PORT = 7171
 STATUS_PORT = 7171
+
+LOG_LEVEL = "info"
+LOG_TO_CONSOLE = true
+LOG_TO_FILE = true
+LOG_FILE = "logs/server.log"
+LOG_MAX_FILE_SIZE_MB = 10
+LOG_MAX_FILES = 5
 ```
 
-Essas variáveis são carregadas pelo `ConfigManager` a partir do `.env`. O arquivo `.env` deve ficar apenas na máquina local e não deve ser enviado para o GitHub. Use o `.env.example` como modelo versionado.
+As variáveis de servidor são carregadas pelo `ConfigManager` a partir do `.env`. As variáveis `LOG_*` configuram o logger central: nível mínimo, saída no console, saída em arquivo e rotação. O arquivo `.env` deve ficar apenas na máquina local e não deve ser enviado para o GitHub. Use o `.env.example` como modelo versionado.
+
+A documentação completa do logger está em `docs/Sistema de Logger.md`.
 
 3. As demais configurações do servidor continuam em `config.lua`, como regras de gameplay, nome do mapa, rates, nome do servidor e informações do status.
 
@@ -128,6 +137,7 @@ Poke_Estelar.exe
 - `src/`: código-fonte C++ do servidor.
 - `data/`: arquivos de dados, scripts, mapas e configurações usadas pelo servidor.
 - `docs/`: documentação interna da source e da organização do projeto.
+- `docs/Sistema de Logger.md`: documentação do logger central, variáveis `LOG_*`, formato e migração.
 - `cmake/`: módulos auxiliares do CMake.
 - `vc14/`: solution e projeto do Visual Studio.
 - `vcpkg.json`: manifesto das dependências externas.

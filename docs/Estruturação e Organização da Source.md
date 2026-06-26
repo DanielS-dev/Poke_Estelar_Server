@@ -52,6 +52,10 @@ Logs devem ajudar a entender o erro sem poluir o fluxo normal do servidor. Mensa
 
 Evite mensagens genéricas demais, como `error` ou `failed`, sem contexto adicional.
 
+O padrão atual para logs técnicos é usar o logger central em `src/core/logger.cpp/.hpp`, com macros como `LOG_INFO`, `LOG_WARN`, `LOG_ERROR` e `LOG_FATAL`. Ele escreve no console e em arquivo, com rotação configurável pelo `.env`.
+
+Para detalhes de configuração, níveis, formato, categorias e ordem recomendada de migração dos `std::cout`, consulte `docs/Sistema de Logger.md`.
+
 ### Refatorações
 
 Refatorações devem ser pequenas, revisáveis e focadas. Ao mover código entre pastas ou arquivos, prefira preservar o comportamento atual antes de aplicar melhorias funcionais.
@@ -96,7 +100,8 @@ Ao mover, criar ou remover arquivos, siga o Processo Padrão de Refatoração de
 - [x] Documentar dependências entre módulos e arquivos críticos na documentação principal.
 - [ ] Continuar revisando arquivos `.cpp` grandes e dividir responsabilidades quando fizer sentido.
 - [ ] Remover implementação desnecessária de regras de negócio em `.h` e `.hpp`, preservando templates, inline e fachadas públicas quando necessário.
-- [ ] Padronizar e fortalecer logs de erro.
+- [x] Criar logger central para console e arquivo.
+- [ ] Migrar mensagens de erro por domínio para o logger central.
 - [ ] Revisar dependências entre módulos para reduzir acoplamento em pontos críticos.
 - [ ] Documentar novos padrões importantes conforme forem definidos.
 

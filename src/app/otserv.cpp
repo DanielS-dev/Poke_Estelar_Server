@@ -19,6 +19,7 @@
 #include "../core/scheduler.hpp"
 #include "../persistence/databasetasks.hpp"
 #include "../core/tools/stringsTools.hpp"
+#include "../core/logger.hpp"
 
 DatabaseTasks g_databaseTasks;
 Dispatcher g_dispatcher;
@@ -36,7 +37,7 @@ std::unique_lock<std::mutex> g_loaderUniqueLock(g_loaderLock);
 
 void startupErrorMessage(const std::string& errorStr)
 {
-	std::cout << "> ERROR: " << errorStr << std::endl;
+	LOG_FATAL("Startup", errorStr);
 	g_loaderSignal.notify_all();
 }
 
@@ -54,6 +55,9 @@ int main(int argc, char* argv[])
 {
 	// Setup bad allocation handler
 	std::set_new_handler(badAllocationHandler);
+
+	Logger::getInstance().initializeFromEnv(".env");
+	LOG_INFO("Startup", "Logger initialized");
 
 	ServiceManager serviceManager;
 
@@ -77,6 +81,7 @@ int main(int argc, char* argv[])
 	g_scheduler.join();
 	g_databaseTasks.join();
 	g_dispatcher.join();
+	Logger::getInstance().shutdown();
 	return 0;
 }
 

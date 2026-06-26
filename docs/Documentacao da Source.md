@@ -10,7 +10,7 @@ Esta documentação não substitui a leitura do código. Ela resume a ideia gera
 |---|---|---|
 | Aplicação | `src/app` | Inicialização do servidor, serviços e sinais do sistema. |
 | Configuração | `src/config` | Leitura e acesso às configurações do servidor. |
-| Core | `src/core` | Tipos base, constantes, scheduler, tarefas e estruturas compartilhadas. |
+| Core | `src/core` | Tipos base, constantes, scheduler, tarefas, logger e estruturas compartilhadas. |
 | Core Tools | `src/core/tools` | Funções auxiliares separadas por domínio. |
 | Entidades | `src/entities` | Players, creatures, monsters, NPCs, guilds, parties e vocations. |
 | Gameplay | `src/game` | Sistemas principais de jogo, combate, spells, raids, movement e commands. |
@@ -58,6 +58,7 @@ Arquivos críticos conhecidos:
 - `src/persistence/database.cpp/.hpp` e `src/persistence/login/iologindata.hpp`: acesso a banco, login, load/save de jogador.
 - `src/entities/player.hpp`, `src/entities/creature.hpp` e `src/entities/monster.hpp`: contratos públicos das entidades centrais.
 - `src/world/map.hpp`, `src/world/tile.hpp` e `src/world/cylinder.hpp`: contratos de mapa, tiles e movimentação de things.
+- `src/core/logger.cpp/.hpp`: logger central usado para logs técnicos do servidor.
 
 ## Estrutura de Pastas
 
@@ -85,6 +86,7 @@ Contém estruturas fundamentais usadas por várias áreas da source.
 - `definitions.hpp`: definições gerais e configurações de compilação.
 - `enums.hpp`: enumeradores compartilhados entre sistemas.
 - `lockfree.hpp`: estruturas auxiliares para uso concorrente.
+- `logger.cpp/.hpp`: logger central com saída em console, arquivo e rotação configurável pelo `.env`.
 - `otpch.cpp/.hpp`: precompiled header usado pelo projeto.
 - `position.cpp/.hpp`: representação e utilidades básicas de posição.
 - `pugicast.hpp`: helpers para conversão de valores vindos de XML.
