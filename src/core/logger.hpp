@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <deque>
 #include <fstream>
+#include <map>
 #include <mutex>
 #include <string>
 #include <thread>
@@ -27,9 +28,13 @@ class Logger
 	public:
 		struct Config {
 			LogLevel level = LogLevel::Info;
+			LogLevel consoleLevel = LogLevel::Info;
+			LogLevel fileLevel = LogLevel::Info;
 			bool console = true;
 			bool file = true;
+			bool splitFilesByLevel = true;
 			std::string fileName = "logs/server.log";
+			std::string directory = "logs";
 			uint32_t maxFileSizeMb = 10;
 			uint32_t maxFiles = 5;
 		};
@@ -61,10 +66,13 @@ class Logger
 
 		void threadMain();
 		void writeMessage(const LogMessage& message);
-		void rotateFileIfNeeded();
+		void rotateFileIfNeeded(const std::string& fileName, std::ofstream& stream);
+		std::ofstream* getFileStream(LogLevel level);
+		std::string getFileName(LogLevel level) const;
 
 		Config config;
 		std::ofstream fileStream;
+		std::map<LogLevel, std::ofstream> levelFileStreams;
 		std::deque<LogMessage> queue;
 		std::thread worker;
 		mutable std::mutex mutex;

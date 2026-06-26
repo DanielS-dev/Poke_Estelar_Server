@@ -3,13 +3,16 @@
 
 #include "otpch.hpp"
 #include "xmlErro.hpp"
+#include "../logger.hpp"
 
 void printXMLError(const std::string& where, const std::string& fileName, const pugi::xml_parse_result& result)
 {
-	std::cout << '[' << where << "] Failed to load " << fileName << ": " << result.description() << std::endl;
+	std::ostringstream message;
+	message << '[' << where << "] Failed to load " << fileName << ": " << result.description();
 
 	FILE* file = fopen(fileName.c_str(), "rb");
 	if (!file) {
+		LOG_ERROR("XML", message.str());
 		return;
 	}
 
@@ -41,14 +44,14 @@ void printXMLError(const std::string& where, const std::string& fileName, const 
 	} while (bytes == 32768);
 	fclose(file);
 
-	std::cout << "Line " << currentLine << ':' << std::endl;
-	std::cout << line << std::endl;
+	message << "\nLine " << currentLine << ":\n" << line << '\n';
 	for (size_t i = 0; i < lineOffsetPosition; i++) {
 		if (line[i] == '\t') {
-			std::cout << '\t';
+			message << '\t';
 		} else {
-			std::cout << ' ';
+			message << ' ';
 		}
 	}
-	std::cout << '^' << std::endl;
+	message << '^';
+	LOG_ERROR("XML", message.str());
 }

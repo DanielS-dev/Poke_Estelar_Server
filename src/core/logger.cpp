@@ -194,6 +194,19 @@ namespace {
 		return fileName.substr(0, slash);
 	}
 
+	std::string joinPath(const std::string& directory, const std::string& fileName)
+	{
+		if (directory.empty()) {
+			return fileName;
+		}
+
+		const char last = directory.back();
+		if (last == '/' || last == '\\') {
+			return directory + fileName;
+		}
+		return directory + '/' + fileName;
+	}
+
 	void createDirectory(const std::string& path)
 	{
 		if (path.empty()) {
@@ -249,8 +262,12 @@ void Logger::initialize(const Config& loggerConfig)
 		config = loggerConfig;
 
 		if (config.file) {
-			createDirectories(getParentDirectory(config.fileName));
-			fileStream.open(config.fileName, std::ios::app);
+			if (config.splitFilesByLevel) {
+				createDirectories(config.directory);
+			} else {
+				createDirectories(getParentDirectory(config.fileName));
+				fileStream.open(config.fileName, std::ios::app);
+			}
 		}
 
 		running = true;
@@ -265,10 +282,15 @@ void Logger::initializeFromEnv(const std::string& fileName)
 	const auto env = loadEnvFile(fileName);
 
 	Config loggerConfig;
-	loggerConfig.level = parseLevel(getEnvString(env, "LOG_LEVEL", "info"));
+	const std::string globalLevel = getEnvString(env, "LOG_LEVEL", "info");
+	loggerConfig.level = parseLevel(globalLevel);
+	loggerConfig.consoleLevel = parseLevel(getEnvString(env, "LOG_CONSOLE_LEVEL", "info"));
+	loggerConfig.fileLevel = parseLevel(getEnvString(env, "LOG_FILE_LEVEL", globalLevel.c_str()));
 	loggerConfig.console = getEnvBoolean(env, "LOG_TO_CONSOLE", true);
 	loggerConfig.file = getEnvBoolean(env, "LOG_TO_FILE", true);
+	loggerConfig.splitFilesByLevel = getEnvBoolean(env, "LOG_SPLIT_BY_LEVEL", true);
 	loggerConfig.fileName = getEnvString(env, "LOG_FILE", "logs/server.log");
+	loggerConfig.directory = getEnvString(env, "LOG_DIR", "logs");
 	loggerConfig.maxFileSizeMb = getEnvNumber(env, "LOG_MAX_FILE_SIZE_MB", 10);
 	loggerConfig.maxFiles = getEnvNumber(env, "LOG_MAX_FILES", 5);
 
@@ -296,6 +318,13 @@ void Logger::shutdown()
 		fileStream.flush();
 		fileStream.close();
 	}
+	for (auto& it : levelFileStreams) {
+		if (it.second.is_open()) {
+			it.second.flush();
+			it.second.close();
+		}
+	}
+	levelFileStreams.clear();
 
 	queue.clear();
 	initialized = false;
@@ -304,7 +333,13 @@ void Logger::shutdown()
 bool Logger::shouldLog(LogLevel level) const
 {
 	std::lock_guard<std::mutex> lock(mutex);
-	return initialized && level >= config.level && config.level != LogLevel::Off;
+	if (!initialized || config.level == LogLevel::Off) {
+		return false;
+	}
+
+	const bool shouldLogToConsole = config.console && config.consoleLevel != LogLevel::Off && level >= config.consoleLevel;
+	const bool shouldLogToFile = config.file && config.fileLevel != LogLevel::Off && level >= config.fileLevel;
+	return shouldLogToConsole || shouldLogToFile;
 }
 
 void Logger::log(LogLevel level, const std::string& category, const std::string& message, const char* file, int line)
@@ -319,9 +354,16 @@ void Logger::log(LogLevel level, const std::string& category, const std::string&
 
 	{
 		std::lock_guard<std::mutex> lock(mutex);
-		if (!initialized || level < config.level || config.level == LogLevel::Off) {
+		if (!initialized || config.level == LogLevel::Off) {
 			return;
 		}
+
+		const bool shouldLogToConsole = config.console && config.consoleLevel != LogLevel::Off && level >= config.consoleLevel;
+		const bool shouldLogToFile = config.file && config.fileLevel != LogLevel::Off && level >= config.fileLevel;
+		if (!shouldLogToConsole && !shouldLogToFile) {
+			return;
+		}
+
 		queue.push_back(std::move(logMessage));
 	}
 	signal.notify_one();
@@ -361,36 +403,72 @@ void Logger::writeMessage(const LogMessage& message)
 		stream << " (" << message.sourceFile << ':' << message.line << ')';
 	}
 
-	const std::string line = stream.str();
-
-	if (config.console) {
-		std::cout << line << std::endl;
+	if (config.console && config.consoleLevel != LogLevel::Off && message.level >= config.consoleLevel) {
+		if (message.level == LogLevel::Info) {
+			std::cout << '[' << message.category << "] " << message.message << std::endl;
+		} else {
+			std::cout << '[' << getLevelName(message.level) << "] [" << message.category << "] " << message.message << std::endl;
+		}
 	}
 
-	if (config.file && fileStream.is_open()) {
-		rotateFileIfNeeded();
-		fileStream << line << std::endl;
+	if (config.file && config.fileLevel != LogLevel::Off && message.level >= config.fileLevel) {
+		std::ofstream* output = getFileStream(message.level);
+		if (output && output->is_open()) {
+			const std::string fileName = getFileName(message.level);
+			rotateFileIfNeeded(fileName, *output);
+			*output << stream.str() << std::endl;
+		}
 	}
 }
 
-void Logger::rotateFileIfNeeded()
+std::ofstream* Logger::getFileStream(LogLevel level)
+{
+	if (!config.splitFilesByLevel) {
+		return &fileStream;
+	}
+
+	auto it = levelFileStreams.find(level);
+	if (it != levelFileStreams.end()) {
+		return &it->second;
+	}
+
+	const std::string fileName = getFileName(level);
+	createDirectories(getParentDirectory(fileName));
+
+	auto result = levelFileStreams.emplace(level, std::ofstream());
+	result.first->second.open(fileName, std::ios::app);
+	return &result.first->second;
+}
+
+std::string Logger::getFileName(LogLevel level) const
+{
+	if (!config.splitFilesByLevel) {
+		return config.fileName;
+	}
+
+	std::ostringstream fileName;
+	fileName << getLevelName(level) << ".log";
+	return joinPath(config.directory, fileName.str());
+}
+
+void Logger::rotateFileIfNeeded(const std::string& fileName, std::ofstream& stream)
 {
 	if (config.maxFileSizeMb == 0 || config.maxFiles == 0) {
 		return;
 	}
 
 	const uint64_t maxSize = static_cast<uint64_t>(config.maxFileSizeMb) * 1024 * 1024;
-	if (getFileSize(config.fileName) < maxSize) {
+	if (getFileSize(fileName) < maxSize) {
 		return;
 	}
 
-	if (fileStream.is_open()) {
-		fileStream.close();
+	if (stream.is_open()) {
+		stream.close();
 	}
 
 	for (uint32_t i = config.maxFiles; i > 0; --i) {
 		std::ostringstream current;
-		current << config.fileName << '.' << i;
+		current << fileName << '.' << i;
 
 		if (i == config.maxFiles) {
 			std::remove(current.str().c_str());
@@ -398,10 +476,10 @@ void Logger::rotateFileIfNeeded()
 		}
 
 		std::ostringstream next;
-		next << config.fileName << '.' << (i + 1);
+		next << fileName << '.' << (i + 1);
 		std::rename(current.str().c_str(), next.str().c_str());
 	}
 
-	std::rename(config.fileName.c_str(), (config.fileName + ".1").c_str());
-	fileStream.open(config.fileName, std::ios::app);
+	std::rename(fileName.c_str(), (fileName + ".1").c_str());
+	stream.open(fileName, std::ios::app);
 }

@@ -86,16 +86,22 @@ LOGIN_PORT = 7171
 STATUS_PORT = 7171
 
 LOG_LEVEL = "info"
+LOG_CONSOLE_LEVEL = "info"
+LOG_FILE_LEVEL = "info"
 LOG_TO_CONSOLE = true
 LOG_TO_FILE = true
+LOG_SPLIT_BY_LEVEL = true
+LOG_DIR = "logs"
 LOG_FILE = "logs/server.log"
 LOG_MAX_FILE_SIZE_MB = 10
 LOG_MAX_FILES = 5
 ```
 
-As variáveis de servidor são carregadas pelo `ConfigManager` a partir do `.env`. As variáveis `LOG_*` configuram o logger central: nível mínimo, saída no console, saída em arquivo e rotação. O arquivo `.env` deve ficar apenas na máquina local e não deve ser enviado para o GitHub. Use o `.env.example` como modelo versionado.
+As variáveis de servidor são carregadas pelo `ConfigManager` a partir do `.env`. As variáveis `LOG_*` configuram o logger central: nível mínimo, saída no console, saída em arquivo e rotação. Por padrão, o console mostra mensagens `info` em formato compacto sem o prefixo `[info]`, enquanto os arquivos mantêm formato completo com data/hora e arquivo:linha para diagnóstico. Com `LOG_SPLIT_BY_LEVEL = true`, os logs técnicos são separados em arquivos como `logs/info.log`, `logs/warn.log`, `logs/error.log` e `logs/fatal.log`. O `LOG_FILE` é usado apenas quando `LOG_SPLIT_BY_LEVEL = false`. O arquivo `.env` deve ficar apenas na máquina local e não deve ser enviado para o GitHub. Use o `.env.example` como modelo versionado.
 
 A documentação completa do logger está em `docs/Sistema de Logger.md`.
+
+Os logs técnicos dos pontos críticos de startup, configuração, banco de dados, Lua, XML e rede base já passam pelo logger central.
 
 3. As demais configurações do servidor continuam em `config.lua`, como regras de gameplay, nome do mapa, rates, nome do servidor e informações do status.
 

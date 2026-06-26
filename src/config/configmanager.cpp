@@ -5,6 +5,7 @@
 
 #include "configmanager.hpp"
 #include "../game/game.hpp"
+#include "../core/logger.hpp"
 #include "../core/tools/auths.hpp"
 #include "../core/tools/stringsTools.hpp"
 
@@ -73,7 +74,7 @@ bool ConfigManager::load()
 	luaL_openlibs(L);
 
 	if (luaL_dofile(L, "config.lua")) {
-		std::cout << "[Error - ConfigManager::load] " << lua_tostring(L, -1) << std::endl;
+		LOG_ERROR("Config", std::string("Unable to load config.lua: ") + lua_tostring(L, -1));
 		lua_close(L);
 		return false;
 	}
@@ -168,7 +169,7 @@ bool ConfigManager::reload()
 const std::string& ConfigManager::getString(string_config_t what) const
 {
 	if (what >= LAST_STRING_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getString] Accessing invalid index: " << what << std::endl;
+		LOG_WARN("Config", "ConfigManager::getString accessing invalid index: " + std::to_string(what));
 		return string[DUMMY_STR];
 	}
 	return string[what];
@@ -177,7 +178,7 @@ const std::string& ConfigManager::getString(string_config_t what) const
 int32_t ConfigManager::getNumber(integer_config_t what) const
 {
 	if (what >= LAST_INTEGER_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getNumber] Accessing invalid index: " << what << std::endl;
+		LOG_WARN("Config", "ConfigManager::getNumber accessing invalid index: " + std::to_string(what));
 		return 0;
 	}
 	return integer[what];
@@ -186,7 +187,7 @@ int32_t ConfigManager::getNumber(integer_config_t what) const
 bool ConfigManager::getBoolean(boolean_config_t what) const
 {
 	if (what >= LAST_BOOLEAN_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getBoolean] Accessing invalid index: " << what << std::endl;
+		LOG_WARN("Config", "ConfigManager::getBoolean accessing invalid index: " + std::to_string(what));
 		return false;
 	}
 	return boolean[what];
@@ -195,7 +196,7 @@ bool ConfigManager::getBoolean(boolean_config_t what) const
 double ConfigManager::getDouble(double_config_t what) const //pota
 {
 	if (what >= LAST_DOUBLE_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getDouble] Accessing invalid index: " << what << std::endl;
+		LOG_WARN("Config", "ConfigManager::getDouble accessing invalid index: " + std::to_string(what));
 		return 0.0;
 	}
 	return decimal[what];
@@ -308,7 +309,7 @@ int32_t ConfigManager::getEnvNumber(const std::unordered_map<std::string, std::s
 	errno = 0;
 	const long value = std::strtol(it->second.c_str(), &end, 10);
 	if (errno != 0 || end == it->second.c_str() || *end != '\0') {
-		std::cout << "[Warning - ConfigManager::getEnvNumber] Invalid value for " << identifier << ": " << it->second << std::endl;
+		LOG_WARN("Config", std::string("Invalid numeric value for ") + identifier + ": " + it->second);
 		return defaultValue;
 	}
 

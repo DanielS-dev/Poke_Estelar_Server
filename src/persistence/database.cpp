@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "../config/configmanager.hpp"
+#include "../core/logger.hpp"
 #include "database.hpp"
 
 #include <errmsg.h>
@@ -22,7 +23,7 @@ bool Database::connect()
 	// connection handle initialization
 	handle = mysql_init(nullptr);
 	if (!handle) {
-		std::cout << std::endl << "Failed to initialize MySQL connection handle." << std::endl;
+		LOG_ERROR("Database", "Failed to initialize MySQL connection handle.");
 		return false;
 	}
 
@@ -32,7 +33,7 @@ bool Database::connect()
 
 	// connects to database
 	if (!mysql_real_connect(handle, g_config.getString(ConfigManager::MYSQL_HOST).c_str(), g_config.getString(ConfigManager::MYSQL_USER).c_str(), g_config.getString(ConfigManager::MYSQL_PASS).c_str(), g_config.getString(ConfigManager::MYSQL_DB).c_str(), g_config.getNumber(ConfigManager::SQL_PORT), g_config.getString(ConfigManager::MYSQL_SOCK).c_str(), 0)) {
-		std::cout << std::endl << "MySQL Error Message: " << mysql_error(handle) << std::endl;
+		LOG_ERROR("Database", std::string("Failed to connect to MySQL: ") + mysql_error(handle));
 		return false;
 	}
 
@@ -56,7 +57,7 @@ bool Database::beginTransaction()
 bool Database::rollback()
 {
 	if (mysql_rollback(handle) != 0) {
-		std::cout << "[Error - mysql_rollback] Message: " << mysql_error(handle) << std::endl;
+		LOG_ERROR("Database", std::string("mysql_rollback failed: ") + mysql_error(handle));
 		databaseLock.unlock();
 		return false;
 	}
@@ -68,7 +69,7 @@ bool Database::rollback()
 bool Database::commit()
 {
 	if (mysql_commit(handle) != 0) {
-		std::cout << "[Error - mysql_commit] Message: " << mysql_error(handle) << std::endl;
+		LOG_ERROR("Database", std::string("mysql_commit failed: ") + mysql_error(handle));
 		databaseLock.unlock();
 		return false;
 	}
@@ -85,7 +86,7 @@ bool Database::executeQuery(const std::string& query)
 	databaseLock.lock();
 
 	while (mysql_real_query(handle, query.c_str(), query.length()) != 0) {
-		std::cout << "[Error - mysql_real_query] Query: " << query.substr(0, 256) << std::endl << "Message: " << mysql_error(handle) << std::endl;
+		LOG_ERROR("Database", "mysql_real_query failed. Query: " + query.substr(0, 256) + " Message: " + mysql_error(handle));
 		auto error = mysql_errno(handle);
 		if (error != CR_SERVER_LOST && error != CR_SERVER_GONE_ERROR && error != CR_CONN_HOST_ERROR && error != 1053/*ER_SERVER_SHUTDOWN*/ && error != CR_CONNECTION_ERROR) {
 			success = false;
@@ -110,7 +111,7 @@ DBResult_ptr Database::storeQuery(const std::string& query)
 
 	retry:
 	while (mysql_real_query(handle, query.c_str(), query.length()) != 0) {
-		std::cout << "[Error - mysql_real_query] Query: " << query << std::endl << "Message: " << mysql_error(handle) << std::endl;
+		LOG_ERROR("Database", "mysql_real_query failed. Query: " + query + " Message: " + mysql_error(handle));
 		auto error = mysql_errno(handle);
 		if (error != CR_SERVER_LOST && error != CR_SERVER_GONE_ERROR && error != CR_CONN_HOST_ERROR && error != 1053/*ER_SERVER_SHUTDOWN*/ && error != CR_CONNECTION_ERROR) {
 			break;
@@ -122,7 +123,7 @@ DBResult_ptr Database::storeQuery(const std::string& query)
 	// as it is described in MySQL manual: "it doesn't hurt" :P
 	MYSQL_RES* res = mysql_store_result(handle);
 	if (res == nullptr) {
-		std::cout << "[Error - mysql_store_result] Query: " << query << std::endl << "Message: " << mysql_error(handle) << std::endl;
+		LOG_ERROR("Database", "mysql_store_result failed. Query: " + query + " Message: " + mysql_error(handle));
 		auto error = mysql_errno(handle);
 		if (error != CR_SERVER_LOST && error != CR_SERVER_GONE_ERROR && error != CR_CONN_HOST_ERROR && error != 1053/*ER_SERVER_SHUTDOWN*/ && error != CR_CONNECTION_ERROR) {
 			databaseLock.unlock();
@@ -189,7 +190,7 @@ std::string DBResult::getString(const std::string& s) const
 {
 	auto it = listNames.find(s);
 	if (it == listNames.end()) {
-		std::cout << "[Error - DBResult::getString] Column '" << s << "' does not exist in result set." << std::endl;
+		LOG_ERROR("Database", "DBResult::getString column does not exist in result set: " + s);
 		return std::string();
 	}
 
@@ -204,7 +205,7 @@ const char* DBResult::getStream(const std::string& s, unsigned long& size) const
 {
 	auto it = listNames.find(s);
 	if (it == listNames.end()) {
-		std::cout << "[Error - DBResult::getStream] Column '" << s << "' doesn't exist in the result set" << std::endl;
+		LOG_ERROR("Database", "DBResult::getStream column does not exist in result set: " + s);
 		size = 0;
 		return nullptr;
 	}

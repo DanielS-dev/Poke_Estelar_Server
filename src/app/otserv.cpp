@@ -69,10 +69,10 @@ int main(int argc, char* argv[])
 	g_loaderSignal.wait(g_loaderUniqueLock);
 
 	if (serviceManager.is_running()) {
-		std::cout << ">> " << g_config.getString(ConfigManager::SERVER_NAME) << " Server Online!" << std::endl << std::endl;
+		LOG_INFO("Startup", g_config.getString(ConfigManager::SERVER_NAME) + " Server Online!");
 		serviceManager.run();
 	} else {
-		std::cout << ">> No services running. The server is NOT online." << std::endl;
+		LOG_WARN("Startup", "No services running. The server is NOT online.");
 		g_scheduler.shutdown();
 		g_databaseTasks.shutdown();
 		g_dispatcher.shutdown();
@@ -94,26 +94,25 @@ void mainLoader(int, char*[], ServiceManager* services)
 #ifdef _WIN32
 	SetConsoleTitle(STATUS_SERVER_NAME);
 #endif
-	std::cout << STATUS_SERVER_NAME << " - Version " << STATUS_SERVER_VERSION << std::endl;
-	std::cout << "Compiled with " << BOOST_COMPILER << std::endl;
-	std::cout << "Compiled on " << __DATE__ << ' ' << __TIME__ << " for platform ";
+	LOG_INFO("Startup", std::string(STATUS_SERVER_NAME) + " - Version " + STATUS_SERVER_VERSION);
+	LOG_INFO("Startup", std::string("Compiled with ") + BOOST_COMPILER);
 
+	std::string platform;
 #if defined(__amd64__) || defined(_M_X64)
-	std::cout << "x64" << std::endl;
+	platform = "x64";
 #elif defined(__i386__) || defined(_M_IX86) || defined(_X86_)
-	std::cout << "x86" << std::endl;
+	platform = "x86";
 #elif defined(__arm__)
-	std::cout << "ARM" << std::endl;
+	platform = "ARM";
 #else
-	std::cout << "unknown" << std::endl;
+	platform = "unknown";
 #endif
-	std::cout << std::endl;
+	LOG_INFO("Startup", std::string("Compiled on ") + __DATE__ + ' ' + __TIME__ + " for platform " + platform);
 
-	std::cout << "A server developed by " << STATUS_SERVER_DEVELOPERS << std::endl;
-	std::cout << std::endl;
+	LOG_INFO("Startup", std::string("A server developed by ") + STATUS_SERVER_DEVELOPERS);
 
 	// read global config
-	std::cout << ">> Loading config" << std::endl;
+	LOG_INFO("Startup", "Loading config");
 	if (!g_config.load()) {
 		startupErrorMessage("Unable to load config.lua!");
 		return;
@@ -131,7 +130,7 @@ void mainLoader(int, char*[], ServiceManager* services)
 	//set RSA key
 	g_RSA.setKey(g_config.getString(ConfigManager::RSA_P).c_str(), g_config.getString(ConfigManager::RSA_Q).c_str());
 
-	std::cout << ">> Establishing database connection..." << std::flush;
+	LOG_INFO("Database", "Establishing database connection...");
 
 	Database* db = Database::getInstance();
 	if (!db->connect()) {
@@ -139,10 +138,10 @@ void mainLoader(int, char*[], ServiceManager* services)
 		return;
 	}
 
-	std::cout << " MySQL " << Database::getClientVersion() << std::endl;
+	LOG_INFO("Database", std::string("Connected to MySQL ") + Database::getClientVersion());
 
 	// run database manager
-	std::cout << ">> Running database manager" << std::endl;
+	LOG_INFO("Database", "Running database manager");
 
 	if (!DatabaseManager::isDatabaseSetup()) {
 		startupErrorMessage("The database you have specified in config.lua is empty, please import the schema.sql to your database.");
@@ -153,18 +152,18 @@ void mainLoader(int, char*[], ServiceManager* services)
 	DatabaseManager::updateDatabase();
 
 	if (g_config.getBoolean(ConfigManager::OPTIMIZE_DATABASE) && !DatabaseManager::optimizeTables()) {
-		std::cout << "> No tables were optimized." << std::endl;
+		LOG_WARN("Database", "No tables were optimized.");
 	}
 
 	//load vocations
-	std::cout << ">> Loading vocations" << std::endl;
+	LOG_INFO("Startup", "Loading vocations");
 	if (!g_vocations.loadFromXml()) {
 		startupErrorMessage("Unable to load vocations!");
 		return;
 	}
 
 	// load item data
-	std::cout << ">> Loading items" << std::endl;
+	LOG_INFO("Startup", "Loading items");
 	if (Item::items.loadFromOtb("data/items/items.otb") != ERROR_NONE) {
 		startupErrorMessage("Unable to load items (OTB)!");
 		return;
@@ -175,26 +174,26 @@ void mainLoader(int, char*[], ServiceManager* services)
 		return;
 	}
 
-	std::cout << ">> Loading script systems" << std::endl;
+	LOG_INFO("Startup", "Loading script systems");
 	if (!ScriptingManager::getInstance()->loadScriptSystems()) {
 		startupErrorMessage("Failed to load script systems");
 		return;
 	}
 
-	std::cout << ">> Loading monsters" << std::endl;
+	LOG_INFO("Startup", "Loading monsters");
 	if (!g_monsters.loadFromXml()) {
 		startupErrorMessage("Unable to load monsters!");
 		return;
 	}
 
-	std::cout << ">> Loading outfits" << std::endl;
+	LOG_INFO("Startup", "Loading outfits");
 	Outfits* outfits = Outfits::getInstance();
 	if (!outfits->loadFromXml()) {
 		startupErrorMessage("Unable to load outfits!");
 		return;
 	}
 
-	std::cout << ">> Checking world type... " << std::flush;
+	LOG_INFO("Startup", "Checking world type");
 	std::string worldType = asLowerCaseString(g_config.getString(ConfigManager::WORLD_TYPE));
 	if (worldType == "pvp") {
 		g_game.setWorldType(WORLD_TYPE_PVP);
@@ -203,22 +202,20 @@ void mainLoader(int, char*[], ServiceManager* services)
 	} else if (worldType == "pvp-enforced") {
 		g_game.setWorldType(WORLD_TYPE_PVP_ENFORCED);
 	} else {
-		std::cout << std::endl;
-
 		std::ostringstream ss;
-		ss << "> ERROR: Unknown world type: " << g_config.getString(ConfigManager::WORLD_TYPE) << ", valid world types are: pvp, no-pvp and pvp-enforced.";
+		ss << "Unknown world type: " << g_config.getString(ConfigManager::WORLD_TYPE) << ", valid world types are: pvp, no-pvp and pvp-enforced.";
 		startupErrorMessage(ss.str());
 		return;
 	}
-	std::cout << asUpperCaseString(worldType) << std::endl;
+	LOG_INFO("Startup", "World type: " + asUpperCaseString(worldType));
 
-	std::cout << ">> Loading map" << std::endl;
+	LOG_INFO("Startup", "Loading map");
 	if (!g_game.loadMainMap(g_config.getString(ConfigManager::MAP_NAME))) {
 		startupErrorMessage("Failed to load map");
 		return;
 	}
 
-	std::cout << ">> Initializing gamestate" << std::endl;
+	LOG_INFO("Startup", "Initializing gamestate");
 	g_game.setGameState(GAME_STATE_INIT);
 
 	// Game client protocols
@@ -251,11 +248,11 @@ void mainLoader(int, char*[], ServiceManager* services)
 	IOMarket::checkExpiredOffers();
 	IOMarket::getInstance()->updateStatistics();
 
-	std::cout << ">> Loaded all modules, server starting up..." << std::endl;
+	LOG_INFO("Startup", "Loaded all modules, server starting up...");
 
 #ifndef _WIN32
 	if (getuid() == 0 || geteuid() == 0) {
-		std::cout << "> Warning: " << STATUS_SERVER_NAME << " has been executed as root user, please consider running it as a normal user." << std::endl;
+		LOG_WARN("Startup", std::string(STATUS_SERVER_NAME) + " has been executed as root user, please consider running it as a normal user.");
 	}
 #endif
 

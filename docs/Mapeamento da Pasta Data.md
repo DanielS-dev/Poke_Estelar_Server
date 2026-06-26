@@ -106,7 +106,7 @@ Regras para adicionar, mover, renomear ou remover arquivos nessa pasta.
 
 Total aproximado no momento do mapeamento: 2307 arquivos, sendo 1149 `.xml`, 1145 `.lua`, 4 `.otbm`, 2 `.py`, 2 `.gitignore`, 1 `.zip`, 1 `.txt` e 1 `.otb`.
 
-Observacao: `data/logs` e usada para logs gerados por sistemas de jogo, como comandos de GM. Os logs tecnicos do servidor gerados pelo logger central ficam, por padrao, em `/logs/server.log` na raiz do projeto. Consulte `docs/Sistema de Logger.md`.
+Observacao: `data/logs` e usada para logs gerados por sistemas de jogo, como comandos de GM. Os logs tecnicos do servidor gerados pelo logger central ficam, por padrao, separados por nivel em `/logs`, como `/logs/info.log`, `/logs/warn.log` e `/logs/error.log`. Consulte `docs/Sistema de Logger.md`.
 
 ## Fluxo de Carregamento Lua
 

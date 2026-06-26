@@ -5,6 +5,7 @@
 
 #include "services.hpp"
 #include "../core/scheduler.hpp"
+#include "../core/logger.hpp"
 #include "../config/configmanager.hpp"
 #include "../security/ban.hpp"
 
@@ -67,6 +68,7 @@ void ServicePort::onAccept(Connection_ptr connection, const boost::system::error
 
 		accept();
 	} else if (error != boost::asio::error::operation_aborted) {
+		LOG_WARN("Network", "Accept failed on port " + std::to_string(serverPort) + ": " + error.message());
 		if (!pendingStart) {
 			close();
 			pendingStart = true;
@@ -123,7 +125,7 @@ void ServicePort::open(uint16_t port)
 
 		accept();
 	} catch (boost::system::system_error& e) {
-		std::cout << "[ServicePort::open] Error: " << e.what() << std::endl;
+		LOG_ERROR("Network", "Failed to open service port " + std::to_string(port) + ": " + e.what());
 
 		pendingStart = true;
 		g_scheduler.addEvent(createSchedulerTask(15000,

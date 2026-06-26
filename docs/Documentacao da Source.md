@@ -60,6 +60,22 @@ Arquivos críticos conhecidos:
 - `src/world/map.hpp`, `src/world/tile.hpp` e `src/world/cylinder.hpp`: contratos de mapa, tiles e movimentação de things.
 - `src/core/logger.cpp/.hpp`: logger central usado para logs técnicos do servidor.
 
+## Logs Tecnicos
+
+O logger central fica em `src/core/logger.cpp/.hpp` e grava, por padrao, no console e em arquivos separados por nivel dentro de `logs/`, como `info.log`, `warn.log`, `error.log` e `fatal.log`. A configuracao e feita por variaveis `LOG_*` no `.env`. O console usa formato compacto e omite `[info]`; os arquivos usam formato completo com data/hora e arquivo:linha.
+
+Os pontos criticos iniciais ja usam o logger central:
+
+- `src/app/otserv.cpp`
+- `src/config/configmanager.cpp`
+- `src/persistence/database.cpp`
+- `src/scripting/lua/luaScriptInterface.cpp`
+- `src/core/tools/xmlErro.cpp`
+- `src/app/servicePort.cpp`
+- `src/network/connection.cpp`
+
+Para detalhes de niveis, formato, categorias e proximas migracoes, consulte `docs/Sistema de Logger.md`.
+
 ## Estrutura de Pastas
 
 ### `src/app`
@@ -86,7 +102,7 @@ Contém estruturas fundamentais usadas por várias áreas da source.
 - `definitions.hpp`: definições gerais e configurações de compilação.
 - `enums.hpp`: enumeradores compartilhados entre sistemas.
 - `lockfree.hpp`: estruturas auxiliares para uso concorrente.
-- `logger.cpp/.hpp`: logger central com saída em console, arquivo e rotação configurável pelo `.env`.
+- `logger.cpp/.hpp`: logger central com saída em console, arquivos por nível e rotação configurável pelo `.env`.
 - `otpch.cpp/.hpp`: precompiled header usado pelo projeto.
 - `position.cpp/.hpp`: representação e utilidades básicas de posição.
 - `pugicast.hpp`: helpers para conversão de valores vindos de XML.

@@ -20,6 +20,7 @@
 #include "../../entities/monster.hpp"
 #include "../../core/scheduler.hpp"
 #include "../../persistence/databasetasks.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/tools/random.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/returnMessageTools.hpp"
@@ -217,31 +218,36 @@ void LuaScriptInterface::reportError(const char* function, const std::string& er
 	LuaScriptInterface* scriptInterface;
 	getScriptEnv()->getEventInfo(scriptId, scriptInterface, callbackId, timerEvent);
 
-	std::cout << std::endl << "Lua Script Error: ";
+	std::ostringstream message;
+	message << "Lua Script Error";
 
 	if (scriptInterface) {
-		std::cout << '[' << scriptInterface->getInterfaceName() << "] " << std::endl;
+		message << " [" << scriptInterface->getInterfaceName() << ']';
 
 		if (timerEvent) {
-			std::cout << "in a timer event called from: " << std::endl;
+			message << "\nin a timer event called from:";
 		}
 
 		if (callbackId) {
-			std::cout << "in callback: " << scriptInterface->getFileById(callbackId) << std::endl;
+			message << "\nin callback: " << scriptInterface->getFileById(callbackId);
 		}
 
-		std::cout << scriptInterface->getFileById(scriptId) << std::endl;
+		message << '\n' << scriptInterface->getFileById(scriptId);
 	}
 
 	if (function) {
-		std::cout << function << "(). ";
+		message << '\n' << function << "(). ";
+	} else {
+		message << '\n';
 	}
 
 	if (stack_trace && scriptInterface) {
-		std::cout << scriptInterface->getStackTrace(error_desc) << std::endl;
+		message << scriptInterface->getStackTrace(error_desc);
 	} else {
-		std::cout << error_desc << std::endl;
+		message << error_desc;
 	}
+
+	LOG_ERROR("Lua", message.str());
 }
 
 bool LuaScriptInterface::pushFunction(int32_t functionId)

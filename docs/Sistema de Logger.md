@@ -22,13 +22,20 @@ O logger pode escrever em dois destinos:
 - Console: util para desenvolvimento local e acompanhamento em tempo real.
 - Arquivo: util para diagnostico persistente depois de crash, erro de startup ou fechamento do console.
 
-Por padrao, o arquivo gerado e:
+Por padrao, os arquivos gerados sao separados por nivel:
 
 ```text
-logs/server.log
+logs/info.log
+logs/warn.log
+logs/error.log
+logs/fatal.log
 ```
 
+Os arquivos `trace.log` e `debug.log` tambem podem ser gerados quando `LOG_FILE_LEVEL` permitir esses niveis. Se `LOG_SPLIT_BY_LEVEL` for desativado, o logger volta a usar um unico arquivo definido em `LOG_FILE`.
+
 A pasta `/logs/` na raiz do projeto e ignorada pelo Git. Ela e diferente de `data/logs`, que continua sendo usada para logs de comandos de jogo.
+
+Por padrao, o console mostra mensagens `info` em formato compacto, sem data/hora, sem arquivo:linha e sem o prefixo `[info]`. Avisos e erros continuam exibindo o nivel. Os arquivos continuam registrando as mensagens em formato completo para preservar historico de startup e diagnostico.
 
 ## Configuracao no `.env`
 
@@ -36,8 +43,12 @@ As variaveis abaixo controlam o comportamento do logger:
 
 ```env
 LOG_LEVEL = "info"
+LOG_CONSOLE_LEVEL = "info"
+LOG_FILE_LEVEL = "info"
 LOG_TO_CONSOLE = true
 LOG_TO_FILE = true
+LOG_SPLIT_BY_LEVEL = true
+LOG_DIR = "logs"
 LOG_FILE = "logs/server.log"
 LOG_MAX_FILE_SIZE_MB = 10
 LOG_MAX_FILES = 5
@@ -47,10 +58,14 @@ LOG_MAX_FILES = 5
 
 | Variavel | Padrao | Descricao |
 |---|---|---|
-| `LOG_LEVEL` | `info` | Nivel minimo que sera registrado. |
+| `LOG_LEVEL` | `info` | Nivel global/fallback. Use `off` para desligar todos os destinos. |
+| `LOG_CONSOLE_LEVEL` | `info` | Nivel minimo exibido no console. |
+| `LOG_FILE_LEVEL` | `info` | Nivel minimo gravado no arquivo. |
 | `LOG_TO_CONSOLE` | `true` | Habilita escrita no console. |
 | `LOG_TO_FILE` | `true` | Habilita escrita em arquivo. |
-| `LOG_FILE` | `logs/server.log` | Caminho do arquivo principal de log. |
+| `LOG_SPLIT_BY_LEVEL` | `true` | Separa a escrita em arquivos por nivel (`info.log`, `warn.log`, `error.log`, `fatal.log`). |
+| `LOG_DIR` | `logs` | Pasta usada quando `LOG_SPLIT_BY_LEVEL` esta habilitado. |
+| `LOG_FILE` | `logs/server.log` | Caminho do arquivo unico quando `LOG_SPLIT_BY_LEVEL` esta desabilitado. |
 | `LOG_MAX_FILE_SIZE_MB` | `10` | Tamanho maximo do arquivo antes da rotacao. |
 | `LOG_MAX_FILES` | `5` | Quantidade maxima de arquivos rotacionados. |
 
@@ -76,11 +91,21 @@ Cada linha segue o formato:
 [YYYY-MM-DD HH:MM:SS.mmm] [level] [Category] Message (source.cpp:line)
 ```
 
+Esse formato completo e usado nos arquivos de log. No console, a mensagem e exibida em formato compacto:
+
+```text
+[Category] Message
+[warn] [Category] Message
+[error] [Category] Message
+```
+
 Exemplo:
 
 ```text
 [2026-06-26 09:12:44.031] [fatal] [Startup] Failed to connect to database. (src/app/otserv.cpp:40)
 ```
+
+Com `LOG_SPLIT_BY_LEVEL = true`, cada mensagem vai para o arquivo do proprio nivel. Exemplo: `LOG_ERROR` grava em `logs/error.log`, enquanto `LOG_WARN` grava em `logs/warn.log`.
 
 ## Macros Disponiveis
 
@@ -133,14 +158,31 @@ Evite usar o logger para mensagens de gameplay destinadas ao jogador. Mensagens 
 
 Nao substitua todos os `std::cout` de uma vez. Migre por dominio, mantendo comportamento e contexto.
 
-Ordem recomendada:
+### Pontos Criticos Migrados
 
-1. `src/persistence/database.cpp`
-2. `src/scripting/lua/luaScriptInterface.cpp`
-3. `src/core/tools/xmlErro.cpp`
-4. `src/app/servicePort.cpp`
-5. `src/network/connection.cpp`
-6. Loaders de scripts, itens, monstros, raids e spells
+Os primeiros pontos criticos ja foram migrados para o logger central:
+
+- `src/app/otserv.cpp`
+- `src/config/configmanager.cpp`
+- `src/persistence/database.cpp`
+- `src/scripting/lua/luaScriptInterface.cpp`
+- `src/core/tools/xmlErro.cpp`
+- `src/app/servicePort.cpp`
+- `src/network/connection.cpp`
+
+Nesses arquivos, os logs tecnicos devem usar `LOG_INFO`, `LOG_WARN`, `LOG_ERROR` ou `LOG_FATAL`. O uso direto de `std::cout`/`std::cerr` para erro tecnico deve ser evitado.
+
+Excecao atual: `badAllocationHandler()` em `src/app/otserv.cpp` usa `puts()` de forma intencional para evitar alocacao dinamica durante falha de memoria.
+
+### Proximas Migracoes
+
+Depois dos pontos criticos, a ordem recomendada e:
+
+1. Loaders de scripts, actions, creature events, globalevents, movements, spells, talkactions e weapons.
+2. Loaders de itens, monstros, NPCs, raids, quests, mounts e outfits.
+3. Sistemas de persistence/login que ainda imprimem erros no console.
+4. Pontos de rede e protocolo que hoje fecham conexao silenciosamente, quando houver valor real de diagnostico.
+5. Mensagens restantes de status normal que fizerem sentido como `LOG_INFO`.
 
 Ao migrar uma mensagem, escolha o nivel correto e mantenha contexto suficiente para investigacao.
 
