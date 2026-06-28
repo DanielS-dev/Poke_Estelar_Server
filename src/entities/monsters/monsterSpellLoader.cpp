@@ -7,6 +7,7 @@
 #include "../monster.hpp"
 #include "../player.hpp"
 #include "../../config/configmanager.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/random.hpp"
@@ -440,7 +441,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 		} else if (tmpName == "effect") {
 			//
 		} else {
-			std::cout << "[Error - Monsters::deserializeSpell] - " << description << " - Unknown spell name: " << name << std::endl;
+			LOG_ERROR("Monsters", description + " has unknown spell name: " + name);
 			delete combat;
 			return false;
 		}
@@ -457,7 +458,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 						if (shoot != CONST_ANI_NONE) {
 							combat->setParam(COMBAT_PARAM_DISTANCEEFFECT, shoot);
 						} else {
-							std::cout << "[Warning - Monsters::deserializeSpell] " << description << " - Unknown shootEffect: " << attr.as_string() << std::endl;
+							LOG_WARN("Monsters", description + " has unknown shootEffect: " + std::string(attr.as_string()));
 						}
 					}
 				} else if (strcasecmp(value, "areaeffect") == 0) {
@@ -466,11 +467,11 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 						if (effect != CONST_ME_NONE) {
 							combat->setParam(COMBAT_PARAM_EFFECT, effect);
 						} else {
-							std::cout << "[Warning - Monsters::deserializeSpell] " << description << " - Unknown areaEffect: " << attr.as_string() << std::endl;
+							LOG_WARN("Monsters", description + " has unknown areaEffect: " + std::string(attr.as_string()));
 						}
 					}
 				} else {
-					std::cout << "[Warning - Monsters::deserializeSpells] Effect type \"" << attr.as_string() << "\" does not exist." << std::endl;
+					LOG_WARN("Monsters", "Unknown monster spell effect key \"" + std::string(attr.as_string()) + "\".");
 				}
 			}
 		}

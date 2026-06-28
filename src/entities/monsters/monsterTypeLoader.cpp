@@ -7,6 +7,7 @@
 #include "../monster.hpp"
 #include "../player.hpp"
 #include "../../config/configmanager.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/random.hpp"
@@ -78,7 +79,7 @@ void loadRaceType(const pugi::xml_node& monsterNode, const char* attributeName, 
 	}
 
 	if (!getRaceType(attr, raceType)) {
-		std::cout << "[Warning - Monsters::loadMonster] Unknown " << attributeName << " type " << attr.as_string() << ". " << file << std::endl;
+		LOG_WARN("Monsters", "Unknown " + std::string(attributeName) + " type \"" + std::string(attr.as_string()) + "\" in " + file);
 	}
 }
 
@@ -98,13 +99,13 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 
 	pugi::xml_node monsterNode = doc.child("monster");
 	if (!monsterNode) {
-		std::cout << "[Error - Monsters::loadMonster] Missing monster node in: " << file << std::endl;
+		LOG_ERROR("Monsters", "Missing monster node in " + file);
 		return false;
 	}
 
 	pugi::xml_attribute attr;
 	if (!(attr = monsterNode.attribute("name"))) {
-		std::cout << "[Error - Monsters::loadMonster] Missing name in: " << file << std::endl;
+		LOG_ERROR("Monsters", "Missing monster name in " + file);
 		return false;
 	}
 
@@ -156,13 +157,13 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		if ((attr = node.attribute("now"))) {
 			mType->info.health = pugi::cast<int32_t>(attr.value());
 		} else {
-			std::cout << "[Error - Monsters::loadMonster] Missing health now. " << file << std::endl;
+			LOG_ERROR("Monsters", "Missing health now in " + file);
 		}
 
 		if ((attr = node.attribute("max"))) {
 			mType->info.healthMax = pugi::cast<int32_t>(attr.value());
 		} else {
-			std::cout << "[Error - Monsters::loadMonster] Missing health max. " << file << std::endl;
+			LOG_ERROR("Monsters", "Missing health max in " + file);
 		}
 	}
 
@@ -171,7 +172,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			mType->info.minLevel = pugi::cast<uint16_t>(attr.value());
 
 		} else {
-			std::cout << "[Error - Monsters::loadMonster] Missing level min. " << file << std::endl;
+			LOG_ERROR("Monsters", "Missing min level in " + file);
 
 		}
 
@@ -179,7 +180,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			mType->info.maxLevel = pugi::cast<uint16_t>(attr.value());
 
 		} else {
-			std::cout << "[Error - Monsters::loadMonster] Missing level max. " << file << std::endl;
+			LOG_ERROR("Monsters", "Missing max level in " + file);
 
 		}
 	}
@@ -235,7 +236,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			} else if (strcasecmp(attrName, "staticattack") == 0) {
 				uint32_t staticAttack = pugi::cast<uint32_t>(attr.value());
 				if (staticAttack > 100) {
-					std::cout << "[Warning - Monsters::loadMonster] staticattack greater than 100. " << file << std::endl;
+					LOG_WARN("Monsters", "staticattack greater than 100 in " + file + ". Clamping to 100.");
 					staticAttack = 100;
 				}
 
@@ -251,7 +252,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			} else if (strcasecmp(attrName, "hidehealth") == 0) {
 				mType->info.hiddenHealth = attr.as_bool();
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Unknown flag attribute: " << attrName << ". " << file << std::endl;
+				LOG_WARN("Monsters", "Unknown flag attribute \"" + std::string(attrName) + "\" in " + file);
 			}
 		}
 
@@ -266,13 +267,13 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		if ((attr = node.attribute("speed")) || (attr = node.attribute("interval"))) {
 			mType->info.changeTargetSpeed = pugi::cast<uint32_t>(attr.value());
 		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Missing targetchange speed. " << file << std::endl;
+			LOG_WARN("Monsters", "Missing targetchange speed in " + file);
 		}
 
 		if ((attr = node.attribute("chance"))) {
 			mType->info.changeTargetChance = pugi::cast<int32_t>(attr.value());
 		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Missing targetchange chance. " << file << std::endl;
+			LOG_WARN("Monsters", "Missing targetchange chance in " + file);
 		}
 	}
 
@@ -302,7 +303,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		} else if ((attr = node.attribute("typeex"))) {
 			mType->info.outfit.lookTypeEx = pugi::cast<uint16_t>(attr.value());
 		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Missing look type/typeex. " << file << std::endl;
+			LOG_WARN("Monsters", "Missing look type/typeex in " + file);
 		}
 
 		if ((attr = node.attribute("mount"))) {
@@ -320,7 +321,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if (deserializeSpell(attackNode, sb, monsterName)) {
 				mType->info.attackSpells.emplace_back(std::move(sb));
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Cant load spell. " << file << std::endl;
+				LOG_WARN("Monsters", "Could not load attack spell for monster " + monsterName + " from " + file);
 			}
 		}
 	}
@@ -332,7 +333,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if (deserializeSpell(attackNode, sb, monsterName)) {
 				mType->info.moves.emplace_back(std::move(sb));
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Cant load move spell. " << file << std::endl;
+				LOG_WARN("Monsters", "Could not load move spell for monster " + monsterName + " from " + file);
 			}
 		}
 	}
@@ -372,7 +373,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				eb.count = count;
 				mType->info.evolutions.emplace_back(eb);
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Missing evolution name. " << file << std::endl;
+				LOG_WARN("Monsters", "Missing evolution name in " + file);
 			}
 		}
 	}
@@ -395,7 +396,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if (deserializeSpell(defenseNode, sb, monsterName)) {
 				mType->info.defenseSpells.emplace_back(std::move(sb));
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Cant load spell. " << file << std::endl;
+				LOG_WARN("Monsters", "Could not load defense spell for monster " + monsterName + " from " + file);
 			}
 		}
 	}
@@ -479,7 +480,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				} else if (tmpStrValue == "bleed") {
 					mType->info.conditionImmunities |= CONDITION_BLEEDING;
 				} else {
-					std::cout << "[Warning - Monsters::loadMonster] Unknown immunity name " << attr.as_string() << ". " << file << std::endl;
+					LOG_WARN("Monsters", "Unknown immunity name \"" + std::string(attr.as_string()) + "\" in " + file);
 				}
 			} else if ((attr = immunityNode.attribute("physical"))) {
 				if (attr.as_bool()) {
@@ -623,7 +624,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 					mType->info.conditionImmunities |= CONDITION_INVISIBLE;
 				}
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Unknown immunity. " << file << std::endl;
+				LOG_WARN("Monsters", "Unknown immunity attribute in " + file);
 			}
 		}
 	}
@@ -632,13 +633,13 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		if ((attr = node.attribute("speed")) || (attr = node.attribute("interval"))) {
 			mType->info.yellSpeedTicks = pugi::cast<uint32_t>(attr.value());
 		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Missing voices speed. " << file << std::endl;
+			LOG_WARN("Monsters", "Missing voices speed in " + file);
 		}
 
 		if ((attr = node.attribute("chance"))) {
 			mType->info.yellChance = pugi::cast<uint32_t>(attr.value());
 		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Missing voices chance. " << file << std::endl;
+			LOG_WARN("Monsters", "Missing voices chance in " + file);
 		}
 
 		for (auto voiceNode : node.children()) {
@@ -646,7 +647,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if ((attr = voiceNode.attribute("sentence"))) {
 				vb.text = attr.as_string();
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Missing voice sentence. " << file << std::endl;
+				LOG_WARN("Monsters", "Missing voice sentence in " + file);
 			}
 
 			if ((attr = voiceNode.attribute("yell"))) {
@@ -664,7 +665,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if (loadLootItem(lootNode, lootBlock)) {
 				mType->info.lootItems.emplace_back(std::move(lootBlock));
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Cant load loot. " << file << std::endl;
+				LOG_WARN("Monsters", "Could not load loot entry for monster " + monsterName + " from " + file);
 			}
 		}
 	}
@@ -724,7 +725,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			} else if ((attr = elementNode.attribute("manadrainPercent"))) {
 				mType->info.elementMap[COMBAT_MANADRAIN] = pugi::cast<int32_t>(attr.value());
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Unknown element percent. " << file << std::endl;
+				LOG_WARN("Monsters", "Unknown element percent entry in " + file);
 			}
 		}
 	}
@@ -733,7 +734,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		if ((attr = node.attribute("maxSummons"))) {
 			mType->info.maxSummons = std::min<uint32_t>(pugi::cast<uint32_t>(attr.value()), 100);
 		} else {
-			std::cout << "[Warning - Monsters::loadMonster] Missing summons maxSummons. " << file << std::endl;
+			LOG_WARN("Monsters", "Missing summons maxSummons in " + file);
 		}
 
 		for (auto summonNode : node.children()) {
@@ -767,7 +768,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				sb.force = force;
 				mType->info.summons.emplace_back(sb);
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Missing summon name. " << file << std::endl;
+				LOG_WARN("Monsters", "Missing summon name in " + file);
 			}
 		}
 	}
@@ -777,7 +778,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if ((attr = eventNode.attribute("name"))) {
 				mType->info.scripts.emplace_back(attr.as_string());
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Missing name for script event. " << file << std::endl;
+				LOG_WARN("Monsters", "Missing script event name in " + file);
 			}
 		}
 	}

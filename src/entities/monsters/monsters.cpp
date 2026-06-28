@@ -7,6 +7,7 @@
 #include "../monster.hpp"
 #include "../player.hpp"
 #include "../../config/configmanager.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/random.hpp"
@@ -32,6 +33,7 @@ spellBlock_t::~spellBlock_t()
 bool Monsters::loadFromXml(bool reloading /*= false*/)
 {
 	allMonsters = {}; //pota
+	uint32_t loadedMonsterCount = 0;
 	pugi::xml_document doc;
 	pugi::xml_parse_result result = doc.load_file("data/monster/monsters.xml");
 	if (!result) {
@@ -44,7 +46,9 @@ bool Monsters::loadFromXml(bool reloading /*= false*/)
 	std::list<std::pair<MonsterType*, std::string>> monsterScriptList;
 	for (auto monsterNode : doc.child("monsters").children()) {
 		std::string name = monsterNode.attribute("name").as_string(); //pota
-		loadMonster("data/monster/" + std::string(monsterNode.attribute("file").as_string()), name, monsterScriptList, reloading); //pota
+		if (loadMonster("data/monster/" + std::string(monsterNode.attribute("file").as_string()), name, monsterScriptList, reloading)) {
+			++loadedMonsterCount;
+		}
 		allMonsters.push_back(name); //pota
 	}
 
@@ -64,11 +68,12 @@ bool Monsters::loadFromXml(bool reloading /*= false*/)
 				mType->info.creatureSayEvent = scriptInterface->getEvent("onCreatureSay");
 				mType->info.thinkEvent = scriptInterface->getEvent("onThink");
 			} else {
-				std::cout << "[Warning - Monsters::loadMonster] Can not load script: " << scriptEntry.second << std::endl;
-				std::cout << scriptInterface->getLastLuaError() << std::endl;
+				LOG_WARN("Monsters", "Could not load monster script: " + scriptEntry.second);
+				LOG_ERROR("Lua", scriptInterface->getLastLuaError());
 			}
 		}
 	}
+	LOG_INFO("Monsters", "Loaded " + std::to_string(loadedMonsterCount) + " monsters from data/monster/monsters.xml");
 	return true;
 }
 

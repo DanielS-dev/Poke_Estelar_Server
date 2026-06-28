@@ -5,6 +5,7 @@
 
 #include "../npc.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/positionTools.hpp"
@@ -26,7 +27,7 @@ bool Npc::loadFromXml()
 
 	pugi::xml_node npcNode = doc.child("npc");
 	if (!npcNode) {
-		std::cout << "[Error - Npc::loadFromXml] Missing npc tag in " << filename << std::endl;
+		LOG_ERROR("Scripts", "Missing npc tag in " + filename);
 		return false;
 	}
 

@@ -11,6 +11,7 @@
 #include "raidLoader.hpp"
 #include "raids.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/stringsTools.hpp"
 #include "../../core/tools/xmlErro.hpp"
@@ -20,6 +21,8 @@ bool RaidLoader::loadFromXml(Raids& raids)
 	if (raids.isLoaded()) {
 		return true;
 	}
+
+	uint32_t loadedRaids = 0;
 
 	pugi::xml_document doc;
 	pugi::xml_parse_result result = doc.load_file("data/raids/raids.xml");
@@ -36,7 +39,7 @@ bool RaidLoader::loadFromXml(Raids& raids)
 		if ((attr = raidNode.attribute("name"))) {
 			name = attr.as_string();
 		} else {
-			std::cout << "[Error - Raids::loadFromXml] Name tag missing for raid" << std::endl;
+			LOG_ERROR("Scripts", "Missing raid name in data/raids/raids.xml");
 			continue;
 		}
 
@@ -46,19 +49,19 @@ bool RaidLoader::loadFromXml(Raids& raids)
 			std::ostringstream ss;
 			ss << "raids/" << name << ".xml";
 			file = ss.str();
-			std::cout << "[Warning - Raids::loadFromXml] File tag missing for raid " << name << ". Using default: " << file << std::endl;
+			LOG_WARN("Scripts", "Missing file tag for raid " + name + ". Using default: " + file);
 		}
 
 		interval = pugi::cast<uint32_t>(raidNode.attribute("interval2").value()) * 60;
 		if (interval == 0) {
-			std::cout << "[Error - Raids::loadFromXml] interval2 tag missing or zero (would divide by 0) for raid: " << name << std::endl;
+			LOG_ERROR("Scripts", "Missing or zero interval2 for raid " + name);
 			continue;
 		}
 
 		if ((attr = raidNode.attribute("margin"))) {
 			margin = pugi::cast<uint32_t>(attr.value()) * 60 * 1000;
 		} else {
-			std::cout << "[Warning - Raids::loadFromXml] margin tag missing for raid: " << name << std::endl;
+			LOG_WARN("Scripts", "Missing margin for raid " + name + ". Using 0.");
 			margin = 0;
 		}
 
@@ -72,12 +75,14 @@ bool RaidLoader::loadFromXml(Raids& raids)
 		Raid* newRaid = new Raid(name, interval, margin, repeat);
 		if (newRaid->loadFromXml("data/raids/" + file)) {
 			raids.raidList.push_back(newRaid);
+			++loadedRaids;
 		} else {
-			std::cout << "[Error - Raids::loadFromXml] Failed to load raid: " << name << std::endl;
+			LOG_ERROR("Scripts", "Failed to load raid " + name);
 			delete newRaid;
 		}
 	}
 
 	raids.loaded = true;
+	LOG_INFO("Scripts", "Loaded " + std::to_string(loadedRaids) + " raids from data/raids/raids.xml");
 	return true;
 }

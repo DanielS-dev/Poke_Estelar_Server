@@ -8,6 +8,7 @@
 #include "../../config/configmanager.hpp"
 #include "../../items/container.hpp"
 #include "../../game/game.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../game/spells/spells.hpp"
 
@@ -78,13 +79,13 @@ bool Actions::registerEvent(Event* event, const pugi::xml_node& node)
 
 		auto result = useItemMap.emplace(id, action);
 		if (!result.second) {
-			std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with id: " << id << std::endl;
+			LOG_WARN("Scripts", "Duplicate action registration for itemid " + std::to_string(id));
 		}
 		return result.second;
 	} else if ((attr = node.attribute("fromid"))) {
 		pugi::xml_attribute toIdAttribute = node.attribute("toid");
 		if (!toIdAttribute) {
-			std::cout << "[Warning - Actions::registerEvent] Missing toid in fromid: " << attr.as_string() << std::endl;
+			LOG_WARN("Scripts", "Action range is missing toid for fromid " + std::string(attr.as_string()));
 			return false;
 		}
 
@@ -94,14 +95,16 @@ bool Actions::registerEvent(Event* event, const pugi::xml_node& node)
 
 		auto result = useItemMap.emplace(iterId, action);
 		if (!result.second) {
-			std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with id: " << iterId << " in fromid: " << fromId << ", toid: " << toId << std::endl;
+			LOG_WARN("Scripts", "Duplicate action registration for itemid " + std::to_string(iterId) +
+				" in range " + std::to_string(fromId) + "-" + std::to_string(toId));
 		}
 
 		bool success = result.second;
 		while (++iterId <= toId) {
 			result = useItemMap.emplace(iterId, action);
 			if (!result.second) {
-				std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with id: " << iterId << " in fromid: " << fromId << ", toid: " << toId << std::endl;
+				LOG_WARN("Scripts", "Duplicate action registration for itemid " + std::to_string(iterId) +
+					" in range " + std::to_string(fromId) + "-" + std::to_string(toId));
 				continue;
 			}
 			success = true;
@@ -112,13 +115,13 @@ bool Actions::registerEvent(Event* event, const pugi::xml_node& node)
 
 		auto result = uniqueItemMap.emplace(uid, action);
 		if (!result.second) {
-			std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with uniqueid: " << uid << std::endl;
+			LOG_WARN("Scripts", "Duplicate action registration for uniqueid " + std::to_string(uid));
 		}
 		return result.second;
 	} else if ((attr = node.attribute("fromuid"))) {
 		pugi::xml_attribute toUidAttribute = node.attribute("touid");
 		if (!toUidAttribute) {
-			std::cout << "[Warning - Actions::registerEvent] Missing touid in fromuid: " << attr.as_string() << std::endl;
+			LOG_WARN("Scripts", "Action range is missing touid for fromuid " + std::string(attr.as_string()));
 			return false;
 		}
 
@@ -128,14 +131,16 @@ bool Actions::registerEvent(Event* event, const pugi::xml_node& node)
 
 		auto result = uniqueItemMap.emplace(iterUid, action);
 		if (!result.second) {
-			std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with unique id: " << iterUid << " in fromuid: " << fromUid << ", touid: " << toUid << std::endl;
+			LOG_WARN("Scripts", "Duplicate action registration for uniqueid " + std::to_string(iterUid) +
+				" in range " + std::to_string(fromUid) + "-" + std::to_string(toUid));
 		}
 
 		bool success = result.second;
 		while (++iterUid <= toUid) {
 			result = uniqueItemMap.emplace(iterUid, action);
 			if (!result.second) {
-				std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with unique id: " << iterUid << " in fromuid: " << fromUid << ", touid: " << toUid << std::endl;
+				LOG_WARN("Scripts", "Duplicate action registration for uniqueid " + std::to_string(iterUid) +
+					" in range " + std::to_string(fromUid) + "-" + std::to_string(toUid));
 				continue;
 			}
 			success = true;
@@ -146,13 +151,13 @@ bool Actions::registerEvent(Event* event, const pugi::xml_node& node)
 
 		auto result = actionItemMap.emplace(aid, action);
 		if (!result.second) {
-			std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with actionid: " << aid << std::endl;
+			LOG_WARN("Scripts", "Duplicate action registration for actionid " + std::to_string(aid));
 		}
 		return result.second;
 	} else if ((attr = node.attribute("fromaid"))) {
 		pugi::xml_attribute toAidAttribute = node.attribute("toaid");
 		if (!toAidAttribute) {
-			std::cout << "[Warning - Actions::registerEvent] Missing toaid in fromaid: " << attr.as_string() << std::endl;
+			LOG_WARN("Scripts", "Action range is missing toaid for fromaid " + std::string(attr.as_string()));
 			return false;
 		}
 
@@ -162,14 +167,16 @@ bool Actions::registerEvent(Event* event, const pugi::xml_node& node)
 
 		auto result = actionItemMap.emplace(iterAid, action);
 		if (!result.second) {
-			std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with action id: " << iterAid << " in fromaid: " << fromAid << ", toaid: " << toAid << std::endl;
+			LOG_WARN("Scripts", "Duplicate action registration for actionid " + std::to_string(iterAid) +
+				" in range " + std::to_string(fromAid) + "-" + std::to_string(toAid));
 		}
 
 		bool success = result.second;
 		while (++iterAid <= toAid) {
 			result = actionItemMap.emplace(iterAid, action);
 			if (!result.second) {
-				std::cout << "[Warning - Actions::registerEvent] Duplicate registered item with action id: " << iterAid << " in fromaid: " << fromAid << ", toaid: " << toAid << std::endl;
+				LOG_WARN("Scripts", "Duplicate action registration for actionid " + std::to_string(iterAid) +
+					" in range " + std::to_string(fromAid) + "-" + std::to_string(toAid));
 				continue;
 			}
 			success = true;

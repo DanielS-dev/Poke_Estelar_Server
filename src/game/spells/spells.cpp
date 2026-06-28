@@ -5,6 +5,7 @@
 #include "otpch.hpp"
 
 #include "../game.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/tools/positionTools.hpp"
 #include "../../core/tools/stringsTools.hpp"
 
@@ -118,7 +119,7 @@ bool Spells::registerEvent(Event* event, const pugi::xml_node&)
 	if (instant) {
 		auto result = instants.emplace(instant->getWords(), instant);
 		if (!result.second) {
-			std::cout << "[Warning - Spells::registerEvent] Duplicate registered instant spell with words: " << instant->getWords() << std::endl;
+			LOG_WARN("Scripts", "Duplicate instant spell registration for words \"" + instant->getWords() + "\"");
 		}
 		return result.second;
 	}
@@ -127,7 +128,7 @@ bool Spells::registerEvent(Event* event, const pugi::xml_node&)
 	if (rune) {
 		auto result = runes.emplace(rune->getRuneItemId(), rune);
 		if (!result.second) {
-			std::cout << "[Warning - Spells::registerEvent] Duplicate registered rune with id: " << rune->getRuneItemId() << std::endl;
+			LOG_WARN("Scripts", "Duplicate rune registration for itemid " + std::to_string(rune->getRuneItemId()));
 		}
 		return result.second;
 	}

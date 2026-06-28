@@ -3,8 +3,11 @@
 
 #include "otpch.hpp"
 
+#include <sstream>
+
 #include "../game.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 
 #include "movement.hpp"
@@ -181,7 +184,7 @@ void MoveEvents::addEvent(MoveEvent* moveEvent, int32_t id, MoveListMap& map)
 		std::list<MoveEvent*>& moveEventList = it->second.moveEvent[moveEvent->getEventType()];
 		for (MoveEvent* existingMoveEvent : moveEventList) {
 			if (existingMoveEvent->getSlot() == moveEvent->getSlot()) {
-				std::cout << "[Warning - MoveEvents::addEvent] Duplicate move event found: " << id << std::endl;
+				LOG_WARN("Scripts", "Duplicate move event registration for id " + std::to_string(id));
 			}
 		}
 		moveEventList.push_back(moveEvent);
@@ -263,7 +266,9 @@ void MoveEvents::addEvent(MoveEvent* moveEvent, const Position& pos, MovePosList
 	} else {
 		std::list<MoveEvent*>& moveEventList = it->second.moveEvent[moveEvent->getEventType()];
 		if (!moveEventList.empty()) {
-			std::cout << "[Warning - MoveEvents::addEvent] Duplicate move event found: " << pos << std::endl;
+			std::ostringstream message;
+			message << "Duplicate move event registration for position " << pos;
+			LOG_WARN("Scripts", message.str());
 		}
 
 		moveEventList.push_back(moveEvent);

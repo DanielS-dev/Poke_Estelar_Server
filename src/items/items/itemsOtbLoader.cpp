@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "../items.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/tools/stringsTools.hpp"
 #include "../../core/tools/systemTools.hpp"
 
@@ -54,12 +55,12 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 	}
 
 	if (majorVersion == 0xFFFFFFFF) {
-		std::cout << "[Warning - Items::loadFromOtb] items.otb using generic client version." << std::endl;
+		LOG_WARN("Items", "items.otb is using a generic client version.");
 	} else if (majorVersion != 3) {
-		std::cout << "Old version detected, a newer version of items.otb is required." << std::endl;
+		LOG_ERROR("Items", "Old items.otb version detected. A newer version is required.");
 		return ERROR_INVALID_FORMAT;
 	} else if (minorVersion < CLIENT_VERSION_1098) {
-		std::cout << "A newer version of items.otb is required." << std::endl;
+		LOG_ERROR("Items", "items.otb client version is too old. A newer version is required.");
 		return ERROR_INVALID_FORMAT;
 	}
 
@@ -244,6 +245,7 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 	}
 
 	items.shrink_to_fit();
+	LOG_INFO("Items", "Loaded " + std::to_string(items.size()) + " item entries from " + file);
 	return ERROR_NONE;
 }
 

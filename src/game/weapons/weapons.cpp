@@ -8,6 +8,7 @@
 
 #include "../weapons/weapons.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../items/items.hpp"
 
 Weapons::Weapons()
@@ -55,6 +56,7 @@ std::string Weapons::getScriptBaseName() const
 
 void Weapons::loadDefaults()
 {
+	uint32_t defaultsLoaded = 0;
 	for (size_t i = 100, size = Item::items.size(); i < size; ++i) {
 		const ItemType& it = Item::items.getItemType(i);
 		if (it.id == 0 || weapons.find(i) != weapons.end()) {
@@ -68,6 +70,7 @@ void Weapons::loadDefaults()
 				WeaponMelee* weapon = new WeaponMelee(&scriptInterface);
 				weapon->configureWeapon(it);
 				weapons[i] = weapon;
+				++defaultsLoaded;
 				break;
 			}
 
@@ -80,6 +83,7 @@ void Weapons::loadDefaults()
 				WeaponDistance* weapon = new WeaponDistance(&scriptInterface);
 				weapon->configureWeapon(it);
 				weapons[i] = weapon;
+				++defaultsLoaded;
 				break;
 			}
 
@@ -87,6 +91,8 @@ void Weapons::loadDefaults()
 				break;
 		}
 	}
+
+	LOG_INFO("Scripts", "Loaded " + std::to_string(defaultsLoaded) + " default weapons from item definitions.");
 }
 
 Event* Weapons::getEvent(const std::string& nodeName)
@@ -107,7 +113,7 @@ bool Weapons::registerEvent(Event* event, const pugi::xml_node&)
 
 	auto result = weapons.emplace(weapon->getID(), weapon);
 	if (!result.second) {
-		std::cout << "[Warning - Weapons::registerEvent] Duplicate registered item with id: " << weapon->getID() << std::endl;
+		LOG_WARN("Scripts", "Duplicate weapon registration for itemid " + std::to_string(weapon->getID()));
 	}
 	return result.second;
 }

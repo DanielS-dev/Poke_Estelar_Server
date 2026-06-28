@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "../entities/player.hpp"
+#include "../core/logger.hpp"
 #include "talkaction.hpp"
 #include "../core/pugicast.hpp"
 #include "../core/tools/stringsTools.hpp"
@@ -96,7 +97,7 @@ bool TalkAction::configureEvent(const pugi::xml_node& node)
 {
 	pugi::xml_attribute wordsAttribute = node.attribute("words");
 	if (!wordsAttribute) {
-		std::cout << "[Error - TalkAction::configureEvent] Missing words for talk action or spell" << std::endl;
+		LOG_ERROR("Scripts", "Missing words for talk action.");
 		return false;
 	}
 

@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "../config/configmanager.hpp"
+#include "../core/logger.hpp"
 #include "globalevent.hpp"
 #include "../core/tools/systemTools.hpp"
 #include "../core/scheduler.hpp"
@@ -79,7 +80,7 @@ bool GlobalEvents::registerEvent(Event* event, const pugi::xml_node&)
 		}
 	}
 
-	std::cout << "[Warning - GlobalEvents::configureEvent] Duplicate registered globalevent with name: " << globalEvent->getName() << std::endl;
+	LOG_WARN("Scripts", "Duplicate global event registration for " + globalEvent->getName());
 	return false;
 }
 
@@ -198,7 +199,7 @@ bool GlobalEvent::configureEvent(const pugi::xml_node& node)
 {
 	pugi::xml_attribute nameAttribute = node.attribute("name");
 	if (!nameAttribute) {
-		std::cout << "[Error - GlobalEvent::configureEvent] Missing name for a globalevent" << std::endl;
+		LOG_ERROR("Scripts", "Missing name for a global event.");
 		return false;
 	}
 
@@ -211,7 +212,7 @@ bool GlobalEvent::configureEvent(const pugi::xml_node& node)
 
 		int32_t hour = params.front();
 		if (hour < 0 || hour > 23) {
-			std::cout << "[Error - GlobalEvent::configureEvent] Invalid hour \"" << attr.as_string() << "\" for globalevent with name: " << name << std::endl;
+			LOG_ERROR("Scripts", "Invalid global event hour \"" + std::string(attr.as_string()) + "\" for " + name);
 			return false;
 		}
 
@@ -222,14 +223,14 @@ bool GlobalEvent::configureEvent(const pugi::xml_node& node)
 		if (params.size() > 1) {
 			min = params[1];
 			if (min < 0 || min > 59) {
-				std::cout << "[Error - GlobalEvent::configureEvent] Invalid minute \"" << attr.as_string() << "\" for globalevent with name: " << name << std::endl;
+				LOG_ERROR("Scripts", "Invalid global event minute \"" + std::string(attr.as_string()) + "\" for " + name);
 				return false;
 			}
 
 			if (params.size() > 2) {
 				sec = params[2];
 				if (sec < 0 || sec > 59) {
-					std::cout << "[Error - GlobalEvent::configureEvent] Invalid second \"" << attr.as_string() << "\" for globalevent with name: " << name << std::endl;
+					LOG_ERROR("Scripts", "Invalid global event second \"" + std::string(attr.as_string()) + "\" for " + name);
 					return false;
 				}
 			}
@@ -257,14 +258,14 @@ bool GlobalEvent::configureEvent(const pugi::xml_node& node)
 		} else if (strcasecmp(value, "record") == 0) {
 			eventType = GLOBALEVENT_RECORD;
 		} else {
-			std::cout << "[Error - GlobalEvent::configureEvent] No valid type \"" << attr.as_string() << "\" for globalevent with name " << name << std::endl;
+			LOG_ERROR("Scripts", "Invalid global event type \"" + std::string(attr.as_string()) + "\" for " + name);
 			return false;
 		}
 	} else if ((attr = node.attribute("interval"))) {
 		interval = std::max<int32_t>(SCHEDULER_MINTICKS, pugi::cast<int32_t>(attr.value()));
 		nextExecution = OTSYS_TIME() + interval;
 	} else {
-		std::cout << "[Error - GlobalEvent::configureEvent] No interval for globalevent with name " << name << std::endl;
+		LOG_ERROR("Scripts", "Missing interval/time/type for global event " + name);
 		return false;
 	}
 	return true;

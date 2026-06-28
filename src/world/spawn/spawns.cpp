@@ -6,6 +6,7 @@
 #include "../spawn.hpp"
 
 #include "../../config/configmanager.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/scheduler.hpp"
 #include "../../core/tools/xmlErro.hpp"
@@ -35,6 +36,7 @@ bool Spawns::loadFromXml(const std::string& filename)
 
 	this->filename = filename;
 	loaded = true;
+	uint32_t loadedNpcCount = 0;
 
 	for (auto spawnNode : doc.child("spawns").children()) {
 		Position centerPos(
@@ -103,8 +105,13 @@ bool Spawns::loadFromXml(const std::string& filename)
 					centerPos.z
 				), radius);
 				npcList.push_front(npc);
+				++loadedNpcCount;
 			}
 		}
+	}
+
+	if (loadedNpcCount > 0) {
+		LOG_INFO("Scripts", "Loaded " + std::to_string(loadedNpcCount) + " NPCs from spawn definitions.");
 	}
 	return true;
 }

@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "creatureevent.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/tools/systemTools.hpp"
 #include "../../core/tools/stringsTools.hpp"
 #include "../../entities/player.hpp"
@@ -54,7 +55,7 @@ bool CreatureEvents::registerEvent(Event* event, const pugi::xml_node&)
 {
 	CreatureEvent* creatureEvent = static_cast<CreatureEvent*>(event); //event is guaranteed to be a CreatureEvent
 	if (creatureEvent->getEventType() == CREATURE_EVENT_NONE) {
-		std::cout << "Error: [CreatureEvents::registerEvent] Trying to register event without type!" << std::endl;
+		LOG_ERROR("Scripts", "Trying to register creature event without a valid type.");
 		return false;
 	}
 

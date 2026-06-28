@@ -5,6 +5,7 @@
 
 #include "../npc.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/positionTools.hpp"
@@ -51,7 +52,7 @@ bool NpcScriptInterface::loadNpcLib(const std::string& file)
 	}
 
 	if (loadFile(file) == -1) {
-		std::cout << "[Warning - NpcScriptInterface::loadNpcLib] Can not load " << file << std::endl;
+		LOG_WARN("Scripts", "Could not load NPC lib " + file);
 		return false;
 	}
 

@@ -5,6 +5,7 @@
 
 #include "../npc.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/positionTools.hpp"
@@ -20,8 +21,8 @@ NpcEventsHandler::NpcEventsHandler(const std::string& file, Npc* npc) :
 {
 	loaded = scriptInterface->loadFile("data/npc/scripts/" + file, npc) == 0;
 	if (!loaded) {
-		std::cout << "[Warning - NpcScript::NpcScript] Can not load script: " << file << std::endl;
-		std::cout << scriptInterface->getLastLuaError() << std::endl;
+		LOG_WARN("Scripts", "Could not load NPC script: " + file);
+		LOG_ERROR("Lua", scriptInterface->getLastLuaError());
 	} else {
 		creatureSayEvent = scriptInterface->getEvent("onCreatureSay");
 		creatureDisappearEvent = scriptInterface->getEvent("onCreatureDisappear");

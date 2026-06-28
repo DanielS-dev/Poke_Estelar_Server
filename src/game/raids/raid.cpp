@@ -8,6 +8,7 @@
 
 #include "raid.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/scheduler.hpp"
 #include "../../core/tools/systemTools.hpp"
@@ -53,7 +54,7 @@ bool Raid::loadFromXml(const std::string& filename)
 		if (event->configureRaidEvent(eventNode)) {
 			raidEvents.push_back(event);
 		} else {
-			std::cout << "[Error - Raid::loadFromXml] In file (" << filename << "), eventNode: " << eventNode.name() << std::endl;
+			LOG_ERROR("Scripts", "Invalid raid event <" + std::string(eventNode.name()) + "> in " + filename);
 			delete event;
 		}
 	}
@@ -61,6 +62,7 @@ bool Raid::loadFromXml(const std::string& filename)
 	std::sort(raidEvents.begin(), raidEvents.end(), RaidEvent::compareEvents);
 
 	loaded = true;
+	LOG_INFO("Scripts", "Loaded " + std::to_string(raidEvents.size()) + " raid events from " + filename);
 	return true;
 }
 

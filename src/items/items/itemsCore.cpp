@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "../items.hpp"
+#include "../../core/logger.hpp"
 #include "../../game/condition/condition.hpp"
 #include "../../game/movement/movement.hpp"
 #include "../../game/weapons/weapons.hpp"
@@ -37,7 +38,10 @@ void Items::clear()
 bool Items::reload()
 {
 	clear();
-	loadFromOtb("data/items/items.otb");
+	FILELOADER_ERRORS otbResult = loadFromOtb("data/items/items.otb");
+	if (otbResult != ERROR_NONE) {
+		LOG_ERROR("Items", "Failed to reload data/items/items.otb. Error code: " + std::to_string(static_cast<int32_t>(otbResult)));
+	}
 
 	if (!loadFromXml()) {
 		return false;
@@ -46,6 +50,7 @@ bool Items::reload()
 	g_moveEvents->reload();
 	g_weapons->reload();
 	g_weapons->loadDefaults();
+	LOG_INFO("Items", "Items reload completed.");
 	return true;
 }
 

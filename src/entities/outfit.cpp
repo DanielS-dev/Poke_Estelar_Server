@@ -5,12 +5,15 @@
 
 #include "outfit.hpp"
 
+#include "../core/logger.hpp"
 #include "../core/pugicast.hpp"
 #include "../core/tools/systemTools.hpp"
 #include "../core/tools/xmlErro.hpp"
 
 bool Outfits::loadFromXml()
 {
+	uint32_t loadedOutfits = 0;
+
 	pugi::xml_document doc;
 	pugi::xml_parse_result result = doc.load_file("data/XML/outfits.xml");
 	if (!result) {
@@ -25,19 +28,19 @@ bool Outfits::loadFromXml()
 		}
 
 		if (!(attr = outfitNode.attribute("type"))) {
-			std::cout << "[Warning - Outfits::loadFromXml] Missing outfit type." << std::endl;
+			LOG_WARN("Scripts", "Missing outfit type in data/XML/outfits.xml");
 			continue;
 		}
 
 		uint16_t type = pugi::cast<uint16_t>(attr.value());
 		if (type > PLAYERSEX_LAST) {
-			std::cout << "[Warning - Outfits::loadFromXml] Invalid outfit type " << type << "." << std::endl;
+			LOG_WARN("Scripts", "Invalid outfit type " + std::to_string(type) + " in data/XML/outfits.xml");
 			continue;
 		}
 
 		pugi::xml_attribute lookTypeAttribute = outfitNode.attribute("looktype");
 		if (!lookTypeAttribute) {
-			std::cout << "[Warning - Outfits::loadFromXml] Missing looktype on outfit." << std::endl;
+			LOG_WARN("Scripts", "Missing looktype on outfit in data/XML/outfits.xml");
 			continue;
 		}
 
@@ -47,7 +50,9 @@ bool Outfits::loadFromXml()
 			outfitNode.attribute("premium").as_bool(),
 			outfitNode.attribute("unlocked").as_bool(true)
 		);
+		++loadedOutfits;
 	}
+	LOG_INFO("Scripts", "Loaded " + std::to_string(loadedOutfits) + " outfits from data/XML/outfits.xml");
 	return true;
 }
 

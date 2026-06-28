@@ -4,6 +4,7 @@
 #include "otpch.hpp"
 
 #include "../items.hpp"
+#include "../../core/logger.hpp"
 #include "../../game/condition/condition.hpp"
 #include "../../game/spells/spells.hpp"
 #include "../../core/pugicast.hpp"
@@ -14,6 +15,8 @@
 
 bool Items::loadFromXml()
 {
+	uint32_t loadedItems = 0;
+
 	pugi::xml_document doc;
 	pugi::xml_parse_result result = doc.load_file("data/items/items.xml");
 	if (!result) {
@@ -30,13 +33,13 @@ bool Items::loadFromXml()
 
 		pugi::xml_attribute fromIdAttribute = itemNode.attribute("fromid");
 		if (!fromIdAttribute) {
-			std::cout << "[Warning - Items::loadFromXml] No item id found" << std::endl;
+			LOG_WARN("Items", "Item node without id/fromid in data/items/items.xml");
 			continue;
 		}
 
 		pugi::xml_attribute toIdAttribute = itemNode.attribute("toid");
 		if (!toIdAttribute) {
-			std::cout << "[Warning - Items::loadFromXml] fromid (" << fromIdAttribute.value() << ") without toid" << std::endl;
+			LOG_WARN("Items", "Item range starting at fromid " + std::string(fromIdAttribute.value()) + " is missing toid.");
 			continue;
 		}
 
@@ -46,6 +49,14 @@ bool Items::loadFromXml()
 			parseItemNode(itemNode, id++);
 		}
 	}
+
+	for (const ItemType& item : items) {
+		if (item.id != 0) {
+			++loadedItems;
+		}
+	}
+
+	LOG_INFO("Items", "Loaded " + std::to_string(loadedItems) + " items from data/items/items.xml");
 	return true;
 }
 
@@ -116,7 +127,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "rune") {
 				it.type = ITEM_TYPE_RUNE;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown type: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown item type \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "description") {
 			it.description = valueAttribute.as_string();
@@ -159,7 +170,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "eastalt") {
 				it.floorChange = TILESTATE_FLOORCHANGE_EAST_ALT;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown floorChange: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown floorChange \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "corpsetype") { //pota
 			tmpStrValue = asLowerCaseString(valueAttribute.as_string());
@@ -208,7 +219,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "fighting") {
 				it.corpseType = RACE_FIGHTING;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown corpseType: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown corpseType \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "containersize") {
 			it.maxItems = pugi::cast<uint16_t>(valueAttribute.value());
@@ -253,7 +264,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "mead") {
 				it.fluidSource = FLUID_MEAD;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown fluidSource: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown fluidSource \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "readable") {
 			it.canReadText = valueAttribute.as_bool();
@@ -281,7 +292,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "ammunition") {
 				it.weaponType = WEAPON_AMMO;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown weaponType: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown weaponType \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "slottype") {
 			tmpStrValue = asLowerCaseString(valueAttribute.as_string());
@@ -314,26 +325,26 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "info") { //pota
 				it.slotPosition |= SLOTP_INFO;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown slotType: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown slotType \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "ammotype") {
 			it.ammoType = getAmmoType(valueAttribute.as_string());
 			if (it.ammoType == AMMO_NONE) {
-				std::cout << "[Warning - Items::parseItemNode] Unknown ammoType: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown ammoType \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "shoottype") {
 			ShootType_t shoot = getShootType(valueAttribute.as_string());
 			if (shoot != CONST_ANI_NONE) {
 				it.shootType = shoot;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown shootType: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown shootType \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "effect") {
 			MagicEffectClasses effect = getMagicEffect(valueAttribute.as_string());
 			if (effect != CONST_ME_NONE) {
 				it.magicEffect = effect;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown effect: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown effect \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 		} else if (tmpStrValue == "range") {
 			it.shootRange = pugi::cast<uint16_t>(valueAttribute.value());
@@ -519,7 +530,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 				conditionDamage = new ConditionDamage(CONDITIONID_COMBAT, CONDITION_BLEEDING);
 				combatType = COMBAT_PHYSICALDAMAGE;
 			} else {
-				std::cout << "[Warning - Items::parseItemNode] Unknown field value: " << valueAttribute.as_string() << std::endl;
+				LOG_WARN("Items", "Unknown field value \"" + std::string(valueAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 			}
 
 			if (combatType != COMBAT_NONE) {
@@ -627,13 +638,13 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 		} else if (tmpStrValue == "allowdistread") {
 			it.allowDistRead = booleanString(valueAttribute.as_string());
 		} else {
-			std::cout << "[Warning - Items::parseItemNode] Unknown key value: " << keyAttribute.as_string() << std::endl;
+			LOG_WARN("Items", "Unknown item key \"" + std::string(keyAttribute.as_string()) + "\" for item " + std::to_string(it.id));
 		}
 	}
 
 	//check bed items
 	if ((it.transformToFree != 0 || it.transformToOnUse[PLAYERSEX_FEMALE] != 0 || it.transformToOnUse[PLAYERSEX_MALE] != 0) && it.type != ITEM_TYPE_BED) {
-		std::cout << "[Warning - Items::parseItemNode] Item " << it.id << " is not set as a bed-type" << std::endl;
+		LOG_WARN("Items", "Item " + std::to_string(it.id) + " has bed transforms but is not marked as bed type.");
 	}
 }
 

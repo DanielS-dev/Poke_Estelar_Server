@@ -5,6 +5,7 @@
 
 #include "../npc.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/positionTools.hpp"

@@ -9,11 +9,15 @@
 #include "questLoader.hpp"
 #include "quests.hpp"
 
+#include "../../core/logger.hpp"
 #include "../../core/pugicast.hpp"
 #include "../../core/tools/xmlErro.hpp"
 
 bool QuestLoader::loadFromXml(Quests& quests)
 {
+	uint32_t loadedQuests = 0;
+	uint32_t loadedMissions = 0;
+
 	pugi::xml_document doc;
 	pugi::xml_parse_result result = doc.load_file("data/XML/quests.xml");
 	if (!result) {
@@ -30,6 +34,7 @@ bool QuestLoader::loadFromXml(Quests& quests)
 			pugi::cast<int32_t>(questNode.attribute("startstoragevalue").value())
 		);
 		Quest& quest = quests.quests.back();
+		++loadedQuests;
 
 		for (auto missionNode : questNode.children()) {
 			std::string mainDescription = missionNode.attribute("description").as_string();
@@ -42,6 +47,7 @@ bool QuestLoader::loadFromXml(Quests& quests)
 				missionNode.attribute("ignoreendvalue").as_bool()
 			);
 			Mission& mission = quest.missions.back();
+			++loadedMissions;
 
 			if (mainDescription.empty()) {
 				for (auto missionStateNode : missionNode.children()) {
@@ -53,5 +59,6 @@ bool QuestLoader::loadFromXml(Quests& quests)
 			}
 		}
 	}
+	LOG_INFO("Scripts", "Loaded " + std::to_string(loadedQuests) + " quests and " + std::to_string(loadedMissions) + " missions from data/XML/quests.xml");
 	return true;
 }

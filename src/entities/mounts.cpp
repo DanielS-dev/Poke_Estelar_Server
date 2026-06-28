@@ -5,6 +5,7 @@
 
 #include "mounts.hpp"
 
+#include "../core/logger.hpp"
 #include "../core/pugicast.hpp"
 #include "../core/tools/systemTools.hpp"
 #include "../core/tools/xmlErro.hpp"
@@ -34,6 +35,7 @@ bool Mounts::loadFromXml()
 		);
 	}
 	mounts.shrink_to_fit();
+	LOG_INFO("Scripts", "Loaded " + std::to_string(mounts.size()) + " mounts from data/XML/mounts.xml");
 	return true;
 }
 
