@@ -192,13 +192,54 @@ No caso dos NPCs, o logger foi ajustado para evitar poluicao do console com um `
 - sucesso: um resumo agregado com a quantidade total de NPCs carregados a partir dos spawns;
 - falha: erro especifico do NPC, XML ou script com contexto suficiente para diagnostico.
 
+### Persistence/Login Ja Migrados
+
+Os primeiros pontos de `persistence/login` que ainda imprimiam mensagens tecnicas no console tambem ja foram migrados para o logger central.
+
+Os principais ajustes feitos nessa etapa foram:
+
+- erros de dados invalidos no carregamento de player, como `group_id`, `vocation` e `town_id`, agora usando `LOG_ERROR("Database", ...)`;
+- falhas de desserializacao de atributos de itens do player agora usando `LOG_WARN("Database", ...)`;
+- mensagens de coluna ausente em `DBResult::getNumber` agora usando `LOG_ERROR("Database", ...)`.
+
+Essa etapa priorizou mensagens com valor real de diagnostico durante login, preload e load de jogador, sem aumentar o ruido do console em casos normais.
+
+### Rede e Protocolo Ja Migrados
+
+Os principais pontos de rede e protocolo que fechavam conexao silenciosamente tambem ja receberam diagnostico pelo logger central.
+
+Os casos cobertos nessa etapa incluem:
+
+- falha de decrypt `XTEA`;
+- pacote curto ou validacao invalida de `RSA`;
+- header de pacote invalido;
+- selecao inicial de protocolo sem correspondencia;
+- handshake recusado por `shutdown`;
+- falha de validacao de challenge no `ProtocolGame`;
+- status query invalida ou limitada por rate limit;
+- opcode desconhecido e overrun de pacote no protocolo de jogo.
+
+O objetivo dessa etapa foi registrar apenas eventos com valor real de diagnostico, sem transformar desconexoes normais em poluicao de log.
+
+### Status Normal Ja Migrado
+
+As mensagens restantes de status operacional normal que faziam sentido como `info` tambem ja foram migradas para `LOG_INFO`.
+
+Os principais exemplos sao:
+
+- sinais recebidos pelo servidor, como `SIGINT`, `SIGTERM`, `SIGBREAK`, `SIGUSR1` e `SIGHUP`;
+- reloads operacionais, como actions, config, creature scripts, movements, NPCs, raids, spells, monsters, items e outros subsistemas;
+- mensagens normais de shutdown e save do servidor;
+- informacoes de carga do mapa, house items e atualizacao de banco;
+- broadcasts globais do servidor.
+
 ### Proximas Migracoes
 
-Depois dos pontos criticos, a ordem recomendada e:
+Depois dos pontos criticos, loaders, persistence/login, rede/protocolo e status normal, o foco recomendado passa a ser:
 
-1. Sistemas de persistence/login que ainda imprimem erros no console.
-2. Pontos de rede e protocolo que hoje fecham conexao silenciosamente, quando houver valor real de diagnostico.
-3. Mensagens restantes de status normal que fizerem sentido como `LOG_INFO`.
+1. Warnings e errors tecnicos restantes que ainda usam `std::cout` ou `std::cerr`.
+2. Pontos de scripting, gameplay e world que ainda imprimem stack overflow, configuracao invalida ou falhas de carga fora do logger central.
+3. Revisao final de consistencia de categorias, niveis e ruido de console.
 
 Ao migrar uma mensagem, escolha o nivel correto e mantenha contexto suficiente para investigacao.
 

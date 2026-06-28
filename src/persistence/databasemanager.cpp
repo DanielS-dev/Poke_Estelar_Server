@@ -5,6 +5,7 @@
 
 #include "../config/configmanager.hpp"
 #include "databasemanager.hpp"
+#include "../core/logger.hpp"
 #include "../scripting/lua/luascript.hpp"
 
 extern ConfigManager g_config;
@@ -22,15 +23,14 @@ bool DatabaseManager::optimizeTables()
 
 	do {
 		std::string tableName = result->getString("TABLE_NAME");
-		std::cout << "> Optimizing table " << tableName << "..." << std::flush;
 
 		query.str(std::string());
 		query << "OPTIMIZE TABLE `" << tableName << '`';
 
 		if (db->executeQuery(query.str())) {
-			std::cout << " [success]" << std::endl;
+			LOG_INFO("Database", "Optimized table '" + tableName + "'.");
 		} else {
-			std::cout << " [failed]" << std::endl;
+			LOG_WARN("Database", "Failed to optimize table '" + tableName + "'.");
 		}
 	} while (result->next());
 	return true;
@@ -116,7 +116,7 @@ void DatabaseManager::updateDatabase()
 		}
 
 		version++;
-		std::cout << "> Database has been updated to version " << version << '.' << std::endl;
+		LOG_INFO("Database", "Database has been updated to version " + std::to_string(version) + ".");
 		registerDatabaseConfig("db_version", version);
 
 		LuaScriptInterface::resetScriptEnv();

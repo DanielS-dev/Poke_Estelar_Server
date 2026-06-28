@@ -6,6 +6,7 @@
 #include "iomap.hpp"
 
 #include "../../world/bed.hpp"
+#include "../../core/logger.hpp"
 
 /*
 	OTBM_ROOTV1
@@ -110,7 +111,7 @@ bool IOMap::loadMap(Map* map, const std::string& identifier)
 		std::cout << "[Warning - IOMap::loadMap] This map needs an updated items.otb." << std::endl;
 	}
 
-	std::cout << "> Map size: " << root_header.width << "x" << root_header.height << '.' << std::endl;
+	LOG_INFO("Map", "Map size: " + std::to_string(root_header.width) + "x" + std::to_string(root_header.height) + ".");
 	map->width = root_header.width;
 	map->height = root_header.height;
 
@@ -456,6 +457,6 @@ bool IOMap::loadMap(Map* map, const std::string& identifier)
 		nodeMapData = f.getNextNode(nodeMapData, type);
 	}
 
-	std::cout << "> Map loading time: " << (OTSYS_TIME() - start) / (1000.) << " seconds." << std::endl;
+	LOG_INFO("Map", "Map loading time: " + std::to_string((OTSYS_TIME() - start) / (1000.)) + " seconds.");
 	return true;
 }

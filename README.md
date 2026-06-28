@@ -103,6 +103,12 @@ A documentação completa do logger está em `docs/Sistema de Logger.md`.
 
 Os logs técnicos dos pontos críticos de startup, configuração, banco de dados, Lua, XML e rede base já passam pelo logger central. Os dois primeiros blocos de loaders também já foram migrados: scripts/actions/events/movements/spells/weapons e itens/monstros/NPCs/raids/quests/mounts/outfits. O padrão atual combina erros específicos com resumos agregados de carga para evitar poluição no console.
 
+As etapas seguintes do logger também já avançaram:
+
+- `persistence/login`: erros relevantes de preload/load de player e desserialização de itens passaram para o logger central;
+- rede/protocolo: handshakes inválidos, falhas de `RSA`/`XTEA`, challenge inválido, status query inválida e protocolo/opcode sem diagnóstico agora registram contexto útil;
+- status operacional normal: sinais, reloads, save/shutdown, informações de mapa/house items/database e broadcasts passaram a usar `LOG_INFO`.
+
 3. As demais configurações do servidor continuam em `config.lua`, como regras de gameplay, nome do mapa, rates, nome do servidor e informações do status.
 
 Exemplo de configurações que ainda ficam em `config.lua`:

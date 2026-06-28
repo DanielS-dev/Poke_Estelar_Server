@@ -29,6 +29,7 @@
 #include "../../core/tools/random.hpp"
 #include "../../core/tools/stringsTools.hpp"
 #include "../../core/tools/xmlErro.hpp"
+#include "../../core/logger.hpp"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;
@@ -58,7 +59,7 @@ void Game::resetCommandTag()
 
 void Game::shutdown()
 {
-	std::cout << "Shutting down..." << std::flush;
+	LOG_INFO("Server", "Shutting down game server.");
 
 	g_scheduler.shutdown();
 	g_databaseTasks.shutdown();
@@ -74,7 +75,7 @@ void Game::shutdown()
 
 	ConnectionManager::getInstance().closeAll();
 
-	std::cout << " done!" << std::endl;
+	LOG_INFO("Server", "Game server shutdown complete.");
 }
 
 
@@ -117,7 +118,7 @@ void Game::ReleaseItem(Item* item)
 
 void Game::broadcastMessage(const std::string& text, MessageClasses type) const
 {
-	std::cout << "> Broadcasted message: \"" << text << "\"." << std::endl;
+	LOG_INFO("Game", "Broadcasted message: \"" + text + "\".");
 	for (const auto& it : players) {
 		it.second->sendTextMessage(type, text);
 	}

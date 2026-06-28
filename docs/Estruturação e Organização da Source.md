@@ -104,7 +104,10 @@ Ao mover, criar ou remover arquivos, siga o Processo Padrão de Refatoração de
 - [x] Migrar pontos críticos iniciais para o logger central (`otserv`, config, database, Lua, XML e network base).
 - [x] Migrar loaders de scripts, actions, creature events, globalevents, movements, spells, talkactions e weapons para o logger central.
 - [x] Migrar loaders de itens, monstros, NPCs, raids, quests, mounts e outfits para o logger central.
-- [ ] Continuar migrando os demais domínios para o logger central, com foco em persistence/login e pontos de rede/protocolo.
+- [x] Migrar os primeiros pontos de `persistence/login` com erros técnicos para o logger central.
+- [x] Migrar os principais pontos de rede/protocolo que fechavam conexão silenciosamente quando havia valor real de diagnóstico.
+- [x] Migrar mensagens restantes de status operacional normal para `LOG_INFO`.
+- [ ] Continuar migrando os demais warnings e errors técnicos que ainda usam `std::cout`/`std::cerr`.
 - [ ] Revisar dependências entre módulos para reduzir acoplamento em pontos críticos.
 - [ ] Documentar novos padrões importantes conforme forem definidos.
 

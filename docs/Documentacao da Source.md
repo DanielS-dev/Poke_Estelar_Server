@@ -81,6 +81,12 @@ Os loaders dos dois primeiros blocos da migracao tambem ja foram integrados ao l
 
 Nesses dominios, o padrao atual combina erros e warnings detalhados com resumos agregados de carga. Exemplo: o startup pode registrar quantidades totais de items, monstros, raids, quests, mounts e outfits carregados, enquanto NPCs usam um resumo agregado por spawn em vez de emitir um `info` para cada NPC individual.
 
+As etapas seguintes da migracao tambem ja avancaram:
+
+- `persistence/login`: erros de preload/load, desserializacao de itens e inconsistencias relevantes de dados agora usam o logger central;
+- `network/protocol`: falhas silenciosas de handshake, `RSA`, `XTEA`, challenge, status query e selecao inicial de protocolo agora registram contexto util;
+- status operacional normal: sinais, reloads, save/shutdown, mapa, house items, database maintenance e broadcasts agora usam `LOG_INFO`.
+
 Para detalhes de niveis, formato, categorias e proximas migracoes, consulte `docs/Sistema de Logger.md`.
 
 ## Estrutura de Pastas

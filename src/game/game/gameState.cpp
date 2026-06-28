@@ -29,6 +29,7 @@
 #include "../../core/tools/random.hpp"
 #include "../../core/tools/stringsTools.hpp"
 #include "../../core/tools/xmlErro.hpp"
+#include "../../core/logger.hpp"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;
@@ -136,7 +137,7 @@ void Game::saveGameState()
 		setGameState(GAME_STATE_MAINTAIN);
 	}
 
-	std::cout << "Saving server..." << std::endl;
+	LOG_INFO("Server", "Saving game state.");
 
 	for (const auto& it : players) {
 		it.second->loginPosition = it.second->getPosition();
