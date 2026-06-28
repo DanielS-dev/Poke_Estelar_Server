@@ -1,0 +1,480 @@
+﻿Relatorio de portraitid duplicado
+
+Total de monsters analisados: 1046
+Total de grupos duplicados: 92
+
+PORTRAITID=27125 | COUNT=61
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian avalugg.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian braviary.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian decidueye.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian goodra.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian lilligant.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian samurott.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian zoroark.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\blastoise.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\accelgor.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\braviary.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\carracosta.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\darmanitan.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\dewott.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\eelektross.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\emboar.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\heatmor.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\lilligant.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\oshawott.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\pignite.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\samurott.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\scolipede.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\serperior.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\servine.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\snivy.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\tepig.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\zoroark.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\avalugg.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\braixen.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\chesnaught.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\chespin.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\clawitzer.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\delphox.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\fennekin.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\froakie.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\frogadier.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\gogoat.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\goodra.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\greninja.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\hawlucha.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\quilladin.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\talonflame.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\brionne.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\dartrix.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\decidueye.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\incineroar.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\litten.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\lurantis.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\oranguru.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\passimian.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\popplio.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\primarina.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\rowlet.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\salazzle.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\torracat.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\tsareena.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\turtonator.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\centiskorch.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\cinderace.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\corviknight.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\dragapult.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega blastoise.xml
+
+PORTRAITID=27261 | COUNT=16
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\zapdos.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\genesect.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\keldeo.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\meloetta.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\victini.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\diancie.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\hoopa.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\volcanion.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\magearna.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\marshadow.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\melmetal.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\zeraora.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\grimmsnarl.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\hatterene.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\zarude.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny zapdos.xml
+
+PORTRAITID=1 | COUNT=11
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\bellsprout turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\bulbasaur turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\caterpie turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\charmander turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\fire.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\koffing turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\missingno.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\pikachu turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\porygon turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\squirtle turret.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\water crystal.xml
+
+PORTRAITID=27189 | COUNT=7
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned tentacruel.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\tentacruel.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\clodsire.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\gholdengo.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\iron bundle.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\toedscruel.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\wugtrio.xml
+
+PORTRAITID=27284 | COUNT=7
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ariados.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\galvantula.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\araquanid.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\crabominable.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\lycanroc.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\mimikyu.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\vikavolt.xml
+
+PORTRAITID=27333 | COUNT=4
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ursaring.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\basculegion.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\overqwil.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\ursaluna.xml
+
+PORTRAITID=27122 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\charizard.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega charizard x.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega charizard y.xml
+
+PORTRAITID=27154 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan ninetales.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned ninetales.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\ninetales.xml
+
+PORTRAITID=27169 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan persian.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\persian.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny persian.xml
+
+PORTRAITID=27173 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\primeape.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\annihilape.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny primeape.xml
+
+PORTRAITID=27196 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\slowbro.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega slowbro.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny slowbro.xml
+
+PORTRAITID=27198 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\magneton.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\beartic.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\klinklang.xml
+
+PORTRAITID=27205 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan muk.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned muk.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\muk.xml
+
+PORTRAITID=27210 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned gengar.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\gengar.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega gengar.xml
+
+PORTRAITID=27273 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian typhlosion.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned typhlosion.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\typhlosion.xml
+
+PORTRAITID=27328 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\scizor.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\kleavor.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega scizor.xml
+
+PORTRAITID=27350 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\stantler.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\sneasler.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\wyrdeer.xml
+
+PORTRAITID=27358 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\blissey.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\audino.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega audino.xml
+
+PORTRAITID=27989 | COUNT=3
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\gardevoir.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\gothitelle.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega gardevoir.xml
+
+PORTRAITID=27119 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\venusaur.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega venusaur.xml
+
+PORTRAITID=27131 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\beedrill.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega beedrill.xml
+
+PORTRAITID=27134 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\pidgeot.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega pidgeot.xml
+
+PORTRAITID=27136 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan raticate.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\raticate.xml
+
+PORTRAITID=27142 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan raichu.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\raichu.xml
+
+PORTRAITID=27144 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan sandslash.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\sandslash.xml
+
+PORTRAITID=27151 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\clefairy.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny clefairy.xml
+
+PORTRAITID=27152 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\clefable.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny clefable.xml
+
+PORTRAITID=27155 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\jigglypuff.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny jigglypuff.xml
+
+PORTRAITID=27156 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\wigglytuff.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny wigglytuff.xml
+
+PORTRAITID=27167 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan dugtrio.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\dugtrio.xml
+
+PORTRAITID=27168 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\meowth.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny meowth.xml
+
+PORTRAITID=27170 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\psyduck.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny psyduck.xml
+
+PORTRAITID=27171 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\golduck.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny golduck.xml
+
+PORTRAITID=27172 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\mankey.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mankey.xml
+
+PORTRAITID=27175 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian arcanine.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\arcanine.xml
+
+PORTRAITID=27181 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\alakazam.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega alakazam.xml
+
+PORTRAITID=27184 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\machamp.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\pangoro.xml
+
+PORTRAITID=27192 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan golem.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\golem.xml
+
+PORTRAITID=27194 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.galarian\galarian rapidash.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\rapidash.xml
+
+PORTRAITID=27195 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\slowpoke.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny slowpoke.xml
+
+PORTRAITID=27199 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.galarian\sirfetch'd.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\farfetch'd.xml
+
+PORTRAITID=27217 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.hisuian\hisuian electrode.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\electrode.xml
+
+PORTRAITID=27219 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan exeggutor.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\exeggutor.xml
+
+PORTRAITID=27221 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.alola\alolan marowak.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\marowak.xml
+
+PORTRAITID=27224 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\lickitung.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny lickitung.xml
+
+PORTRAITID=27226 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.galarian\galarian weezing.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\weezing.xml
+
+PORTRAITID=27229 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\chansey.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny chansey.xml
+
+PORTRAITID=27231 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\kangaskhan.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega kangaskhan.xml
+
+PORTRAITID=27238 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.galarian\mr. rime.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\mr. mime.xml
+
+PORTRAITID=27239 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned scyther.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\scyther.xml
+
+PORTRAITID=27242 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\.galarian\galarian darmanitan.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\magmar.xml
+
+PORTRAITID=27243 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\pinsir.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega pinsir.xml
+
+PORTRAITID=27246 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\gyarados.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega gyarados.xml
+
+PORTRAITID=27250 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\vaporeon.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny vaporeon.xml
+
+PORTRAITID=27251 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\jolteon.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny jolteon.xml
+
+PORTRAITID=27252 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\flareon.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny flareon.xml
+
+PORTRAITID=27258 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\aerodactyl.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega aerodactyl.xml
+
+PORTRAITID=27259 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen1\snorlax.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny snorlax.xml
+
+PORTRAITID=27297 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ampharos.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega ampharos.xml
+
+PORTRAITID=27319 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\girafarig.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\farigiraf.xml
+
+PORTRAITID=27322 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\dunsparce.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen9\dudunsparce.xml
+
+PORTRAITID=27324 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\steelix.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega steelix.xml
+
+PORTRAITID=27330 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\heracross.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega heracross.xml
+
+PORTRAITID=27345 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\houndoom.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega houndoom.xml
+
+PORTRAITID=27359 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\raikou.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny raikou.xml
+
+PORTRAITID=27360 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\entei.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny entei.xml
+
+PORTRAITID=27361 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\suicune.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny suicune.xml
+
+PORTRAITID=27364 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\tyranitar.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega tyranitar.xml
+
+PORTRAITID=27365 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\lugia.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny lugia.xml
+
+PORTRAITID=27366 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ho-oh.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny ho-oh.xml
+
+PORTRAITID=27367 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\celebi.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny celebi.xml
+
+PORTRAITID=27961 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\sceptile.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega sceptile.xml
+
+PORTRAITID=27964 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\blaziken.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega blaziken.xml
+
+PORTRAITID=27967 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\swampert.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega swampert.xml
+
+PORTRAITID=28009 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\sableye.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega sableye.xml
+
+PORTRAITID=28010 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\mawile.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega mawile.xml
+
+PORTRAITID=28013 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\aggron.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega aggron.xml
+
+PORTRAITID=28015 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\medicham.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega medicham.xml
+
+PORTRAITID=28017 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\manectric.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega manectric.xml
+
+PORTRAITID=28026 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\sharpedo.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega sharpedo.xml
+
+PORTRAITID=28030 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\camerupt.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega camerupt.xml
+
+PORTRAITID=28041 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\altaria.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega altaria.xml
+
+PORTRAITID=28058 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\castform.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny castform.xml
+
+PORTRAITID=28061 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\banette.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega banette.xml
+
+PORTRAITID=28066 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\absol.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega absol.xml
+
+PORTRAITID=28069 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\glalie.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega glalie.xml
+
+PORTRAITID=28080 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\salamence.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega salamence.xml
+
+PORTRAITID=28083 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\metagross.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega metagross.xml
+
+PORTRAITID=28087 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\latias.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny latias.xml
+
+PORTRAITID=28088 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\latios.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny latios.xml
+
+PORTRAITID=28093 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\deoxys.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny deoxys.xml
+
+PORTRAITID=28246 | COUNT=2
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny azurill.xml
+- C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny marill.xml
+

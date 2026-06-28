@@ -1,0 +1,631 @@
+﻿Relatorio de spawns fora da 1 geracao
+
+Arquivo analisado: C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\world\map-spawn.xml
+Total de spawns de monster: 5975
+Total de spawns nao-gen1: 2068
+Total de nomes unicos nao-gen1: 208
+
+NAME=Abomasnow | COUNT=30 | FIRST_LINE=11834
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\abomasnow.xml
+
+NAME=Absol | COUNT=6 | FIRST_LINE=17550
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\absol.xml
+
+NAME=Accelgor | COUNT=6 | FIRST_LINE=7383
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\accelgor.xml
+
+NAME=Aggron | COUNT=15 | FIRST_LINE=1951
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\aggron.xml
+
+NAME=Altaria | COUNT=25 | FIRST_LINE=4015
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\altaria.xml
+
+NAME=Ambipom | COUNT=31 | FIRST_LINE=4036
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\ambipom.xml
+
+NAME=Ampharos | COUNT=10 | FIRST_LINE=13894
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ampharos.xml
+
+NAME=Araquanid | COUNT=7 | FIRST_LINE=7392
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\araquanid.xml
+
+NAME=Ariados | COUNT=15 | FIRST_LINE=3435
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ariados.xml
+
+NAME=Armaldo | COUNT=4 | FIRST_LINE=16923
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\armaldo.xml
+
+NAME=Audino | COUNT=8 | FIRST_LINE=6611
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\audino.xml
+
+NAME=Avalugg | COUNT=9 | FIRST_LINE=8136
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\avalugg.xml
+
+NAME=Azumarill | COUNT=12 | FIRST_LINE=13828
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\azumarill.xml
+
+NAME=Banette | COUNT=9 | FIRST_LINE=12516
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\banette.xml
+
+NAME=Bastiodon | COUNT=7 | FIRST_LINE=16842
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\bastiodon.xml
+
+NAME=Beartic | COUNT=12 | FIRST_LINE=7845
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\beartic.xml
+
+NAME=Beautifly | COUNT=6 | FIRST_LINE=17103
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\beautifly.xml
+
+NAME=Bellossom | COUNT=18 | FIRST_LINE=5871
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\bellossom.xml
+
+NAME=Blaziken | COUNT=5 | FIRST_LINE=8581
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\blaziken.xml
+
+NAME=Blissey | COUNT=13 | FIRST_LINE=1669
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\blissey.xml
+
+NAME=Braviary | COUNT=11 | FIRST_LINE=7638
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\braviary.xml
+
+NAME=Breloom | COUNT=6 | FIRST_LINE=17319
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\breloom.xml
+
+NAME=Bronzong | COUNT=2 | FIRST_LINE=17847
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\bronzong.xml
+
+NAME=Cacturne | COUNT=2 | FIRST_LINE=17706
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\cacturne.xml
+
+NAME=Camerupt | COUNT=6 | FIRST_LINE=17541
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\camerupt.xml
+
+NAME=Carnivine | COUNT=6 | FIRST_LINE=17313
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\carnivine.xml
+
+NAME=Carracosta | COUNT=7 | FIRST_LINE=6536
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\carracosta.xml
+
+NAME=Castform | COUNT=1 | FIRST_LINE=17808
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\castform.xml
+
+NAME=Centiskorch | COUNT=9 | FIRST_LINE=7542
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\centiskorch.xml
+
+NAME=Chandelure | COUNT=13 | FIRST_LINE=1657
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\chandelure.xml
+
+NAME=charmander turret | COUNT=4 | FIRST_LINE=16187
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\utility\charmander turret.xml
+
+NAME=Chatot | COUNT=2 | FIRST_LINE=17823
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\chatot.xml
+
+NAME=Cherrim | COUNT=6 | FIRST_LINE=17121
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\cherrim.xml
+
+NAME=Chesnaught | COUNT=12 | FIRST_LINE=6295
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\chesnaught.xml
+
+NAME=Chimecho | COUNT=2 | FIRST_LINE=18024
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\chimecho.xml
+
+NAME=Cinderace | COUNT=7 | FIRST_LINE=6304
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\cinderace.xml
+
+NAME=Clawitzer | COUNT=8 | FIRST_LINE=7773
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\clawitzer.xml
+
+NAME=Claydol | COUNT=6 | FIRST_LINE=17739
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\claydol.xml
+
+NAME=Corviknight | COUNT=9 | FIRST_LINE=1849
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\corviknight.xml
+
+NAME=Crabominable | COUNT=11 | FIRST_LINE=7842
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\crabominable.xml
+
+NAME=Cradily | COUNT=4 | FIRST_LINE=16926
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\cradily.xml
+
+NAME=Crobat | COUNT=20 | FIRST_LINE=7368
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\crobat.xml
+
+NAME=Darmanitan | COUNT=14 | FIRST_LINE=6395
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\darmanitan.xml
+
+NAME=Decidueye | COUNT=9 | FIRST_LINE=2976
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\decidueye.xml
+
+NAME=Delcatty | COUNT=12 | FIRST_LINE=8575
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\delcatty.xml
+
+NAME=Delibird | COUNT=26 | FIRST_LINE=6262
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\delibird.xml
+
+NAME=Delphox | COUNT=10 | FIRST_LINE=6292
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\delphox.xml
+
+NAME=Donphan | COUNT=34 | FIRST_LINE=11393
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\donphan.xml
+
+NAME=Dragapult | COUNT=12 | FIRST_LINE=7425
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\dragapult.xml
+
+NAME=Drapion | COUNT=5 | FIRST_LINE=17202
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\drapion.xml
+
+NAME=Drifblim | COUNT=7 | FIRST_LINE=17697
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\drifblim.xml
+
+NAME=Druddigon | COUNT=10 | FIRST_LINE=6872
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\druddigon.xml
+
+NAME=Dunsparce | COUNT=10 | FIRST_LINE=6881
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\dunsparce.xml
+
+NAME=Dusknoir | COUNT=10 | FIRST_LINE=12525
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\dusknoir.xml
+
+NAME=Dustox | COUNT=6 | FIRST_LINE=17325
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\dustox.xml
+
+NAME=Eelektross | COUNT=9 | FIRST_LINE=6539
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\eelektross.xml
+
+NAME=Electivire | COUNT=6 | FIRST_LINE=17859
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\electivire.xml
+
+NAME=Emboar | COUNT=12 | FIRST_LINE=6352
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\emboar.xml
+
+NAME=Escavalier | COUNT=11 | FIRST_LINE=3564
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\escavalier.xml
+
+NAME=Espeon | COUNT=16 | FIRST_LINE=13924
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\espeon.xml
+
+NAME=Exploud | COUNT=6 | FIRST_LINE=17829
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\exploud.xml
+
+NAME=Feraligatr | COUNT=12 | FIRST_LINE=9830
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\feraligatr.xml
+
+NAME=Ferrothorn | COUNT=7 | FIRST_LINE=6836
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\ferrothorn.xml
+
+NAME=Flygon | COUNT=4 | FIRST_LINE=16695
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\flygon.xml
+
+NAME=Forretress | COUNT=20 | FIRST_LINE=3231
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\forretress.xml
+
+NAME=Froslass | COUNT=10 | FIRST_LINE=13768
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\froslass.xml
+
+NAME=Furret | COUNT=11 | FIRST_LINE=6986
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\furret.xml
+
+NAME=Gallade | COUNT=6 | FIRST_LINE=17559
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\gallade.xml
+
+NAME=Galvantula | COUNT=10 | FIRST_LINE=6590
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\galvantula.xml
+
+NAME=Garchomp | COUNT=7 | FIRST_LINE=16839
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\garchomp.xml
+
+NAME=Gardevoir | COUNT=6 | FIRST_LINE=17562
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\gardevoir.xml
+
+NAME=Girafarig | COUNT=13 | FIRST_LINE=15756
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\girafarig.xml
+
+NAME=Glaceon | COUNT=2 | FIRST_LINE=17574
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\glaceon.xml
+
+NAME=Glalie | COUNT=10 | FIRST_LINE=11951
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\glalie.xml
+
+NAME=Gliscor | COUNT=4 | FIRST_LINE=16692
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\gliscor.xml
+
+NAME=Gogoat | COUNT=10 | FIRST_LINE=6605
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\gogoat.xml
+
+NAME=Golurk | COUNT=8 | FIRST_LINE=3489
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\golurk.xml
+
+NAME=Goodra | COUNT=10 | FIRST_LINE=3090
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\goodra.xml
+
+NAME=Gothitelle | COUNT=14 | FIRST_LINE=6707
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\gothitelle.xml
+
+NAME=Granbull | COUNT=11 | FIRST_LINE=6932
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\granbull.xml
+
+NAME=Grimmsnarl | COUNT=8 | FIRST_LINE=7716
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\grimmsnarl.xml
+
+NAME=Grumpig | COUNT=2 | FIRST_LINE=17736
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\grumpig.xml
+
+NAME=Hariyama | COUNT=11 | FIRST_LINE=8536
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\hariyama.xml
+
+NAME=Hatterene | COUNT=9 | FIRST_LINE=7728
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen8\hatterene.xml
+
+NAME=Hawlucha | COUNT=8 | FIRST_LINE=7683
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\hawlucha.xml
+
+NAME=Haxorus | COUNT=15 | FIRST_LINE=6839
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\haxorus.xml
+
+NAME=Heatmor | COUNT=8 | FIRST_LINE=6307
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\heatmor.xml
+
+NAME=Heracross | COUNT=13 | FIRST_LINE=1759
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\heracross.xml
+
+NAME=Hippowdon | COUNT=7 | FIRST_LINE=16845
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\hippowdon.xml
+
+NAME=Hitmontop | COUNT=63 | FIRST_LINE=5511
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\hitmontop.xml
+
+NAME=Honchkrow | COUNT=6 | FIRST_LINE=17913
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\honchkrow.xml
+
+NAME=Houndoom | COUNT=26 | FIRST_LINE=11825
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\houndoom.xml
+
+NAME=Hydreigon | COUNT=10 | FIRST_LINE=3141
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\hydreigon.xml
+
+NAME=Illumise | COUNT=1 | FIRST_LINE=18003
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\illumise.xml
+
+NAME=Incineroar | COUNT=11 | FIRST_LINE=3000
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\incineroar.xml
+
+NAME=Infernape | COUNT=9 | FIRST_LINE=8499
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\infernape.xml
+
+NAME=Jumpluff | COUNT=15 | FIRST_LINE=5781
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\jumpluff.xml
+
+NAME=Kecleon | COUNT=6 | FIRST_LINE=17106
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\kecleon.xml
+
+NAME=Kingdra | COUNT=7 | FIRST_LINE=12375
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\kingdra.xml
+
+NAME=Klinklang | COUNT=5 | FIRST_LINE=6857
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\klinklang.xml
+
+NAME=Kricketune | COUNT=6 | FIRST_LINE=16950
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\kricketune.xml
+
+NAME=Lanturn | COUNT=6 | FIRST_LINE=12363
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\lanturn.xml
+
+NAME=Leafeon | COUNT=2 | FIRST_LINE=17571
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\leafeon.xml
+
+NAME=Ledian | COUNT=17 | FIRST_LINE=7025
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ledian.xml
+
+NAME=Lickilicky | COUNT=2 | FIRST_LINE=17832
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lickilicky.xml
+
+NAME=Lilligant | COUNT=12 | FIRST_LINE=6668
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\lilligant.xml
+
+NAME=Linoone | COUNT=9 | FIRST_LINE=8605
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\linoone.xml
+
+NAME=Lopunny | COUNT=6 | FIRST_LINE=17124
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lopunny.xml
+
+NAME=Lucario | COUNT=4 | FIRST_LINE=17646
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lucario.xml
+
+NAME=Ludicolo | COUNT=7 | FIRST_LINE=17694
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\ludicolo.xml
+
+NAME=Lunatone | COUNT=2 | FIRST_LINE=17844
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\lunatone.xml
+
+NAME=Lurantis | COUNT=10 | FIRST_LINE=6965
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\lurantis.xml
+
+NAME=Luxray | COUNT=6 | FIRST_LINE=17715
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\luxray.xml
+
+NAME=Lycanroc | COUNT=12 | FIRST_LINE=7455
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\lycanroc.xml
+
+NAME=Magcargo | COUNT=28 | FIRST_LINE=15474
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\magcargo.xml
+
+NAME=Magmortar | COUNT=2 | FIRST_LINE=17703
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\magmortar.xml
+
+NAME=Magnezone | COUNT=2 | FIRST_LINE=17856
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\magnezone.xml
+
+NAME=Mamoswine | COUNT=17 | FIRST_LINE=6168
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mamoswine.xml
+
+NAME=Manectric | COUNT=6 | FIRST_LINE=17556
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\manectric.xml
+
+NAME=Mantine | COUNT=5 | FIRST_LINE=12297
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\mantine.xml
+
+NAME=Masquerain | COUNT=2 | FIRST_LINE=18021
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\masquerain.xml
+
+NAME=Mawile | COUNT=6 | FIRST_LINE=17544
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\mawile.xml
+
+NAME=Medicham | COUNT=16 | FIRST_LINE=8524
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\medicham.xml
+
+NAME=Meganium | COUNT=10 | FIRST_LINE=9962
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\meganium.xml
+
+NAME=Metagross | COUNT=6 | FIRST_LINE=17568
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\metagross.xml
+
+NAME=Mightyena | COUNT=14 | FIRST_LINE=8602
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\mightyena.xml
+
+NAME=Milotic | COUNT=9 | FIRST_LINE=17484
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\milotic.xml
+
+NAME=Miltank | COUNT=11 | FIRST_LINE=6692
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\miltank.xml
+
+NAME=Mimikyu | COUNT=12 | FIRST_LINE=1840
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\mimikyu.xml
+
+NAME=Minun | COUNT=1 | FIRST_LINE=17733
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\minun.xml
+
+NAME=Mismagius | COUNT=2 | FIRST_LINE=17841
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mismagius.xml
+
+NAME=Mothim | COUNT=5 | FIRST_LINE=17181
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mothim.xml
+
+NAME=Ninjask | COUNT=2 | FIRST_LINE=17682
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\ninjask.xml
+
+NAME=Noctowl | COUNT=19 | FIRST_LINE=3156
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\noctowl.xml
+
+NAME=Noivern | COUNT=10 | FIRST_LINE=3078
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\noivern.xml
+
+NAME=Octillery | COUNT=7 | FIRST_LINE=12321
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\octillery.xml
+
+NAME=Oranguru | COUNT=8 | FIRST_LINE=7227
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\oranguru.xml
+
+NAME=Pachirisu | COUNT=6 | FIRST_LINE=17109
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\pachirisu.xml
+
+NAME=Pangoro | COUNT=8 | FIRST_LINE=7224
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\pangoro.xml
+
+NAME=Passimian | COUNT=8 | FIRST_LINE=7160
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\passimian.xml
+
+NAME=Pelipper | COUNT=7 | FIRST_LINE=17760
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\pelipper.xml
+
+NAME=Plusle | COUNT=1 | FIRST_LINE=17754
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\plusle.xml
+
+NAME=Politoed | COUNT=10 | FIRST_LINE=12189
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\politoed.xml
+
+NAME=Porygon2 | COUNT=11 | FIRST_LINE=15648
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\porygon2.xml
+
+NAME=Porygon-Z | COUNT=2 | FIRST_LINE=17718
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\porygon-z.xml
+
+NAME=Primarina | COUNT=7 | FIRST_LINE=17286
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\primarina.xml
+
+NAME=Probopass | COUNT=14 | FIRST_LINE=1954
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\probopass.xml
+
+NAME=Purugly | COUNT=10 | FIRST_LINE=8572
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\purugly.xml
+
+NAME=Quagsire | COUNT=12 | FIRST_LINE=13822
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\quagsire.xml
+
+NAME=Rampardos | COUNT=7 | FIRST_LINE=16854
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\rampardos.xml
+
+NAME=Rhyperior | COUNT=5 | FIRST_LINE=17217
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\rhyperior.xml
+
+NAME=Roserade | COUNT=6 | FIRST_LINE=17112
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\roserade.xml
+
+NAME=Rotom | COUNT=3 | FIRST_LINE=17811
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\rotom.xml
+
+NAME=Sableye | COUNT=10 | FIRST_LINE=12519
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\sableye.xml
+
+NAME=Salamence | COUNT=6 | FIRST_LINE=17553
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\salamence.xml
+
+NAME=Salazzle | COUNT=9 | FIRST_LINE=6343
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\salazzle.xml
+
+NAME=Sceptile | COUNT=6 | FIRST_LINE=17547
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\sceptile.xml
+
+NAME=Scizor | COUNT=25 | FIRST_LINE=1771
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\scizor.xml
+
+NAME=Scolipede | COUNT=13 | FIRST_LINE=3036
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\scolipede.xml
+
+NAME=Serperior | COUNT=16 | FIRST_LINE=6310
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\serperior.xml
+
+NAME=Seviper | COUNT=6 | FIRST_LINE=17310
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\seviper.xml
+
+NAME=Sharpedo | COUNT=9 | FIRST_LINE=17928
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\sharpedo.xml
+
+NAME=Shiftry | COUNT=6 | FIRST_LINE=17316
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\shiftry.xml
+
+NAME=Shuckle | COUNT=7 | FIRST_LINE=7097
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\shuckle.xml
+
+NAME=Skarmory | COUNT=22 | FIRST_LINE=1642
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\skarmory.xml
+
+NAME=Skuntank | COUNT=2 | FIRST_LINE=17970
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\skuntank.xml
+
+NAME=Slaking | COUNT=6 | FIRST_LINE=17850
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\slaking.xml
+
+NAME=Slowking | COUNT=29 | FIRST_LINE=6854
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\slowking.xml
+
+NAME=Smeargle | COUNT=11 | FIRST_LINE=3267
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\smeargle.xml
+
+NAME=Solrock | COUNT=2 | FIRST_LINE=17724
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\solrock.xml
+
+NAME=Spinda | COUNT=14 | FIRST_LINE=8554
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\spinda.xml
+
+NAME=Spiritomb | COUNT=1 | FIRST_LINE=17538
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\spiritomb.xml
+
+NAME=Stantler | COUNT=11 | FIRST_LINE=3108
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\stantler.xml
+
+NAME=Staraptor | COUNT=2 | FIRST_LINE=17820
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\staraptor.xml
+
+NAME=Steelix | COUNT=35 | FIRST_LINE=13417
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\steelix.xml
+
+NAME=Sudowoodo | COUNT=12 | FIRST_LINE=5922
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\sudowoodo.xml
+
+NAME=Sunflora | COUNT=25 | FIRST_LINE=11266
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\sunflora.xml
+
+NAME=Swalot | COUNT=2 | FIRST_LINE=17916
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\swalot.xml
+
+NAME=Swampert | COUNT=8 | FIRST_LINE=16815
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\swampert.xml
+
+NAME=Swellow | COUNT=2 | FIRST_LINE=17826
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\swellow.xml
+
+NAME=Sylveon | COUNT=9 | FIRST_LINE=6908
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\sylveon.xml
+
+NAME=Talonflame | COUNT=8 | FIRST_LINE=1681
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\talonflame.xml
+
+NAME=Tangrowth | COUNT=5 | FIRST_LINE=17193
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\tangrowth.xml
+
+NAME=Togekiss | COUNT=10 | FIRST_LINE=1969
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\togekiss.xml
+
+NAME=Torkoal | COUNT=6 | FIRST_LINE=17709
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\torkoal.xml
+
+NAME=Torterra | COUNT=2 | FIRST_LINE=17685
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\torterra.xml
+
+NAME=Toxicroak | COUNT=6 | FIRST_LINE=17322
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\toxicroak.xml
+
+NAME=Trevenant | COUNT=11 | FIRST_LINE=6650
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\trevenant.xml
+
+NAME=Tropius | COUNT=6 | FIRST_LINE=17307
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\tropius.xml
+
+NAME=Tsareena | COUNT=10 | FIRST_LINE=6953
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\tsareena.xml
+
+NAME=Turtonator | COUNT=8 | FIRST_LINE=1672
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\turtonator.xml
+
+NAME=Typhlosion | COUNT=10 | FIRST_LINE=4778
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\typhlosion.xml
+
+NAME=Tyranitar | COUNT=25 | FIRST_LINE=15426
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\tyranitar.xml
+
+NAME=Umbreon | COUNT=16 | FIRST_LINE=13939
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\umbreon.xml
+
+NAME=Unown | COUNT=45 | FIRST_LINE=12219
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\unown.xml
+
+NAME=Ursaring | COUNT=12 | FIRST_LINE=3096
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\ursaring.xml
+
+NAME=Vespiquen | COUNT=6 | FIRST_LINE=16947
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\vespiquen.xml
+
+NAME=Vikavolt | COUNT=10 | FIRST_LINE=7341
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen7\vikavolt.xml
+
+NAME=Volbeat | COUNT=1 | FIRST_LINE=17961
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\volbeat.xml
+
+NAME=Volcarona | COUNT=9 | FIRST_LINE=7563
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\volcarona.xml
+
+NAME=Wailord | COUNT=9 | FIRST_LINE=17490
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\wailord.xml
+
+NAME=Weavile | COUNT=8 | FIRST_LINE=13777
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\weavile.xml
+
+NAME=Wobbuffet | COUNT=32 | FIRST_LINE=2083
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\wobbuffet.xml
+
+NAME=Wormadam | COUNT=5 | FIRST_LINE=17175
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\wormadam.xml
+
+NAME=Xatu | COUNT=23 | FIRST_LINE=3165
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen2\xatu.xml
+
+NAME=Yanmega | COUNT=6 | FIRST_LINE=16953
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\yanmega.xml
+
+NAME=Zangoose | COUNT=6 | FIRST_LINE=17835
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen3\zangoose.xml
+
+NAME=Zoroark | COUNT=7 | FIRST_LINE=6557
+PATHS=C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\zoroark.xml
+

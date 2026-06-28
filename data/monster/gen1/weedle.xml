@@ -2,7 +2,7 @@
 <monster name="Weedle" nameDescription="a weedle" race="bug" race2="poison" experience="39" speed="150" manacost="0">
 	<level min="1" max="5"/>
 	<health now="400" max="400" />
-	<look type="916" head="113" body="57" legs="95" feet="113" corpse="26874" />
+	<look type="916" head="113" body="57" legs="95" feet="113" corpse="26874" portraitid="27129"/>
 	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="1" />

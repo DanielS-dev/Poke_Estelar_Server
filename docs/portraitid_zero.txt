@@ -1,0 +1,204 @@
+﻿Relatorio de portraitid = 0
+
+Total de monsters analisados: 1046
+Total com portraitid=0: 199
+
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned electivire.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\cloned\cloned mamoswine.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\abomasnow.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\ambipom.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\arceus.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\azelf.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\bastiodon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\bibarel.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\bronzong.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\carnivine.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\chatot.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\cherrim.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\chimchar.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\cresselia.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\darkrai.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\dialga.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\drapion.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\drifblim.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\dusknoir.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\electivire.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\empoleon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\floatzel.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\froslass.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\gallade.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\garchomp.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\gastrodon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\giratina.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\glaceon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\gliscor.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\grotle.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\heatran.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\hippowdon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\honchkrow.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\infernape.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\kricketune.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\leafeon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lickilicky.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lopunny.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lucario.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\lumineon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\luxray.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\magmortar.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\magnezone.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mamoswine.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\manaphy.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mesprit.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mismagius.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\monferno.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\mothim.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\pachirisu.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\palkia.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\phione.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\piplup.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\porygon-z.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\prinplup.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\probopass.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\purugly.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\rampardos.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\regigigas.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\rhyperior.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\roserade.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\rotom.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\shaymin.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\skuntank.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\spiritomb.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\staraptor.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\tangrowth.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\togekiss.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\torterra.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\toxicroak.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\turtwig.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\uxie.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\vespiquen.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\weavile.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\wormadam.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen4\yanmega.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\chandelure.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\druddigon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\escavalier.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\ferrothorn.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\golurk.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\haxorus.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\hydreigon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen5\volcarona.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\noivern.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\sylveon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\gen6\trevenant.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega abomasnow.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega gallade.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega garchomp.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega lopunny.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\mega\mega lucario.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny abomasnow.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny ambipom.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny arceus.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny azelf.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny bastiodon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny bibarel.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny bidoof.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny bonsly.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny bronzong.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny bronzor.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny budew.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny buizel.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny buneary.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny burmy.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny carnivine.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny chatot.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny cherrim.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny cherubi.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny chimchar.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny chingling.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny combee.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny cranidos.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny cresselia.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny croagunk.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny darkrai.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny dialga.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny drapion.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny drifblim.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny drifloon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny dusknoir.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny electivire.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny empoleon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny finneon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny floatzel.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny froslass.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny gabite.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny gallade.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny garchomp.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny gastrodon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny gible.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny giratina.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny glaceon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny glameow.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny gliscor.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny grotle.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny happiny.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny heatran.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny hippopotas.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny hippowdon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny honchkrow.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny infernape.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny kricketot.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny kricketune.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny leafeon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny lickilicky.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny lopunny.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny lucario.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny lumineon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny luxio.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny luxray.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny magmortar.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny magnezone.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mamoswine.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny manaphy.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mantyke.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mesprit.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mime jr.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mismagius.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny monferno.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny mothim.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny munchlax.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny pachirisu.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny palkia.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny phione.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny piplup.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny porygon-z.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny prinplup.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny probopass.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny purugly.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny rampardos.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny regigigas.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny rhyperior.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny riolu.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny roserade.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny rotom.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny shaymin.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny shellos.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny shieldon.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny shinx.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny skorupi.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny skuntank.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny snover.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny spiritomb.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny staraptor.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny staravia.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny starly.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny stunky.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny tangrowth.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny togekiss.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny torterra.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny toxicroak.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny turtwig.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny uxie.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny vespiquen.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny weavile.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny wormadam.xml
+C:\Users\NGX BRASIL\Downloads\Poke_Estelar_Server\data\monster\shiny\shiny yanmega.xml
