@@ -5,7 +5,13 @@
 
 #include "../container.hpp"
 #include "../inbox.hpp"
+#include "../../entities/player.hpp"
 #include "../../core/tools/systemTools.hpp"
+
+namespace {
+constexpr uint16_t FILLED_POKEBALL_ITEM_ID = 26661;
+constexpr uint32_t MAX_MAIN_BACKPACK_POKEBALLS = 6;
+}
 
 ReturnValue Container::queryAdd(int32_t index, const Thing& thing, uint32_t count,
 		uint32_t flags, Creature* actor/* = nullptr*/) const
@@ -32,6 +38,15 @@ ReturnValue Container::queryAdd(int32_t index, const Thing& thing, uint32_t coun
 
 	if (item == this) {
 		return RETURNVALUE_THISISIMPOSSIBLE;
+	}
+
+	if (item->getID() == FILLED_POKEBALL_ITEM_ID) {
+		if (const Player* player = dynamic_cast<const Player*>(getTopParent())) {
+			if (player->getInventoryItem(CONST_SLOT_BACKPACK) == this &&
+					getItemTypeCount(FILLED_POKEBALL_ITEM_ID) >= MAX_MAIN_BACKPACK_POKEBALLS) {
+				return RETURNVALUE_CONTAINERNOTENOUGHROOM;
+			}
+		}
 	}
 
 	const Cylinder* cylinder = getParent();

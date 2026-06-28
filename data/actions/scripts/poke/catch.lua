@@ -181,7 +181,19 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	chance = chance * catchVar
 	
 	if math.random(1, 1000) <= chance or ballKey == "masterball" then
-		if player:getSlotItem(CONST_SLOT_BACKPACK) and player:getSlotItem(CONST_SLOT_BACKPACK):getEmptySlots() >= 1 and player:getFreeCapacity() >= 1 then -- add to backpack
+
+		-- Verificar a quantidade de pokemons na bag
+		local backpack = player:getSlotItem(CONST_SLOT_BACKPACK)
+		local quantityPokeball = 0
+
+		for i = 0, backpack:getSize() - 1 do
+			local item = backpack:getItem(i)
+			if item and item:getId() == 26661 then
+				quantityPokeball = quantityPokeball + 1
+			end
+		end
+
+		if player:getSlotItem(CONST_SLOT_BACKPACK) and player:getSlotItem(CONST_SLOT_BACKPACK):getEmptySlots() >= 1 and player:getFreeCapacity() >= 1 and quantityPokeball <= 5 then -- add to backpack
 			addEvent(doAddPokeball, delayMessage, player:getId(), name, level, initialBoost, ballKey, false, delayMessage, teraType)
 		else -- send to cp
 			local addPokeball = doAddPokeball(player:getId(), name, level, initialBoost, ballKey, true, delayMessage + 4000, teraType)

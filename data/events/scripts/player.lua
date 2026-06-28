@@ -321,6 +321,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 --	if toPosition.x ~= 65535 or (toPosition.x == 65535 and toPosition.y ~= 64 and toPosition.y ~= 3 and toPosition.y ~= 10) then
 		if item:isPokeball() then
 			local isBallBeingUsed = item:getSpecialAttribute("isBeingUsed")
+
 			if isBallBeingUsed and isBallBeingUsed == 1 then
 				self:sendCancelMessage("Sorry, not possible while using Pokemon.")
 				return false
