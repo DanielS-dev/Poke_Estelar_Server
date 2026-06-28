@@ -7,6 +7,7 @@
 #include "../config/configmanager.hpp"
 #include "../game/game.hpp"
 #include "outputmessage.hpp"
+#include "../core/logger.hpp"
 #include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;
@@ -34,6 +35,7 @@ void ProtocolStatus::onRecvFirstMessage(NetworkMessage& msg)
 		if (ipStr != g_config.getString(ConfigManager::IP)) {
 			std::map<uint32_t, int64_t>::const_iterator it = ipConnectMap.find(ip);
 			if (it != ipConnectMap.end() && (OTSYS_TIME() < (it->second + g_config.getNumber(ConfigManager::STATUSQUERY_TIMEOUT)))) {
+				LOG_WARN("Network", "Rate-limited status query from " + ipStr + ".");
 				disconnect();
 				return;
 			}
@@ -68,6 +70,8 @@ void ProtocolStatus::onRecvFirstMessage(NetworkMessage& msg)
 		default:
 			break;
 	}
+
+	LOG_WARN("Network", "Received invalid status query from " + convertIPToString(ip) + ".");
 	disconnect();
 }
 

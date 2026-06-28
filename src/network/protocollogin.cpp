@@ -6,7 +6,9 @@
 #include "protocollogin.hpp"
 
 #include "outputmessage.hpp"
+#include "../core/logger.hpp"
 #include "../core/tasks.hpp"
+#include "../core/tools/stringsTools.hpp"
 #include "../core/tools/auths.hpp"
 #include "../core/tools/dateTools.hpp"
 
@@ -105,6 +107,7 @@ void ProtocolLogin::getCharacterList(const std::string& accountName, const std::
 void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 {
 	if (g_game.getGameState() == GAME_STATE_SHUTDOWN) {
+		LOG_INFO("Network", "Rejected login handshake from " + convertIPToString(getIP()) + " because the server is shutting down.");
 		disconnect();
 		return;
 	}
@@ -132,6 +135,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	}
 
 	if (!Protocol::RSA_decrypt(msg)) {
+		LOG_WARN("Network", "Login handshake RSA validation failed from " + convertIPToString(getIP()) + " for client version " + std::to_string(version) + ".");
 		disconnect();
 		return;
 	}
@@ -193,6 +197,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	// read authenticator token and stay logged in flag from last 128 bytes
 	msg.skipBytes((msg.getLength() - 128) - msg.getBufferPosition());
 	if (!Protocol::RSA_decrypt(msg)) {
+		LOG_WARN("Network", "Authenticator token RSA validation failed from " + convertIPToString(getIP()) + " for account '" + accountName + "'.");
 		disconnectClient("Invalid authentification token.", version);
 		return;
 	}

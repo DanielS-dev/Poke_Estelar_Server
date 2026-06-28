@@ -5,6 +5,8 @@
 
 #include "protocolold.hpp"
 #include "outputmessage.hpp"
+#include "../core/logger.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 #include "../game/game.hpp"
 
@@ -23,6 +25,7 @@ void ProtocolOld::disconnectClient(const std::string& message)
 void ProtocolOld::onRecvFirstMessage(NetworkMessage& msg)
 {
 	if (g_game.getGameState() == GAME_STATE_SHUTDOWN) {
+		LOG_INFO("Network", "Rejected legacy protocol handshake from " + convertIPToString(getIP()) + " because the server is shutting down.");
 		disconnect();
 		return;
 	}
@@ -39,6 +42,7 @@ void ProtocolOld::onRecvFirstMessage(NetworkMessage& msg)
 	}
 
 	if (!Protocol::RSA_decrypt(msg)) {
+		LOG_WARN("Network", "Legacy protocol RSA validation failed from " + convertIPToString(getIP()) + " for client version " + std::to_string(version) + ".");
 		disconnect();
 		return;
 	}

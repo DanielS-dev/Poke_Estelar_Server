@@ -143,6 +143,7 @@ void Connection::parseHeader(const boost::system::error_code& error)
 
 	uint16_t size = msg.getLengthHeader();
 	if (size == 0 || size >= NETWORKMESSAGE_MAXSIZE - 16) {
+		LOG_WARN("Network", "Received invalid packet header size " + std::to_string(size) + " from " + convertIPToString(getIP()) + ".");
 		close(FORCE_CLOSE);
 		return;
 	}

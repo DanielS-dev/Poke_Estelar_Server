@@ -3,11 +3,14 @@
 
 #include "otpch.hpp"
 
+#include <sstream>
+
 #include "services.hpp"
 #include "../core/scheduler.hpp"
 #include "../core/logger.hpp"
 #include "../config/configmanager.hpp"
 #include "../security/ban.hpp"
+#include "../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;
 Ban g_bans;
@@ -90,6 +93,12 @@ Protocol_ptr ServicePort::make_protocol(bool checksummed, NetworkMessage& msg, c
 			return service->make_protocol(connection);
 		}
 	}
+
+	std::ostringstream ss;
+	ss << "Unable to resolve protocol for connection from " << convertIPToString(connection->getIP()) << " on port "
+	   << serverPort << " with opcode 0x" << std::hex << static_cast<uint16_t>(protocolID) << std::dec
+	   << (checksummed ? " (checksummed)." : " (non-checksummed).");
+	LOG_WARN("Network", ss.str());
 	return nullptr;
 }
 

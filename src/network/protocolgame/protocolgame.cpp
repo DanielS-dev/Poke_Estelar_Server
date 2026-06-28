@@ -4,9 +4,11 @@
 #include "otpch.hpp"
 
 #include <boost/range/adaptor/reversed.hpp>
+#include <sstream>
 
 #include "../protocolgame.hpp"
 #include "../outputmessage.hpp"
+#include "../../core/logger.hpp"
 
 #include "../../entities/player.hpp"
 #include "../../entities/monster.hpp"
@@ -23,6 +25,7 @@
 #include "../../core/tools/fluidTools.hpp"
 #include "../../core/tools/gameEnumTools.hpp"
 #include "../../core/tools/random.hpp"
+#include "../../core/tools/stringsTools.hpp"
 
 extern ConfigManager g_config;
 extern Actions actions;
@@ -224,6 +227,7 @@ void ProtocolGame::logout(bool displayEffect, bool forced)
 void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 {
 	if (g_game.getGameState() == GAME_STATE_SHUTDOWN) {
+		LOG_INFO("Network", "Rejected game handshake from " + convertIPToString(getIP()) + " because the server is shutting down.");
 		disconnect();
 		return;
 	}
@@ -234,6 +238,7 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	msg.skipBytes(7); // U32 client version, U8 client type, U16 dat revision
 
 	if (!Protocol::RSA_decrypt(msg)) {
+		LOG_WARN("Network", "Game handshake RSA validation failed from " + convertIPToString(getIP()) + " for client version " + std::to_string(version) + ".");
 		disconnect();
 		return;
 	}
@@ -276,6 +281,7 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	uint32_t timeStamp = msg.get<uint32_t>();
 	uint8_t randNumber = msg.getByte();
 	if (challengeTimestamp != timeStamp || challengeRandom != randNumber) {
+		LOG_WARN("Network", "Game challenge validation failed from " + convertIPToString(getIP()) + " for character '" + characterName + "'.");
 		disconnect();
 		return;
 	}
@@ -472,11 +478,19 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xF9: parseModalWindowAnswer(msg); break;
 
 		default:
-			// std::cout << "Player: " << player->getName() << " sent an unknown packet header: 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << "!" << std::endl;
+		{
+			std::ostringstream ss;
+			ss << "Player '" << player->getName() << "' sent unknown packet opcode 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << '.';
+			LOG_WARN("Network", ss.str());
 			break;
+		}
 	}
 
 	if (msg.isOverrun()) {
+		std::ostringstream ss;
+		ss << "Packet overrun detected while parsing opcode 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec
+		   << " from player '" << player->getName() << "'.";
+		LOG_WARN("Network", ss.str());
 		disconnect();
 	}
 }

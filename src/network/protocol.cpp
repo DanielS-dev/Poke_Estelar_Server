@@ -5,6 +5,8 @@
 
 #include "protocol.hpp"
 #include "outputmessage.hpp"
+#include "../core/logger.hpp"
+#include "../core/tools/stringsTools.hpp"
 #include "../security/rsa.hpp"
 
 extern RSA g_RSA;
@@ -24,6 +26,7 @@ void Protocol::onSendMessage(const OutputMessage_ptr& msg) const
 void Protocol::onRecvMessage(NetworkMessage& msg)
 {
 	if (encryptionEnabled && !XTEA_decrypt(msg)) {
+		LOG_WARN("Network", "Failed to decrypt packet with XTEA from " + convertIPToString(getIP()) + ".");
 		return;
 	}
 
@@ -121,11 +124,17 @@ bool Protocol::XTEA_decrypt(NetworkMessage& msg) const
 bool Protocol::RSA_decrypt(NetworkMessage& msg)
 {
 	if ((msg.getLength() - msg.getBufferPosition()) < 128) {
+		LOG_WARN("Network", "Received packet too short for RSA decryption.");
 		return false;
 	}
 
 	g_RSA.decrypt(reinterpret_cast<char*>(msg.getBuffer()) + msg.getBufferPosition()); //does not break strict aliasing
-	return msg.getByte() == 0;
+	if (msg.getByte() != 0) {
+		LOG_WARN("Network", "RSA decryption validation failed.");
+		return false;
+	}
+
+	return true;
 }
 
 uint32_t Protocol::getIP() const
