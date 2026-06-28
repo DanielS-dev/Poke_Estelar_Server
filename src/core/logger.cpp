@@ -8,7 +8,9 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cctype>
+#include <cerrno>
 #include <ctime>
+#include <cstring>
 #include <sys/stat.h>
 #include <utility>
 
@@ -266,7 +268,7 @@ void Logger::initialize(const Config& loggerConfig)
 				createDirectories(config.directory);
 			} else {
 				createDirectories(getParentDirectory(config.fileName));
-				fileStream.open(config.fileName, std::ios::app);
+				openFileStream(fileStream, config.fileName);
 			}
 		}
 
@@ -284,7 +286,7 @@ void Logger::initializeFromEnv(const std::string& fileName)
 	Config loggerConfig;
 	const std::string globalLevel = getEnvString(env, "LOG_LEVEL", "info");
 	loggerConfig.level = parseLevel(globalLevel);
-	loggerConfig.consoleLevel = parseLevel(getEnvString(env, "LOG_CONSOLE_LEVEL", "info"));
+	loggerConfig.consoleLevel = parseLevel(getEnvString(env, "LOG_CONSOLE_LEVEL", globalLevel.c_str()));
 	loggerConfig.fileLevel = parseLevel(getEnvString(env, "LOG_FILE_LEVEL", globalLevel.c_str()));
 	loggerConfig.console = getEnvBoolean(env, "LOG_TO_CONSOLE", true);
 	loggerConfig.file = getEnvBoolean(env, "LOG_TO_FILE", true);
@@ -337,6 +339,10 @@ bool Logger::shouldLog(LogLevel level) const
 		return false;
 	}
 
+	if (level < config.level) {
+		return false;
+	}
+
 	const bool shouldLogToConsole = config.console && config.consoleLevel != LogLevel::Off && level >= config.consoleLevel;
 	const bool shouldLogToFile = config.file && config.fileLevel != LogLevel::Off && level >= config.fileLevel;
 	return shouldLogToConsole || shouldLogToFile;
@@ -355,6 +361,10 @@ void Logger::log(LogLevel level, const std::string& category, const std::string&
 	{
 		std::lock_guard<std::mutex> lock(mutex);
 		if (!initialized || config.level == LogLevel::Off) {
+			return;
+		}
+
+		if (level < config.level) {
 			return;
 		}
 
@@ -423,7 +433,14 @@ void Logger::writeMessage(const LogMessage& message)
 
 std::ofstream* Logger::getFileStream(LogLevel level)
 {
+	if (!config.file) {
+		return nullptr;
+	}
+
 	if (!config.splitFilesByLevel) {
+		if (!fileStream.is_open() && !openFileStream(fileStream, config.fileName)) {
+			return nullptr;
+		}
 		return &fileStream;
 	}
 
@@ -436,7 +453,9 @@ std::ofstream* Logger::getFileStream(LogLevel level)
 	createDirectories(getParentDirectory(fileName));
 
 	auto result = levelFileStreams.emplace(level, std::ofstream());
-	result.first->second.open(fileName, std::ios::app);
+	if (!openFileStream(result.first->second, fileName)) {
+		return nullptr;
+	}
 	return &result.first->second;
 }
 
@@ -481,5 +500,34 @@ void Logger::rotateFileIfNeeded(const std::string& fileName, std::ofstream& stre
 	}
 
 	std::rename(fileName.c_str(), (fileName + ".1").c_str());
+	openFileStream(stream, fileName);
+}
+
+void Logger::disableFileLogging(const std::string& reason)
+{
+	config.file = false;
+
+	for (auto& it : levelFileStreams) {
+		if (it.second.is_open()) {
+			it.second.close();
+		}
+	}
+
+	if (fileStream.is_open()) {
+		fileStream.close();
+	}
+
+	std::cerr << "[error] [Logger] File logging disabled: " << reason << std::endl;
+}
+
+bool Logger::openFileStream(std::ofstream& stream, const std::string& fileName)
+{
 	stream.open(fileName, std::ios::app);
+	if (stream.is_open()) {
+		return true;
+	}
+
+	const std::string errorMessage = std::strerror(errno);
+	disableFileLogging("failed to open log file '" + fileName + "': " + errorMessage);
+	return false;
 }

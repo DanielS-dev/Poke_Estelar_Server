@@ -66,7 +66,7 @@ void Signals::asyncWait()
 {
 	set.async_wait([this] (ErrorCode err, int signal) {
 		if (err) {
-			std::cerr << "Signal handling error: "  << err.message() << std::endl;
+			LOG_ERROR("Server", "Signal handling error: " + err.message());
 			return;
 		}
 		dispatchSignalHandler(signal);

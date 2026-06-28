@@ -69,6 +69,8 @@ class Logger
 		void rotateFileIfNeeded(const std::string& fileName, std::ofstream& stream);
 		std::ofstream* getFileStream(LogLevel level);
 		std::string getFileName(LogLevel level) const;
+		void disableFileLogging(const std::string& reason);
+		bool openFileStream(std::ofstream& stream, const std::string& fileName);
 
 		Config config;
 		std::ofstream fileStream;

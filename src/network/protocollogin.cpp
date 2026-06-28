@@ -197,7 +197,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	// read authenticator token and stay logged in flag from last 128 bytes
 	msg.skipBytes((msg.getLength() - 128) - msg.getBufferPosition());
 	if (!Protocol::RSA_decrypt(msg)) {
-		LOG_WARN("Network", "Authenticator token RSA validation failed from " + convertIPToString(getIP()) + " for account '" + accountName + "'.");
+		LOG_WARN("Network", "Authenticator token RSA validation failed from " + convertIPToString(getIP()) + ".");
 		disconnectClient("Invalid authentification token.", version);
 		return;
 	}
