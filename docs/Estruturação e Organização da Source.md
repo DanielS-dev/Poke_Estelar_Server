@@ -102,7 +102,9 @@ Ao mover, criar ou remover arquivos, siga o Processo Padrão de Refatoração de
 - [ ] Remover implementação desnecessária de regras de negócio em `.h` e `.hpp`, preservando templates, inline e fachadas públicas quando necessário.
 - [x] Criar logger central para console e arquivo.
 - [x] Migrar pontos críticos iniciais para o logger central (`otserv`, config, database, Lua, XML e network base).
-- [ ] Migrar loaders e demais domínios para o logger central.
+- [x] Migrar loaders de scripts, actions, creature events, globalevents, movements, spells, talkactions e weapons para o logger central.
+- [x] Migrar loaders de itens, monstros, NPCs, raids, quests, mounts e outfits para o logger central.
+- [ ] Continuar migrando os demais domínios para o logger central, com foco em persistence/login e pontos de rede/protocolo.
 - [ ] Revisar dependências entre módulos para reduzir acoplamento em pontos críticos.
 - [ ] Documentar novos padrões importantes conforme forem definidos.
 

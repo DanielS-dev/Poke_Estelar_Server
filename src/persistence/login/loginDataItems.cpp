@@ -5,6 +5,7 @@
 
 #include "iologindata.hpp"
 #include "../../config/configmanager.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/tools/auths.hpp"
 #include "../../game/game.hpp"
 #include "../ioguild.hpp"
@@ -89,7 +90,8 @@ void IOLoginData::loadItems(ItemMap& itemMap, DBResult_ptr result)
 		Item* item = Item::CreateItem(type, count);
 		if (item) {
 			if (!item->unserializeAttr(propStream)) {
-				std::cout << "WARNING: Serialize error in IOLoginData::loadItems" << std::endl;
+				LOG_WARN("Database", "Failed to unserialize player item attributes for itemtype " + std::to_string(type) +
+					", sid " + std::to_string(sid) + ", pid " + std::to_string(pid));
 			}
 
 			std::pair<Item*, uint32_t> pair(item, pid);
@@ -97,4 +99,3 @@ void IOLoginData::loadItems(ItemMap& itemMap, DBResult_ptr result)
 		}
 	} while (result->next());
 }
-

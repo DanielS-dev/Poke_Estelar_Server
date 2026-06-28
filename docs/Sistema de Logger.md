@@ -174,15 +174,31 @@ Nesses arquivos, os logs tecnicos devem usar `LOG_INFO`, `LOG_WARN`, `LOG_ERROR`
 
 Excecao atual: `badAllocationHandler()` em `src/app/otserv.cpp` usa `puts()` de forma intencional para evitar alocacao dinamica durante falha de memoria.
 
+### Loaders Ja Migrados
+
+As duas primeiras etapas da migracao de loaders ja foram concluidas:
+
+1. Scripts, actions, creature events, globalevents, movements, spells, talkactions e weapons.
+2. Itens, monstros, NPCs, raids, quests, mounts e outfits.
+
+Os principais pontos agora usam o logger central para:
+
+- falhas fatais de startup, como impossibilidade de carregar um subsystem inteiro;
+- warnings de XML, Lua e duplicidade de registro;
+- resumos agregados de carga, como quantidade de eventos, items, monstros, raids, quests, mounts e outfits carregados.
+
+No caso dos NPCs, o logger foi ajustado para evitar poluicao do console com um `info` por NPC individual. O comportamento atual e:
+
+- sucesso: um resumo agregado com a quantidade total de NPCs carregados a partir dos spawns;
+- falha: erro especifico do NPC, XML ou script com contexto suficiente para diagnostico.
+
 ### Proximas Migracoes
 
 Depois dos pontos criticos, a ordem recomendada e:
 
-1. Loaders de scripts, actions, creature events, globalevents, movements, spells, talkactions e weapons.
-2. Loaders de itens, monstros, NPCs, raids, quests, mounts e outfits.
-3. Sistemas de persistence/login que ainda imprimem erros no console.
-4. Pontos de rede e protocolo que hoje fecham conexao silenciosamente, quando houver valor real de diagnostico.
-5. Mensagens restantes de status normal que fizerem sentido como `LOG_INFO`.
+1. Sistemas de persistence/login que ainda imprimem erros no console.
+2. Pontos de rede e protocolo que hoje fecham conexao silenciosamente, quando houver valor real de diagnostico.
+3. Mensagens restantes de status normal que fizerem sentido como `LOG_INFO`.
 
 Ao migrar uma mensagem, escolha o nivel correto e mantenha contexto suficiente para investigacao.
 

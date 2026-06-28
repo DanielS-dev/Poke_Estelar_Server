@@ -5,6 +5,7 @@
 
 #include "iologindata.hpp"
 #include "../../config/configmanager.hpp"
+#include "../../core/logger.hpp"
 #include "../../core/tools/auths.hpp"
 #include "../../game/game.hpp"
 #include "../ioguild.hpp"
@@ -49,7 +50,8 @@ bool IOLoginData::preloadPlayer(Player* player, const std::string& name)
 	player->setGUID(result->getNumber<uint32_t>("id"));
 	Group* group = g_game.groups.getGroup(result->getNumber<uint16_t>("group_id"));
 	if (!group) {
-		std::cout << "[Error - IOLoginData::preloadPlayer] " << player->name << " has Group ID " << result->getNumber<uint16_t>("group_id") << " which doesn't exist." << std::endl;
+		LOG_ERROR("Database", player->name + " has invalid group_id " + std::to_string(result->getNumber<uint16_t>("group_id")) +
+			" during preloadPlayer.");
 		return false;
 	}
 	player->setGroup(group);
@@ -103,7 +105,8 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 
 	Group* group = g_game.groups.getGroup(result->getNumber<uint16_t>("group_id"));
 	if (!group) {
-		std::cout << "[Error - IOLoginData::loadPlayer] " << player->name << " has Group ID " << result->getNumber<uint16_t>("group_id") << " which doesn't exist" << std::endl;
+		LOG_ERROR("Database", player->name + " has invalid group_id " + std::to_string(result->getNumber<uint16_t>("group_id")) +
+			" during loadPlayer.");
 		return false;
 	}
 	player->setGroup(group);
@@ -149,7 +152,8 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 	}
 
 	if (!player->setVocation(result->getNumber<uint16_t>("vocation"))) {
-		std::cout << "[Error - IOLoginData::loadPlayer] " << player->name << " has Vocation ID " << result->getNumber<uint16_t>("vocation") << " which doesn't exist" << std::endl;
+		LOG_ERROR("Database", player->name + " has invalid vocation " + std::to_string(result->getNumber<uint16_t>("vocation")) +
+			" during loadPlayer.");
 		return false;
 	}
 
@@ -204,7 +208,8 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 
 	Town* town = g_game.map.towns.getTown(result->getNumber<uint32_t>("town_id"));
 	if (!town) {
-		std::cout << "[Error - IOLoginData::loadPlayer] " << player->name << " has Town ID " << result->getNumber<uint32_t>("town_id") << " which doesn't exist" << std::endl;
+		LOG_ERROR("Database", player->name + " has invalid town_id " + std::to_string(result->getNumber<uint32_t>("town_id")) +
+			" during loadPlayer.");
 		return false;
 	}
 
@@ -409,4 +414,3 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 	player->updateItemsLight(true);
 	return true;
 }
-

@@ -74,6 +74,13 @@ Os pontos criticos iniciais ja usam o logger central:
 - `src/app/servicePort.cpp`
 - `src/network/connection.cpp`
 
+Os loaders dos dois primeiros blocos da migracao tambem ja foram integrados ao logger central:
+
+- scripts, actions, creature events, globalevents, movements, spells, talkactions e weapons;
+- itens, monstros, NPCs, raids, quests, mounts e outfits.
+
+Nesses dominios, o padrao atual combina erros e warnings detalhados com resumos agregados de carga. Exemplo: o startup pode registrar quantidades totais de items, monstros, raids, quests, mounts e outfits carregados, enquanto NPCs usam um resumo agregado por spawn em vez de emitir um `info` para cada NPC individual.
+
 Para detalhes de niveis, formato, categorias e proximas migracoes, consulte `docs/Sistema de Logger.md`.
 
 ## Estrutura de Pastas

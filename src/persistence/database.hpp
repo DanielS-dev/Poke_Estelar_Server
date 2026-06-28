@@ -4,6 +4,8 @@
 #ifndef FS_DATABASE_H_A484B0CDFDE542838F506DCE3D40C693
 #define FS_DATABASE_H_A484B0CDFDE542838F506DCE3D40C693
 
+#include "../core/logger.hpp"
+
 #include <boost/lexical_cast.hpp>
 
 #include <mysql.h>
@@ -136,7 +138,7 @@ class DBResult
 		{
 			auto it = listNames.find(s);
 			if (it == listNames.end()) {
-				std::cout << "[Error - DBResult::getNumber] Column '" << s << "' doesn't exist in the result set" << std::endl;
+				LOG_ERROR("Database", "DBResult::getNumber missing column in result set: " + s);
 				return static_cast<T>(0);
 			}
 
